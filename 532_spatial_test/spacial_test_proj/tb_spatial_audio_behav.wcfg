@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_spatial_audio_sine_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_spatial_audio_sine" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="4842033236395fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="229"></NameColumnWidth>
+      <ValueColumnWidth column_width="108"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="7" />
+   <wvobject fp_name="/tb_spatial_audio_sine/dut/i2s/sd_rx" type="logic">
+      <obj_property name="ElementShortName">sd_rx</obj_property>
+      <obj_property name="ObjectShortName">sd_rx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_spatial_audio_sine/dut/fir_left/audio_in" type="array">
+      <obj_property name="ElementShortName">audio_in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">audio_in[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_spatial_audio_sine/dut/fir_left/coeff_in" type="array">
+      <obj_property name="ElementShortName">coeff_in[15:0]</obj_property>
+      <obj_property name="ObjectShortName">coeff_in[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_spatial_audio_sine/dut/fir_left/audio_out" type="array">
+      <obj_property name="ElementShortName">audio_out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">audio_out[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_spatial_audio_sine/dut/fir_right/audio_in" type="array">
+      <obj_property name="ElementShortName">audio_in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">audio_in[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_spatial_audio_sine/dut/fir_right/coeff_in" type="array">
+      <obj_property name="ElementShortName">coeff_in[15:0]</obj_property>
+      <obj_property name="ObjectShortName">coeff_in[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_spatial_audio_sine/dut/fir_right/audio_out" type="array">
+      <obj_property name="ElementShortName">audio_out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">audio_out[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+</wave_config>

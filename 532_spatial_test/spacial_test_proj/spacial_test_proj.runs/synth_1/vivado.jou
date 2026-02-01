@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Jan 29 15:22:38 2026
+# Process ID: 3052
+# Current directory: D:/ECE532/532_spatial_test/spacial_test_proj/spacial_test_proj.runs/synth_1
+# Command line: vivado.exe -log spatial_audio_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source spatial_audio_top.tcl
+# Log file: D:/ECE532/532_spatial_test/spacial_test_proj/spacial_test_proj.runs/synth_1/spatial_audio_top.vds
+# Journal file: D:/ECE532/532_spatial_test/spacial_test_proj/spacial_test_proj.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source spatial_audio_top.tcl -notrace
