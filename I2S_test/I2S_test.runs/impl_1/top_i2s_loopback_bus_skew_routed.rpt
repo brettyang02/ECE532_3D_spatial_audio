@@ -1,0 +1,15 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Feb  7 01:47:50 2026
+| Host         : Andiputer running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file top_i2s_loopback_bus_skew_routed.rpt -pb top_i2s_loopback_bus_skew_routed.pb -rpx top_i2s_loopback_bus_skew_routed.rpx
+| Design       : top_i2s_loopback
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

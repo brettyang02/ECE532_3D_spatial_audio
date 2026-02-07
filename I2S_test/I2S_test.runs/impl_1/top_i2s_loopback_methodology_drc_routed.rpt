@@ -1,0 +1,50 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Feb  7 01:47:49 2026
+| Host         : Andiputer running 64-bit major release  (build 9200)
+| Command      : report_methodology -file top_i2s_loopback_methodology_drc_routed.rpt -pb top_i2s_loopback_methodology_drc_routed.pb -rpx top_i2s_loopback_methodology_drc_routed.rpx
+| Design       : top_i2s_loopback
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 2
++--------+----------+--------------------------------------------------------+------------+
+| Rule   | Severity | Description                                            | Violations |
++--------+----------+--------------------------------------------------------+------------+
+| XDCC-1 | Warning  | Scoped Clock constraint overwritten with the same name | 1          |
+| XDCC-7 | Warning  | Scoped Clock constraint overwritten on the same source | 1          |
++--------+----------+--------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+XDCC-1#1 Warning
+Scoped Clock constraint overwritten with the same name  
+A new clock constraint create_clock overrides a previous scoped clock constraint with the same name. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 10.000 -name clk_100mhz [get_ports clk_100mhz] (Source: C:/Users/andyl/Desktop/UofT/Semesters/4B/ECE_532/Milestones/Milestone_2/I2S_test/I2S_test.srcs/constrs_1/new/nexys4ddr_i2s2.xdc (Line: 6))
+Previous: create_clock -period 10.000 [get_ports clk_100mhz] (Source: c:/Users/andyl/Desktop/UofT/Semesters/4B/ECE_532/Milestones/Milestone_2/I2S_test/I2S_test.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc (Line: 56))
+Related violations: <none>
+
+XDCC-7#1 Warning
+Scoped Clock constraint overwritten on the same source  
+A new clock constraint create_clock overrides a previous scoped clock constraint defined on the same source. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 10.000 -name clk_100mhz [get_ports clk_100mhz] (Source: C:/Users/andyl/Desktop/UofT/Semesters/4B/ECE_532/Milestones/Milestone_2/I2S_test/I2S_test.srcs/constrs_1/new/nexys4ddr_i2s2.xdc (Line: 6))
+Previous: create_clock -period 10.000 [get_ports clk_100mhz] (Source: c:/Users/andyl/Desktop/UofT/Semesters/4B/ECE_532/Milestones/Milestone_2/I2S_test/I2S_test.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc (Line: 56))
+Related violations: <none>
+
+

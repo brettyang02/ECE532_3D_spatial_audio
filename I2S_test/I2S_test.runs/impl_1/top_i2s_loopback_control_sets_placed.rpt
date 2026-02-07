@@ -1,0 +1,77 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Feb  7 01:47:32 2026
+| Host         : Andiputer running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_i2s_loopback_control_sets_placed.rpt
+| Design       : top_i2s_loopback
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     9 |
+| Unused register locations in slices containing registers |    23 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            1 |
+|      2 |            1 |
+|      4 |            1 |
+|      6 |            1 |
+|    16+ |            5 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              52 |           10 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               4 |            1 |
+| Yes          | No                    | No                     |              48 |           11 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              57 |           13 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------+--------------------------------+------------------------+------------------+----------------+
+|       Clock Signal      |          Enable Signal         |    Set/Reset Signal    | Slice Load Count | Bel Load Count |
++-------------------------+--------------------------------+------------------------+------------------+----------------+
+|  clk_gen/inst/clk_audio | i2s_inst/sclk_fall             | i2s_inst/sd_tx_i_1_n_0 |                1 |              1 |
+|  clk_gen/inst/clk_audio | i2s_inst/lrck5_out             | i2s_inst/lrck_i_1_n_0  |                1 |              2 |
+|  clk_gen/inst/clk_audio |                                | reset_audio            |                1 |              4 |
+|  clk_gen/inst/clk_audio | i2s_inst/sclk_fall             | reset_audio            |                1 |              6 |
+|  clk_gen/inst/clk_audio | i2s_inst/tx_shift[23]_i_1_n_0  |                        |                8 |             24 |
+|  clk_gen/inst/clk_audio | i2s_inst/rx_shift_0            |                        |                3 |             24 |
+|  clk_gen/inst/clk_audio | i2s_inst/l_data_rx[23]_i_1_n_0 | reset_audio            |                5 |             24 |
+|  clk_gen/inst/clk_audio | i2s_inst/r_data_rx[23]_i_1_n_0 | reset_audio            |                5 |             24 |
+|  clk_gen/inst/clk_audio |                                |                        |               10 |             52 |
++-------------------------+--------------------------------+------------------------+------------------+----------------+
+
+
