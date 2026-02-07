@@ -16,10 +16,13 @@ module tb_spatial_audio_sine;
     real PI = 3.14159265;
     real freq = 440.0;      // 440 Hz Tone
     real fs = 44100.0;      // Sample Rate
-    real amp = 4000000.0;   // Amplitude (Approx 50% of 24-bit full scale)
-    integer sample_idx = 0;
+    real amp = 4000000.0;   // Amplitude (~50% Full Scale)
+    
+    // Global sample counter (Must be continuous for smooth sine!)
+    integer global_sample_idx = 0; 
     reg signed [23:0] sine_val;
 
+    // --- INSTANTIATE DUT ---
     spatial_audio_top dut (
         .clk_100mhz(clk_100mhz),
         .reset_btn(reset_btn),
@@ -35,29 +38,24 @@ module tb_spatial_audio_sine;
     always #5 clk_100mhz = ~clk_100mhz;
 
     // --------------------------------------------------
-    // I2S TRANSMIT TASK (Robust Edge Alignment)
+    // I2S TRANSMIT TASK
     // --------------------------------------------------
     task send_sample(input [23:0] L, input [23:0] R);
         integer i;
         begin
-            // ---- LEFT ----
-            // Wait for Start of Left Frame
+            // ---- LEFT CHANNEL ----
             @(negedge tx_lrck); 
-            @(negedge tx_sclk); // Dummy bit
-
+            @(negedge tx_sclk); // Skip dummy bit
             for (i = 23; i >= 0; i=i-1) begin
                 rx_data <= L[i];
                 @(posedge tx_sclk);   
                 @(negedge tx_sclk);
             end
-            
             rx_data <= 0; // Padding
 
-            // ---- RIGHT ----
-            // Wait for Start of Right Frame
+            // ---- RIGHT CHANNEL ----
             @(posedge tx_lrck); 
-            @(negedge tx_sclk);
-
+            @(negedge tx_sclk); // Skip dummy bit
             for (i = 23; i >= 0; i=i-1) begin
                 rx_data <= R[i];
                 @(posedge tx_sclk);
@@ -68,59 +66,86 @@ module tb_spatial_audio_sine;
     endtask
 
     // --------------------------------------------------
-    // MAIN TEST: SINE WAVE GENERATION
+    // HELPER: PLAY TONE FOR X SAMPLES
+    // --------------------------------------------------
+    task play_tone_duration(input integer duration_samples);
+        integer k;
+        begin
+            for (k = 0; k < duration_samples; k = k + 1) begin
+                // Calculate Sine based on GLOBAL index (Continuous Phase)
+                sine_val = $rtoi(amp * $sin(2.0 * PI * freq * global_sample_idx / fs));
+                
+                // Send Mono Source (Same to L and R)
+                send_sample(sine_val, sine_val);
+                
+                // Increment Global Time
+                global_sample_idx = global_sample_idx + 1;
+            end
+        end
+    endtask
+
+    // --------------------------------------------------
+    // MAIN TEST SEQUENCE
     // --------------------------------------------------
     initial begin
-        $display("=== Spatial Audio Sine Wave Test ===");
+        $display("=== Spatial Audio Direction Test ===");
         
-        // 1. Reset
+        // 1. Initialize
         reset_btn = 1;
         #200;
         reset_btn = 0;
         
-        // Wait for Clock Lock
+        // Wait for Clock Lock (DCM/PLL lock time)
         repeat(2000) @(posedge clk_100mhz);
+        
+        // -------------------------------------------------------
+        // PHASE 1: FRONT (0 Degrees) - 5ms
+        // -------------------------------------------------------
+        target_angle = 8'd0; 
+        $display("[Time 0ms] Direction: FRONT (0 deg)");
+        play_tone_duration(250); // ~5.6ms
 
-        // 2. Set Angle to "Left"
-        // Adjust this index based on your specific HRTF map.
-        // Assuming ~5 degree steps, Index 18-20 is roughly 90 degrees Left.
-        //target_angle = 8'd20; 
-        $display("Generating 440Hz Sine at Angle Index %d...", target_angle);
+        // -------------------------------------------------------
+        // PHASE 2: LEFT (90 Degrees) - 5ms
+        // -------------------------------------------------------
+        // Index 18 * 5 deg = 90 deg
+        target_angle = 8'd18; 
+        $display("[Time 5ms] Direction: LEFT (90 deg)");
+        play_tone_duration(250);
 
-        // 3. Generate 200 samples (approx 5ms, enough for ~2 sine cycles)
-        for (sample_idx = 0; sample_idx < 300; sample_idx = sample_idx + 1) begin
-            
-            // Calculate Sine Value (Real -> Integer conversion)
-            // val = Amp * sin(2 * PI * f * t)
-            sine_val = $rtoi(amp * $sin(2.0 * PI * freq * sample_idx / fs));
-            
-            // Send as MONO source (Same signal to both L and R inputs)
-            // The HRTF engine will filter them differently.
-            send_sample(sine_val, sine_val);
-        end
+        // -------------------------------------------------------
+        // PHASE 3: RIGHT (270 Degrees) - 5ms
+        // -------------------------------------------------------
+        // Index 54 * 5 deg = 270 deg (or -90 deg)
+        target_angle = 8'd54; 
+        $display("[Time 10ms] Direction: RIGHT (270 deg)");
+        play_tone_duration(250);
 
-        $display("DONE");
+        $display("=== Test Complete. Check 'audio_dump_sine.csv' ===");
         #1000;
         $finish;
     end
     
     // -----------------------------------------------------------
-    // AUTOMATIC CSV EXPORT BLOCK (Analysis Mode)
+    // CSV EXPORT (For Python Plotting)
     // -----------------------------------------------------------
     integer f;
     initial begin
         f = $fopen("audio_dump_sine.csv", "w");
-        // We record the INPUT sine and the OUTPUT Left/Right
-        $fwrite(f, "Time_ns, Input_Sine, Left_Out, Right_Out\n");
+        // Header
+        $fwrite(f, "Time_ns, Input_Sine, Left_Out, Right_Out, Angle_Index\n");
     end
 
+    // Trigger write exactly when the DUT outputs a new sample
+    // Note: Assuming 'dut.i2s.new_sample_pulse' exists. 
+    // If not, trigger on 'posedge tx_lrck'.
     always @(posedge dut.i2s.new_sample_pulse) begin
-        // Note: 'sine_val' is the input we just sent
-        $fwrite(f, "%d, %d, %d, %d\n", 
+        $fwrite(f, "%d, %d, %d, %d, %d\n", 
                 $time, 
-                $signed(sine_val),   // Verify the input looks like a sine
-                $signed(dut.l_out), 
-                $signed(dut.r_out)
+                $signed(sine_val),    // The perfect input sine
+                $signed(dut.l_out),   // The filtered Left Output
+                $signed(dut.r_out),   // The filtered Right Output
+                target_angle          // Log the angle to see the switch point
         );
     end
 
