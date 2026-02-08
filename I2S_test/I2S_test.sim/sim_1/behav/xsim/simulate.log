@@ -1,2 +1,5 @@
 Vivado Simulator 2018.3
 Time resolution is 1 ps
+Starting I2S Simulation at 44.1kHz (MCLK = 22.5792MHz)
+Simulation Finished.
+$finish called at time : 185801216 ps : File "C:/Users/eliza/Documents/1_Local/ECE532_local/ECE532_3D_spatial_audio/I2S_test/I2S_test.srcs/sim_1/new/tb_i2s_controller_tyra.v" Line 82

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="i2s_controller_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="i2s_controller_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="102859602667fs"></ZoomStartTime>
+      <ZoomEndTime time="136399602668fs"></ZoomEndTime>
+      <Cursor1Time time="94759603000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="217"></NameColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/i2s_controller_tb/clk_audio" type="logic">
+      <obj_property name="ElementShortName">clk_audio</obj_property>
+      <obj_property name="ObjectShortName">clk_audio</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_controller_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_controller_tb/mclk" type="logic">
+      <obj_property name="ElementShortName">mclk</obj_property>
+      <obj_property name="ObjectShortName">mclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_controller_tb/sclk" type="logic">
+      <obj_property name="ElementShortName">sclk</obj_property>
+      <obj_property name="ObjectShortName">sclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_controller_tb/lrck" type="logic">
+      <obj_property name="ElementShortName">lrck</obj_property>
+      <obj_property name="ObjectShortName">lrck</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_controller_tb/dut/tx_shift" type="array">
+      <obj_property name="ElementShortName">tx_shift[23:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_shift[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_controller_tb/dut/rx_shift" type="array">
+      <obj_property name="ElementShortName">rx_shift[23:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_shift[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_controller_tb/sd_rx" type="logic">
+      <obj_property name="ElementShortName">sd_rx</obj_property>
+      <obj_property name="ObjectShortName">sd_rx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_controller_tb/sd_tx" type="logic">
+      <obj_property name="ElementShortName">sd_tx</obj_property>
+      <obj_property name="ObjectShortName">sd_tx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_controller_tb/l_rx" type="array">
+      <obj_property name="ElementShortName">l_rx[23:0]</obj_property>
+      <obj_property name="ObjectShortName">l_rx[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_controller_tb/r_rx" type="array">
+      <obj_property name="ElementShortName">r_rx[23:0]</obj_property>
+      <obj_property name="ObjectShortName">r_rx[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_controller_tb/l_tx_data" type="array">
+      <obj_property name="ElementShortName">l_tx_data[23:0]</obj_property>
+      <obj_property name="ObjectShortName">l_tx_data[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/i2s_controller_tb/r_tx_data" type="array">
+      <obj_property name="ElementShortName">r_tx_data[23:0]</obj_property>
+      <obj_property name="ObjectShortName">r_tx_data[23:0]</obj_property>
+   </wvobject>
+</wave_config>
