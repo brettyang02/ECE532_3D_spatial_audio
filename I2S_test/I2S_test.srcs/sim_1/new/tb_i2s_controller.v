@@ -8,7 +8,6 @@ module tb_i2s_controller;
     parameter real CLK_AUDIO_FREQ = 22_579_200.0;
     parameter real CLK_AUDIO_PER  = 1e9 / CLK_AUDIO_FREQ;
 
-
     // ============================================================
     // DUT signals
     // ============================================================
@@ -28,10 +27,8 @@ module tb_i2s_controller;
     reg  [23:0] l_data_tx;
     reg  [23:0] r_data_tx;
 
-    wire        new_sample_pulse;
-
     // ============================================================
-    // Instantiate DUT
+    // Instantiate DUT 
     // ============================================================
     i2s_controller dut (
         .clk_audio(clk_audio),
@@ -44,17 +41,16 @@ module tb_i2s_controller;
         .l_data_rx(l_data_rx),
         .r_data_rx(r_data_rx),
         .l_data_tx(l_data_tx),
-        .r_data_tx(r_data_tx),
-        .new_sample_pulse(new_sample_pulse)
+        .r_data_tx(r_data_tx)
     );
 
     // ============================================================
-    // Clock generation (22.5792 MHz)
+    // Clock generation
     // ============================================================
     always #(CLK_AUDIO_PER/2.0) clk_audio = ~clk_audio;
 
     // ============================================================
-    // Simple sine LUT
+    // Sine LUT Generation
     // ============================================================
     integer i;
     localparam LUT_SIZE = 64;
@@ -69,11 +65,10 @@ module tb_i2s_controller;
     end
 
     // ============================================================
-    // I2S RX stimulus (serializer)
+    // I2S RX Stimulus (Emulating an External ADC)
     // ============================================================
     integer sample_idx = 0;
     integer bit_idx    = 0;
-
     reg [31:0] shift_word;
     reg        last_lrck;
 
@@ -82,25 +77,23 @@ module tb_i2s_controller;
         last_lrck = 0;
     end
 
+    // Drive sd_rx on negedge SCLK so DUT can sample on posedge
     always @(negedge sclk) begin
-        // Detect LRCK edge ? load new channel sample
         if (lrck != last_lrck) begin
             bit_idx <= 0;
-
             if (lrck == 0) begin
-                // LEFT channel
-                shift_word <= {1'b0, sine_lut[sample_idx], 7'd0};
+                // Load Left Channel (I2S: Data starts 1 bit after LRCK edge)
+                shift_word <= {sine_lut[sample_idx], 8'd0}; 
             end else begin
-                // RIGHT channel
-                shift_word <= {1'b0, sine_lut[sample_idx], 7'd0};
+                // Load Right Channel
+                shift_word <= {sine_lut[sample_idx], 8'd0};
                 sample_idx <= (sample_idx + 1) % LUT_SIZE;
             end
-        end
-        else begin
+        end else begin
             bit_idx <= bit_idx + 1;
         end
 
-        // Output MSB-first after 1-bit delay
+        // Simple I2S shift: MSB starts 1 SCLK after LRCK transition
         if (bit_idx < 32)
             sd_rx <= shift_word[31 - bit_idx];
         else
@@ -110,7 +103,7 @@ module tb_i2s_controller;
     end
 
     // ============================================================
-    // Loopback inside TB (RX ? TX)
+    // Loopback Logic (Connects Output to Input)
     // ============================================================
     always @(posedge clk_audio) begin
         l_data_tx <= l_data_rx;
@@ -118,15 +111,16 @@ module tb_i2s_controller;
     end
 
     // ============================================================
-    // Reset + simulation control
+    // Simulation Control
     // ============================================================
     initial begin
         reset = 1;
-        #(10 * CLK_AUDIO_PER);
+        #(20 * CLK_AUDIO_PER);
         reset = 0;
 
-        // Run long enough to see multiple sine cycles
-        #(5_000_000);
+        // Run for enough time to see several sine periods
+        #(5_000_000); 
+        $display("Simulation Finished");
         $finish;
     end
 

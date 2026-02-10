@@ -1,1 +1,1 @@
--wto "fa1219c842884fed9f8fded000c7336a" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "tb_i2s_controller_behav" "xil_defaultlib.tb_i2s_controller" "xil_defaultlib.glbl" -log "elaborate.log" 
+-wto "fa1219c842884fed9f8fded000c7336a" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "tb_i2s_controller_behav" "xil_defaultlib.tb_i2s_controller" "xil_defaultlib.glbl" -log "elaborate.log" 
