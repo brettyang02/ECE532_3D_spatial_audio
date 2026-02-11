@@ -7,11 +7,18 @@ module spatial_audio_top (
     output wire tx_lrck,
     output wire tx_sclk,
     output wire tx_data,
+    output wire rx_mclk,
+    output wire rx_lrck,
+    output wire rx_sclk,
     input  wire rx_data,
     
     // Joystick / Switches
     input wire [7:0] target_angle
 );
+    
+    assign rx_mclk = tx_mclk;
+    assign rx_lrck = tx_lrck;
+    assign rx_sclk = tx_sclk;
 
     // 1. Generate Audio Clock
     wire clk_audio; 

@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module tb_spatial_audio;
+module tb_spatial_audio_pulse;
 
     reg clk_100mhz = 0;
     reg reset_btn = 1;
@@ -88,6 +88,7 @@ module tb_spatial_audio;
         repeat(60)
             send_sample(24'h0, 24'h0);
 
+        /*
         // -----------------------------
         // Change HRTF angle
         // -----------------------------
@@ -99,6 +100,7 @@ module tb_spatial_audio;
 
         repeat(60)
             send_sample(24'h0, 24'h0);
+        */
 
         $display("DONE");
         #10000;
