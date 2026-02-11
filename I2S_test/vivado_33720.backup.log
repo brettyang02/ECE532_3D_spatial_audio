@@ -1,0 +1,413 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Feb 10 12:21:26 2026
+# Process ID: 33720
+# Current directory: C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27380 C:\Users\andyl\Desktop\ECE532_3D_spatial_audio\I2S_test\I2S_test.xpr
+# Log file: C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/vivado.log
+# Journal file: C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/eliza/Documents/1_Local/ECE532_local/ECE532_3D_spatial_audio/I2S_test' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:33 ; elapsed = 00:00:26 . Memory (MB): peak = 867.508 ; gain = 238.336
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2s_controller_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2s_controller_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.srcs/sources_1/new/i2s_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2s_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.srcs/sim_1/new/tb_i2s_controller_tyra.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2s_controller_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto fa1219c842884fed9f8fded000c7336a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_controller_tb_behav xil_defaultlib.i2s_controller_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.i2s_controller
+Compiling module xil_defaultlib.i2s_controller_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2s_controller_tb_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim/xsim.dir/i2s_controller_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Feb 10 12:23:25 2026...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 934.320 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "i2s_controller_tb_behav -key {Behavioral:sim_1:Functional:i2s_controller_tb} -tclbatch {i2s_controller_tb.tcl} -view {C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_sine_tb_behav.wcfg} -view {C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_sine_tb_behav.wcfg
+WARNING: Simulation object /i2s_controller_sine_tb/clk_audio was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/reset was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/mclk was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/sclk was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/lrck was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/sd_rx was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/sd_tx was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/current_sine was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/l_data_rx was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/r_data_rx was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/sample_idx was not found in the design.
+open_wave_config C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_tb_behav.wcfg
+source i2s_controller_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Starting I2S Simulation at 44.1kHz (MCLK = 22.5792MHz)
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'i2s_controller_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 952.859 ; gain = 18.539
+run 3 ms
+Simulation Finished.
+$finish called at time : 185801216 ps : File "C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.srcs/sim_1/new/tb_i2s_controller_tyra.v" Line 82
+run 3 ms
+set_property top i2s_controller_sine_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'i2s_controller_sine_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj i2s_controller_sine_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.srcs/sim_1/new/tb_i2s_controller_sine_tyra.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2s_controller_sine_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto fa1219c842884fed9f8fded000c7336a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2s_controller_sine_tb_behav xil_defaultlib.i2s_controller_sine_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.i2s_controller
+Compiling module xil_defaultlib.i2s_controller_sine_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot i2s_controller_sine_tb_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim/xsim.dir/i2s_controller_sine_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Feb 10 12:27:05 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 996.434 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "i2s_controller_sine_tb_behav -key {Behavioral:sim_1:Functional:i2s_controller_sine_tb} -tclbatch {i2s_controller_sine_tb.tcl} -view {C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_sine_tb_behav.wcfg} -view {C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_sine_tb_behav.wcfg
+open_wave_config C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_tb_behav.wcfg
+WARNING: Simulation object /i2s_controller_tb/clk_audio was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/reset was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/mclk was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/sclk was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/lrck was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/dut/tx_shift was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/dut/rx_shift was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/sd_rx was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/sd_tx was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/l_rx was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/r_rx was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/l_tx_data was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/r_tx_data was not found in the design.
+source i2s_controller_sine_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'i2s_controller_sine_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 996.434 ; gain = 0.000
+run 3 ms
+Sending 10ms of 440Hz Sine Wave...
+run 3 ms
+run 3 ms
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 3 ms
+Sending 10ms of 440Hz Sine Wave...
+set_property top tb_i2s_controller [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_i2s_controller' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_i2s_controller_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.srcs/sim_1/new/tb_i2s_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_i2s_controller
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto fa1219c842884fed9f8fded000c7336a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_i2s_controller_behav xil_defaultlib.tb_i2s_controller xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'new_sample_pulse' on this module [C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.srcs/sim_1/new/tb_i2s_controller.v:48]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_i2s_controller' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_i2s_controller_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.srcs/sources_1/new/i2s_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2s_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.srcs/sim_1/new/tb_i2s_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_i2s_controller
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto fa1219c842884fed9f8fded000c7336a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_i2s_controller_behav xil_defaultlib.tb_i2s_controller xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.i2s_controller
+Compiling module xil_defaultlib.tb_i2s_controller
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_i2s_controller_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim/xsim.dir/tb_i2s_controller_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Feb 10 12:46:59 2026...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1702.699 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_i2s_controller_behav -key {Behavioral:sim_1:Functional:tb_i2s_controller} -tclbatch {tb_i2s_controller.tcl} -view {C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_sine_tb_behav.wcfg} -view {C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_sine_tb_behav.wcfg
+WARNING: Simulation object /i2s_controller_sine_tb/clk_audio was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/reset was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/mclk was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/sclk was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/lrck was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/sd_rx was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/sd_tx was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/current_sine was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/l_data_rx was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/r_data_rx was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/sample_idx was not found in the design.
+open_wave_config C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_tb_behav.wcfg
+WARNING: Simulation object /i2s_controller_tb/clk_audio was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/reset was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/mclk was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/sclk was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/lrck was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/dut/tx_shift was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/dut/rx_shift was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/sd_rx was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/sd_tx was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/l_rx was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/r_rx was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/l_tx_data was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/r_tx_data was not found in the design.
+source tb_i2s_controller.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_i2s_controller_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 1702.699 ; gain = 0.000
+run 3 ms
+Simulation Finished
+$finish called at time : 2000885771 ps : File "C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.srcs/sim_1/new/tb_i2s_controller.v" Line 124
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ms
+Simulation Finished
+$finish called at time : 2000885771 ps : File "C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.srcs/sim_1/new/tb_i2s_controller.v" Line 124
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1702.699 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_i2s_controller' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_i2s_controller_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.srcs/sources_1/new/i2s_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module i2s_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.srcs/sim_1/new/tb_i2s_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_i2s_controller
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto fa1219c842884fed9f8fded000c7336a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_i2s_controller_behav xil_defaultlib.tb_i2s_controller xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.i2s_controller
+Compiling module xil_defaultlib.tb_i2s_controller
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_i2s_controller_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_i2s_controller_behav -key {Behavioral:sim_1:Functional:tb_i2s_controller} -tclbatch {tb_i2s_controller.tcl} -view {C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_sine_tb_behav.wcfg} -view {C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_sine_tb_behav.wcfg
+WARNING: Simulation object /i2s_controller_sine_tb/clk_audio was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/reset was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/mclk was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/sclk was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/lrck was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/sd_rx was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/sd_tx was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/current_sine was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/l_data_rx was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/r_data_rx was not found in the design.
+WARNING: Simulation object /i2s_controller_sine_tb/sample_idx was not found in the design.
+open_wave_config C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_tb_behav.wcfg
+WARNING: Simulation object /i2s_controller_tb/clk_audio was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/reset was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/mclk was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/sclk was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/lrck was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/dut/tx_shift was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/dut/rx_shift was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/sd_rx was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/sd_tx was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/l_rx was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/r_rx was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/l_tx_data was not found in the design.
+WARNING: Simulation object /i2s_controller_tb/r_tx_data was not found in the design.
+source tb_i2s_controller.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_i2s_controller_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1702.699 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ms
+Simulation Finished
+$finish called at time : 5000885771 ps : File "C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.srcs/sim_1/new/tb_i2s_controller.v" Line 124
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+current_sim simulation_2
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1702.699 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 10 14:51:01 2026...

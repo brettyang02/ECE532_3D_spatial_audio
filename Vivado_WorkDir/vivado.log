@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Feb 10 14:55:33 2026
+# Process ID: 26484
+# Current directory: C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/Vivado_WorkDir
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent34696 C:\Users\andyl\Desktop\ECE532_3D_spatial_audio\Vivado_WorkDir\spatial_audio.xpr
+# Log file: C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/Vivado_WorkDir/vivado.log
+# Journal file: C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/Vivado_WorkDir\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.xpr
+INFO: [Project 1-313] Project file moved from 'D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-509] GeneratedRun file for 'synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'clk_wiz_audio_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'rom_hrtf_left_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'rom_hrtf_right_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'impl_1' not found
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.ip_user_files', nor could it be found using path 'D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 834.285 ; gain = 201.949
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 10 14:59:40 2026...

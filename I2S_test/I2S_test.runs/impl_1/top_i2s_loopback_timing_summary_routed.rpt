@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sat Feb  7 01:47:50 2026
+| Date         : Tue Feb 10 16:54:48 2026
 | Host         : Andiputer running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file top_i2s_loopback_timing_summary_routed.rpt -pb top_i2s_loopback_timing_summary_routed.pb -rpx top_i2s_loopback_timing_summary_routed.rpx -warn_on_violation
 | Design       : top_i2s_loopback

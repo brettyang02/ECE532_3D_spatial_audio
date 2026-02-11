@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/andyl/Desktop/UofT/Semesters/4B/ECE_532/Milestones/Milestone_2/I2S_test/I2S_test.runs/synth_1'
+HD_PWD='C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

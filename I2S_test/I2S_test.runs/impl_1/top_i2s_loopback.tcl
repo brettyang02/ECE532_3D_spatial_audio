@@ -60,26 +60,23 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache C:/Users/andyl/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-15000-Andiputer/incrSyn
   set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/andyl/Desktop/UofT/Semesters/4B/ECE_532/Milestones/Milestone_2/I2S_test/I2S_test.cache/wt [current_project]
-  set_property parent.project_path C:/Users/andyl/Desktop/UofT/Semesters/4B/ECE_532/Milestones/Milestone_2/I2S_test/I2S_test.xpr [current_project]
-  set_property ip_output_repo C:/Users/andyl/Desktop/UofT/Semesters/4B/ECE_532/Milestones/Milestone_2/I2S_test/I2S_test.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.cache/wt [current_project]
+  set_property parent.project_path C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.xpr [current_project]
+  set_property ip_output_repo C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet C:/Users/andyl/Desktop/UofT/Semesters/4B/ECE_532/Milestones/Milestone_2/I2S_test/I2S_test.runs/synth_1/top_i2s_loopback.dcp
-  read_ip -quiet c:/Users/andyl/Desktop/UofT/Semesters/4B/ECE_532/Milestones/Milestone_2/I2S_test/I2S_test.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-  read_xdc C:/Users/andyl/Desktop/UofT/Semesters/4B/ECE_532/Milestones/Milestone_2/I2S_test/I2S_test.srcs/constrs_1/new/nexys4ddr_i2s2.xdc
+  add_files -quiet C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.runs/synth_1/top_i2s_loopback.dcp
+  read_ip -quiet C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_xdc C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.srcs/constrs_1/new/nexys4ddr_i2s2.xdc
   link_design -top top_i2s_loopback -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]

@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/andyl/Desktop/UofT/Semesters/4B/ECE_532/Milestones/Milestone_2/I2S_test/I2S_test.srcs/constrs_1/new/nexys4ddr_i2s2.xdc rfile:../../../I2S_test.srcs/constrs_1/new/nexys4ddr_i2s2.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.srcs/constrs_1/new/nexys4ddr_i2s2.xdc rfile:../../../I2S_test.srcs/constrs_1/new/nexys4ddr_i2s2.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN E3 [get_ports clk_100mhz]
 set_property src_info {type:XDC file:1 line:16 export:INPUT save:INPUT read:READ} [current_design]
