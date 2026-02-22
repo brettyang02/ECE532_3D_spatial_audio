@@ -29,3 +29,57 @@ set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property PROGRAM.FILE {C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.runs/impl_1/top_i2s_loopback.bit} [get_hw_devices xc7a100t_0]
 program_hw_devices [get_hw_devices xc7a100t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+close_hw
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.runs/impl_1/top_i2s_loopback.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.runs/impl_1/top_i2s_loopback.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.runs/impl_1/top_i2s_loopback.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.runs/impl_1/top_i2s_loopback.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+launch_simulation
+open_wave_config C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_sine_tb_behav.wcfg
+open_wave_config C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_tb_behav.wcfg
+source tb_i2s_controller.tcl
+restart
+run 10 ms
+restart
+run 10 ms
+relaunch_sim
+run 10 ms
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.runs/impl_1/top_i2s_loopback.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.runs/impl_1/top_i2s_loopback.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw
+close_sim
