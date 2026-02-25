@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../spatial_audio.srcs/sources_1/ip/clk_wiz_audio" \
+"../../../../../Src/RTL/dsp_fir_folded.v" \
+"../../../../spatial_audio.srcs/sim_1/imports/Sim/tb_cliping.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
