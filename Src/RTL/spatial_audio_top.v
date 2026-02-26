@@ -1,6 +1,7 @@
 module spatial_audio_top (
-    input wire clk_100mhz,
-    input wire reset_btn,       // Active High Reset for Clock Wizard
+    
+    input wire clk_audio,
+    input wire locked,
     
     // Pmod I2S Interface
     output wire tx_mclk,
@@ -20,16 +21,17 @@ module spatial_audio_top (
     assign rx_lrck = tx_lrck;
     assign rx_sclk = tx_sclk;
 
-    // 1. Generate Audio Clock
-    wire clk_audio; 
-    wire locked;    // <--- NEW SIGNAL
-    
+         
+    // Audio clock is now generated outside (in block design)
+    /*
+    wire clk_audio;
     clk_wiz_audio clk_gen (
         .clk_in1(clk_100mhz),
         .clk_out1(clk_audio),
         .reset(reset_btn),
         .locked(locked) // <--- CONNECT THIS
     );
+    */
 
     // 2. Create a Safe System Reset
     // The logic is held in reset until the clock is STABLE (Locked = 1)

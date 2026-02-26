@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# updatemem v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# 
+# Start of session at: Thu Feb 26 02:09:21 2026
+# Process ID: 26848
+# Current directory: d:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir
+# Command line: updatemem.exe -mode batch -source F:/Xilinx/SDK/2018.3/scripts/updatemem/main.tcl -notrace -tclargs -meminfo D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.mmi -data F:/Xilinx/SDK/2018.3/data/embeddedsw/lib/microblaze/mb_bootloop_le.elf -proc design_1_i/microblaze_0 -bit D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit -out D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/download.bit -force
+# Log file: d:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/updatemem.log
+# Journal file: d:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir\updatemem.jou
+#-----------------------------------------------------------
+source F:/Xilinx/SDK/2018.3/scripts/updatemem/main.tcl -notrace
+ Loading bitfile D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+Loading data files...
+Updating memory content...
+Creating bitstream...
+Writing bitstream D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/download.bit...
+  update_mem: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 523.430 ; gain = 441.211
+INFO: [Common 17-206] Exiting updatemem at Thu Feb 26 02:09:30 2026...
