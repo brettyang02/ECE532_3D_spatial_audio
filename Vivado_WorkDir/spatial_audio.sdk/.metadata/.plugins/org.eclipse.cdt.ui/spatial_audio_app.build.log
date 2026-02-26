@@ -1,6 +1,21 @@
-02:10:57 **** Incremental Build of configuration Debug for project spatial_audio_app ****
+11:02:02 **** Auto Build of configuration Debug for project spatial_audio_app ****
 make all 
-make: Nothing to be done for 'all'.
+'Building file: ../src/jstk_test.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/jstk_test.o" -I../../spatial_audio_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/jstk_test.d" -MT"src/jstk_test.o" -o "src/jstk_test.o" "../src/jstk_test.c"
+'Finished building: ../src/jstk_test.c'
+' '
+'Building target: spatial_audio_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../spatial_audio_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "spatial_audio_app.elf"  ./src/jstk_test.o ./src/platform.o ./src/spatial_audio_run.o ./src/spatial_audio_uart.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spatial_audio_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size spatial_audio_app.elf  |tee "spatial_audio_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31644	    364	   3232	  35240	   89a8	spatial_audio_app.elf
+'Finished building: spatial_audio_app.elf.size'
+' '
 
-02:10:57 Build Finished (took 110ms)
+11:02:03 Build Finished (took 678ms)
 

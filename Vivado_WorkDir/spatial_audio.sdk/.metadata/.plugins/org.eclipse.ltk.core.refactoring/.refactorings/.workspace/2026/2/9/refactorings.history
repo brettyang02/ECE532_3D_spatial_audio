@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;spatial_audio_app/src/helloworld.c&apos;" deleteContents="false" description="Delete resource &apos;spatial_audio_app/src/helloworld.c&apos;" element1="/spatial_audio_app/src/helloworld.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1772121173476"/>
+</session>
