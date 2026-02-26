@@ -1,0 +1,123 @@
+/******************************************************************************
+*
+* Copyright (C) 2009 - 2014 Xilinx, Inc.  All rights reserved.
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* Use of the Software is limited solely to applications:
+* (a) running on a Xilinx device, or
+* (b) that interact with a Xilinx device through a bus or interconnect.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+* Except as contained in this notice, the name of the Xilinx shall not be used
+* in advertising or otherwise to promote the sale, use or other dealings in
+* this Software without prior written authorization from Xilinx.
+*
+******************************************************************************/
+
+/*
+ * helloworld.c: simple test application
+ *
+ * This application configures UART 16550 to baud rate 9600.
+ * PS7 UART (Zynq) is not initialized by this application, since
+ * bootrom/bsp configures it to baud rate 115200
+ *
+ * ------------------------------------------------
+ * | UART TYPE   BAUD RATE                        |
+ * ------------------------------------------------
+ *   uartns550   9600
+ *   uartlite    Configurable only in HW design
+ *   ps7_uart    115200 (configured by bootrom/bsp)
+ */
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+
+#include <stdlib.h> // Required for the atoi() function (String to Integer)
+#include "xgpio.h"
+#include "xuartlite_l.h"
+#include "xparameters.h"
+
+int main_uart()
+{
+    init_platform();
+
+    // Initialize the GPIO
+    XGpio angle_gpio;
+    XGpio_Initialize(&angle_gpio, XPAR_GPIO_0_DEVICE_ID);
+    XGpio_SetDataDirection(&angle_gpio, 1, 0x00);
+
+    u8 current_angle = 0;
+    XGpio_DiscreteWrite(&angle_gpio, 1, current_angle);
+
+    print("--- Spatial Audio Control (Direct Input) ---\n\r");
+    print("Type an index (0 to 71) and press ENTER:\n\r");
+    print("> ");
+
+    // Create a buffer to hold the characters as you type them
+    char input_buffer[10];
+    int buffer_index = 0;
+
+    while(1) {
+        // Wait for a byte from the terminal
+        u8 key_input = XUartLite_RecvByte(XPAR_UARTLITE_0_BASEADDR);
+
+        // Check if the user pressed 'Enter' (Carriage Return \r or Line Feed \n)
+        if (key_input == '\r' || key_input == '\n') {
+            if (buffer_index > 0) {
+                // We have some numbers! Cap off the string.
+                input_buffer[buffer_index] = '\0';
+
+                // Convert the string to an integer
+                int parsed_angle = atoi(input_buffer);
+
+                // Check if it fits in our 8-bit wire (0-71)
+                if (parsed_angle >= 0 && parsed_angle <= 71) {
+                    current_angle = (u8)parsed_angle;
+                    XGpio_DiscreteWrite(&angle_gpio, 1, current_angle);
+                    xil_printf("\n\rSuccess! Sent target angle: %d\n\r", current_angle*5);
+                } else {
+                    xil_printf("\n\rError: %d is out of bounds! Must be 0-71.\n\r", parsed_angle);
+                }
+
+                // Reset the buffer for the next input
+                buffer_index = 0;
+                print("> ");
+            }
+        }
+        // Handle Backspace (ASCII 8 or 127) so you can fix typos
+        else if (key_input == 8 || key_input == 127) {
+            if (buffer_index > 0) {
+                buffer_index--;
+                // Visual trick: move cursor back, print space, move back again to erase on screen
+                outbyte(8); outbyte(' '); outbyte(8);
+            }
+        }
+        // If it's a number (0-9), store it in the buffer
+        else if (key_input >= '0' && key_input <= '9') {
+            if (buffer_index < 9) { // Prevent buffer overflow
+                input_buffer[buffer_index] = key_input;
+                buffer_index++;
+                outbyte(key_input); // Echo the character back so you can see what you are typing
+            }
+        }
+    }
+
+    cleanup_platform();
+    return 0;
+}

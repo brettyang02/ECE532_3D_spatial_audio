@@ -2,6 +2,9 @@
 #  -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { clk_100mhz }];
 # create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports { clk_100mhz }];
 
+# CDC
+set_false_path -from [get_clocks -of_objects [get_pins design_1_i/clk_wiz_1/inst/clk_out1]] -to [get_clocks -of_objects [get_pins design_1_i/clk_wiz_1/inst/clk_out2]]
+
 ## ---- Pmod I2S2 on JA ----
 ## DAC (pins 1-4)
 set_property PACKAGE_PIN C17 [get_ports tx_mclk]   ;# JA1
