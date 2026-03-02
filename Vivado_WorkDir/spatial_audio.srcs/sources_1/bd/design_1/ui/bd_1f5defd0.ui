@@ -38,8 +38,8 @@ preplace netloc spatial_audio_top_0_rx_sclk 1 6 1 2010J
 preplace netloc microblaze_0_Clk 1 1 5 200 630 610 450 890 580 1400 50 1720
 preplace netloc microblaze_0_axi_periph_M03_AXI 1 5 1 1700
 preplace netloc microblaze_0_ilmb_1 1 4 1 1370
-preplace netloc microblaze_0_M_AXI_DP 1 4 1 1380
 preplace netloc microblaze_0_axi_periph_M00_AXI 1 2 4 590 60 NJ 60 NJ 60 1690
+preplace netloc microblaze_0_M_AXI_DP 1 4 1 1380
 preplace netloc sys_clock_1 1 0 1 NJ
 preplace netloc spatial_audio_top_0_tx_mclk 1 6 1 2010J
 preplace netloc axi_gpio_0_gpio_io_o 1 5 2 1710 490 2020
@@ -52,8 +52,8 @@ preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 2 620J 460 880
 preplace netloc clk_wiz_1_locked 1 1 5 220 670 NJ 670 NJ 670 NJ 670 NJ
 preplace netloc axi_uartlite_0_UART 1 6 1 NJ
 preplace netloc clk_wiz_1_clk_out2 1 1 5 N 650 NJ 650 NJ 650 NJ 650 NJ
-preplace netloc microblaze_0_axi_periph_M02_AXI 1 5 1 1710
 preplace netloc microblaze_0_dlmb_1 1 4 1 1390
+preplace netloc microblaze_0_axi_periph_M02_AXI 1 5 1 1710
 preplace netloc spatial_audio_top_0_rx_lrck 1 6 1 2020J
 preplace netloc spatial_audio_top_0_rx_mclk 1 6 1 2020J
 preplace netloc microblaze_0_debug 1 3 1 870

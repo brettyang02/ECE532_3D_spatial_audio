@@ -1,5 +1,4 @@
 module spatial_audio_top (
-    
     input wire clk_audio,
     input wire locked,
     
@@ -21,31 +20,77 @@ module spatial_audio_top (
     assign rx_lrck = tx_lrck;
     assign rx_sclk = tx_sclk;
 
-         
-    // Audio clock is now generated outside (in block design)
-    /*
-    wire clk_audio;
-    clk_wiz_audio clk_gen (
-        .clk_in1(clk_100mhz),
-        .clk_out1(clk_audio),
-        .reset(reset_btn),
-        .locked(locked) // <--- CONNECT THIS
-    );
-    */
-
-    // 2. Create a Safe System Reset
-    // The logic is held in reset until the clock is STABLE (Locked = 1)
-    // We invert it: When Locked is 0 (Unstable), Reset is 1 (Active).
+    // 1. Safe System Reset
     wire rst_audio = ~locked; 
 
-    // 3. I2S Controller
+    // ==========================================
+    // FIXED: Ping-Pong Trigger Logic & Lockout
+    // ==========================================
+    reg [7:0] angle_a = 0;     // Feeds Port A Address Generator
+    reg [7:0] angle_b = 0;     // Feeds Port B Address Generator
+    reg active_channel = 0;    // 0 = Port A is loud, 1 = Port B is loud
+    reg crossfade_trig = 0;
+
+    reg [8:0] lockout_counter = 0;
+    reg is_locked_out = 0;
+
+    always @(posedge clk_audio) begin
+        if (rst_audio) begin
+            angle_a <= target_angle;
+            angle_b <= target_angle;
+            active_channel <= 1'b0; // Start with A loud
+            crossfade_trig <= 1'b0;
+            is_locked_out <= 1'b0;
+            lockout_counter <= 9'd0;
+        end else begin
+            // Default: Keep trigger low
+            crossfade_trig <= 1'b0; 
+
+            if (is_locked_out) begin
+                // A crossfade is currently happening. Wait for 256 samples.
+                if (new_sample) begin
+                    if (lockout_counter < 9'd256) begin
+                        lockout_counter <= lockout_counter + 1'b1;
+                    end else begin
+                        is_locked_out <= 1'b0; // Fade finished! Unlock.
+                    end
+                end
+            end 
+            else begin
+                // We are NOT fading. Check if the joystick has moved from the currently playing angle.
+                if (active_channel == 1'b0) begin
+                    // --- PORT A IS CURRENTLY LOUD ---
+                    if (target_angle != angle_a) begin
+                        angle_b <= target_angle; // Load new angle into SILENT Port B
+                        active_channel <= 1'b1;  // Tell crossfader to fade TO B
+                        crossfade_trig <= 1'b1;  // Fire the trigger pulse
+                        is_locked_out <= 1'b1;   // Lock out new inputs
+                        lockout_counter <= 9'd0;
+                    end
+                end else begin
+                    // --- PORT B IS CURRENTLY LOUD ---
+                    if (target_angle != angle_b) begin
+                        angle_a <= target_angle; // Load new angle into SILENT Port A
+                        active_channel <= 1'b0;  // Tell crossfader to fade TO A
+                        crossfade_trig <= 1'b1;  // Fire the trigger pulse
+                        is_locked_out <= 1'b1;   // Lock out new inputs
+                        lockout_counter <= 9'd0;
+                    end
+                end
+            end
+        end
+    end
+
+    // ==========================================
+    // 2. I2S Controller
+    // ==========================================
     wire [23:0] l_in, r_in;
     wire [23:0] l_out, r_out;
     wire new_sample;
     
     i2s_controller i2s (
         .clk_audio(clk_audio),
-        .reset(rst_audio), // <--- USE LOCKED RESET
+        .reset(rst_audio), 
         .mclk(tx_mclk),
         .lrck(tx_lrck),
         .sclk(tx_sclk),
@@ -58,54 +103,93 @@ module spatial_audio_top (
         .new_sample_pulse(new_sample)
     );
 
-    // 4. Address Gen 
-    wire [15:0] bram_addr;
-    wire conv_en, conv_done;
+    // ==========================================
+    // 3. Address Generators (Dual Instantiation)
+    // ==========================================
+    wire [15:0] bram_addr_a;
+    wire [15:0] bram_addr_b;
+    wire conv_en;
     
-    hrtf_address_generator addr_gen (
+    // Generates addresses for Port A
+    hrtf_address_generator addr_gen_a (
         .clk(clk_audio),
-        .reset(rst_audio), // <--- USE LOCKED RESET
+        .reset(rst_audio), 
         .start_trigger(new_sample),
-        .angle_index(target_angle),
-        .bram_addr(bram_addr),
+        .angle_index(angle_a), 
+        .bram_addr(bram_addr_a),
         .conv_en(conv_en),
-        .conv_done(conv_done)
+        .conv_done()
     );
 
-    // 5. BRAM & DSP (Left Ear)
-    wire [15:0] coeff_l;
+    // Generates addresses for Port B
+    hrtf_address_generator addr_gen_b (
+        .clk(clk_audio),
+        .reset(rst_audio), 
+        .start_trigger(new_sample),
+        .angle_index(angle_b), 
+        .bram_addr(bram_addr_b),
+        .conv_en(),  // Only need conv_en from the first one
+        .conv_done() 
+    );
+
+    // ==========================================
+    // 4. BRAM & Crossfader (Left Ear)
+    // ==========================================
+    wire [15:0] coeff_l_a;
+    wire [15:0] coeff_l_b;
+    
     rom_hrtf_left rom_l (
+        // Port A
         .clka(clk_audio),
-        .addra(bram_addr[13:0]), 
-        .douta(coeff_l)
+        .addra(bram_addr_a[13:0]), 
+        .douta(coeff_l_a),
+        // Port B
+        .clkb(clk_audio),
+        .addrb(bram_addr_b[13:0]),
+        .doutb(coeff_l_b)
     );
     
-    dsp_fir_folded fir_left (
+    hrtf_crossfader crossfade_left (
         .clk(clk_audio),
         .reset(rst_audio),
         .conv_en(conv_en),
-        .audio_in(l_in),
-        .coeff_in(coeff_l),
         .new_sample_trig(new_sample),
-        .audio_out(l_out)
+        .audio_in(l_in),
+        .coeff_a(coeff_l_a),
+        .coeff_b(coeff_l_b),
+        .start_crossfade_trig(crossfade_trig),
+        .fade_to_b(active_channel), // 0 = Fade to A, 1 = Fade to B
+        .audio_out_mixed(l_out)
     );
 
-    // 6. BRAM & DSP (Right Ear)
-    wire [15:0] coeff_r;
+    // ==========================================
+    // 5. BRAM & Crossfader (Right Ear)
+    // ==========================================
+    wire [15:0] coeff_r_a;
+    wire [15:0] coeff_r_b;
+    
     rom_hrtf_right rom_r (
+        // Port A
         .clka(clk_audio),
-        .addra(bram_addr[13:0]),
-        .douta(coeff_r)
+        .addra(bram_addr_a[13:0]),
+        .douta(coeff_r_a),
+        // Port B
+        .clkb(clk_audio),
+        .addrb(bram_addr_b[13:0]),
+        .doutb(coeff_r_b)
     );
     
-    dsp_fir_folded fir_right (
+    hrtf_crossfader crossfade_right (
         .clk(clk_audio),
         .reset(rst_audio),
         .conv_en(conv_en),
-        .audio_in(r_in), 
-        .coeff_in(coeff_r),
         .new_sample_trig(new_sample),
-        .audio_out(r_out)
+        .audio_in(r_in), 
+        .coeff_a(coeff_r_a),
+        .coeff_b(coeff_r_b),
+        .start_crossfade_trig(crossfade_trig),
+        .fade_to_b(active_channel), // 0 = Fade to A, 1 = Fade to B
+        .audio_out_mixed(r_out)
     );
 
 endmodule

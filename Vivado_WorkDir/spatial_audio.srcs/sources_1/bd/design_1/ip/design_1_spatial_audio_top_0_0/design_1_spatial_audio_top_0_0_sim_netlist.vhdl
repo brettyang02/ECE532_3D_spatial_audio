@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Thu Feb 26 01:24:08 2026
--- Host        : Brett_PC running 64-bit major release  (build 9200)
+-- Date        : Mon Mar  2 01:16:15 2026
+-- Host        : Andiputer running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               d:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.srcs/sources_1/bd/design_1/ip/design_1_spatial_audio_top_0_0/design_1_spatial_audio_top_0_0_sim_netlist.vhdl
+--               C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.srcs/sources_1/bd/design_1/ip/design_1_spatial_audio_top_0_0/design_1_spatial_audio_top_0_0_sim_netlist.vhdl
 -- Design      : design_1_spatial_audio_top_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,9 +16,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_spatial_audio_top_0_0_dsp_fir_folded is
   port (
-    Q : out STD_LOGIC_VECTOR ( 6 downto 0 );
-    \write_ptr_reg[0]_0\ : out STD_LOGIC;
-    \audio_out_reg[23]_0\ : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    P : out STD_LOGIC_VECTOR ( 23 downto 0 );
     pipe_audio_s1 : in STD_LOGIC;
     accumulator_reg_0 : in STD_LOGIC;
     accumulator_reg_1 : in STD_LOGIC;
@@ -26,9 +24,9 @@ entity design_1_spatial_audio_top_0_0_dsp_fir_folded is
     rst_audio : in STD_LOGIC;
     RSTP : in STD_LOGIC;
     douta : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    \read_ptr_reg[0]_0\ : in STD_LOGIC;
+    \read_ptr_reg[6]_0\ : in STD_LOGIC;
     new_sample : in STD_LOGIC;
-    read_ptr_reg : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \read_ptr_reg[6]_1\ : in STD_LOGIC_VECTOR ( 6 downto 0 );
     accumulator_reg_2 : in STD_LOGIC_VECTOR ( 23 downto 0 );
     accumulator_reg_3 : in STD_LOGIC;
     accumulator_reg_4 : in STD_LOGIC
@@ -38,7 +36,30 @@ entity design_1_spatial_audio_top_0_0_dsp_fir_folded is
 end design_1_spatial_audio_top_0_0_dsp_fir_folded;
 
 architecture STRUCTURE of design_1_spatial_audio_top_0_0_dsp_fir_folded is
-  signal \^q\ : STD_LOGIC_VECTOR ( 6 downto 0 );
+  signal \accumulator_reg_i_10__2_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_11__2_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_12__2_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_13__2_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_14__2_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_15__2_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_16__2_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_17__2_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_18__2_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_19__2_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_1__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_20__2_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_21__2_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_22__2_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_23__2_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_24__2_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_2__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_3__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_4__2_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_5__2_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_6__2_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_7__2_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_8__2_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_9__2_n_0\ : STD_LOGIC;
   signal accumulator_reg_n_100 : STD_LOGIC;
   signal accumulator_reg_n_101 : STD_LOGIC;
   signal accumulator_reg_n_102 : STD_LOGIC;
@@ -55,30 +76,6 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_dsp_fir_folded is
   signal accumulator_reg_n_65 : STD_LOGIC;
   signal accumulator_reg_n_66 : STD_LOGIC;
   signal accumulator_reg_n_67 : STD_LOGIC;
-  signal accumulator_reg_n_68 : STD_LOGIC;
-  signal accumulator_reg_n_69 : STD_LOGIC;
-  signal accumulator_reg_n_70 : STD_LOGIC;
-  signal accumulator_reg_n_71 : STD_LOGIC;
-  signal accumulator_reg_n_72 : STD_LOGIC;
-  signal accumulator_reg_n_73 : STD_LOGIC;
-  signal accumulator_reg_n_74 : STD_LOGIC;
-  signal accumulator_reg_n_75 : STD_LOGIC;
-  signal accumulator_reg_n_76 : STD_LOGIC;
-  signal accumulator_reg_n_77 : STD_LOGIC;
-  signal accumulator_reg_n_78 : STD_LOGIC;
-  signal accumulator_reg_n_79 : STD_LOGIC;
-  signal accumulator_reg_n_80 : STD_LOGIC;
-  signal accumulator_reg_n_81 : STD_LOGIC;
-  signal accumulator_reg_n_82 : STD_LOGIC;
-  signal accumulator_reg_n_83 : STD_LOGIC;
-  signal accumulator_reg_n_84 : STD_LOGIC;
-  signal accumulator_reg_n_85 : STD_LOGIC;
-  signal accumulator_reg_n_86 : STD_LOGIC;
-  signal accumulator_reg_n_87 : STD_LOGIC;
-  signal accumulator_reg_n_88 : STD_LOGIC;
-  signal accumulator_reg_n_89 : STD_LOGIC;
-  signal accumulator_reg_n_90 : STD_LOGIC;
-  signal accumulator_reg_n_91 : STD_LOGIC;
   signal accumulator_reg_n_92 : STD_LOGIC;
   signal accumulator_reg_n_93 : STD_LOGIC;
   signal accumulator_reg_n_94 : STD_LOGIC;
@@ -135,18 +132,2320 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_dsp_fir_folded is
   signal audio_history_reg_64_127_9_11_n_0 : STD_LOGIC;
   signal audio_history_reg_64_127_9_11_n_1 : STD_LOGIC;
   signal audio_history_reg_64_127_9_11_n_2 : STD_LOGIC;
-  signal \p_0_in__2\ : STD_LOGIC_VECTOR ( 6 downto 0 );
-  signal pipe_audio_s10 : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal read_ptr : STD_LOGIC_VECTOR ( 6 to 6 );
-  signal \read_ptr[0]_i_2_n_0\ : STD_LOGIC;
+  signal \read_ptr[0]_i_1__2_n_0\ : STD_LOGIC;
+  signal \read_ptr[1]_i_1__2_n_0\ : STD_LOGIC;
+  signal \read_ptr[2]_i_1_n_0\ : STD_LOGIC;
+  signal \read_ptr[3]_i_1_n_0\ : STD_LOGIC;
+  signal \read_ptr[4]_i_1_n_0\ : STD_LOGIC;
+  signal \read_ptr[4]_i_2_n_0\ : STD_LOGIC;
+  signal \read_ptr[5]_i_1_n_0\ : STD_LOGIC;
+  signal \read_ptr[6]_i_1__2_n_0\ : STD_LOGIC;
+  signal read_ptr_reg : STD_LOGIC_VECTOR ( 5 downto 0 );
+  signal NLW_accumulator_reg_CARRYCASCOUT_UNCONNECTED : STD_LOGIC;
+  signal NLW_accumulator_reg_MULTSIGNOUT_UNCONNECTED : STD_LOGIC;
+  signal NLW_accumulator_reg_OVERFLOW_UNCONNECTED : STD_LOGIC;
+  signal NLW_accumulator_reg_PATTERNBDETECT_UNCONNECTED : STD_LOGIC;
+  signal NLW_accumulator_reg_PATTERNDETECT_UNCONNECTED : STD_LOGIC;
+  signal NLW_accumulator_reg_UNDERFLOW_UNCONNECTED : STD_LOGIC;
+  signal NLW_accumulator_reg_ACOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 29 downto 0 );
+  signal NLW_accumulator_reg_BCOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 17 downto 0 );
+  signal NLW_accumulator_reg_CARRYOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_accumulator_reg_PCOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 47 downto 0 );
+  signal NLW_audio_history_reg_0_63_0_2_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_0_63_12_14_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_0_63_15_17_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_0_63_18_20_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_0_63_21_23_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_0_63_3_5_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_0_63_6_8_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_0_63_9_11_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_64_127_0_2_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_64_127_12_14_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_64_127_15_17_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_64_127_18_20_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_64_127_21_23_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_64_127_3_5_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_64_127_6_8_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_64_127_9_11_DOD_UNCONNECTED : STD_LOGIC;
+  attribute METHODOLOGY_DRC_VIOS : string;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_0_63_0_2 : label is "";
+  attribute ram_addr_begin : integer;
+  attribute ram_addr_begin of audio_history_reg_0_63_0_2 : label is 0;
+  attribute ram_addr_end : integer;
+  attribute ram_addr_end of audio_history_reg_0_63_0_2 : label is 63;
+  attribute ram_slice_begin : integer;
+  attribute ram_slice_begin of audio_history_reg_0_63_0_2 : label is 0;
+  attribute ram_slice_end : integer;
+  attribute ram_slice_end of audio_history_reg_0_63_0_2 : label is 2;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_0_63_12_14 : label is "";
+  attribute ram_addr_begin of audio_history_reg_0_63_12_14 : label is 0;
+  attribute ram_addr_end of audio_history_reg_0_63_12_14 : label is 63;
+  attribute ram_slice_begin of audio_history_reg_0_63_12_14 : label is 12;
+  attribute ram_slice_end of audio_history_reg_0_63_12_14 : label is 14;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_0_63_15_17 : label is "";
+  attribute ram_addr_begin of audio_history_reg_0_63_15_17 : label is 0;
+  attribute ram_addr_end of audio_history_reg_0_63_15_17 : label is 63;
+  attribute ram_slice_begin of audio_history_reg_0_63_15_17 : label is 15;
+  attribute ram_slice_end of audio_history_reg_0_63_15_17 : label is 17;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_0_63_18_20 : label is "";
+  attribute ram_addr_begin of audio_history_reg_0_63_18_20 : label is 0;
+  attribute ram_addr_end of audio_history_reg_0_63_18_20 : label is 63;
+  attribute ram_slice_begin of audio_history_reg_0_63_18_20 : label is 18;
+  attribute ram_slice_end of audio_history_reg_0_63_18_20 : label is 20;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_0_63_21_23 : label is "";
+  attribute ram_addr_begin of audio_history_reg_0_63_21_23 : label is 0;
+  attribute ram_addr_end of audio_history_reg_0_63_21_23 : label is 63;
+  attribute ram_slice_begin of audio_history_reg_0_63_21_23 : label is 21;
+  attribute ram_slice_end of audio_history_reg_0_63_21_23 : label is 23;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_0_63_3_5 : label is "";
+  attribute ram_addr_begin of audio_history_reg_0_63_3_5 : label is 0;
+  attribute ram_addr_end of audio_history_reg_0_63_3_5 : label is 63;
+  attribute ram_slice_begin of audio_history_reg_0_63_3_5 : label is 3;
+  attribute ram_slice_end of audio_history_reg_0_63_3_5 : label is 5;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_0_63_6_8 : label is "";
+  attribute ram_addr_begin of audio_history_reg_0_63_6_8 : label is 0;
+  attribute ram_addr_end of audio_history_reg_0_63_6_8 : label is 63;
+  attribute ram_slice_begin of audio_history_reg_0_63_6_8 : label is 6;
+  attribute ram_slice_end of audio_history_reg_0_63_6_8 : label is 8;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_0_63_9_11 : label is "";
+  attribute ram_addr_begin of audio_history_reg_0_63_9_11 : label is 0;
+  attribute ram_addr_end of audio_history_reg_0_63_9_11 : label is 63;
+  attribute ram_slice_begin of audio_history_reg_0_63_9_11 : label is 9;
+  attribute ram_slice_end of audio_history_reg_0_63_9_11 : label is 11;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_64_127_0_2 : label is "";
+  attribute ram_addr_begin of audio_history_reg_64_127_0_2 : label is 64;
+  attribute ram_addr_end of audio_history_reg_64_127_0_2 : label is 127;
+  attribute ram_slice_begin of audio_history_reg_64_127_0_2 : label is 0;
+  attribute ram_slice_end of audio_history_reg_64_127_0_2 : label is 2;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_64_127_12_14 : label is "";
+  attribute ram_addr_begin of audio_history_reg_64_127_12_14 : label is 64;
+  attribute ram_addr_end of audio_history_reg_64_127_12_14 : label is 127;
+  attribute ram_slice_begin of audio_history_reg_64_127_12_14 : label is 12;
+  attribute ram_slice_end of audio_history_reg_64_127_12_14 : label is 14;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_64_127_15_17 : label is "";
+  attribute ram_addr_begin of audio_history_reg_64_127_15_17 : label is 64;
+  attribute ram_addr_end of audio_history_reg_64_127_15_17 : label is 127;
+  attribute ram_slice_begin of audio_history_reg_64_127_15_17 : label is 15;
+  attribute ram_slice_end of audio_history_reg_64_127_15_17 : label is 17;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_64_127_18_20 : label is "";
+  attribute ram_addr_begin of audio_history_reg_64_127_18_20 : label is 64;
+  attribute ram_addr_end of audio_history_reg_64_127_18_20 : label is 127;
+  attribute ram_slice_begin of audio_history_reg_64_127_18_20 : label is 18;
+  attribute ram_slice_end of audio_history_reg_64_127_18_20 : label is 20;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_64_127_21_23 : label is "";
+  attribute ram_addr_begin of audio_history_reg_64_127_21_23 : label is 64;
+  attribute ram_addr_end of audio_history_reg_64_127_21_23 : label is 127;
+  attribute ram_slice_begin of audio_history_reg_64_127_21_23 : label is 21;
+  attribute ram_slice_end of audio_history_reg_64_127_21_23 : label is 23;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_64_127_3_5 : label is "";
+  attribute ram_addr_begin of audio_history_reg_64_127_3_5 : label is 64;
+  attribute ram_addr_end of audio_history_reg_64_127_3_5 : label is 127;
+  attribute ram_slice_begin of audio_history_reg_64_127_3_5 : label is 3;
+  attribute ram_slice_end of audio_history_reg_64_127_3_5 : label is 5;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_64_127_6_8 : label is "";
+  attribute ram_addr_begin of audio_history_reg_64_127_6_8 : label is 64;
+  attribute ram_addr_end of audio_history_reg_64_127_6_8 : label is 127;
+  attribute ram_slice_begin of audio_history_reg_64_127_6_8 : label is 6;
+  attribute ram_slice_end of audio_history_reg_64_127_6_8 : label is 8;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_64_127_9_11 : label is "";
+  attribute ram_addr_begin of audio_history_reg_64_127_9_11 : label is 64;
+  attribute ram_addr_end of audio_history_reg_64_127_9_11 : label is 127;
+  attribute ram_slice_begin of audio_history_reg_64_127_9_11 : label is 9;
+  attribute ram_slice_end of audio_history_reg_64_127_9_11 : label is 11;
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \read_ptr[0]_i_1__2\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \read_ptr[1]_i_1__2\ : label is "soft_lutpair19";
+begin
+accumulator_reg: unisim.vcomponents.DSP48E1
+    generic map(
+      ACASCREG => 2,
+      ADREG => 1,
+      ALUMODEREG => 0,
+      AREG => 2,
+      AUTORESET_PATDET => "NO_RESET",
+      A_INPUT => "DIRECT",
+      BCASCREG => 0,
+      BREG => 0,
+      B_INPUT => "DIRECT",
+      CARRYINREG => 0,
+      CARRYINSELREG => 0,
+      CREG => 1,
+      DREG => 1,
+      INMODEREG => 0,
+      MASK => X"3FFFFFFFFFFF",
+      MREG => 0,
+      OPMODEREG => 0,
+      PATTERN => X"000000000000",
+      PREG => 1,
+      SEL_MASK => "MASK",
+      SEL_PATTERN => "PATTERN",
+      USE_DPORT => false,
+      USE_MULT => "MULTIPLY",
+      USE_PATTERN_DETECT => "NO_PATDET",
+      USE_SIMD => "ONE48"
+    )
+        port map (
+      A(29) => \accumulator_reg_i_1__1_n_0\,
+      A(28) => \accumulator_reg_i_1__1_n_0\,
+      A(27) => \accumulator_reg_i_1__1_n_0\,
+      A(26) => \accumulator_reg_i_1__1_n_0\,
+      A(25) => \accumulator_reg_i_1__1_n_0\,
+      A(24) => \accumulator_reg_i_1__1_n_0\,
+      A(23) => \accumulator_reg_i_1__1_n_0\,
+      A(22) => \accumulator_reg_i_2__1_n_0\,
+      A(21) => \accumulator_reg_i_3__1_n_0\,
+      A(20) => \accumulator_reg_i_4__2_n_0\,
+      A(19) => \accumulator_reg_i_5__2_n_0\,
+      A(18) => \accumulator_reg_i_6__2_n_0\,
+      A(17) => \accumulator_reg_i_7__2_n_0\,
+      A(16) => \accumulator_reg_i_8__2_n_0\,
+      A(15) => \accumulator_reg_i_9__2_n_0\,
+      A(14) => \accumulator_reg_i_10__2_n_0\,
+      A(13) => \accumulator_reg_i_11__2_n_0\,
+      A(12) => \accumulator_reg_i_12__2_n_0\,
+      A(11) => \accumulator_reg_i_13__2_n_0\,
+      A(10) => \accumulator_reg_i_14__2_n_0\,
+      A(9) => \accumulator_reg_i_15__2_n_0\,
+      A(8) => \accumulator_reg_i_16__2_n_0\,
+      A(7) => \accumulator_reg_i_17__2_n_0\,
+      A(6) => \accumulator_reg_i_18__2_n_0\,
+      A(5) => \accumulator_reg_i_19__2_n_0\,
+      A(4) => \accumulator_reg_i_20__2_n_0\,
+      A(3) => \accumulator_reg_i_21__2_n_0\,
+      A(2) => \accumulator_reg_i_22__2_n_0\,
+      A(1) => \accumulator_reg_i_23__2_n_0\,
+      A(0) => \accumulator_reg_i_24__2_n_0\,
+      ACIN(29 downto 0) => B"000000000000000000000000000000",
+      ACOUT(29 downto 0) => NLW_accumulator_reg_ACOUT_UNCONNECTED(29 downto 0),
+      ALUMODE(3 downto 0) => B"0000",
+      B(17) => douta(15),
+      B(16) => douta(15),
+      B(15 downto 0) => douta(15 downto 0),
+      BCIN(17 downto 0) => B"000000000000000000",
+      BCOUT(17 downto 0) => NLW_accumulator_reg_BCOUT_UNCONNECTED(17 downto 0),
+      C(47 downto 0) => B"111111111111111111111111111111111111111111111111",
+      CARRYCASCIN => '0',
+      CARRYCASCOUT => NLW_accumulator_reg_CARRYCASCOUT_UNCONNECTED,
+      CARRYIN => '0',
+      CARRYINSEL(2 downto 0) => B"000",
+      CARRYOUT(3 downto 0) => NLW_accumulator_reg_CARRYOUT_UNCONNECTED(3 downto 0),
+      CEA1 => pipe_audio_s1,
+      CEA2 => accumulator_reg_0,
+      CEAD => '0',
+      CEALUMODE => '0',
+      CEB1 => '0',
+      CEB2 => '0',
+      CEC => '0',
+      CECARRYIN => '0',
+      CECTRL => '0',
+      CED => '0',
+      CEINMODE => '0',
+      CEM => '0',
+      CEP => accumulator_reg_1,
+      CLK => clk_audio,
+      D(24 downto 0) => B"0000000000000000000000000",
+      INMODE(4 downto 0) => B"00000",
+      MULTSIGNIN => '0',
+      MULTSIGNOUT => NLW_accumulator_reg_MULTSIGNOUT_UNCONNECTED,
+      OPMODE(6 downto 0) => B"0100101",
+      OVERFLOW => NLW_accumulator_reg_OVERFLOW_UNCONNECTED,
+      P(47) => accumulator_reg_n_58,
+      P(46) => accumulator_reg_n_59,
+      P(45) => accumulator_reg_n_60,
+      P(44) => accumulator_reg_n_61,
+      P(43) => accumulator_reg_n_62,
+      P(42) => accumulator_reg_n_63,
+      P(41) => accumulator_reg_n_64,
+      P(40) => accumulator_reg_n_65,
+      P(39) => accumulator_reg_n_66,
+      P(38) => accumulator_reg_n_67,
+      P(37 downto 14) => P(23 downto 0),
+      P(13) => accumulator_reg_n_92,
+      P(12) => accumulator_reg_n_93,
+      P(11) => accumulator_reg_n_94,
+      P(10) => accumulator_reg_n_95,
+      P(9) => accumulator_reg_n_96,
+      P(8) => accumulator_reg_n_97,
+      P(7) => accumulator_reg_n_98,
+      P(6) => accumulator_reg_n_99,
+      P(5) => accumulator_reg_n_100,
+      P(4) => accumulator_reg_n_101,
+      P(3) => accumulator_reg_n_102,
+      P(2) => accumulator_reg_n_103,
+      P(1) => accumulator_reg_n_104,
+      P(0) => accumulator_reg_n_105,
+      PATTERNBDETECT => NLW_accumulator_reg_PATTERNBDETECT_UNCONNECTED,
+      PATTERNDETECT => NLW_accumulator_reg_PATTERNDETECT_UNCONNECTED,
+      PCIN(47 downto 0) => B"000000000000000000000000000000000000000000000000",
+      PCOUT(47 downto 0) => NLW_accumulator_reg_PCOUT_UNCONNECTED(47 downto 0),
+      RSTA => rst_audio,
+      RSTALLCARRYIN => '0',
+      RSTALUMODE => '0',
+      RSTB => '0',
+      RSTC => '0',
+      RSTCTRL => '0',
+      RSTD => '0',
+      RSTINMODE => '0',
+      RSTM => '0',
+      RSTP => RSTP,
+      UNDERFLOW => NLW_accumulator_reg_UNDERFLOW_UNCONNECTED
+    );
+\accumulator_reg_i_10__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_12_14_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_12_14_n_2,
+      O => \accumulator_reg_i_10__2_n_0\
+    );
+\accumulator_reg_i_11__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_12_14_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_12_14_n_1,
+      O => \accumulator_reg_i_11__2_n_0\
+    );
+\accumulator_reg_i_12__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_12_14_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_12_14_n_0,
+      O => \accumulator_reg_i_12__2_n_0\
+    );
+\accumulator_reg_i_13__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_9_11_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_9_11_n_2,
+      O => \accumulator_reg_i_13__2_n_0\
+    );
+\accumulator_reg_i_14__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_9_11_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_9_11_n_1,
+      O => \accumulator_reg_i_14__2_n_0\
+    );
+\accumulator_reg_i_15__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_9_11_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_9_11_n_0,
+      O => \accumulator_reg_i_15__2_n_0\
+    );
+\accumulator_reg_i_16__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_6_8_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_6_8_n_2,
+      O => \accumulator_reg_i_16__2_n_0\
+    );
+\accumulator_reg_i_17__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_6_8_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_6_8_n_1,
+      O => \accumulator_reg_i_17__2_n_0\
+    );
+\accumulator_reg_i_18__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_6_8_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_6_8_n_0,
+      O => \accumulator_reg_i_18__2_n_0\
+    );
+\accumulator_reg_i_19__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_3_5_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_3_5_n_2,
+      O => \accumulator_reg_i_19__2_n_0\
+    );
+\accumulator_reg_i_1__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_21_23_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_21_23_n_2,
+      O => \accumulator_reg_i_1__1_n_0\
+    );
+\accumulator_reg_i_20__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_3_5_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_3_5_n_1,
+      O => \accumulator_reg_i_20__2_n_0\
+    );
+\accumulator_reg_i_21__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_3_5_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_3_5_n_0,
+      O => \accumulator_reg_i_21__2_n_0\
+    );
+\accumulator_reg_i_22__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_0_2_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_0_2_n_2,
+      O => \accumulator_reg_i_22__2_n_0\
+    );
+\accumulator_reg_i_23__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_0_2_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_0_2_n_1,
+      O => \accumulator_reg_i_23__2_n_0\
+    );
+\accumulator_reg_i_24__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_0_2_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_0_2_n_0,
+      O => \accumulator_reg_i_24__2_n_0\
+    );
+\accumulator_reg_i_2__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_21_23_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_21_23_n_1,
+      O => \accumulator_reg_i_2__1_n_0\
+    );
+\accumulator_reg_i_3__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_21_23_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_21_23_n_0,
+      O => \accumulator_reg_i_3__1_n_0\
+    );
+\accumulator_reg_i_4__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_18_20_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_18_20_n_2,
+      O => \accumulator_reg_i_4__2_n_0\
+    );
+\accumulator_reg_i_5__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_18_20_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_18_20_n_1,
+      O => \accumulator_reg_i_5__2_n_0\
+    );
+\accumulator_reg_i_6__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_18_20_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_18_20_n_0,
+      O => \accumulator_reg_i_6__2_n_0\
+    );
+\accumulator_reg_i_7__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_15_17_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_15_17_n_2,
+      O => \accumulator_reg_i_7__2_n_0\
+    );
+\accumulator_reg_i_8__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_15_17_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_15_17_n_1,
+      O => \accumulator_reg_i_8__2_n_0\
+    );
+\accumulator_reg_i_9__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_15_17_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_15_17_n_0,
+      O => \accumulator_reg_i_9__2_n_0\
+    );
+audio_history_reg_0_63_0_2: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(0),
+      DIB => accumulator_reg_2(1),
+      DIC => accumulator_reg_2(2),
+      DID => '0',
+      DOA => audio_history_reg_0_63_0_2_n_0,
+      DOB => audio_history_reg_0_63_0_2_n_1,
+      DOC => audio_history_reg_0_63_0_2_n_2,
+      DOD => NLW_audio_history_reg_0_63_0_2_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_3
+    );
+audio_history_reg_0_63_12_14: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(12),
+      DIB => accumulator_reg_2(13),
+      DIC => accumulator_reg_2(14),
+      DID => '0',
+      DOA => audio_history_reg_0_63_12_14_n_0,
+      DOB => audio_history_reg_0_63_12_14_n_1,
+      DOC => audio_history_reg_0_63_12_14_n_2,
+      DOD => NLW_audio_history_reg_0_63_12_14_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_3
+    );
+audio_history_reg_0_63_15_17: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(15),
+      DIB => accumulator_reg_2(16),
+      DIC => accumulator_reg_2(17),
+      DID => '0',
+      DOA => audio_history_reg_0_63_15_17_n_0,
+      DOB => audio_history_reg_0_63_15_17_n_1,
+      DOC => audio_history_reg_0_63_15_17_n_2,
+      DOD => NLW_audio_history_reg_0_63_15_17_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_3
+    );
+audio_history_reg_0_63_18_20: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(18),
+      DIB => accumulator_reg_2(19),
+      DIC => accumulator_reg_2(20),
+      DID => '0',
+      DOA => audio_history_reg_0_63_18_20_n_0,
+      DOB => audio_history_reg_0_63_18_20_n_1,
+      DOC => audio_history_reg_0_63_18_20_n_2,
+      DOD => NLW_audio_history_reg_0_63_18_20_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_3
+    );
+audio_history_reg_0_63_21_23: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(21),
+      DIB => accumulator_reg_2(22),
+      DIC => accumulator_reg_2(23),
+      DID => '0',
+      DOA => audio_history_reg_0_63_21_23_n_0,
+      DOB => audio_history_reg_0_63_21_23_n_1,
+      DOC => audio_history_reg_0_63_21_23_n_2,
+      DOD => NLW_audio_history_reg_0_63_21_23_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_3
+    );
+audio_history_reg_0_63_3_5: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(3),
+      DIB => accumulator_reg_2(4),
+      DIC => accumulator_reg_2(5),
+      DID => '0',
+      DOA => audio_history_reg_0_63_3_5_n_0,
+      DOB => audio_history_reg_0_63_3_5_n_1,
+      DOC => audio_history_reg_0_63_3_5_n_2,
+      DOD => NLW_audio_history_reg_0_63_3_5_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_3
+    );
+audio_history_reg_0_63_6_8: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(6),
+      DIB => accumulator_reg_2(7),
+      DIC => accumulator_reg_2(8),
+      DID => '0',
+      DOA => audio_history_reg_0_63_6_8_n_0,
+      DOB => audio_history_reg_0_63_6_8_n_1,
+      DOC => audio_history_reg_0_63_6_8_n_2,
+      DOD => NLW_audio_history_reg_0_63_6_8_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_3
+    );
+audio_history_reg_0_63_9_11: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(9),
+      DIB => accumulator_reg_2(10),
+      DIC => accumulator_reg_2(11),
+      DID => '0',
+      DOA => audio_history_reg_0_63_9_11_n_0,
+      DOB => audio_history_reg_0_63_9_11_n_1,
+      DOC => audio_history_reg_0_63_9_11_n_2,
+      DOD => NLW_audio_history_reg_0_63_9_11_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_3
+    );
+audio_history_reg_64_127_0_2: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(0),
+      DIB => accumulator_reg_2(1),
+      DIC => accumulator_reg_2(2),
+      DID => '0',
+      DOA => audio_history_reg_64_127_0_2_n_0,
+      DOB => audio_history_reg_64_127_0_2_n_1,
+      DOC => audio_history_reg_64_127_0_2_n_2,
+      DOD => NLW_audio_history_reg_64_127_0_2_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_4
+    );
+audio_history_reg_64_127_12_14: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(12),
+      DIB => accumulator_reg_2(13),
+      DIC => accumulator_reg_2(14),
+      DID => '0',
+      DOA => audio_history_reg_64_127_12_14_n_0,
+      DOB => audio_history_reg_64_127_12_14_n_1,
+      DOC => audio_history_reg_64_127_12_14_n_2,
+      DOD => NLW_audio_history_reg_64_127_12_14_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_4
+    );
+audio_history_reg_64_127_15_17: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(15),
+      DIB => accumulator_reg_2(16),
+      DIC => accumulator_reg_2(17),
+      DID => '0',
+      DOA => audio_history_reg_64_127_15_17_n_0,
+      DOB => audio_history_reg_64_127_15_17_n_1,
+      DOC => audio_history_reg_64_127_15_17_n_2,
+      DOD => NLW_audio_history_reg_64_127_15_17_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_4
+    );
+audio_history_reg_64_127_18_20: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(18),
+      DIB => accumulator_reg_2(19),
+      DIC => accumulator_reg_2(20),
+      DID => '0',
+      DOA => audio_history_reg_64_127_18_20_n_0,
+      DOB => audio_history_reg_64_127_18_20_n_1,
+      DOC => audio_history_reg_64_127_18_20_n_2,
+      DOD => NLW_audio_history_reg_64_127_18_20_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_4
+    );
+audio_history_reg_64_127_21_23: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(21),
+      DIB => accumulator_reg_2(22),
+      DIC => accumulator_reg_2(23),
+      DID => '0',
+      DOA => audio_history_reg_64_127_21_23_n_0,
+      DOB => audio_history_reg_64_127_21_23_n_1,
+      DOC => audio_history_reg_64_127_21_23_n_2,
+      DOD => NLW_audio_history_reg_64_127_21_23_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_4
+    );
+audio_history_reg_64_127_3_5: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(3),
+      DIB => accumulator_reg_2(4),
+      DIC => accumulator_reg_2(5),
+      DID => '0',
+      DOA => audio_history_reg_64_127_3_5_n_0,
+      DOB => audio_history_reg_64_127_3_5_n_1,
+      DOC => audio_history_reg_64_127_3_5_n_2,
+      DOD => NLW_audio_history_reg_64_127_3_5_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_4
+    );
+audio_history_reg_64_127_6_8: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(6),
+      DIB => accumulator_reg_2(7),
+      DIC => accumulator_reg_2(8),
+      DID => '0',
+      DOA => audio_history_reg_64_127_6_8_n_0,
+      DOB => audio_history_reg_64_127_6_8_n_1,
+      DOC => audio_history_reg_64_127_6_8_n_2,
+      DOD => NLW_audio_history_reg_64_127_6_8_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_4
+    );
+audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(9),
+      DIB => accumulator_reg_2(10),
+      DIC => accumulator_reg_2(11),
+      DID => '0',
+      DOA => audio_history_reg_64_127_9_11_n_0,
+      DOB => audio_history_reg_64_127_9_11_n_1,
+      DOC => audio_history_reg_64_127_9_11_n_2,
+      DOD => NLW_audio_history_reg_64_127_9_11_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_4
+    );
+\read_ptr[0]_i_1__2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"D1"
+    )
+        port map (
+      I0 => read_ptr_reg(0),
+      I1 => new_sample,
+      I2 => \read_ptr_reg[6]_1\(0),
+      O => \read_ptr[0]_i_1__2_n_0\
+    );
+\read_ptr[1]_i_1__2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"F909"
+    )
+        port map (
+      I0 => read_ptr_reg(0),
+      I1 => read_ptr_reg(1),
+      I2 => new_sample,
+      I3 => \read_ptr_reg[6]_1\(1),
+      O => \read_ptr[1]_i_1__2_n_0\
+    );
+\read_ptr[2]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFE100E1"
+    )
+        port map (
+      I0 => read_ptr_reg(1),
+      I1 => read_ptr_reg(0),
+      I2 => read_ptr_reg(2),
+      I3 => new_sample,
+      I4 => \read_ptr_reg[6]_1\(2),
+      O => \read_ptr[2]_i_1_n_0\
+    );
+\read_ptr[3]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFE010000FE01"
+    )
+        port map (
+      I0 => read_ptr_reg(2),
+      I1 => read_ptr_reg(0),
+      I2 => read_ptr_reg(1),
+      I3 => read_ptr_reg(3),
+      I4 => new_sample,
+      I5 => \read_ptr_reg[6]_1\(3),
+      O => \read_ptr[3]_i_1_n_0\
+    );
+\read_ptr[4]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"F909"
+    )
+        port map (
+      I0 => \read_ptr[4]_i_2_n_0\,
+      I1 => read_ptr_reg(4),
+      I2 => new_sample,
+      I3 => \read_ptr_reg[6]_1\(4),
+      O => \read_ptr[4]_i_1_n_0\
+    );
+\read_ptr[4]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => read_ptr_reg(2),
+      I1 => read_ptr_reg(0),
+      I2 => read_ptr_reg(1),
+      I3 => read_ptr_reg(3),
+      O => \read_ptr[4]_i_2_n_0\
+    );
+\read_ptr[5]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFE100E1"
+    )
+        port map (
+      I0 => read_ptr_reg(4),
+      I1 => \read_ptr[4]_i_2_n_0\,
+      I2 => read_ptr_reg(5),
+      I3 => new_sample,
+      I4 => \read_ptr_reg[6]_1\(5),
+      O => \read_ptr[5]_i_1_n_0\
+    );
+\read_ptr[6]_i_1__2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFE010000FE01"
+    )
+        port map (
+      I0 => \read_ptr[4]_i_2_n_0\,
+      I1 => read_ptr_reg(4),
+      I2 => read_ptr_reg(5),
+      I3 => read_ptr(6),
+      I4 => new_sample,
+      I5 => \read_ptr_reg[6]_1\(6),
+      O => \read_ptr[6]_i_1__2_n_0\
+    );
+\read_ptr_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[0]_i_1__2_n_0\,
+      Q => read_ptr_reg(0),
+      R => rst_audio
+    );
+\read_ptr_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[1]_i_1__2_n_0\,
+      Q => read_ptr_reg(1),
+      R => rst_audio
+    );
+\read_ptr_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[2]_i_1_n_0\,
+      Q => read_ptr_reg(2),
+      R => rst_audio
+    );
+\read_ptr_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[3]_i_1_n_0\,
+      Q => read_ptr_reg(3),
+      R => rst_audio
+    );
+\read_ptr_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[4]_i_1_n_0\,
+      Q => read_ptr_reg(4),
+      R => rst_audio
+    );
+\read_ptr_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[5]_i_1_n_0\,
+      Q => read_ptr_reg(5),
+      R => rst_audio
+    );
+\read_ptr_reg[6]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[6]_i_1__2_n_0\,
+      Q => read_ptr(6),
+      R => rst_audio
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity design_1_spatial_audio_top_0_0_dsp_fir_folded_2 is
+  port (
+    P : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    pipe_audio_s1 : in STD_LOGIC;
+    accumulator_reg_0 : in STD_LOGIC;
+    accumulator_reg_1 : in STD_LOGIC;
+    clk_audio : in STD_LOGIC;
+    rst_audio : in STD_LOGIC;
+    RSTP : in STD_LOGIC;
+    doutb : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    \read_ptr_reg[6]_0\ : in STD_LOGIC;
+    new_sample : in STD_LOGIC;
+    \read_ptr_reg[6]_1\ : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    accumulator_reg_2 : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    accumulator_reg_3 : in STD_LOGIC;
+    accumulator_reg_4 : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_dsp_fir_folded_2 : entity is "dsp_fir_folded";
+end design_1_spatial_audio_top_0_0_dsp_fir_folded_2;
+
+architecture STRUCTURE of design_1_spatial_audio_top_0_0_dsp_fir_folded_2 is
+  signal \accumulator_reg_i_10__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_11__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_12__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_13__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_14__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_15__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_16__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_17__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_18__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_19__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_1__0_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_20__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_21__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_22__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_23__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_24__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_2__0_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_3__0_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_4__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_5__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_6__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_7__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_8__1_n_0\ : STD_LOGIC;
+  signal \accumulator_reg_i_9__1_n_0\ : STD_LOGIC;
+  signal accumulator_reg_n_100 : STD_LOGIC;
+  signal accumulator_reg_n_101 : STD_LOGIC;
+  signal accumulator_reg_n_102 : STD_LOGIC;
+  signal accumulator_reg_n_103 : STD_LOGIC;
+  signal accumulator_reg_n_104 : STD_LOGIC;
+  signal accumulator_reg_n_105 : STD_LOGIC;
+  signal accumulator_reg_n_58 : STD_LOGIC;
+  signal accumulator_reg_n_59 : STD_LOGIC;
+  signal accumulator_reg_n_60 : STD_LOGIC;
+  signal accumulator_reg_n_61 : STD_LOGIC;
+  signal accumulator_reg_n_62 : STD_LOGIC;
+  signal accumulator_reg_n_63 : STD_LOGIC;
+  signal accumulator_reg_n_64 : STD_LOGIC;
+  signal accumulator_reg_n_65 : STD_LOGIC;
+  signal accumulator_reg_n_66 : STD_LOGIC;
+  signal accumulator_reg_n_67 : STD_LOGIC;
+  signal accumulator_reg_n_92 : STD_LOGIC;
+  signal accumulator_reg_n_93 : STD_LOGIC;
+  signal accumulator_reg_n_94 : STD_LOGIC;
+  signal accumulator_reg_n_95 : STD_LOGIC;
+  signal accumulator_reg_n_96 : STD_LOGIC;
+  signal accumulator_reg_n_97 : STD_LOGIC;
+  signal accumulator_reg_n_98 : STD_LOGIC;
+  signal accumulator_reg_n_99 : STD_LOGIC;
+  signal audio_history_reg_0_63_0_2_n_0 : STD_LOGIC;
+  signal audio_history_reg_0_63_0_2_n_1 : STD_LOGIC;
+  signal audio_history_reg_0_63_0_2_n_2 : STD_LOGIC;
+  signal audio_history_reg_0_63_12_14_n_0 : STD_LOGIC;
+  signal audio_history_reg_0_63_12_14_n_1 : STD_LOGIC;
+  signal audio_history_reg_0_63_12_14_n_2 : STD_LOGIC;
+  signal audio_history_reg_0_63_15_17_n_0 : STD_LOGIC;
+  signal audio_history_reg_0_63_15_17_n_1 : STD_LOGIC;
+  signal audio_history_reg_0_63_15_17_n_2 : STD_LOGIC;
+  signal audio_history_reg_0_63_18_20_n_0 : STD_LOGIC;
+  signal audio_history_reg_0_63_18_20_n_1 : STD_LOGIC;
+  signal audio_history_reg_0_63_18_20_n_2 : STD_LOGIC;
+  signal audio_history_reg_0_63_21_23_n_0 : STD_LOGIC;
+  signal audio_history_reg_0_63_21_23_n_1 : STD_LOGIC;
+  signal audio_history_reg_0_63_21_23_n_2 : STD_LOGIC;
+  signal audio_history_reg_0_63_3_5_n_0 : STD_LOGIC;
+  signal audio_history_reg_0_63_3_5_n_1 : STD_LOGIC;
+  signal audio_history_reg_0_63_3_5_n_2 : STD_LOGIC;
+  signal audio_history_reg_0_63_6_8_n_0 : STD_LOGIC;
+  signal audio_history_reg_0_63_6_8_n_1 : STD_LOGIC;
+  signal audio_history_reg_0_63_6_8_n_2 : STD_LOGIC;
+  signal audio_history_reg_0_63_9_11_n_0 : STD_LOGIC;
+  signal audio_history_reg_0_63_9_11_n_1 : STD_LOGIC;
+  signal audio_history_reg_0_63_9_11_n_2 : STD_LOGIC;
+  signal audio_history_reg_64_127_0_2_n_0 : STD_LOGIC;
+  signal audio_history_reg_64_127_0_2_n_1 : STD_LOGIC;
+  signal audio_history_reg_64_127_0_2_n_2 : STD_LOGIC;
+  signal audio_history_reg_64_127_12_14_n_0 : STD_LOGIC;
+  signal audio_history_reg_64_127_12_14_n_1 : STD_LOGIC;
+  signal audio_history_reg_64_127_12_14_n_2 : STD_LOGIC;
+  signal audio_history_reg_64_127_15_17_n_0 : STD_LOGIC;
+  signal audio_history_reg_64_127_15_17_n_1 : STD_LOGIC;
+  signal audio_history_reg_64_127_15_17_n_2 : STD_LOGIC;
+  signal audio_history_reg_64_127_18_20_n_0 : STD_LOGIC;
+  signal audio_history_reg_64_127_18_20_n_1 : STD_LOGIC;
+  signal audio_history_reg_64_127_18_20_n_2 : STD_LOGIC;
+  signal audio_history_reg_64_127_21_23_n_0 : STD_LOGIC;
+  signal audio_history_reg_64_127_21_23_n_1 : STD_LOGIC;
+  signal audio_history_reg_64_127_21_23_n_2 : STD_LOGIC;
+  signal audio_history_reg_64_127_3_5_n_0 : STD_LOGIC;
+  signal audio_history_reg_64_127_3_5_n_1 : STD_LOGIC;
+  signal audio_history_reg_64_127_3_5_n_2 : STD_LOGIC;
+  signal audio_history_reg_64_127_6_8_n_0 : STD_LOGIC;
+  signal audio_history_reg_64_127_6_8_n_1 : STD_LOGIC;
+  signal audio_history_reg_64_127_6_8_n_2 : STD_LOGIC;
+  signal audio_history_reg_64_127_9_11_n_0 : STD_LOGIC;
+  signal audio_history_reg_64_127_9_11_n_1 : STD_LOGIC;
+  signal audio_history_reg_64_127_9_11_n_2 : STD_LOGIC;
+  signal read_ptr : STD_LOGIC_VECTOR ( 6 to 6 );
+  signal \read_ptr[0]_i_1__0_n_0\ : STD_LOGIC;
   signal \read_ptr[1]_i_1__0_n_0\ : STD_LOGIC;
-  signal \read_ptr[2]_i_1__0_n_0\ : STD_LOGIC;
-  signal \read_ptr[3]_i_1__0_n_0\ : STD_LOGIC;
-  signal \read_ptr[4]_i_1__0_n_0\ : STD_LOGIC;
-  signal \read_ptr[4]_i_2__0_n_0\ : STD_LOGIC;
-  signal \read_ptr[5]_i_1__0_n_0\ : STD_LOGIC;
+  signal \read_ptr[2]_i_1__1_n_0\ : STD_LOGIC;
+  signal \read_ptr[3]_i_1__1_n_0\ : STD_LOGIC;
+  signal \read_ptr[4]_i_1__1_n_0\ : STD_LOGIC;
+  signal \read_ptr[4]_i_2__1_n_0\ : STD_LOGIC;
+  signal \read_ptr[5]_i_1__1_n_0\ : STD_LOGIC;
   signal \read_ptr[6]_i_1__0_n_0\ : STD_LOGIC;
-  signal read_ptr_reg_0 : STD_LOGIC_VECTOR ( 5 downto 0 );
+  signal read_ptr_reg : STD_LOGIC_VECTOR ( 5 downto 0 );
+  signal NLW_accumulator_reg_CARRYCASCOUT_UNCONNECTED : STD_LOGIC;
+  signal NLW_accumulator_reg_MULTSIGNOUT_UNCONNECTED : STD_LOGIC;
+  signal NLW_accumulator_reg_OVERFLOW_UNCONNECTED : STD_LOGIC;
+  signal NLW_accumulator_reg_PATTERNBDETECT_UNCONNECTED : STD_LOGIC;
+  signal NLW_accumulator_reg_PATTERNDETECT_UNCONNECTED : STD_LOGIC;
+  signal NLW_accumulator_reg_UNDERFLOW_UNCONNECTED : STD_LOGIC;
+  signal NLW_accumulator_reg_ACOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 29 downto 0 );
+  signal NLW_accumulator_reg_BCOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 17 downto 0 );
+  signal NLW_accumulator_reg_CARRYOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_accumulator_reg_PCOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 47 downto 0 );
+  signal NLW_audio_history_reg_0_63_0_2_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_0_63_12_14_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_0_63_15_17_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_0_63_18_20_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_0_63_21_23_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_0_63_3_5_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_0_63_6_8_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_0_63_9_11_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_64_127_0_2_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_64_127_12_14_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_64_127_15_17_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_64_127_18_20_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_64_127_21_23_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_64_127_3_5_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_64_127_6_8_DOD_UNCONNECTED : STD_LOGIC;
+  signal NLW_audio_history_reg_64_127_9_11_DOD_UNCONNECTED : STD_LOGIC;
+  attribute METHODOLOGY_DRC_VIOS : string;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_0_63_0_2 : label is "";
+  attribute ram_addr_begin : integer;
+  attribute ram_addr_begin of audio_history_reg_0_63_0_2 : label is 0;
+  attribute ram_addr_end : integer;
+  attribute ram_addr_end of audio_history_reg_0_63_0_2 : label is 63;
+  attribute ram_slice_begin : integer;
+  attribute ram_slice_begin of audio_history_reg_0_63_0_2 : label is 0;
+  attribute ram_slice_end : integer;
+  attribute ram_slice_end of audio_history_reg_0_63_0_2 : label is 2;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_0_63_12_14 : label is "";
+  attribute ram_addr_begin of audio_history_reg_0_63_12_14 : label is 0;
+  attribute ram_addr_end of audio_history_reg_0_63_12_14 : label is 63;
+  attribute ram_slice_begin of audio_history_reg_0_63_12_14 : label is 12;
+  attribute ram_slice_end of audio_history_reg_0_63_12_14 : label is 14;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_0_63_15_17 : label is "";
+  attribute ram_addr_begin of audio_history_reg_0_63_15_17 : label is 0;
+  attribute ram_addr_end of audio_history_reg_0_63_15_17 : label is 63;
+  attribute ram_slice_begin of audio_history_reg_0_63_15_17 : label is 15;
+  attribute ram_slice_end of audio_history_reg_0_63_15_17 : label is 17;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_0_63_18_20 : label is "";
+  attribute ram_addr_begin of audio_history_reg_0_63_18_20 : label is 0;
+  attribute ram_addr_end of audio_history_reg_0_63_18_20 : label is 63;
+  attribute ram_slice_begin of audio_history_reg_0_63_18_20 : label is 18;
+  attribute ram_slice_end of audio_history_reg_0_63_18_20 : label is 20;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_0_63_21_23 : label is "";
+  attribute ram_addr_begin of audio_history_reg_0_63_21_23 : label is 0;
+  attribute ram_addr_end of audio_history_reg_0_63_21_23 : label is 63;
+  attribute ram_slice_begin of audio_history_reg_0_63_21_23 : label is 21;
+  attribute ram_slice_end of audio_history_reg_0_63_21_23 : label is 23;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_0_63_3_5 : label is "";
+  attribute ram_addr_begin of audio_history_reg_0_63_3_5 : label is 0;
+  attribute ram_addr_end of audio_history_reg_0_63_3_5 : label is 63;
+  attribute ram_slice_begin of audio_history_reg_0_63_3_5 : label is 3;
+  attribute ram_slice_end of audio_history_reg_0_63_3_5 : label is 5;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_0_63_6_8 : label is "";
+  attribute ram_addr_begin of audio_history_reg_0_63_6_8 : label is 0;
+  attribute ram_addr_end of audio_history_reg_0_63_6_8 : label is 63;
+  attribute ram_slice_begin of audio_history_reg_0_63_6_8 : label is 6;
+  attribute ram_slice_end of audio_history_reg_0_63_6_8 : label is 8;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_0_63_9_11 : label is "";
+  attribute ram_addr_begin of audio_history_reg_0_63_9_11 : label is 0;
+  attribute ram_addr_end of audio_history_reg_0_63_9_11 : label is 63;
+  attribute ram_slice_begin of audio_history_reg_0_63_9_11 : label is 9;
+  attribute ram_slice_end of audio_history_reg_0_63_9_11 : label is 11;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_64_127_0_2 : label is "";
+  attribute ram_addr_begin of audio_history_reg_64_127_0_2 : label is 64;
+  attribute ram_addr_end of audio_history_reg_64_127_0_2 : label is 127;
+  attribute ram_slice_begin of audio_history_reg_64_127_0_2 : label is 0;
+  attribute ram_slice_end of audio_history_reg_64_127_0_2 : label is 2;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_64_127_12_14 : label is "";
+  attribute ram_addr_begin of audio_history_reg_64_127_12_14 : label is 64;
+  attribute ram_addr_end of audio_history_reg_64_127_12_14 : label is 127;
+  attribute ram_slice_begin of audio_history_reg_64_127_12_14 : label is 12;
+  attribute ram_slice_end of audio_history_reg_64_127_12_14 : label is 14;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_64_127_15_17 : label is "";
+  attribute ram_addr_begin of audio_history_reg_64_127_15_17 : label is 64;
+  attribute ram_addr_end of audio_history_reg_64_127_15_17 : label is 127;
+  attribute ram_slice_begin of audio_history_reg_64_127_15_17 : label is 15;
+  attribute ram_slice_end of audio_history_reg_64_127_15_17 : label is 17;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_64_127_18_20 : label is "";
+  attribute ram_addr_begin of audio_history_reg_64_127_18_20 : label is 64;
+  attribute ram_addr_end of audio_history_reg_64_127_18_20 : label is 127;
+  attribute ram_slice_begin of audio_history_reg_64_127_18_20 : label is 18;
+  attribute ram_slice_end of audio_history_reg_64_127_18_20 : label is 20;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_64_127_21_23 : label is "";
+  attribute ram_addr_begin of audio_history_reg_64_127_21_23 : label is 64;
+  attribute ram_addr_end of audio_history_reg_64_127_21_23 : label is 127;
+  attribute ram_slice_begin of audio_history_reg_64_127_21_23 : label is 21;
+  attribute ram_slice_end of audio_history_reg_64_127_21_23 : label is 23;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_64_127_3_5 : label is "";
+  attribute ram_addr_begin of audio_history_reg_64_127_3_5 : label is 64;
+  attribute ram_addr_end of audio_history_reg_64_127_3_5 : label is 127;
+  attribute ram_slice_begin of audio_history_reg_64_127_3_5 : label is 3;
+  attribute ram_slice_end of audio_history_reg_64_127_3_5 : label is 5;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_64_127_6_8 : label is "";
+  attribute ram_addr_begin of audio_history_reg_64_127_6_8 : label is 64;
+  attribute ram_addr_end of audio_history_reg_64_127_6_8 : label is 127;
+  attribute ram_slice_begin of audio_history_reg_64_127_6_8 : label is 6;
+  attribute ram_slice_end of audio_history_reg_64_127_6_8 : label is 8;
+  attribute METHODOLOGY_DRC_VIOS of audio_history_reg_64_127_9_11 : label is "";
+  attribute ram_addr_begin of audio_history_reg_64_127_9_11 : label is 64;
+  attribute ram_addr_end of audio_history_reg_64_127_9_11 : label is 127;
+  attribute ram_slice_begin of audio_history_reg_64_127_9_11 : label is 9;
+  attribute ram_slice_end of audio_history_reg_64_127_9_11 : label is 11;
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \read_ptr[0]_i_1__0\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \read_ptr[1]_i_1__0\ : label is "soft_lutpair20";
+begin
+accumulator_reg: unisim.vcomponents.DSP48E1
+    generic map(
+      ACASCREG => 2,
+      ADREG => 1,
+      ALUMODEREG => 0,
+      AREG => 2,
+      AUTORESET_PATDET => "NO_RESET",
+      A_INPUT => "DIRECT",
+      BCASCREG => 0,
+      BREG => 0,
+      B_INPUT => "DIRECT",
+      CARRYINREG => 0,
+      CARRYINSELREG => 0,
+      CREG => 1,
+      DREG => 1,
+      INMODEREG => 0,
+      MASK => X"3FFFFFFFFFFF",
+      MREG => 0,
+      OPMODEREG => 0,
+      PATTERN => X"000000000000",
+      PREG => 1,
+      SEL_MASK => "MASK",
+      SEL_PATTERN => "PATTERN",
+      USE_DPORT => false,
+      USE_MULT => "MULTIPLY",
+      USE_PATTERN_DETECT => "NO_PATDET",
+      USE_SIMD => "ONE48"
+    )
+        port map (
+      A(29) => \accumulator_reg_i_1__0_n_0\,
+      A(28) => \accumulator_reg_i_1__0_n_0\,
+      A(27) => \accumulator_reg_i_1__0_n_0\,
+      A(26) => \accumulator_reg_i_1__0_n_0\,
+      A(25) => \accumulator_reg_i_1__0_n_0\,
+      A(24) => \accumulator_reg_i_1__0_n_0\,
+      A(23) => \accumulator_reg_i_1__0_n_0\,
+      A(22) => \accumulator_reg_i_2__0_n_0\,
+      A(21) => \accumulator_reg_i_3__0_n_0\,
+      A(20) => \accumulator_reg_i_4__1_n_0\,
+      A(19) => \accumulator_reg_i_5__1_n_0\,
+      A(18) => \accumulator_reg_i_6__1_n_0\,
+      A(17) => \accumulator_reg_i_7__1_n_0\,
+      A(16) => \accumulator_reg_i_8__1_n_0\,
+      A(15) => \accumulator_reg_i_9__1_n_0\,
+      A(14) => \accumulator_reg_i_10__1_n_0\,
+      A(13) => \accumulator_reg_i_11__1_n_0\,
+      A(12) => \accumulator_reg_i_12__1_n_0\,
+      A(11) => \accumulator_reg_i_13__1_n_0\,
+      A(10) => \accumulator_reg_i_14__1_n_0\,
+      A(9) => \accumulator_reg_i_15__1_n_0\,
+      A(8) => \accumulator_reg_i_16__1_n_0\,
+      A(7) => \accumulator_reg_i_17__1_n_0\,
+      A(6) => \accumulator_reg_i_18__1_n_0\,
+      A(5) => \accumulator_reg_i_19__1_n_0\,
+      A(4) => \accumulator_reg_i_20__1_n_0\,
+      A(3) => \accumulator_reg_i_21__1_n_0\,
+      A(2) => \accumulator_reg_i_22__1_n_0\,
+      A(1) => \accumulator_reg_i_23__1_n_0\,
+      A(0) => \accumulator_reg_i_24__1_n_0\,
+      ACIN(29 downto 0) => B"000000000000000000000000000000",
+      ACOUT(29 downto 0) => NLW_accumulator_reg_ACOUT_UNCONNECTED(29 downto 0),
+      ALUMODE(3 downto 0) => B"0000",
+      B(17) => doutb(15),
+      B(16) => doutb(15),
+      B(15 downto 0) => doutb(15 downto 0),
+      BCIN(17 downto 0) => B"000000000000000000",
+      BCOUT(17 downto 0) => NLW_accumulator_reg_BCOUT_UNCONNECTED(17 downto 0),
+      C(47 downto 0) => B"111111111111111111111111111111111111111111111111",
+      CARRYCASCIN => '0',
+      CARRYCASCOUT => NLW_accumulator_reg_CARRYCASCOUT_UNCONNECTED,
+      CARRYIN => '0',
+      CARRYINSEL(2 downto 0) => B"000",
+      CARRYOUT(3 downto 0) => NLW_accumulator_reg_CARRYOUT_UNCONNECTED(3 downto 0),
+      CEA1 => pipe_audio_s1,
+      CEA2 => accumulator_reg_0,
+      CEAD => '0',
+      CEALUMODE => '0',
+      CEB1 => '0',
+      CEB2 => '0',
+      CEC => '0',
+      CECARRYIN => '0',
+      CECTRL => '0',
+      CED => '0',
+      CEINMODE => '0',
+      CEM => '0',
+      CEP => accumulator_reg_1,
+      CLK => clk_audio,
+      D(24 downto 0) => B"0000000000000000000000000",
+      INMODE(4 downto 0) => B"00000",
+      MULTSIGNIN => '0',
+      MULTSIGNOUT => NLW_accumulator_reg_MULTSIGNOUT_UNCONNECTED,
+      OPMODE(6 downto 0) => B"0100101",
+      OVERFLOW => NLW_accumulator_reg_OVERFLOW_UNCONNECTED,
+      P(47) => accumulator_reg_n_58,
+      P(46) => accumulator_reg_n_59,
+      P(45) => accumulator_reg_n_60,
+      P(44) => accumulator_reg_n_61,
+      P(43) => accumulator_reg_n_62,
+      P(42) => accumulator_reg_n_63,
+      P(41) => accumulator_reg_n_64,
+      P(40) => accumulator_reg_n_65,
+      P(39) => accumulator_reg_n_66,
+      P(38) => accumulator_reg_n_67,
+      P(37 downto 14) => P(23 downto 0),
+      P(13) => accumulator_reg_n_92,
+      P(12) => accumulator_reg_n_93,
+      P(11) => accumulator_reg_n_94,
+      P(10) => accumulator_reg_n_95,
+      P(9) => accumulator_reg_n_96,
+      P(8) => accumulator_reg_n_97,
+      P(7) => accumulator_reg_n_98,
+      P(6) => accumulator_reg_n_99,
+      P(5) => accumulator_reg_n_100,
+      P(4) => accumulator_reg_n_101,
+      P(3) => accumulator_reg_n_102,
+      P(2) => accumulator_reg_n_103,
+      P(1) => accumulator_reg_n_104,
+      P(0) => accumulator_reg_n_105,
+      PATTERNBDETECT => NLW_accumulator_reg_PATTERNBDETECT_UNCONNECTED,
+      PATTERNDETECT => NLW_accumulator_reg_PATTERNDETECT_UNCONNECTED,
+      PCIN(47 downto 0) => B"000000000000000000000000000000000000000000000000",
+      PCOUT(47 downto 0) => NLW_accumulator_reg_PCOUT_UNCONNECTED(47 downto 0),
+      RSTA => rst_audio,
+      RSTALLCARRYIN => '0',
+      RSTALUMODE => '0',
+      RSTB => '0',
+      RSTC => '0',
+      RSTCTRL => '0',
+      RSTD => '0',
+      RSTINMODE => '0',
+      RSTM => '0',
+      RSTP => RSTP,
+      UNDERFLOW => NLW_accumulator_reg_UNDERFLOW_UNCONNECTED
+    );
+\accumulator_reg_i_10__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_12_14_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_12_14_n_2,
+      O => \accumulator_reg_i_10__1_n_0\
+    );
+\accumulator_reg_i_11__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_12_14_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_12_14_n_1,
+      O => \accumulator_reg_i_11__1_n_0\
+    );
+\accumulator_reg_i_12__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_12_14_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_12_14_n_0,
+      O => \accumulator_reg_i_12__1_n_0\
+    );
+\accumulator_reg_i_13__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_9_11_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_9_11_n_2,
+      O => \accumulator_reg_i_13__1_n_0\
+    );
+\accumulator_reg_i_14__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_9_11_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_9_11_n_1,
+      O => \accumulator_reg_i_14__1_n_0\
+    );
+\accumulator_reg_i_15__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_9_11_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_9_11_n_0,
+      O => \accumulator_reg_i_15__1_n_0\
+    );
+\accumulator_reg_i_16__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_6_8_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_6_8_n_2,
+      O => \accumulator_reg_i_16__1_n_0\
+    );
+\accumulator_reg_i_17__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_6_8_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_6_8_n_1,
+      O => \accumulator_reg_i_17__1_n_0\
+    );
+\accumulator_reg_i_18__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_6_8_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_6_8_n_0,
+      O => \accumulator_reg_i_18__1_n_0\
+    );
+\accumulator_reg_i_19__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_3_5_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_3_5_n_2,
+      O => \accumulator_reg_i_19__1_n_0\
+    );
+\accumulator_reg_i_1__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_21_23_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_21_23_n_2,
+      O => \accumulator_reg_i_1__0_n_0\
+    );
+\accumulator_reg_i_20__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_3_5_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_3_5_n_1,
+      O => \accumulator_reg_i_20__1_n_0\
+    );
+\accumulator_reg_i_21__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_3_5_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_3_5_n_0,
+      O => \accumulator_reg_i_21__1_n_0\
+    );
+\accumulator_reg_i_22__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_0_2_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_0_2_n_2,
+      O => \accumulator_reg_i_22__1_n_0\
+    );
+\accumulator_reg_i_23__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_0_2_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_0_2_n_1,
+      O => \accumulator_reg_i_23__1_n_0\
+    );
+\accumulator_reg_i_24__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_0_2_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_0_2_n_0,
+      O => \accumulator_reg_i_24__1_n_0\
+    );
+\accumulator_reg_i_2__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_21_23_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_21_23_n_1,
+      O => \accumulator_reg_i_2__0_n_0\
+    );
+\accumulator_reg_i_3__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_21_23_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_21_23_n_0,
+      O => \accumulator_reg_i_3__0_n_0\
+    );
+\accumulator_reg_i_4__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_18_20_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_18_20_n_2,
+      O => \accumulator_reg_i_4__1_n_0\
+    );
+\accumulator_reg_i_5__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_18_20_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_18_20_n_1,
+      O => \accumulator_reg_i_5__1_n_0\
+    );
+\accumulator_reg_i_6__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_18_20_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_18_20_n_0,
+      O => \accumulator_reg_i_6__1_n_0\
+    );
+\accumulator_reg_i_7__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_15_17_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_15_17_n_2,
+      O => \accumulator_reg_i_7__1_n_0\
+    );
+\accumulator_reg_i_8__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_15_17_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_15_17_n_1,
+      O => \accumulator_reg_i_8__1_n_0\
+    );
+\accumulator_reg_i_9__1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_15_17_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_15_17_n_0,
+      O => \accumulator_reg_i_9__1_n_0\
+    );
+audio_history_reg_0_63_0_2: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(0),
+      DIB => accumulator_reg_2(1),
+      DIC => accumulator_reg_2(2),
+      DID => '0',
+      DOA => audio_history_reg_0_63_0_2_n_0,
+      DOB => audio_history_reg_0_63_0_2_n_1,
+      DOC => audio_history_reg_0_63_0_2_n_2,
+      DOD => NLW_audio_history_reg_0_63_0_2_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_3
+    );
+audio_history_reg_0_63_12_14: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(12),
+      DIB => accumulator_reg_2(13),
+      DIC => accumulator_reg_2(14),
+      DID => '0',
+      DOA => audio_history_reg_0_63_12_14_n_0,
+      DOB => audio_history_reg_0_63_12_14_n_1,
+      DOC => audio_history_reg_0_63_12_14_n_2,
+      DOD => NLW_audio_history_reg_0_63_12_14_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_3
+    );
+audio_history_reg_0_63_15_17: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(15),
+      DIB => accumulator_reg_2(16),
+      DIC => accumulator_reg_2(17),
+      DID => '0',
+      DOA => audio_history_reg_0_63_15_17_n_0,
+      DOB => audio_history_reg_0_63_15_17_n_1,
+      DOC => audio_history_reg_0_63_15_17_n_2,
+      DOD => NLW_audio_history_reg_0_63_15_17_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_3
+    );
+audio_history_reg_0_63_18_20: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(18),
+      DIB => accumulator_reg_2(19),
+      DIC => accumulator_reg_2(20),
+      DID => '0',
+      DOA => audio_history_reg_0_63_18_20_n_0,
+      DOB => audio_history_reg_0_63_18_20_n_1,
+      DOC => audio_history_reg_0_63_18_20_n_2,
+      DOD => NLW_audio_history_reg_0_63_18_20_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_3
+    );
+audio_history_reg_0_63_21_23: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(21),
+      DIB => accumulator_reg_2(22),
+      DIC => accumulator_reg_2(23),
+      DID => '0',
+      DOA => audio_history_reg_0_63_21_23_n_0,
+      DOB => audio_history_reg_0_63_21_23_n_1,
+      DOC => audio_history_reg_0_63_21_23_n_2,
+      DOD => NLW_audio_history_reg_0_63_21_23_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_3
+    );
+audio_history_reg_0_63_3_5: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(3),
+      DIB => accumulator_reg_2(4),
+      DIC => accumulator_reg_2(5),
+      DID => '0',
+      DOA => audio_history_reg_0_63_3_5_n_0,
+      DOB => audio_history_reg_0_63_3_5_n_1,
+      DOC => audio_history_reg_0_63_3_5_n_2,
+      DOD => NLW_audio_history_reg_0_63_3_5_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_3
+    );
+audio_history_reg_0_63_6_8: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(6),
+      DIB => accumulator_reg_2(7),
+      DIC => accumulator_reg_2(8),
+      DID => '0',
+      DOA => audio_history_reg_0_63_6_8_n_0,
+      DOB => audio_history_reg_0_63_6_8_n_1,
+      DOC => audio_history_reg_0_63_6_8_n_2,
+      DOD => NLW_audio_history_reg_0_63_6_8_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_3
+    );
+audio_history_reg_0_63_9_11: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(9),
+      DIB => accumulator_reg_2(10),
+      DIC => accumulator_reg_2(11),
+      DID => '0',
+      DOA => audio_history_reg_0_63_9_11_n_0,
+      DOB => audio_history_reg_0_63_9_11_n_1,
+      DOC => audio_history_reg_0_63_9_11_n_2,
+      DOD => NLW_audio_history_reg_0_63_9_11_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_3
+    );
+audio_history_reg_64_127_0_2: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(0),
+      DIB => accumulator_reg_2(1),
+      DIC => accumulator_reg_2(2),
+      DID => '0',
+      DOA => audio_history_reg_64_127_0_2_n_0,
+      DOB => audio_history_reg_64_127_0_2_n_1,
+      DOC => audio_history_reg_64_127_0_2_n_2,
+      DOD => NLW_audio_history_reg_64_127_0_2_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_4
+    );
+audio_history_reg_64_127_12_14: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(12),
+      DIB => accumulator_reg_2(13),
+      DIC => accumulator_reg_2(14),
+      DID => '0',
+      DOA => audio_history_reg_64_127_12_14_n_0,
+      DOB => audio_history_reg_64_127_12_14_n_1,
+      DOC => audio_history_reg_64_127_12_14_n_2,
+      DOD => NLW_audio_history_reg_64_127_12_14_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_4
+    );
+audio_history_reg_64_127_15_17: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(15),
+      DIB => accumulator_reg_2(16),
+      DIC => accumulator_reg_2(17),
+      DID => '0',
+      DOA => audio_history_reg_64_127_15_17_n_0,
+      DOB => audio_history_reg_64_127_15_17_n_1,
+      DOC => audio_history_reg_64_127_15_17_n_2,
+      DOD => NLW_audio_history_reg_64_127_15_17_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_4
+    );
+audio_history_reg_64_127_18_20: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(18),
+      DIB => accumulator_reg_2(19),
+      DIC => accumulator_reg_2(20),
+      DID => '0',
+      DOA => audio_history_reg_64_127_18_20_n_0,
+      DOB => audio_history_reg_64_127_18_20_n_1,
+      DOC => audio_history_reg_64_127_18_20_n_2,
+      DOD => NLW_audio_history_reg_64_127_18_20_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_4
+    );
+audio_history_reg_64_127_21_23: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(21),
+      DIB => accumulator_reg_2(22),
+      DIC => accumulator_reg_2(23),
+      DID => '0',
+      DOA => audio_history_reg_64_127_21_23_n_0,
+      DOB => audio_history_reg_64_127_21_23_n_1,
+      DOC => audio_history_reg_64_127_21_23_n_2,
+      DOD => NLW_audio_history_reg_64_127_21_23_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_4
+    );
+audio_history_reg_64_127_3_5: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(3),
+      DIB => accumulator_reg_2(4),
+      DIC => accumulator_reg_2(5),
+      DID => '0',
+      DOA => audio_history_reg_64_127_3_5_n_0,
+      DOB => audio_history_reg_64_127_3_5_n_1,
+      DOC => audio_history_reg_64_127_3_5_n_2,
+      DOD => NLW_audio_history_reg_64_127_3_5_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_4
+    );
+audio_history_reg_64_127_6_8: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(6),
+      DIB => accumulator_reg_2(7),
+      DIC => accumulator_reg_2(8),
+      DID => '0',
+      DOA => audio_history_reg_64_127_6_8_n_0,
+      DOB => audio_history_reg_64_127_6_8_n_1,
+      DOC => audio_history_reg_64_127_6_8_n_2,
+      DOD => NLW_audio_history_reg_64_127_6_8_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_4
+    );
+audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
+    generic map(
+      INIT_A => X"0000000000000000",
+      INIT_B => X"0000000000000000",
+      INIT_C => X"0000000000000000",
+      INIT_D => X"0000000000000000"
+    )
+        port map (
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRD(5 downto 0) => \read_ptr_reg[6]_1\(5 downto 0),
+      DIA => accumulator_reg_2(9),
+      DIB => accumulator_reg_2(10),
+      DIC => accumulator_reg_2(11),
+      DID => '0',
+      DOA => audio_history_reg_64_127_9_11_n_0,
+      DOB => audio_history_reg_64_127_9_11_n_1,
+      DOC => audio_history_reg_64_127_9_11_n_2,
+      DOD => NLW_audio_history_reg_64_127_9_11_DOD_UNCONNECTED,
+      WCLK => clk_audio,
+      WE => accumulator_reg_4
+    );
+\read_ptr[0]_i_1__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"D1"
+    )
+        port map (
+      I0 => read_ptr_reg(0),
+      I1 => new_sample,
+      I2 => \read_ptr_reg[6]_1\(0),
+      O => \read_ptr[0]_i_1__0_n_0\
+    );
+\read_ptr[1]_i_1__0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"F909"
+    )
+        port map (
+      I0 => read_ptr_reg(0),
+      I1 => read_ptr_reg(1),
+      I2 => new_sample,
+      I3 => \read_ptr_reg[6]_1\(1),
+      O => \read_ptr[1]_i_1__0_n_0\
+    );
+\read_ptr[2]_i_1__1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFE100E1"
+    )
+        port map (
+      I0 => read_ptr_reg(1),
+      I1 => read_ptr_reg(0),
+      I2 => read_ptr_reg(2),
+      I3 => new_sample,
+      I4 => \read_ptr_reg[6]_1\(2),
+      O => \read_ptr[2]_i_1__1_n_0\
+    );
+\read_ptr[3]_i_1__1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFE010000FE01"
+    )
+        port map (
+      I0 => read_ptr_reg(2),
+      I1 => read_ptr_reg(0),
+      I2 => read_ptr_reg(1),
+      I3 => read_ptr_reg(3),
+      I4 => new_sample,
+      I5 => \read_ptr_reg[6]_1\(3),
+      O => \read_ptr[3]_i_1__1_n_0\
+    );
+\read_ptr[4]_i_1__1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"F909"
+    )
+        port map (
+      I0 => \read_ptr[4]_i_2__1_n_0\,
+      I1 => read_ptr_reg(4),
+      I2 => new_sample,
+      I3 => \read_ptr_reg[6]_1\(4),
+      O => \read_ptr[4]_i_1__1_n_0\
+    );
+\read_ptr[4]_i_2__1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => read_ptr_reg(2),
+      I1 => read_ptr_reg(0),
+      I2 => read_ptr_reg(1),
+      I3 => read_ptr_reg(3),
+      O => \read_ptr[4]_i_2__1_n_0\
+    );
+\read_ptr[5]_i_1__1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFE100E1"
+    )
+        port map (
+      I0 => read_ptr_reg(4),
+      I1 => \read_ptr[4]_i_2__1_n_0\,
+      I2 => read_ptr_reg(5),
+      I3 => new_sample,
+      I4 => \read_ptr_reg[6]_1\(5),
+      O => \read_ptr[5]_i_1__1_n_0\
+    );
+\read_ptr[6]_i_1__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFE010000FE01"
+    )
+        port map (
+      I0 => \read_ptr[4]_i_2__1_n_0\,
+      I1 => read_ptr_reg(4),
+      I2 => read_ptr_reg(5),
+      I3 => read_ptr(6),
+      I4 => new_sample,
+      I5 => \read_ptr_reg[6]_1\(6),
+      O => \read_ptr[6]_i_1__0_n_0\
+    );
+\read_ptr_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[0]_i_1__0_n_0\,
+      Q => read_ptr_reg(0),
+      R => rst_audio
+    );
+\read_ptr_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[1]_i_1__0_n_0\,
+      Q => read_ptr_reg(1),
+      R => rst_audio
+    );
+\read_ptr_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[2]_i_1__1_n_0\,
+      Q => read_ptr_reg(2),
+      R => rst_audio
+    );
+\read_ptr_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[3]_i_1__1_n_0\,
+      Q => read_ptr_reg(3),
+      R => rst_audio
+    );
+\read_ptr_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[4]_i_1__1_n_0\,
+      Q => read_ptr_reg(4),
+      R => rst_audio
+    );
+\read_ptr_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[5]_i_1__1_n_0\,
+      Q => read_ptr_reg(5),
+      R => rst_audio
+    );
+\read_ptr_reg[6]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[6]_i_1__0_n_0\,
+      Q => read_ptr(6),
+      R => rst_audio
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity design_1_spatial_audio_top_0_0_dsp_fir_folded_3 is
+  port (
+    P : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    pipe_valid_s2_reg_0 : out STD_LOGIC;
+    Q : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    pipe_audio_s1 : in STD_LOGIC;
+    accumulator_reg_0 : in STD_LOGIC;
+    clk_audio : in STD_LOGIC;
+    rst_audio : in STD_LOGIC;
+    RSTP : in STD_LOGIC;
+    douta : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    \read_ptr_reg[6]_0\ : in STD_LOGIC;
+    pipe_valid_s1_reg_0 : in STD_LOGIC;
+    new_sample : in STD_LOGIC;
+    locked : in STD_LOGIC;
+    accumulator_reg_1 : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    accumulator_reg_2 : in STD_LOGIC;
+    accumulator_reg_3 : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_dsp_fir_folded_3 : entity is "dsp_fir_folded";
+end design_1_spatial_audio_top_0_0_dsp_fir_folded_3;
+
+architecture STRUCTURE of design_1_spatial_audio_top_0_0_dsp_fir_folded_3 is
+  signal \^q\ : STD_LOGIC_VECTOR ( 6 downto 0 );
+  signal accumulator_reg_n_100 : STD_LOGIC;
+  signal accumulator_reg_n_101 : STD_LOGIC;
+  signal accumulator_reg_n_102 : STD_LOGIC;
+  signal accumulator_reg_n_103 : STD_LOGIC;
+  signal accumulator_reg_n_104 : STD_LOGIC;
+  signal accumulator_reg_n_105 : STD_LOGIC;
+  signal accumulator_reg_n_58 : STD_LOGIC;
+  signal accumulator_reg_n_59 : STD_LOGIC;
+  signal accumulator_reg_n_60 : STD_LOGIC;
+  signal accumulator_reg_n_61 : STD_LOGIC;
+  signal accumulator_reg_n_62 : STD_LOGIC;
+  signal accumulator_reg_n_63 : STD_LOGIC;
+  signal accumulator_reg_n_64 : STD_LOGIC;
+  signal accumulator_reg_n_65 : STD_LOGIC;
+  signal accumulator_reg_n_66 : STD_LOGIC;
+  signal accumulator_reg_n_67 : STD_LOGIC;
+  signal accumulator_reg_n_92 : STD_LOGIC;
+  signal accumulator_reg_n_93 : STD_LOGIC;
+  signal accumulator_reg_n_94 : STD_LOGIC;
+  signal accumulator_reg_n_95 : STD_LOGIC;
+  signal accumulator_reg_n_96 : STD_LOGIC;
+  signal accumulator_reg_n_97 : STD_LOGIC;
+  signal accumulator_reg_n_98 : STD_LOGIC;
+  signal accumulator_reg_n_99 : STD_LOGIC;
+  signal audio_history_reg_0_63_0_2_n_0 : STD_LOGIC;
+  signal audio_history_reg_0_63_0_2_n_1 : STD_LOGIC;
+  signal audio_history_reg_0_63_0_2_n_2 : STD_LOGIC;
+  signal audio_history_reg_0_63_12_14_n_0 : STD_LOGIC;
+  signal audio_history_reg_0_63_12_14_n_1 : STD_LOGIC;
+  signal audio_history_reg_0_63_12_14_n_2 : STD_LOGIC;
+  signal audio_history_reg_0_63_15_17_n_0 : STD_LOGIC;
+  signal audio_history_reg_0_63_15_17_n_1 : STD_LOGIC;
+  signal audio_history_reg_0_63_15_17_n_2 : STD_LOGIC;
+  signal audio_history_reg_0_63_18_20_n_0 : STD_LOGIC;
+  signal audio_history_reg_0_63_18_20_n_1 : STD_LOGIC;
+  signal audio_history_reg_0_63_18_20_n_2 : STD_LOGIC;
+  signal audio_history_reg_0_63_21_23_n_0 : STD_LOGIC;
+  signal audio_history_reg_0_63_21_23_n_1 : STD_LOGIC;
+  signal audio_history_reg_0_63_21_23_n_2 : STD_LOGIC;
+  signal audio_history_reg_0_63_3_5_n_0 : STD_LOGIC;
+  signal audio_history_reg_0_63_3_5_n_1 : STD_LOGIC;
+  signal audio_history_reg_0_63_3_5_n_2 : STD_LOGIC;
+  signal audio_history_reg_0_63_6_8_n_0 : STD_LOGIC;
+  signal audio_history_reg_0_63_6_8_n_1 : STD_LOGIC;
+  signal audio_history_reg_0_63_6_8_n_2 : STD_LOGIC;
+  signal audio_history_reg_0_63_9_11_n_0 : STD_LOGIC;
+  signal audio_history_reg_0_63_9_11_n_1 : STD_LOGIC;
+  signal audio_history_reg_0_63_9_11_n_2 : STD_LOGIC;
+  signal audio_history_reg_64_127_0_2_n_0 : STD_LOGIC;
+  signal audio_history_reg_64_127_0_2_n_1 : STD_LOGIC;
+  signal audio_history_reg_64_127_0_2_n_2 : STD_LOGIC;
+  signal audio_history_reg_64_127_12_14_n_0 : STD_LOGIC;
+  signal audio_history_reg_64_127_12_14_n_1 : STD_LOGIC;
+  signal audio_history_reg_64_127_12_14_n_2 : STD_LOGIC;
+  signal audio_history_reg_64_127_15_17_n_0 : STD_LOGIC;
+  signal audio_history_reg_64_127_15_17_n_1 : STD_LOGIC;
+  signal audio_history_reg_64_127_15_17_n_2 : STD_LOGIC;
+  signal audio_history_reg_64_127_18_20_n_0 : STD_LOGIC;
+  signal audio_history_reg_64_127_18_20_n_1 : STD_LOGIC;
+  signal audio_history_reg_64_127_18_20_n_2 : STD_LOGIC;
+  signal audio_history_reg_64_127_21_23_n_0 : STD_LOGIC;
+  signal audio_history_reg_64_127_21_23_n_1 : STD_LOGIC;
+  signal audio_history_reg_64_127_21_23_n_2 : STD_LOGIC;
+  signal audio_history_reg_64_127_3_5_n_0 : STD_LOGIC;
+  signal audio_history_reg_64_127_3_5_n_1 : STD_LOGIC;
+  signal audio_history_reg_64_127_3_5_n_2 : STD_LOGIC;
+  signal audio_history_reg_64_127_6_8_n_0 : STD_LOGIC;
+  signal audio_history_reg_64_127_6_8_n_1 : STD_LOGIC;
+  signal audio_history_reg_64_127_6_8_n_2 : STD_LOGIC;
+  signal audio_history_reg_64_127_9_11_n_0 : STD_LOGIC;
+  signal audio_history_reg_64_127_9_11_n_1 : STD_LOGIC;
+  signal audio_history_reg_64_127_9_11_n_2 : STD_LOGIC;
+  signal \p_0_in__3\ : STD_LOGIC_VECTOR ( 6 downto 0 );
+  signal pipe_audio_s10 : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal pipe_valid_s1 : STD_LOGIC;
+  signal pipe_valid_s2_i_1_n_0 : STD_LOGIC;
+  signal \^pipe_valid_s2_reg_0\ : STD_LOGIC;
+  signal read_ptr : STD_LOGIC_VECTOR ( 6 to 6 );
+  signal \read_ptr[0]_i_1__1_n_0\ : STD_LOGIC;
+  signal \read_ptr[1]_i_1__1_n_0\ : STD_LOGIC;
+  signal \read_ptr[2]_i_1__2_n_0\ : STD_LOGIC;
+  signal \read_ptr[3]_i_1__2_n_0\ : STD_LOGIC;
+  signal \read_ptr[4]_i_1__2_n_0\ : STD_LOGIC;
+  signal \read_ptr[4]_i_2__0_n_0\ : STD_LOGIC;
+  signal \read_ptr[5]_i_1__2_n_0\ : STD_LOGIC;
+  signal \read_ptr[6]_i_1__1_n_0\ : STD_LOGIC;
+  signal read_ptr_reg : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal \write_ptr[6]_i_2_n_0\ : STD_LOGIC;
   signal NLW_accumulator_reg_CARRYCASCOUT_UNCONNECTED : STD_LOGIC;
   signal NLW_accumulator_reg_MULTSIGNOUT_UNCONNECTED : STD_LOGIC;
@@ -260,16 +2559,17 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_dsp_fir_folded is
   attribute ram_slice_begin of audio_history_reg_64_127_9_11 : label is 9;
   attribute ram_slice_end of audio_history_reg_64_127_9_11 : label is 11;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \read_ptr[0]_i_1__0\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \read_ptr[0]_i_2\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \read_ptr[1]_i_1__0\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \write_ptr[1]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \write_ptr[2]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \write_ptr[3]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \write_ptr[4]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \write_ptr[6]_i_2\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \read_ptr[0]_i_1__1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \read_ptr[1]_i_1__1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \write_ptr[0]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \write_ptr[1]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \write_ptr[2]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \write_ptr[3]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \write_ptr[4]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \write_ptr[6]_i_2\ : label is "soft_lutpair16";
 begin
   Q(6 downto 0) <= \^q\(6 downto 0);
+  pipe_valid_s2_reg_0 <= \^pipe_valid_s2_reg_0\;
 accumulator_reg: unisim.vcomponents.DSP48E1
     generic map(
       ACASCREG => 2,
@@ -332,7 +2632,7 @@ accumulator_reg: unisim.vcomponents.DSP48E1
       CED => '0',
       CEINMODE => '0',
       CEM => '0',
-      CEP => accumulator_reg_1,
+      CEP => \^pipe_valid_s2_reg_0\,
       CLK => clk_audio,
       D(24 downto 0) => B"0000000000000000000000000",
       INMODE(4 downto 0) => B"00000",
@@ -350,30 +2650,7 @@ accumulator_reg: unisim.vcomponents.DSP48E1
       P(40) => accumulator_reg_n_65,
       P(39) => accumulator_reg_n_66,
       P(38) => accumulator_reg_n_67,
-      P(37) => accumulator_reg_n_68,
-      P(36) => accumulator_reg_n_69,
-      P(35) => accumulator_reg_n_70,
-      P(34) => accumulator_reg_n_71,
-      P(33) => accumulator_reg_n_72,
-      P(32) => accumulator_reg_n_73,
-      P(31) => accumulator_reg_n_74,
-      P(30) => accumulator_reg_n_75,
-      P(29) => accumulator_reg_n_76,
-      P(28) => accumulator_reg_n_77,
-      P(27) => accumulator_reg_n_78,
-      P(26) => accumulator_reg_n_79,
-      P(25) => accumulator_reg_n_80,
-      P(24) => accumulator_reg_n_81,
-      P(23) => accumulator_reg_n_82,
-      P(22) => accumulator_reg_n_83,
-      P(21) => accumulator_reg_n_84,
-      P(20) => accumulator_reg_n_85,
-      P(19) => accumulator_reg_n_86,
-      P(18) => accumulator_reg_n_87,
-      P(17) => accumulator_reg_n_88,
-      P(16) => accumulator_reg_n_89,
-      P(15) => accumulator_reg_n_90,
-      P(14) => accumulator_reg_n_91,
+      P(37 downto 14) => P(23 downto 0),
       P(13) => accumulator_reg_n_92,
       P(12) => accumulator_reg_n_93,
       P(11) => accumulator_reg_n_94,
@@ -404,187 +2681,7 @@ accumulator_reg: unisim.vcomponents.DSP48E1
       RSTP => RSTP,
       UNDERFLOW => NLW_accumulator_reg_UNDERFLOW_UNCONNECTED
     );
-accumulator_reg_i_10: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_15_17_n_2,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_15_17_n_2,
-      O => pipe_audio_s10(17)
-    );
-accumulator_reg_i_11: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_15_17_n_1,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_15_17_n_1,
-      O => pipe_audio_s10(16)
-    );
-accumulator_reg_i_12: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_15_17_n_0,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_15_17_n_0,
-      O => pipe_audio_s10(15)
-    );
-accumulator_reg_i_13: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_12_14_n_2,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_12_14_n_2,
-      O => pipe_audio_s10(14)
-    );
-accumulator_reg_i_14: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_12_14_n_1,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_12_14_n_1,
-      O => pipe_audio_s10(13)
-    );
-accumulator_reg_i_15: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_12_14_n_0,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_12_14_n_0,
-      O => pipe_audio_s10(12)
-    );
-accumulator_reg_i_16: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_9_11_n_2,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_9_11_n_2,
-      O => pipe_audio_s10(11)
-    );
-accumulator_reg_i_17: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_9_11_n_1,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_9_11_n_1,
-      O => pipe_audio_s10(10)
-    );
-accumulator_reg_i_18: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_9_11_n_0,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_9_11_n_0,
-      O => pipe_audio_s10(9)
-    );
-accumulator_reg_i_19: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_6_8_n_2,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_6_8_n_2,
-      O => pipe_audio_s10(8)
-    );
-accumulator_reg_i_20: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_6_8_n_1,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_6_8_n_1,
-      O => pipe_audio_s10(7)
-    );
-accumulator_reg_i_21: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_6_8_n_0,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_6_8_n_0,
-      O => pipe_audio_s10(6)
-    );
-accumulator_reg_i_22: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_3_5_n_2,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_3_5_n_2,
-      O => pipe_audio_s10(5)
-    );
-accumulator_reg_i_23: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_3_5_n_1,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_3_5_n_1,
-      O => pipe_audio_s10(4)
-    );
-accumulator_reg_i_24: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_3_5_n_0,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_3_5_n_0,
-      O => pipe_audio_s10(3)
-    );
-accumulator_reg_i_25: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_0_2_n_2,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_0_2_n_2,
-      O => pipe_audio_s10(2)
-    );
-accumulator_reg_i_26: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_0_2_n_1,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_0_2_n_1,
-      O => pipe_audio_s10(1)
-    );
-accumulator_reg_i_27: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_0_2_n_0,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_0_2_n_0,
-      O => pipe_audio_s10(0)
-    );
-accumulator_reg_i_4: unisim.vcomponents.LUT3
+accumulator_reg_i_1: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
     )
@@ -594,7 +2691,107 @@ accumulator_reg_i_4: unisim.vcomponents.LUT3
       I2 => audio_history_reg_0_63_21_23_n_2,
       O => pipe_audio_s10(23)
     );
-accumulator_reg_i_5: unisim.vcomponents.LUT3
+\accumulator_reg_i_10__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_12_14_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_12_14_n_2,
+      O => pipe_audio_s10(14)
+    );
+\accumulator_reg_i_11__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_12_14_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_12_14_n_1,
+      O => pipe_audio_s10(13)
+    );
+\accumulator_reg_i_12__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_12_14_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_12_14_n_0,
+      O => pipe_audio_s10(12)
+    );
+\accumulator_reg_i_13__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_9_11_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_9_11_n_2,
+      O => pipe_audio_s10(11)
+    );
+\accumulator_reg_i_14__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_9_11_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_9_11_n_1,
+      O => pipe_audio_s10(10)
+    );
+\accumulator_reg_i_15__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_9_11_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_9_11_n_0,
+      O => pipe_audio_s10(9)
+    );
+\accumulator_reg_i_16__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_6_8_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_6_8_n_2,
+      O => pipe_audio_s10(8)
+    );
+\accumulator_reg_i_17__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_6_8_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_6_8_n_1,
+      O => pipe_audio_s10(7)
+    );
+\accumulator_reg_i_18__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_6_8_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_6_8_n_0,
+      O => pipe_audio_s10(6)
+    );
+\accumulator_reg_i_19__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_3_5_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_3_5_n_2,
+      O => pipe_audio_s10(5)
+    );
+accumulator_reg_i_2: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
     )
@@ -604,7 +2801,57 @@ accumulator_reg_i_5: unisim.vcomponents.LUT3
       I2 => audio_history_reg_0_63_21_23_n_1,
       O => pipe_audio_s10(22)
     );
-accumulator_reg_i_6: unisim.vcomponents.LUT3
+\accumulator_reg_i_20__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_3_5_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_3_5_n_1,
+      O => pipe_audio_s10(4)
+    );
+\accumulator_reg_i_21__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_3_5_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_3_5_n_0,
+      O => pipe_audio_s10(3)
+    );
+\accumulator_reg_i_22__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_0_2_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_0_2_n_2,
+      O => pipe_audio_s10(2)
+    );
+\accumulator_reg_i_23__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_0_2_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_0_2_n_1,
+      O => pipe_audio_s10(1)
+    );
+\accumulator_reg_i_24__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_0_2_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_0_2_n_0,
+      O => pipe_audio_s10(0)
+    );
+accumulator_reg_i_3: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
     )
@@ -614,7 +2861,7 @@ accumulator_reg_i_6: unisim.vcomponents.LUT3
       I2 => audio_history_reg_0_63_21_23_n_0,
       O => pipe_audio_s10(21)
     );
-accumulator_reg_i_7: unisim.vcomponents.LUT3
+\accumulator_reg_i_4__0\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
     )
@@ -624,7 +2871,7 @@ accumulator_reg_i_7: unisim.vcomponents.LUT3
       I2 => audio_history_reg_0_63_18_20_n_2,
       O => pipe_audio_s10(20)
     );
-accumulator_reg_i_8: unisim.vcomponents.LUT3
+\accumulator_reg_i_5__0\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
     )
@@ -634,7 +2881,7 @@ accumulator_reg_i_8: unisim.vcomponents.LUT3
       I2 => audio_history_reg_0_63_18_20_n_1,
       O => pipe_audio_s10(19)
     );
-accumulator_reg_i_9: unisim.vcomponents.LUT3
+\accumulator_reg_i_6__0\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
     )
@@ -644,6 +2891,36 @@ accumulator_reg_i_9: unisim.vcomponents.LUT3
       I2 => audio_history_reg_0_63_18_20_n_0,
       O => pipe_audio_s10(18)
     );
+\accumulator_reg_i_7__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_15_17_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_15_17_n_2,
+      O => pipe_audio_s10(17)
+    );
+\accumulator_reg_i_8__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_15_17_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_15_17_n_1,
+      O => pipe_audio_s10(16)
+    );
+\accumulator_reg_i_9__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_15_17_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_15_17_n_0,
+      O => pipe_audio_s10(15)
+    );
 audio_history_reg_0_63_0_2: unisim.vcomponents.RAM64M
     generic map(
       INIT_A => X"0000000000000000",
@@ -652,20 +2929,20 @@ audio_history_reg_0_63_0_2: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRB(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRC(5 downto 0) => read_ptr_reg_0(5 downto 0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => \^q\(5 downto 0),
-      DIA => accumulator_reg_2(0),
-      DIB => accumulator_reg_2(1),
-      DIC => accumulator_reg_2(2),
+      DIA => accumulator_reg_1(0),
+      DIB => accumulator_reg_1(1),
+      DIC => accumulator_reg_1(2),
       DID => '0',
       DOA => audio_history_reg_0_63_0_2_n_0,
       DOB => audio_history_reg_0_63_0_2_n_1,
       DOC => audio_history_reg_0_63_0_2_n_2,
       DOD => NLW_audio_history_reg_0_63_0_2_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_3
+      WE => accumulator_reg_2
     );
 audio_history_reg_0_63_12_14: unisim.vcomponents.RAM64M
     generic map(
@@ -675,20 +2952,20 @@ audio_history_reg_0_63_12_14: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRB(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRC(5 downto 0) => read_ptr_reg_0(5 downto 0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => \^q\(5 downto 0),
-      DIA => accumulator_reg_2(12),
-      DIB => accumulator_reg_2(13),
-      DIC => accumulator_reg_2(14),
+      DIA => accumulator_reg_1(12),
+      DIB => accumulator_reg_1(13),
+      DIC => accumulator_reg_1(14),
       DID => '0',
       DOA => audio_history_reg_0_63_12_14_n_0,
       DOB => audio_history_reg_0_63_12_14_n_1,
       DOC => audio_history_reg_0_63_12_14_n_2,
       DOD => NLW_audio_history_reg_0_63_12_14_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_3
+      WE => accumulator_reg_2
     );
 audio_history_reg_0_63_15_17: unisim.vcomponents.RAM64M
     generic map(
@@ -698,20 +2975,20 @@ audio_history_reg_0_63_15_17: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRB(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRC(5 downto 0) => read_ptr_reg_0(5 downto 0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => \^q\(5 downto 0),
-      DIA => accumulator_reg_2(15),
-      DIB => accumulator_reg_2(16),
-      DIC => accumulator_reg_2(17),
+      DIA => accumulator_reg_1(15),
+      DIB => accumulator_reg_1(16),
+      DIC => accumulator_reg_1(17),
       DID => '0',
       DOA => audio_history_reg_0_63_15_17_n_0,
       DOB => audio_history_reg_0_63_15_17_n_1,
       DOC => audio_history_reg_0_63_15_17_n_2,
       DOD => NLW_audio_history_reg_0_63_15_17_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_3
+      WE => accumulator_reg_2
     );
 audio_history_reg_0_63_18_20: unisim.vcomponents.RAM64M
     generic map(
@@ -721,20 +2998,20 @@ audio_history_reg_0_63_18_20: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRB(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRC(5 downto 0) => read_ptr_reg_0(5 downto 0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => \^q\(5 downto 0),
-      DIA => accumulator_reg_2(18),
-      DIB => accumulator_reg_2(19),
-      DIC => accumulator_reg_2(20),
+      DIA => accumulator_reg_1(18),
+      DIB => accumulator_reg_1(19),
+      DIC => accumulator_reg_1(20),
       DID => '0',
       DOA => audio_history_reg_0_63_18_20_n_0,
       DOB => audio_history_reg_0_63_18_20_n_1,
       DOC => audio_history_reg_0_63_18_20_n_2,
       DOD => NLW_audio_history_reg_0_63_18_20_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_3
+      WE => accumulator_reg_2
     );
 audio_history_reg_0_63_21_23: unisim.vcomponents.RAM64M
     generic map(
@@ -744,20 +3021,20 @@ audio_history_reg_0_63_21_23: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRB(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRC(5 downto 0) => read_ptr_reg_0(5 downto 0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => \^q\(5 downto 0),
-      DIA => accumulator_reg_2(21),
-      DIB => accumulator_reg_2(22),
-      DIC => accumulator_reg_2(23),
+      DIA => accumulator_reg_1(21),
+      DIB => accumulator_reg_1(22),
+      DIC => accumulator_reg_1(23),
       DID => '0',
       DOA => audio_history_reg_0_63_21_23_n_0,
       DOB => audio_history_reg_0_63_21_23_n_1,
       DOC => audio_history_reg_0_63_21_23_n_2,
       DOD => NLW_audio_history_reg_0_63_21_23_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_3
+      WE => accumulator_reg_2
     );
 audio_history_reg_0_63_3_5: unisim.vcomponents.RAM64M
     generic map(
@@ -767,20 +3044,20 @@ audio_history_reg_0_63_3_5: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRB(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRC(5 downto 0) => read_ptr_reg_0(5 downto 0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => \^q\(5 downto 0),
-      DIA => accumulator_reg_2(3),
-      DIB => accumulator_reg_2(4),
-      DIC => accumulator_reg_2(5),
+      DIA => accumulator_reg_1(3),
+      DIB => accumulator_reg_1(4),
+      DIC => accumulator_reg_1(5),
       DID => '0',
       DOA => audio_history_reg_0_63_3_5_n_0,
       DOB => audio_history_reg_0_63_3_5_n_1,
       DOC => audio_history_reg_0_63_3_5_n_2,
       DOD => NLW_audio_history_reg_0_63_3_5_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_3
+      WE => accumulator_reg_2
     );
 audio_history_reg_0_63_6_8: unisim.vcomponents.RAM64M
     generic map(
@@ -790,20 +3067,20 @@ audio_history_reg_0_63_6_8: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRB(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRC(5 downto 0) => read_ptr_reg_0(5 downto 0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => \^q\(5 downto 0),
-      DIA => accumulator_reg_2(6),
-      DIB => accumulator_reg_2(7),
-      DIC => accumulator_reg_2(8),
+      DIA => accumulator_reg_1(6),
+      DIB => accumulator_reg_1(7),
+      DIC => accumulator_reg_1(8),
       DID => '0',
       DOA => audio_history_reg_0_63_6_8_n_0,
       DOB => audio_history_reg_0_63_6_8_n_1,
       DOC => audio_history_reg_0_63_6_8_n_2,
       DOD => NLW_audio_history_reg_0_63_6_8_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_3
+      WE => accumulator_reg_2
     );
 audio_history_reg_0_63_9_11: unisim.vcomponents.RAM64M
     generic map(
@@ -813,20 +3090,20 @@ audio_history_reg_0_63_9_11: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRB(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRC(5 downto 0) => read_ptr_reg_0(5 downto 0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => \^q\(5 downto 0),
-      DIA => accumulator_reg_2(9),
-      DIB => accumulator_reg_2(10),
-      DIC => accumulator_reg_2(11),
+      DIA => accumulator_reg_1(9),
+      DIB => accumulator_reg_1(10),
+      DIC => accumulator_reg_1(11),
       DID => '0',
       DOA => audio_history_reg_0_63_9_11_n_0,
       DOB => audio_history_reg_0_63_9_11_n_1,
       DOC => audio_history_reg_0_63_9_11_n_2,
       DOD => NLW_audio_history_reg_0_63_9_11_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_3
+      WE => accumulator_reg_2
     );
 audio_history_reg_64_127_0_2: unisim.vcomponents.RAM64M
     generic map(
@@ -836,20 +3113,20 @@ audio_history_reg_64_127_0_2: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRB(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRC(5 downto 0) => read_ptr_reg_0(5 downto 0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => \^q\(5 downto 0),
-      DIA => accumulator_reg_2(0),
-      DIB => accumulator_reg_2(1),
-      DIC => accumulator_reg_2(2),
+      DIA => accumulator_reg_1(0),
+      DIB => accumulator_reg_1(1),
+      DIC => accumulator_reg_1(2),
       DID => '0',
       DOA => audio_history_reg_64_127_0_2_n_0,
       DOB => audio_history_reg_64_127_0_2_n_1,
       DOC => audio_history_reg_64_127_0_2_n_2,
       DOD => NLW_audio_history_reg_64_127_0_2_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_4
+      WE => accumulator_reg_3
     );
 audio_history_reg_64_127_12_14: unisim.vcomponents.RAM64M
     generic map(
@@ -859,20 +3136,20 @@ audio_history_reg_64_127_12_14: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRB(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRC(5 downto 0) => read_ptr_reg_0(5 downto 0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => \^q\(5 downto 0),
-      DIA => accumulator_reg_2(12),
-      DIB => accumulator_reg_2(13),
-      DIC => accumulator_reg_2(14),
+      DIA => accumulator_reg_1(12),
+      DIB => accumulator_reg_1(13),
+      DIC => accumulator_reg_1(14),
       DID => '0',
       DOA => audio_history_reg_64_127_12_14_n_0,
       DOB => audio_history_reg_64_127_12_14_n_1,
       DOC => audio_history_reg_64_127_12_14_n_2,
       DOD => NLW_audio_history_reg_64_127_12_14_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_4
+      WE => accumulator_reg_3
     );
 audio_history_reg_64_127_15_17: unisim.vcomponents.RAM64M
     generic map(
@@ -882,20 +3159,20 @@ audio_history_reg_64_127_15_17: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRB(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRC(5 downto 0) => read_ptr_reg_0(5 downto 0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => \^q\(5 downto 0),
-      DIA => accumulator_reg_2(15),
-      DIB => accumulator_reg_2(16),
-      DIC => accumulator_reg_2(17),
+      DIA => accumulator_reg_1(15),
+      DIB => accumulator_reg_1(16),
+      DIC => accumulator_reg_1(17),
       DID => '0',
       DOA => audio_history_reg_64_127_15_17_n_0,
       DOB => audio_history_reg_64_127_15_17_n_1,
       DOC => audio_history_reg_64_127_15_17_n_2,
       DOD => NLW_audio_history_reg_64_127_15_17_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_4
+      WE => accumulator_reg_3
     );
 audio_history_reg_64_127_18_20: unisim.vcomponents.RAM64M
     generic map(
@@ -905,20 +3182,20 @@ audio_history_reg_64_127_18_20: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRB(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRC(5 downto 0) => read_ptr_reg_0(5 downto 0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => \^q\(5 downto 0),
-      DIA => accumulator_reg_2(18),
-      DIB => accumulator_reg_2(19),
-      DIC => accumulator_reg_2(20),
+      DIA => accumulator_reg_1(18),
+      DIB => accumulator_reg_1(19),
+      DIC => accumulator_reg_1(20),
       DID => '0',
       DOA => audio_history_reg_64_127_18_20_n_0,
       DOB => audio_history_reg_64_127_18_20_n_1,
       DOC => audio_history_reg_64_127_18_20_n_2,
       DOD => NLW_audio_history_reg_64_127_18_20_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_4
+      WE => accumulator_reg_3
     );
 audio_history_reg_64_127_21_23: unisim.vcomponents.RAM64M
     generic map(
@@ -928,20 +3205,20 @@ audio_history_reg_64_127_21_23: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRB(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRC(5 downto 0) => read_ptr_reg_0(5 downto 0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => \^q\(5 downto 0),
-      DIA => accumulator_reg_2(21),
-      DIB => accumulator_reg_2(22),
-      DIC => accumulator_reg_2(23),
+      DIA => accumulator_reg_1(21),
+      DIB => accumulator_reg_1(22),
+      DIC => accumulator_reg_1(23),
       DID => '0',
       DOA => audio_history_reg_64_127_21_23_n_0,
       DOB => audio_history_reg_64_127_21_23_n_1,
       DOC => audio_history_reg_64_127_21_23_n_2,
       DOD => NLW_audio_history_reg_64_127_21_23_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_4
+      WE => accumulator_reg_3
     );
 audio_history_reg_64_127_3_5: unisim.vcomponents.RAM64M
     generic map(
@@ -951,20 +3228,20 @@ audio_history_reg_64_127_3_5: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRB(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRC(5 downto 0) => read_ptr_reg_0(5 downto 0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => \^q\(5 downto 0),
-      DIA => accumulator_reg_2(3),
-      DIB => accumulator_reg_2(4),
-      DIC => accumulator_reg_2(5),
+      DIA => accumulator_reg_1(3),
+      DIB => accumulator_reg_1(4),
+      DIC => accumulator_reg_1(5),
       DID => '0',
       DOA => audio_history_reg_64_127_3_5_n_0,
       DOB => audio_history_reg_64_127_3_5_n_1,
       DOC => audio_history_reg_64_127_3_5_n_2,
       DOD => NLW_audio_history_reg_64_127_3_5_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_4
+      WE => accumulator_reg_3
     );
 audio_history_reg_64_127_6_8: unisim.vcomponents.RAM64M
     generic map(
@@ -974,20 +3251,20 @@ audio_history_reg_64_127_6_8: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRB(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRC(5 downto 0) => read_ptr_reg_0(5 downto 0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => \^q\(5 downto 0),
-      DIA => accumulator_reg_2(6),
-      DIB => accumulator_reg_2(7),
-      DIC => accumulator_reg_2(8),
+      DIA => accumulator_reg_1(6),
+      DIB => accumulator_reg_1(7),
+      DIC => accumulator_reg_1(8),
       DID => '0',
       DOA => audio_history_reg_64_127_6_8_n_0,
       DOB => audio_history_reg_64_127_6_8_n_1,
       DOC => audio_history_reg_64_127_6_8_n_2,
       DOD => NLW_audio_history_reg_64_127_6_8_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_4
+      WE => accumulator_reg_3
     );
 audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
     generic map(
@@ -997,387 +3274,139 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRB(5 downto 0) => read_ptr_reg_0(5 downto 0),
-      ADDRC(5 downto 0) => read_ptr_reg_0(5 downto 0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => \^q\(5 downto 0),
-      DIA => accumulator_reg_2(9),
-      DIB => accumulator_reg_2(10),
-      DIC => accumulator_reg_2(11),
+      DIA => accumulator_reg_1(9),
+      DIB => accumulator_reg_1(10),
+      DIC => accumulator_reg_1(11),
       DID => '0',
       DOA => audio_history_reg_64_127_9_11_n_0,
       DOB => audio_history_reg_64_127_9_11_n_1,
       DOC => audio_history_reg_64_127_9_11_n_2,
       DOD => NLW_audio_history_reg_64_127_9_11_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_4
+      WE => accumulator_reg_3
     );
-\audio_out_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
+pipe_valid_s1_reg: unisim.vcomponents.FDRE
+     port map (
       C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_91,
-      Q => \audio_out_reg[23]_0\(0),
-      R => rst_audio
+      CE => '1',
+      D => pipe_valid_s1_reg_0,
+      Q => pipe_valid_s1,
+      R => '0'
     );
-\audio_out_reg[10]\: unisim.vcomponents.FDRE
+pipe_valid_s2_i_1: unisim.vcomponents.LUT3
     generic map(
-      INIT => '0'
+      INIT => X"08"
     )
         port map (
+      I0 => pipe_valid_s1,
+      I1 => locked,
+      I2 => new_sample,
+      O => pipe_valid_s2_i_1_n_0
+    );
+pipe_valid_s2_reg: unisim.vcomponents.FDRE
+     port map (
       C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_81,
-      Q => \audio_out_reg[23]_0\(10),
-      R => rst_audio
+      CE => '1',
+      D => pipe_valid_s2_i_1_n_0,
+      Q => \^pipe_valid_s2_reg_0\,
+      R => '0'
     );
-\audio_out_reg[11]\: unisim.vcomponents.FDRE
+\read_ptr[0]_i_1__1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => '0'
+      INIT => X"D1"
     )
         port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_80,
-      Q => \audio_out_reg[23]_0\(11),
-      R => rst_audio
-    );
-\audio_out_reg[12]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_79,
-      Q => \audio_out_reg[23]_0\(12),
-      R => rst_audio
-    );
-\audio_out_reg[13]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_78,
-      Q => \audio_out_reg[23]_0\(13),
-      R => rst_audio
-    );
-\audio_out_reg[14]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_77,
-      Q => \audio_out_reg[23]_0\(14),
-      R => rst_audio
-    );
-\audio_out_reg[15]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_76,
-      Q => \audio_out_reg[23]_0\(15),
-      R => rst_audio
-    );
-\audio_out_reg[16]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_75,
-      Q => \audio_out_reg[23]_0\(16),
-      R => rst_audio
-    );
-\audio_out_reg[17]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_74,
-      Q => \audio_out_reg[23]_0\(17),
-      R => rst_audio
-    );
-\audio_out_reg[18]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_73,
-      Q => \audio_out_reg[23]_0\(18),
-      R => rst_audio
-    );
-\audio_out_reg[19]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_72,
-      Q => \audio_out_reg[23]_0\(19),
-      R => rst_audio
-    );
-\audio_out_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_90,
-      Q => \audio_out_reg[23]_0\(1),
-      R => rst_audio
-    );
-\audio_out_reg[20]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_71,
-      Q => \audio_out_reg[23]_0\(20),
-      R => rst_audio
-    );
-\audio_out_reg[21]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_70,
-      Q => \audio_out_reg[23]_0\(21),
-      R => rst_audio
-    );
-\audio_out_reg[22]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_69,
-      Q => \audio_out_reg[23]_0\(22),
-      R => rst_audio
-    );
-\audio_out_reg[23]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_68,
-      Q => \audio_out_reg[23]_0\(23),
-      R => rst_audio
-    );
-\audio_out_reg[2]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_89,
-      Q => \audio_out_reg[23]_0\(2),
-      R => rst_audio
-    );
-\audio_out_reg[3]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_88,
-      Q => \audio_out_reg[23]_0\(3),
-      R => rst_audio
-    );
-\audio_out_reg[4]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_87,
-      Q => \audio_out_reg[23]_0\(4),
-      R => rst_audio
-    );
-\audio_out_reg[5]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_86,
-      Q => \audio_out_reg[23]_0\(5),
-      R => rst_audio
-    );
-\audio_out_reg[6]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_85,
-      Q => \audio_out_reg[23]_0\(6),
-      R => rst_audio
-    );
-\audio_out_reg[7]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_84,
-      Q => \audio_out_reg[23]_0\(7),
-      R => rst_audio
-    );
-\audio_out_reg[8]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_83,
-      Q => \audio_out_reg[23]_0\(8),
-      R => rst_audio
-    );
-\audio_out_reg[9]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_82,
-      Q => \audio_out_reg[23]_0\(9),
-      R => rst_audio
-    );
-\read_ptr[0]_i_1__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"8B"
-    )
-        port map (
-      I0 => \^q\(0),
+      I0 => read_ptr_reg(0),
       I1 => new_sample,
-      I2 => read_ptr_reg(0),
-      O => \write_ptr_reg[0]_0\
+      I2 => \^q\(0),
+      O => \read_ptr[0]_i_1__1_n_0\
     );
-\read_ptr[0]_i_2\: unisim.vcomponents.LUT3
+\read_ptr[1]_i_1__1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"8B"
+      INIT => X"F909"
     )
         port map (
-      I0 => \^q\(0),
-      I1 => new_sample,
-      I2 => read_ptr_reg_0(0),
-      O => \read_ptr[0]_i_2_n_0\
+      I0 => read_ptr_reg(0),
+      I1 => read_ptr_reg(1),
+      I2 => new_sample,
+      I3 => \^q\(1),
+      O => \read_ptr[1]_i_1__1_n_0\
     );
-\read_ptr[1]_i_1__0\: unisim.vcomponents.LUT4
+\read_ptr[2]_i_1__2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"B88B"
+      INIT => X"FFE100E1"
     )
         port map (
-      I0 => \^q\(1),
-      I1 => new_sample,
-      I2 => read_ptr_reg_0(0),
-      I3 => read_ptr_reg_0(1),
-      O => \read_ptr[1]_i_1__0_n_0\
+      I0 => read_ptr_reg(1),
+      I1 => read_ptr_reg(0),
+      I2 => read_ptr_reg(2),
+      I3 => new_sample,
+      I4 => \^q\(2),
+      O => \read_ptr[2]_i_1__2_n_0\
     );
-\read_ptr[2]_i_1__0\: unisim.vcomponents.LUT5
+\read_ptr[3]_i_1__2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"BBB8888B"
+      INIT => X"FFFFFE010000FE01"
     )
         port map (
-      I0 => \^q\(2),
-      I1 => new_sample,
-      I2 => read_ptr_reg_0(1),
-      I3 => read_ptr_reg_0(0),
-      I4 => read_ptr_reg_0(2),
-      O => \read_ptr[2]_i_1__0_n_0\
+      I0 => read_ptr_reg(2),
+      I1 => read_ptr_reg(0),
+      I2 => read_ptr_reg(1),
+      I3 => read_ptr_reg(3),
+      I4 => new_sample,
+      I5 => \^q\(3),
+      O => \read_ptr[3]_i_1__2_n_0\
     );
-\read_ptr[3]_i_1__0\: unisim.vcomponents.LUT6
+\read_ptr[4]_i_1__2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BBBBBBB88888888B"
+      INIT => X"F909"
     )
         port map (
-      I0 => \^q\(3),
-      I1 => new_sample,
-      I2 => read_ptr_reg_0(2),
-      I3 => read_ptr_reg_0(0),
-      I4 => read_ptr_reg_0(1),
-      I5 => read_ptr_reg_0(3),
-      O => \read_ptr[3]_i_1__0_n_0\
-    );
-\read_ptr[4]_i_1__0\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"B88B"
-    )
-        port map (
-      I0 => \^q\(4),
-      I1 => new_sample,
-      I2 => \read_ptr[4]_i_2__0_n_0\,
-      I3 => read_ptr_reg_0(4),
-      O => \read_ptr[4]_i_1__0_n_0\
+      I0 => \read_ptr[4]_i_2__0_n_0\,
+      I1 => read_ptr_reg(4),
+      I2 => new_sample,
+      I3 => \^q\(4),
+      O => \read_ptr[4]_i_1__2_n_0\
     );
 \read_ptr[4]_i_2__0\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FFFE"
     )
         port map (
-      I0 => read_ptr_reg_0(2),
-      I1 => read_ptr_reg_0(0),
-      I2 => read_ptr_reg_0(1),
-      I3 => read_ptr_reg_0(3),
+      I0 => read_ptr_reg(2),
+      I1 => read_ptr_reg(0),
+      I2 => read_ptr_reg(1),
+      I3 => read_ptr_reg(3),
       O => \read_ptr[4]_i_2__0_n_0\
     );
-\read_ptr[5]_i_1__0\: unisim.vcomponents.LUT5
+\read_ptr[5]_i_1__2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"BBB8888B"
+      INIT => X"FFE100E1"
     )
         port map (
-      I0 => \^q\(5),
-      I1 => new_sample,
-      I2 => read_ptr_reg_0(4),
-      I3 => \read_ptr[4]_i_2__0_n_0\,
-      I4 => read_ptr_reg_0(5),
-      O => \read_ptr[5]_i_1__0_n_0\
+      I0 => read_ptr_reg(4),
+      I1 => \read_ptr[4]_i_2__0_n_0\,
+      I2 => read_ptr_reg(5),
+      I3 => new_sample,
+      I4 => \^q\(5),
+      O => \read_ptr[5]_i_1__2_n_0\
     );
-\read_ptr[6]_i_1__0\: unisim.vcomponents.LUT6
+\read_ptr[6]_i_1__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"BBBBBBB88888888B"
+      INIT => X"FFFFFE010000FE01"
     )
         port map (
-      I0 => \^q\(6),
-      I1 => new_sample,
-      I2 => \read_ptr[4]_i_2__0_n_0\,
-      I3 => read_ptr_reg_0(4),
-      I4 => read_ptr_reg_0(5),
-      I5 => read_ptr(6),
-      O => \read_ptr[6]_i_1__0_n_0\
+      I0 => \read_ptr[4]_i_2__0_n_0\,
+      I1 => read_ptr_reg(4),
+      I2 => read_ptr_reg(5),
+      I3 => read_ptr(6),
+      I4 => new_sample,
+      I5 => \^q\(6),
+      O => \read_ptr[6]_i_1__1_n_0\
     );
 \read_ptr_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -1385,9 +3414,9 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
     )
         port map (
       C => clk_audio,
-      CE => \read_ptr_reg[0]_0\,
-      D => \read_ptr[0]_i_2_n_0\,
-      Q => read_ptr_reg_0(0),
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[0]_i_1__1_n_0\,
+      Q => read_ptr_reg(0),
       R => rst_audio
     );
 \read_ptr_reg[1]\: unisim.vcomponents.FDRE
@@ -1396,9 +3425,9 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
     )
         port map (
       C => clk_audio,
-      CE => \read_ptr_reg[0]_0\,
-      D => \read_ptr[1]_i_1__0_n_0\,
-      Q => read_ptr_reg_0(1),
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[1]_i_1__1_n_0\,
+      Q => read_ptr_reg(1),
       R => rst_audio
     );
 \read_ptr_reg[2]\: unisim.vcomponents.FDRE
@@ -1407,9 +3436,9 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
     )
         port map (
       C => clk_audio,
-      CE => \read_ptr_reg[0]_0\,
-      D => \read_ptr[2]_i_1__0_n_0\,
-      Q => read_ptr_reg_0(2),
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[2]_i_1__2_n_0\,
+      Q => read_ptr_reg(2),
       R => rst_audio
     );
 \read_ptr_reg[3]\: unisim.vcomponents.FDRE
@@ -1418,9 +3447,9 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
     )
         port map (
       C => clk_audio,
-      CE => \read_ptr_reg[0]_0\,
-      D => \read_ptr[3]_i_1__0_n_0\,
-      Q => read_ptr_reg_0(3),
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[3]_i_1__2_n_0\,
+      Q => read_ptr_reg(3),
       R => rst_audio
     );
 \read_ptr_reg[4]\: unisim.vcomponents.FDRE
@@ -1429,9 +3458,9 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
     )
         port map (
       C => clk_audio,
-      CE => \read_ptr_reg[0]_0\,
-      D => \read_ptr[4]_i_1__0_n_0\,
-      Q => read_ptr_reg_0(4),
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[4]_i_1__2_n_0\,
+      Q => read_ptr_reg(4),
       R => rst_audio
     );
 \read_ptr_reg[5]\: unisim.vcomponents.FDRE
@@ -1440,9 +3469,9 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
     )
         port map (
       C => clk_audio,
-      CE => \read_ptr_reg[0]_0\,
-      D => \read_ptr[5]_i_1__0_n_0\,
-      Q => read_ptr_reg_0(5),
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[5]_i_1__2_n_0\,
+      Q => read_ptr_reg(5),
       R => rst_audio
     );
 \read_ptr_reg[6]\: unisim.vcomponents.FDRE
@@ -1451,8 +3480,8 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
     )
         port map (
       C => clk_audio,
-      CE => \read_ptr_reg[0]_0\,
-      D => \read_ptr[6]_i_1__0_n_0\,
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[6]_i_1__1_n_0\,
       Q => read_ptr(6),
       R => rst_audio
     );
@@ -1462,7 +3491,7 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
     )
         port map (
       I0 => \^q\(0),
-      O => \p_0_in__2\(0)
+      O => \p_0_in__3\(0)
     );
 \write_ptr[1]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -1471,7 +3500,7 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
         port map (
       I0 => \^q\(0),
       I1 => \^q\(1),
-      O => \p_0_in__2\(1)
+      O => \p_0_in__3\(1)
     );
 \write_ptr[2]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -1481,7 +3510,7 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
       I0 => \^q\(1),
       I1 => \^q\(0),
       I2 => \^q\(2),
-      O => \p_0_in__2\(2)
+      O => \p_0_in__3\(2)
     );
 \write_ptr[3]_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -1492,7 +3521,7 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
       I1 => \^q\(0),
       I2 => \^q\(1),
       I3 => \^q\(3),
-      O => \p_0_in__2\(3)
+      O => \p_0_in__3\(3)
     );
 \write_ptr[4]_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -1504,7 +3533,7 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
       I2 => \^q\(0),
       I3 => \^q\(2),
       I4 => \^q\(4),
-      O => \p_0_in__2\(4)
+      O => \p_0_in__3\(4)
     );
 \write_ptr[5]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1517,7 +3546,7 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
       I3 => \^q\(3),
       I4 => \^q\(4),
       I5 => \^q\(5),
-      O => \p_0_in__2\(5)
+      O => \p_0_in__3\(5)
     );
 \write_ptr[6]_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -1529,7 +3558,7 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
       I2 => \^q\(4),
       I3 => \^q\(3),
       I4 => \^q\(6),
-      O => \p_0_in__2\(6)
+      O => \p_0_in__3\(6)
     );
 \write_ptr[6]_i_2\: unisim.vcomponents.LUT3
     generic map(
@@ -1548,7 +3577,7 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
         port map (
       C => clk_audio,
       CE => new_sample,
-      D => \p_0_in__2\(0),
+      D => \p_0_in__3\(0),
       Q => \^q\(0),
       R => rst_audio
     );
@@ -1559,7 +3588,7 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
         port map (
       C => clk_audio,
       CE => new_sample,
-      D => \p_0_in__2\(1),
+      D => \p_0_in__3\(1),
       Q => \^q\(1),
       R => rst_audio
     );
@@ -1570,7 +3599,7 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
         port map (
       C => clk_audio,
       CE => new_sample,
-      D => \p_0_in__2\(2),
+      D => \p_0_in__3\(2),
       Q => \^q\(2),
       R => rst_audio
     );
@@ -1581,7 +3610,7 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
         port map (
       C => clk_audio,
       CE => new_sample,
-      D => \p_0_in__2\(3),
+      D => \p_0_in__3\(3),
       Q => \^q\(3),
       R => rst_audio
     );
@@ -1592,7 +3621,7 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
         port map (
       C => clk_audio,
       CE => new_sample,
-      D => \p_0_in__2\(4),
+      D => \p_0_in__3\(4),
       Q => \^q\(4),
       R => rst_audio
     );
@@ -1603,7 +3632,7 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
         port map (
       C => clk_audio,
       CE => new_sample,
-      D => \p_0_in__2\(5),
+      D => \p_0_in__3\(5),
       Q => \^q\(5),
       R => rst_audio
     );
@@ -1614,7 +3643,7 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
         port map (
       C => clk_audio,
       CE => new_sample,
-      D => \p_0_in__2\(6),
+      D => \p_0_in__3\(6),
       Q => \^q\(6),
       R => rst_audio
     );
@@ -1623,56 +3652,52 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_1_spatial_audio_top_0_0_dsp_fir_folded_0 is
+entity design_1_spatial_audio_top_0_0_dsp_fir_folded_4 is
   port (
-    pipe_valid_s2_reg_0 : out STD_LOGIC;
-    \read_ptr_reg[0]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \audio_out_reg[23]_0\ : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    P : out STD_LOGIC_VECTOR ( 23 downto 0 );
     pipe_audio_s1 : in STD_LOGIC;
     accumulator_reg_0 : in STD_LOGIC;
+    accumulator_reg_1 : in STD_LOGIC;
     clk_audio : in STD_LOGIC;
-    SR : in STD_LOGIC_VECTOR ( 0 to 0 );
+    rst_audio : in STD_LOGIC;
     RSTP : in STD_LOGIC;
-    douta : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    \read_ptr_reg[5]_0\ : in STD_LOGIC;
-    \read_ptr_reg[0]_1\ : in STD_LOGIC;
-    pipe_valid_s1_reg_0 : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    doutb : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    \read_ptr_reg[6]_0\ : in STD_LOGIC;
     new_sample : in STD_LOGIC;
-    locked : in STD_LOGIC;
-    accumulator_reg_1 : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    accumulator_reg_2 : in STD_LOGIC;
-    accumulator_reg_3 : in STD_LOGIC
+    Q : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    accumulator_reg_2 : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    accumulator_reg_3 : in STD_LOGIC;
+    accumulator_reg_4 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_dsp_fir_folded_0 : entity is "dsp_fir_folded";
-end design_1_spatial_audio_top_0_0_dsp_fir_folded_0;
+  attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_dsp_fir_folded_4 : entity is "dsp_fir_folded";
+end design_1_spatial_audio_top_0_0_dsp_fir_folded_4;
 
-architecture STRUCTURE of design_1_spatial_audio_top_0_0_dsp_fir_folded_0 is
-  signal \accumulator_reg_i_10__0_n_0\ : STD_LOGIC;
-  signal \accumulator_reg_i_11__0_n_0\ : STD_LOGIC;
-  signal \accumulator_reg_i_12__0_n_0\ : STD_LOGIC;
-  signal \accumulator_reg_i_13__0_n_0\ : STD_LOGIC;
-  signal \accumulator_reg_i_14__0_n_0\ : STD_LOGIC;
-  signal \accumulator_reg_i_15__0_n_0\ : STD_LOGIC;
-  signal \accumulator_reg_i_16__0_n_0\ : STD_LOGIC;
-  signal \accumulator_reg_i_17__0_n_0\ : STD_LOGIC;
-  signal \accumulator_reg_i_18__0_n_0\ : STD_LOGIC;
-  signal \accumulator_reg_i_19__0_n_0\ : STD_LOGIC;
-  signal accumulator_reg_i_1_n_0 : STD_LOGIC;
-  signal \accumulator_reg_i_20__0_n_0\ : STD_LOGIC;
-  signal \accumulator_reg_i_21__0_n_0\ : STD_LOGIC;
-  signal \accumulator_reg_i_22__0_n_0\ : STD_LOGIC;
-  signal \accumulator_reg_i_23__0_n_0\ : STD_LOGIC;
-  signal \accumulator_reg_i_24__0_n_0\ : STD_LOGIC;
-  signal accumulator_reg_i_2_n_0 : STD_LOGIC;
-  signal accumulator_reg_i_3_n_0 : STD_LOGIC;
-  signal \accumulator_reg_i_4__0_n_0\ : STD_LOGIC;
-  signal \accumulator_reg_i_5__0_n_0\ : STD_LOGIC;
-  signal \accumulator_reg_i_6__0_n_0\ : STD_LOGIC;
-  signal \accumulator_reg_i_7__0_n_0\ : STD_LOGIC;
-  signal \accumulator_reg_i_8__0_n_0\ : STD_LOGIC;
-  signal \accumulator_reg_i_9__0_n_0\ : STD_LOGIC;
+architecture STRUCTURE of design_1_spatial_audio_top_0_0_dsp_fir_folded_4 is
+  signal accumulator_reg_i_10_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_11_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_12_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_13_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_14_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_15_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_16_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_17_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_18_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_19_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_20_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_21_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_22_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_23_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_24_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_25_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_26_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_27_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_4_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_5_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_6_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_7_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_8_n_0 : STD_LOGIC;
+  signal accumulator_reg_i_9_n_0 : STD_LOGIC;
   signal accumulator_reg_n_100 : STD_LOGIC;
   signal accumulator_reg_n_101 : STD_LOGIC;
   signal accumulator_reg_n_102 : STD_LOGIC;
@@ -1689,30 +3714,6 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_dsp_fir_folded_0 is
   signal accumulator_reg_n_65 : STD_LOGIC;
   signal accumulator_reg_n_66 : STD_LOGIC;
   signal accumulator_reg_n_67 : STD_LOGIC;
-  signal accumulator_reg_n_68 : STD_LOGIC;
-  signal accumulator_reg_n_69 : STD_LOGIC;
-  signal accumulator_reg_n_70 : STD_LOGIC;
-  signal accumulator_reg_n_71 : STD_LOGIC;
-  signal accumulator_reg_n_72 : STD_LOGIC;
-  signal accumulator_reg_n_73 : STD_LOGIC;
-  signal accumulator_reg_n_74 : STD_LOGIC;
-  signal accumulator_reg_n_75 : STD_LOGIC;
-  signal accumulator_reg_n_76 : STD_LOGIC;
-  signal accumulator_reg_n_77 : STD_LOGIC;
-  signal accumulator_reg_n_78 : STD_LOGIC;
-  signal accumulator_reg_n_79 : STD_LOGIC;
-  signal accumulator_reg_n_80 : STD_LOGIC;
-  signal accumulator_reg_n_81 : STD_LOGIC;
-  signal accumulator_reg_n_82 : STD_LOGIC;
-  signal accumulator_reg_n_83 : STD_LOGIC;
-  signal accumulator_reg_n_84 : STD_LOGIC;
-  signal accumulator_reg_n_85 : STD_LOGIC;
-  signal accumulator_reg_n_86 : STD_LOGIC;
-  signal accumulator_reg_n_87 : STD_LOGIC;
-  signal accumulator_reg_n_88 : STD_LOGIC;
-  signal accumulator_reg_n_89 : STD_LOGIC;
-  signal accumulator_reg_n_90 : STD_LOGIC;
-  signal accumulator_reg_n_91 : STD_LOGIC;
   signal accumulator_reg_n_92 : STD_LOGIC;
   signal accumulator_reg_n_93 : STD_LOGIC;
   signal accumulator_reg_n_94 : STD_LOGIC;
@@ -1769,19 +3770,16 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_dsp_fir_folded_0 is
   signal audio_history_reg_64_127_9_11_n_0 : STD_LOGIC;
   signal audio_history_reg_64_127_9_11_n_1 : STD_LOGIC;
   signal audio_history_reg_64_127_9_11_n_2 : STD_LOGIC;
-  signal pipe_valid_s1_reg_n_0 : STD_LOGIC;
-  signal pipe_valid_s2_i_1_n_0 : STD_LOGIC;
-  signal \^pipe_valid_s2_reg_0\ : STD_LOGIC;
   signal read_ptr : STD_LOGIC_VECTOR ( 6 to 6 );
+  signal \read_ptr[0]_i_2_n_0\ : STD_LOGIC;
   signal \read_ptr[1]_i_1_n_0\ : STD_LOGIC;
-  signal \read_ptr[2]_i_1_n_0\ : STD_LOGIC;
-  signal \read_ptr[3]_i_1_n_0\ : STD_LOGIC;
-  signal \read_ptr[4]_i_1_n_0\ : STD_LOGIC;
-  signal \read_ptr[4]_i_2_n_0\ : STD_LOGIC;
-  signal \read_ptr[5]_i_1_n_0\ : STD_LOGIC;
+  signal \read_ptr[2]_i_1__0_n_0\ : STD_LOGIC;
+  signal \read_ptr[3]_i_1__0_n_0\ : STD_LOGIC;
+  signal \read_ptr[4]_i_1__0_n_0\ : STD_LOGIC;
+  signal \read_ptr[4]_i_2__2_n_0\ : STD_LOGIC;
+  signal \read_ptr[5]_i_1__0_n_0\ : STD_LOGIC;
   signal \read_ptr[6]_i_1_n_0\ : STD_LOGIC;
-  signal read_ptr_reg : STD_LOGIC_VECTOR ( 5 downto 1 );
-  signal \^read_ptr_reg[0]_0\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal read_ptr_reg : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_accumulator_reg_CARRYCASCOUT_UNCONNECTED : STD_LOGIC;
   signal NLW_accumulator_reg_MULTSIGNOUT_UNCONNECTED : STD_LOGIC;
   signal NLW_accumulator_reg_OVERFLOW_UNCONNECTED : STD_LOGIC;
@@ -1893,9 +3891,10 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_dsp_fir_folded_0 is
   attribute ram_addr_end of audio_history_reg_64_127_9_11 : label is 127;
   attribute ram_slice_begin of audio_history_reg_64_127_9_11 : label is 9;
   attribute ram_slice_end of audio_history_reg_64_127_9_11 : label is 11;
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \read_ptr[0]_i_2\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \read_ptr[1]_i_1\ : label is "soft_lutpair18";
 begin
-  pipe_valid_s2_reg_0 <= \^pipe_valid_s2_reg_0\;
-  \read_ptr_reg[0]_0\(0) <= \^read_ptr_reg[0]_0\(0);
 accumulator_reg: unisim.vcomponents.DSP48E1
     generic map(
       ACASCREG => 2,
@@ -1925,42 +3924,42 @@ accumulator_reg: unisim.vcomponents.DSP48E1
       USE_SIMD => "ONE48"
     )
         port map (
-      A(29) => accumulator_reg_i_1_n_0,
-      A(28) => accumulator_reg_i_1_n_0,
-      A(27) => accumulator_reg_i_1_n_0,
-      A(26) => accumulator_reg_i_1_n_0,
-      A(25) => accumulator_reg_i_1_n_0,
-      A(24) => accumulator_reg_i_1_n_0,
-      A(23) => accumulator_reg_i_1_n_0,
-      A(22) => accumulator_reg_i_2_n_0,
-      A(21) => accumulator_reg_i_3_n_0,
-      A(20) => \accumulator_reg_i_4__0_n_0\,
-      A(19) => \accumulator_reg_i_5__0_n_0\,
-      A(18) => \accumulator_reg_i_6__0_n_0\,
-      A(17) => \accumulator_reg_i_7__0_n_0\,
-      A(16) => \accumulator_reg_i_8__0_n_0\,
-      A(15) => \accumulator_reg_i_9__0_n_0\,
-      A(14) => \accumulator_reg_i_10__0_n_0\,
-      A(13) => \accumulator_reg_i_11__0_n_0\,
-      A(12) => \accumulator_reg_i_12__0_n_0\,
-      A(11) => \accumulator_reg_i_13__0_n_0\,
-      A(10) => \accumulator_reg_i_14__0_n_0\,
-      A(9) => \accumulator_reg_i_15__0_n_0\,
-      A(8) => \accumulator_reg_i_16__0_n_0\,
-      A(7) => \accumulator_reg_i_17__0_n_0\,
-      A(6) => \accumulator_reg_i_18__0_n_0\,
-      A(5) => \accumulator_reg_i_19__0_n_0\,
-      A(4) => \accumulator_reg_i_20__0_n_0\,
-      A(3) => \accumulator_reg_i_21__0_n_0\,
-      A(2) => \accumulator_reg_i_22__0_n_0\,
-      A(1) => \accumulator_reg_i_23__0_n_0\,
-      A(0) => \accumulator_reg_i_24__0_n_0\,
+      A(29) => accumulator_reg_i_4_n_0,
+      A(28) => accumulator_reg_i_4_n_0,
+      A(27) => accumulator_reg_i_4_n_0,
+      A(26) => accumulator_reg_i_4_n_0,
+      A(25) => accumulator_reg_i_4_n_0,
+      A(24) => accumulator_reg_i_4_n_0,
+      A(23) => accumulator_reg_i_4_n_0,
+      A(22) => accumulator_reg_i_5_n_0,
+      A(21) => accumulator_reg_i_6_n_0,
+      A(20) => accumulator_reg_i_7_n_0,
+      A(19) => accumulator_reg_i_8_n_0,
+      A(18) => accumulator_reg_i_9_n_0,
+      A(17) => accumulator_reg_i_10_n_0,
+      A(16) => accumulator_reg_i_11_n_0,
+      A(15) => accumulator_reg_i_12_n_0,
+      A(14) => accumulator_reg_i_13_n_0,
+      A(13) => accumulator_reg_i_14_n_0,
+      A(12) => accumulator_reg_i_15_n_0,
+      A(11) => accumulator_reg_i_16_n_0,
+      A(10) => accumulator_reg_i_17_n_0,
+      A(9) => accumulator_reg_i_18_n_0,
+      A(8) => accumulator_reg_i_19_n_0,
+      A(7) => accumulator_reg_i_20_n_0,
+      A(6) => accumulator_reg_i_21_n_0,
+      A(5) => accumulator_reg_i_22_n_0,
+      A(4) => accumulator_reg_i_23_n_0,
+      A(3) => accumulator_reg_i_24_n_0,
+      A(2) => accumulator_reg_i_25_n_0,
+      A(1) => accumulator_reg_i_26_n_0,
+      A(0) => accumulator_reg_i_27_n_0,
       ACIN(29 downto 0) => B"000000000000000000000000000000",
       ACOUT(29 downto 0) => NLW_accumulator_reg_ACOUT_UNCONNECTED(29 downto 0),
       ALUMODE(3 downto 0) => B"0000",
-      B(17) => douta(15),
-      B(16) => douta(15),
-      B(15 downto 0) => douta(15 downto 0),
+      B(17) => doutb(15),
+      B(16) => doutb(15),
+      B(15 downto 0) => doutb(15 downto 0),
       BCIN(17 downto 0) => B"000000000000000000",
       BCOUT(17 downto 0) => NLW_accumulator_reg_BCOUT_UNCONNECTED(17 downto 0),
       C(47 downto 0) => B"111111111111111111111111111111111111111111111111",
@@ -1981,7 +3980,7 @@ accumulator_reg: unisim.vcomponents.DSP48E1
       CED => '0',
       CEINMODE => '0',
       CEM => '0',
-      CEP => \^pipe_valid_s2_reg_0\,
+      CEP => accumulator_reg_1,
       CLK => clk_audio,
       D(24 downto 0) => B"0000000000000000000000000",
       INMODE(4 downto 0) => B"00000",
@@ -1999,30 +3998,7 @@ accumulator_reg: unisim.vcomponents.DSP48E1
       P(40) => accumulator_reg_n_65,
       P(39) => accumulator_reg_n_66,
       P(38) => accumulator_reg_n_67,
-      P(37) => accumulator_reg_n_68,
-      P(36) => accumulator_reg_n_69,
-      P(35) => accumulator_reg_n_70,
-      P(34) => accumulator_reg_n_71,
-      P(33) => accumulator_reg_n_72,
-      P(32) => accumulator_reg_n_73,
-      P(31) => accumulator_reg_n_74,
-      P(30) => accumulator_reg_n_75,
-      P(29) => accumulator_reg_n_76,
-      P(28) => accumulator_reg_n_77,
-      P(27) => accumulator_reg_n_78,
-      P(26) => accumulator_reg_n_79,
-      P(25) => accumulator_reg_n_80,
-      P(24) => accumulator_reg_n_81,
-      P(23) => accumulator_reg_n_82,
-      P(22) => accumulator_reg_n_83,
-      P(21) => accumulator_reg_n_84,
-      P(20) => accumulator_reg_n_85,
-      P(19) => accumulator_reg_n_86,
-      P(18) => accumulator_reg_n_87,
-      P(17) => accumulator_reg_n_88,
-      P(16) => accumulator_reg_n_89,
-      P(15) => accumulator_reg_n_90,
-      P(14) => accumulator_reg_n_91,
+      P(37 downto 14) => P(23 downto 0),
       P(13) => accumulator_reg_n_92,
       P(12) => accumulator_reg_n_93,
       P(11) => accumulator_reg_n_94,
@@ -2041,7 +4017,7 @@ accumulator_reg: unisim.vcomponents.DSP48E1
       PATTERNDETECT => NLW_accumulator_reg_PATTERNDETECT_UNCONNECTED,
       PCIN(47 downto 0) => B"000000000000000000000000000000000000000000000000",
       PCOUT(47 downto 0) => NLW_accumulator_reg_PCOUT_UNCONNECTED(47 downto 0),
-      RSTA => SR(0),
+      RSTA => rst_audio,
       RSTALLCARRYIN => '0',
       RSTALUMODE => '0',
       RSTB => '0',
@@ -2053,217 +4029,7 @@ accumulator_reg: unisim.vcomponents.DSP48E1
       RSTP => RSTP,
       UNDERFLOW => NLW_accumulator_reg_UNDERFLOW_UNCONNECTED
     );
-accumulator_reg_i_1: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_21_23_n_2,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_21_23_n_2,
-      O => accumulator_reg_i_1_n_0
-    );
-\accumulator_reg_i_10__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_12_14_n_2,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_12_14_n_2,
-      O => \accumulator_reg_i_10__0_n_0\
-    );
-\accumulator_reg_i_11__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_12_14_n_1,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_12_14_n_1,
-      O => \accumulator_reg_i_11__0_n_0\
-    );
-\accumulator_reg_i_12__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_12_14_n_0,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_12_14_n_0,
-      O => \accumulator_reg_i_12__0_n_0\
-    );
-\accumulator_reg_i_13__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_9_11_n_2,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_9_11_n_2,
-      O => \accumulator_reg_i_13__0_n_0\
-    );
-\accumulator_reg_i_14__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_9_11_n_1,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_9_11_n_1,
-      O => \accumulator_reg_i_14__0_n_0\
-    );
-\accumulator_reg_i_15__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_9_11_n_0,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_9_11_n_0,
-      O => \accumulator_reg_i_15__0_n_0\
-    );
-\accumulator_reg_i_16__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_6_8_n_2,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_6_8_n_2,
-      O => \accumulator_reg_i_16__0_n_0\
-    );
-\accumulator_reg_i_17__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_6_8_n_1,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_6_8_n_1,
-      O => \accumulator_reg_i_17__0_n_0\
-    );
-\accumulator_reg_i_18__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_6_8_n_0,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_6_8_n_0,
-      O => \accumulator_reg_i_18__0_n_0\
-    );
-\accumulator_reg_i_19__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_3_5_n_2,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_3_5_n_2,
-      O => \accumulator_reg_i_19__0_n_0\
-    );
-accumulator_reg_i_2: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_21_23_n_1,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_21_23_n_1,
-      O => accumulator_reg_i_2_n_0
-    );
-\accumulator_reg_i_20__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_3_5_n_1,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_3_5_n_1,
-      O => \accumulator_reg_i_20__0_n_0\
-    );
-\accumulator_reg_i_21__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_3_5_n_0,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_3_5_n_0,
-      O => \accumulator_reg_i_21__0_n_0\
-    );
-\accumulator_reg_i_22__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_0_2_n_2,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_0_2_n_2,
-      O => \accumulator_reg_i_22__0_n_0\
-    );
-\accumulator_reg_i_23__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_0_2_n_1,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_0_2_n_1,
-      O => \accumulator_reg_i_23__0_n_0\
-    );
-\accumulator_reg_i_24__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_0_2_n_0,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_0_2_n_0,
-      O => \accumulator_reg_i_24__0_n_0\
-    );
-accumulator_reg_i_3: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_21_23_n_0,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_21_23_n_0,
-      O => accumulator_reg_i_3_n_0
-    );
-\accumulator_reg_i_4__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_18_20_n_2,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_18_20_n_2,
-      O => \accumulator_reg_i_4__0_n_0\
-    );
-\accumulator_reg_i_5__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_18_20_n_1,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_18_20_n_1,
-      O => \accumulator_reg_i_5__0_n_0\
-    );
-\accumulator_reg_i_6__0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => audio_history_reg_64_127_18_20_n_0,
-      I1 => read_ptr(6),
-      I2 => audio_history_reg_0_63_18_20_n_0,
-      O => \accumulator_reg_i_6__0_n_0\
-    );
-\accumulator_reg_i_7__0\: unisim.vcomponents.LUT3
+accumulator_reg_i_10: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
     )
@@ -2271,9 +4037,9 @@ accumulator_reg_i_3: unisim.vcomponents.LUT3
       I0 => audio_history_reg_64_127_15_17_n_2,
       I1 => read_ptr(6),
       I2 => audio_history_reg_0_63_15_17_n_2,
-      O => \accumulator_reg_i_7__0_n_0\
+      O => accumulator_reg_i_10_n_0
     );
-\accumulator_reg_i_8__0\: unisim.vcomponents.LUT3
+accumulator_reg_i_11: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
     )
@@ -2281,9 +4047,9 @@ accumulator_reg_i_3: unisim.vcomponents.LUT3
       I0 => audio_history_reg_64_127_15_17_n_1,
       I1 => read_ptr(6),
       I2 => audio_history_reg_0_63_15_17_n_1,
-      O => \accumulator_reg_i_8__0_n_0\
+      O => accumulator_reg_i_11_n_0
     );
-\accumulator_reg_i_9__0\: unisim.vcomponents.LUT3
+accumulator_reg_i_12: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
     )
@@ -2291,7 +4057,217 @@ accumulator_reg_i_3: unisim.vcomponents.LUT3
       I0 => audio_history_reg_64_127_15_17_n_0,
       I1 => read_ptr(6),
       I2 => audio_history_reg_0_63_15_17_n_0,
-      O => \accumulator_reg_i_9__0_n_0\
+      O => accumulator_reg_i_12_n_0
+    );
+accumulator_reg_i_13: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_12_14_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_12_14_n_2,
+      O => accumulator_reg_i_13_n_0
+    );
+accumulator_reg_i_14: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_12_14_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_12_14_n_1,
+      O => accumulator_reg_i_14_n_0
+    );
+accumulator_reg_i_15: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_12_14_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_12_14_n_0,
+      O => accumulator_reg_i_15_n_0
+    );
+accumulator_reg_i_16: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_9_11_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_9_11_n_2,
+      O => accumulator_reg_i_16_n_0
+    );
+accumulator_reg_i_17: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_9_11_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_9_11_n_1,
+      O => accumulator_reg_i_17_n_0
+    );
+accumulator_reg_i_18: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_9_11_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_9_11_n_0,
+      O => accumulator_reg_i_18_n_0
+    );
+accumulator_reg_i_19: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_6_8_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_6_8_n_2,
+      O => accumulator_reg_i_19_n_0
+    );
+accumulator_reg_i_20: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_6_8_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_6_8_n_1,
+      O => accumulator_reg_i_20_n_0
+    );
+accumulator_reg_i_21: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_6_8_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_6_8_n_0,
+      O => accumulator_reg_i_21_n_0
+    );
+accumulator_reg_i_22: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_3_5_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_3_5_n_2,
+      O => accumulator_reg_i_22_n_0
+    );
+accumulator_reg_i_23: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_3_5_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_3_5_n_1,
+      O => accumulator_reg_i_23_n_0
+    );
+accumulator_reg_i_24: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_3_5_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_3_5_n_0,
+      O => accumulator_reg_i_24_n_0
+    );
+accumulator_reg_i_25: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_0_2_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_0_2_n_2,
+      O => accumulator_reg_i_25_n_0
+    );
+accumulator_reg_i_26: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_0_2_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_0_2_n_1,
+      O => accumulator_reg_i_26_n_0
+    );
+accumulator_reg_i_27: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_0_2_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_0_2_n_0,
+      O => accumulator_reg_i_27_n_0
+    );
+accumulator_reg_i_4: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_21_23_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_21_23_n_2,
+      O => accumulator_reg_i_4_n_0
+    );
+accumulator_reg_i_5: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_21_23_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_21_23_n_1,
+      O => accumulator_reg_i_5_n_0
+    );
+accumulator_reg_i_6: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_21_23_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_21_23_n_0,
+      O => accumulator_reg_i_6_n_0
+    );
+accumulator_reg_i_7: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_18_20_n_2,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_18_20_n_2,
+      O => accumulator_reg_i_7_n_0
+    );
+accumulator_reg_i_8: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_18_20_n_1,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_18_20_n_1,
+      O => accumulator_reg_i_8_n_0
+    );
+accumulator_reg_i_9: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => audio_history_reg_64_127_18_20_n_0,
+      I1 => read_ptr(6),
+      I2 => audio_history_reg_0_63_18_20_n_0,
+      O => accumulator_reg_i_9_n_0
     );
 audio_history_reg_0_63_0_2: unisim.vcomponents.RAM64M
     generic map(
@@ -2301,23 +4277,20 @@ audio_history_reg_0_63_0_2: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRA(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRB(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRB(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRC(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRC(0) => \^read_ptr_reg[0]_0\(0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => Q(5 downto 0),
-      DIA => accumulator_reg_1(0),
-      DIB => accumulator_reg_1(1),
-      DIC => accumulator_reg_1(2),
+      DIA => accumulator_reg_2(0),
+      DIB => accumulator_reg_2(1),
+      DIC => accumulator_reg_2(2),
       DID => '0',
       DOA => audio_history_reg_0_63_0_2_n_0,
       DOB => audio_history_reg_0_63_0_2_n_1,
       DOC => audio_history_reg_0_63_0_2_n_2,
       DOD => NLW_audio_history_reg_0_63_0_2_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_2
+      WE => accumulator_reg_3
     );
 audio_history_reg_0_63_12_14: unisim.vcomponents.RAM64M
     generic map(
@@ -2327,23 +4300,20 @@ audio_history_reg_0_63_12_14: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRA(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRB(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRB(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRC(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRC(0) => \^read_ptr_reg[0]_0\(0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => Q(5 downto 0),
-      DIA => accumulator_reg_1(12),
-      DIB => accumulator_reg_1(13),
-      DIC => accumulator_reg_1(14),
+      DIA => accumulator_reg_2(12),
+      DIB => accumulator_reg_2(13),
+      DIC => accumulator_reg_2(14),
       DID => '0',
       DOA => audio_history_reg_0_63_12_14_n_0,
       DOB => audio_history_reg_0_63_12_14_n_1,
       DOC => audio_history_reg_0_63_12_14_n_2,
       DOD => NLW_audio_history_reg_0_63_12_14_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_2
+      WE => accumulator_reg_3
     );
 audio_history_reg_0_63_15_17: unisim.vcomponents.RAM64M
     generic map(
@@ -2353,23 +4323,20 @@ audio_history_reg_0_63_15_17: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRA(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRB(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRB(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRC(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRC(0) => \^read_ptr_reg[0]_0\(0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => Q(5 downto 0),
-      DIA => accumulator_reg_1(15),
-      DIB => accumulator_reg_1(16),
-      DIC => accumulator_reg_1(17),
+      DIA => accumulator_reg_2(15),
+      DIB => accumulator_reg_2(16),
+      DIC => accumulator_reg_2(17),
       DID => '0',
       DOA => audio_history_reg_0_63_15_17_n_0,
       DOB => audio_history_reg_0_63_15_17_n_1,
       DOC => audio_history_reg_0_63_15_17_n_2,
       DOD => NLW_audio_history_reg_0_63_15_17_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_2
+      WE => accumulator_reg_3
     );
 audio_history_reg_0_63_18_20: unisim.vcomponents.RAM64M
     generic map(
@@ -2379,23 +4346,20 @@ audio_history_reg_0_63_18_20: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRA(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRB(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRB(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRC(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRC(0) => \^read_ptr_reg[0]_0\(0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => Q(5 downto 0),
-      DIA => accumulator_reg_1(18),
-      DIB => accumulator_reg_1(19),
-      DIC => accumulator_reg_1(20),
+      DIA => accumulator_reg_2(18),
+      DIB => accumulator_reg_2(19),
+      DIC => accumulator_reg_2(20),
       DID => '0',
       DOA => audio_history_reg_0_63_18_20_n_0,
       DOB => audio_history_reg_0_63_18_20_n_1,
       DOC => audio_history_reg_0_63_18_20_n_2,
       DOD => NLW_audio_history_reg_0_63_18_20_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_2
+      WE => accumulator_reg_3
     );
 audio_history_reg_0_63_21_23: unisim.vcomponents.RAM64M
     generic map(
@@ -2405,23 +4369,20 @@ audio_history_reg_0_63_21_23: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRA(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRB(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRB(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRC(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRC(0) => \^read_ptr_reg[0]_0\(0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => Q(5 downto 0),
-      DIA => accumulator_reg_1(21),
-      DIB => accumulator_reg_1(22),
-      DIC => accumulator_reg_1(23),
+      DIA => accumulator_reg_2(21),
+      DIB => accumulator_reg_2(22),
+      DIC => accumulator_reg_2(23),
       DID => '0',
       DOA => audio_history_reg_0_63_21_23_n_0,
       DOB => audio_history_reg_0_63_21_23_n_1,
       DOC => audio_history_reg_0_63_21_23_n_2,
       DOD => NLW_audio_history_reg_0_63_21_23_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_2
+      WE => accumulator_reg_3
     );
 audio_history_reg_0_63_3_5: unisim.vcomponents.RAM64M
     generic map(
@@ -2431,23 +4392,20 @@ audio_history_reg_0_63_3_5: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRA(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRB(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRB(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRC(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRC(0) => \^read_ptr_reg[0]_0\(0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => Q(5 downto 0),
-      DIA => accumulator_reg_1(3),
-      DIB => accumulator_reg_1(4),
-      DIC => accumulator_reg_1(5),
+      DIA => accumulator_reg_2(3),
+      DIB => accumulator_reg_2(4),
+      DIC => accumulator_reg_2(5),
       DID => '0',
       DOA => audio_history_reg_0_63_3_5_n_0,
       DOB => audio_history_reg_0_63_3_5_n_1,
       DOC => audio_history_reg_0_63_3_5_n_2,
       DOD => NLW_audio_history_reg_0_63_3_5_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_2
+      WE => accumulator_reg_3
     );
 audio_history_reg_0_63_6_8: unisim.vcomponents.RAM64M
     generic map(
@@ -2457,23 +4415,20 @@ audio_history_reg_0_63_6_8: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRA(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRB(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRB(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRC(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRC(0) => \^read_ptr_reg[0]_0\(0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => Q(5 downto 0),
-      DIA => accumulator_reg_1(6),
-      DIB => accumulator_reg_1(7),
-      DIC => accumulator_reg_1(8),
+      DIA => accumulator_reg_2(6),
+      DIB => accumulator_reg_2(7),
+      DIC => accumulator_reg_2(8),
       DID => '0',
       DOA => audio_history_reg_0_63_6_8_n_0,
       DOB => audio_history_reg_0_63_6_8_n_1,
       DOC => audio_history_reg_0_63_6_8_n_2,
       DOD => NLW_audio_history_reg_0_63_6_8_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_2
+      WE => accumulator_reg_3
     );
 audio_history_reg_0_63_9_11: unisim.vcomponents.RAM64M
     generic map(
@@ -2483,23 +4438,20 @@ audio_history_reg_0_63_9_11: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRA(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRB(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRB(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRC(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRC(0) => \^read_ptr_reg[0]_0\(0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => Q(5 downto 0),
-      DIA => accumulator_reg_1(9),
-      DIB => accumulator_reg_1(10),
-      DIC => accumulator_reg_1(11),
+      DIA => accumulator_reg_2(9),
+      DIB => accumulator_reg_2(10),
+      DIC => accumulator_reg_2(11),
       DID => '0',
       DOA => audio_history_reg_0_63_9_11_n_0,
       DOB => audio_history_reg_0_63_9_11_n_1,
       DOC => audio_history_reg_0_63_9_11_n_2,
       DOD => NLW_audio_history_reg_0_63_9_11_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_2
+      WE => accumulator_reg_3
     );
 audio_history_reg_64_127_0_2: unisim.vcomponents.RAM64M
     generic map(
@@ -2509,23 +4461,20 @@ audio_history_reg_64_127_0_2: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRA(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRB(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRB(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRC(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRC(0) => \^read_ptr_reg[0]_0\(0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => Q(5 downto 0),
-      DIA => accumulator_reg_1(0),
-      DIB => accumulator_reg_1(1),
-      DIC => accumulator_reg_1(2),
+      DIA => accumulator_reg_2(0),
+      DIB => accumulator_reg_2(1),
+      DIC => accumulator_reg_2(2),
       DID => '0',
       DOA => audio_history_reg_64_127_0_2_n_0,
       DOB => audio_history_reg_64_127_0_2_n_1,
       DOC => audio_history_reg_64_127_0_2_n_2,
       DOD => NLW_audio_history_reg_64_127_0_2_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_3
+      WE => accumulator_reg_4
     );
 audio_history_reg_64_127_12_14: unisim.vcomponents.RAM64M
     generic map(
@@ -2535,23 +4484,20 @@ audio_history_reg_64_127_12_14: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRA(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRB(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRB(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRC(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRC(0) => \^read_ptr_reg[0]_0\(0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => Q(5 downto 0),
-      DIA => accumulator_reg_1(12),
-      DIB => accumulator_reg_1(13),
-      DIC => accumulator_reg_1(14),
+      DIA => accumulator_reg_2(12),
+      DIB => accumulator_reg_2(13),
+      DIC => accumulator_reg_2(14),
       DID => '0',
       DOA => audio_history_reg_64_127_12_14_n_0,
       DOB => audio_history_reg_64_127_12_14_n_1,
       DOC => audio_history_reg_64_127_12_14_n_2,
       DOD => NLW_audio_history_reg_64_127_12_14_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_3
+      WE => accumulator_reg_4
     );
 audio_history_reg_64_127_15_17: unisim.vcomponents.RAM64M
     generic map(
@@ -2561,23 +4507,20 @@ audio_history_reg_64_127_15_17: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRA(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRB(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRB(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRC(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRC(0) => \^read_ptr_reg[0]_0\(0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => Q(5 downto 0),
-      DIA => accumulator_reg_1(15),
-      DIB => accumulator_reg_1(16),
-      DIC => accumulator_reg_1(17),
+      DIA => accumulator_reg_2(15),
+      DIB => accumulator_reg_2(16),
+      DIC => accumulator_reg_2(17),
       DID => '0',
       DOA => audio_history_reg_64_127_15_17_n_0,
       DOB => audio_history_reg_64_127_15_17_n_1,
       DOC => audio_history_reg_64_127_15_17_n_2,
       DOD => NLW_audio_history_reg_64_127_15_17_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_3
+      WE => accumulator_reg_4
     );
 audio_history_reg_64_127_18_20: unisim.vcomponents.RAM64M
     generic map(
@@ -2587,23 +4530,20 @@ audio_history_reg_64_127_18_20: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRA(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRB(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRB(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRC(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRC(0) => \^read_ptr_reg[0]_0\(0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => Q(5 downto 0),
-      DIA => accumulator_reg_1(18),
-      DIB => accumulator_reg_1(19),
-      DIC => accumulator_reg_1(20),
+      DIA => accumulator_reg_2(18),
+      DIB => accumulator_reg_2(19),
+      DIC => accumulator_reg_2(20),
       DID => '0',
       DOA => audio_history_reg_64_127_18_20_n_0,
       DOB => audio_history_reg_64_127_18_20_n_1,
       DOC => audio_history_reg_64_127_18_20_n_2,
       DOD => NLW_audio_history_reg_64_127_18_20_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_3
+      WE => accumulator_reg_4
     );
 audio_history_reg_64_127_21_23: unisim.vcomponents.RAM64M
     generic map(
@@ -2613,23 +4553,20 @@ audio_history_reg_64_127_21_23: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRA(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRB(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRB(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRC(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRC(0) => \^read_ptr_reg[0]_0\(0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => Q(5 downto 0),
-      DIA => accumulator_reg_1(21),
-      DIB => accumulator_reg_1(22),
-      DIC => accumulator_reg_1(23),
+      DIA => accumulator_reg_2(21),
+      DIB => accumulator_reg_2(22),
+      DIC => accumulator_reg_2(23),
       DID => '0',
       DOA => audio_history_reg_64_127_21_23_n_0,
       DOB => audio_history_reg_64_127_21_23_n_1,
       DOC => audio_history_reg_64_127_21_23_n_2,
       DOD => NLW_audio_history_reg_64_127_21_23_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_3
+      WE => accumulator_reg_4
     );
 audio_history_reg_64_127_3_5: unisim.vcomponents.RAM64M
     generic map(
@@ -2639,23 +4576,20 @@ audio_history_reg_64_127_3_5: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRA(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRB(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRB(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRC(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRC(0) => \^read_ptr_reg[0]_0\(0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => Q(5 downto 0),
-      DIA => accumulator_reg_1(3),
-      DIB => accumulator_reg_1(4),
-      DIC => accumulator_reg_1(5),
+      DIA => accumulator_reg_2(3),
+      DIB => accumulator_reg_2(4),
+      DIC => accumulator_reg_2(5),
       DID => '0',
       DOA => audio_history_reg_64_127_3_5_n_0,
       DOB => audio_history_reg_64_127_3_5_n_1,
       DOC => audio_history_reg_64_127_3_5_n_2,
       DOD => NLW_audio_history_reg_64_127_3_5_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_3
+      WE => accumulator_reg_4
     );
 audio_history_reg_64_127_6_8: unisim.vcomponents.RAM64M
     generic map(
@@ -2665,23 +4599,20 @@ audio_history_reg_64_127_6_8: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRA(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRB(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRB(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRC(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRC(0) => \^read_ptr_reg[0]_0\(0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => Q(5 downto 0),
-      DIA => accumulator_reg_1(6),
-      DIB => accumulator_reg_1(7),
-      DIC => accumulator_reg_1(8),
+      DIA => accumulator_reg_2(6),
+      DIB => accumulator_reg_2(7),
+      DIC => accumulator_reg_2(8),
       DID => '0',
       DOA => audio_history_reg_64_127_6_8_n_0,
       DOB => audio_history_reg_64_127_6_8_n_1,
       DOC => audio_history_reg_64_127_6_8_n_2,
       DOD => NLW_audio_history_reg_64_127_6_8_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_3
+      WE => accumulator_reg_4
     );
 audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
     generic map(
@@ -2691,395 +4622,112 @@ audio_history_reg_64_127_9_11: unisim.vcomponents.RAM64M
       INIT_D => X"0000000000000000"
     )
         port map (
-      ADDRA(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRA(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRB(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRB(0) => \^read_ptr_reg[0]_0\(0),
-      ADDRC(5 downto 1) => read_ptr_reg(5 downto 1),
-      ADDRC(0) => \^read_ptr_reg[0]_0\(0),
+      ADDRA(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRB(5 downto 0) => read_ptr_reg(5 downto 0),
+      ADDRC(5 downto 0) => read_ptr_reg(5 downto 0),
       ADDRD(5 downto 0) => Q(5 downto 0),
-      DIA => accumulator_reg_1(9),
-      DIB => accumulator_reg_1(10),
-      DIC => accumulator_reg_1(11),
+      DIA => accumulator_reg_2(9),
+      DIB => accumulator_reg_2(10),
+      DIC => accumulator_reg_2(11),
       DID => '0',
       DOA => audio_history_reg_64_127_9_11_n_0,
       DOB => audio_history_reg_64_127_9_11_n_1,
       DOC => audio_history_reg_64_127_9_11_n_2,
       DOD => NLW_audio_history_reg_64_127_9_11_DOD_UNCONNECTED,
       WCLK => clk_audio,
-      WE => accumulator_reg_3
+      WE => accumulator_reg_4
     );
-\audio_out_reg[0]\: unisim.vcomponents.FDRE
+\read_ptr[0]_i_2\: unisim.vcomponents.LUT3
     generic map(
-      INIT => '0'
+      INIT => X"D1"
     )
         port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_91,
-      Q => \audio_out_reg[23]_0\(0),
-      R => SR(0)
-    );
-\audio_out_reg[10]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_81,
-      Q => \audio_out_reg[23]_0\(10),
-      R => SR(0)
-    );
-\audio_out_reg[11]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_80,
-      Q => \audio_out_reg[23]_0\(11),
-      R => SR(0)
-    );
-\audio_out_reg[12]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_79,
-      Q => \audio_out_reg[23]_0\(12),
-      R => SR(0)
-    );
-\audio_out_reg[13]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_78,
-      Q => \audio_out_reg[23]_0\(13),
-      R => SR(0)
-    );
-\audio_out_reg[14]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_77,
-      Q => \audio_out_reg[23]_0\(14),
-      R => SR(0)
-    );
-\audio_out_reg[15]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_76,
-      Q => \audio_out_reg[23]_0\(15),
-      R => SR(0)
-    );
-\audio_out_reg[16]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_75,
-      Q => \audio_out_reg[23]_0\(16),
-      R => SR(0)
-    );
-\audio_out_reg[17]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_74,
-      Q => \audio_out_reg[23]_0\(17),
-      R => SR(0)
-    );
-\audio_out_reg[18]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_73,
-      Q => \audio_out_reg[23]_0\(18),
-      R => SR(0)
-    );
-\audio_out_reg[19]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_72,
-      Q => \audio_out_reg[23]_0\(19),
-      R => SR(0)
-    );
-\audio_out_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_90,
-      Q => \audio_out_reg[23]_0\(1),
-      R => SR(0)
-    );
-\audio_out_reg[20]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_71,
-      Q => \audio_out_reg[23]_0\(20),
-      R => SR(0)
-    );
-\audio_out_reg[21]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_70,
-      Q => \audio_out_reg[23]_0\(21),
-      R => SR(0)
-    );
-\audio_out_reg[22]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_69,
-      Q => \audio_out_reg[23]_0\(22),
-      R => SR(0)
-    );
-\audio_out_reg[23]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_68,
-      Q => \audio_out_reg[23]_0\(23),
-      R => SR(0)
-    );
-\audio_out_reg[2]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_89,
-      Q => \audio_out_reg[23]_0\(2),
-      R => SR(0)
-    );
-\audio_out_reg[3]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_88,
-      Q => \audio_out_reg[23]_0\(3),
-      R => SR(0)
-    );
-\audio_out_reg[4]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_87,
-      Q => \audio_out_reg[23]_0\(4),
-      R => SR(0)
-    );
-\audio_out_reg[5]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_86,
-      Q => \audio_out_reg[23]_0\(5),
-      R => SR(0)
-    );
-\audio_out_reg[6]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_85,
-      Q => \audio_out_reg[23]_0\(6),
-      R => SR(0)
-    );
-\audio_out_reg[7]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_84,
-      Q => \audio_out_reg[23]_0\(7),
-      R => SR(0)
-    );
-\audio_out_reg[8]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_83,
-      Q => \audio_out_reg[23]_0\(8),
-      R => SR(0)
-    );
-\audio_out_reg[9]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clk_audio,
-      CE => new_sample,
-      D => accumulator_reg_n_82,
-      Q => \audio_out_reg[23]_0\(9),
-      R => SR(0)
-    );
-pipe_valid_s1_reg: unisim.vcomponents.FDRE
-     port map (
-      C => clk_audio,
-      CE => '1',
-      D => pipe_valid_s1_reg_0,
-      Q => pipe_valid_s1_reg_n_0,
-      R => '0'
-    );
-pipe_valid_s2_i_1: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"08"
-    )
-        port map (
-      I0 => pipe_valid_s1_reg_n_0,
-      I1 => locked,
-      I2 => new_sample,
-      O => pipe_valid_s2_i_1_n_0
-    );
-pipe_valid_s2_reg: unisim.vcomponents.FDRE
-     port map (
-      C => clk_audio,
-      CE => '1',
-      D => pipe_valid_s2_i_1_n_0,
-      Q => \^pipe_valid_s2_reg_0\,
-      R => '0'
+      I0 => read_ptr_reg(0),
+      I1 => new_sample,
+      I2 => Q(0),
+      O => \read_ptr[0]_i_2_n_0\
     );
 \read_ptr[1]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"B88B"
+      INIT => X"F909"
     )
         port map (
-      I0 => Q(1),
-      I1 => new_sample,
-      I2 => \^read_ptr_reg[0]_0\(0),
-      I3 => read_ptr_reg(1),
+      I0 => read_ptr_reg(0),
+      I1 => read_ptr_reg(1),
+      I2 => new_sample,
+      I3 => Q(1),
       O => \read_ptr[1]_i_1_n_0\
     );
-\read_ptr[2]_i_1\: unisim.vcomponents.LUT5
+\read_ptr[2]_i_1__0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"BBB8888B"
+      INIT => X"FFE100E1"
     )
         port map (
-      I0 => Q(2),
-      I1 => new_sample,
-      I2 => read_ptr_reg(1),
-      I3 => \^read_ptr_reg[0]_0\(0),
-      I4 => read_ptr_reg(2),
-      O => \read_ptr[2]_i_1_n_0\
-    );
-\read_ptr[3]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BBBBBBB88888888B"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => new_sample,
+      I0 => read_ptr_reg(1),
+      I1 => read_ptr_reg(0),
       I2 => read_ptr_reg(2),
-      I3 => \^read_ptr_reg[0]_0\(0),
-      I4 => read_ptr_reg(1),
-      I5 => read_ptr_reg(3),
-      O => \read_ptr[3]_i_1_n_0\
+      I3 => new_sample,
+      I4 => Q(2),
+      O => \read_ptr[2]_i_1__0_n_0\
     );
-\read_ptr[4]_i_1\: unisim.vcomponents.LUT4
+\read_ptr[3]_i_1__0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B88B"
+      INIT => X"FFFFFE010000FE01"
     )
         port map (
-      I0 => Q(4),
-      I1 => new_sample,
-      I2 => \read_ptr[4]_i_2_n_0\,
-      I3 => read_ptr_reg(4),
-      O => \read_ptr[4]_i_1_n_0\
+      I0 => read_ptr_reg(2),
+      I1 => read_ptr_reg(0),
+      I2 => read_ptr_reg(1),
+      I3 => read_ptr_reg(3),
+      I4 => new_sample,
+      I5 => Q(3),
+      O => \read_ptr[3]_i_1__0_n_0\
     );
-\read_ptr[4]_i_2\: unisim.vcomponents.LUT4
+\read_ptr[4]_i_1__0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"F909"
+    )
+        port map (
+      I0 => \read_ptr[4]_i_2__2_n_0\,
+      I1 => read_ptr_reg(4),
+      I2 => new_sample,
+      I3 => Q(4),
+      O => \read_ptr[4]_i_1__0_n_0\
+    );
+\read_ptr[4]_i_2__2\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FFFE"
     )
         port map (
       I0 => read_ptr_reg(2),
-      I1 => \^read_ptr_reg[0]_0\(0),
+      I1 => read_ptr_reg(0),
       I2 => read_ptr_reg(1),
       I3 => read_ptr_reg(3),
-      O => \read_ptr[4]_i_2_n_0\
+      O => \read_ptr[4]_i_2__2_n_0\
     );
-\read_ptr[5]_i_1\: unisim.vcomponents.LUT5
+\read_ptr[5]_i_1__0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"BBB8888B"
+      INIT => X"FFE100E1"
     )
         port map (
-      I0 => Q(5),
-      I1 => new_sample,
-      I2 => read_ptr_reg(4),
-      I3 => \read_ptr[4]_i_2_n_0\,
-      I4 => read_ptr_reg(5),
-      O => \read_ptr[5]_i_1_n_0\
+      I0 => read_ptr_reg(4),
+      I1 => \read_ptr[4]_i_2__2_n_0\,
+      I2 => read_ptr_reg(5),
+      I3 => new_sample,
+      I4 => Q(5),
+      O => \read_ptr[5]_i_1__0_n_0\
     );
 \read_ptr[6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"BBBBBBB88888888B"
+      INIT => X"FFFFFE010000FE01"
     )
         port map (
-      I0 => Q(6),
-      I1 => new_sample,
-      I2 => \read_ptr[4]_i_2_n_0\,
-      I3 => read_ptr_reg(4),
-      I4 => read_ptr_reg(5),
-      I5 => read_ptr(6),
+      I0 => \read_ptr[4]_i_2__2_n_0\,
+      I1 => read_ptr_reg(4),
+      I2 => read_ptr_reg(5),
+      I3 => read_ptr(6),
+      I4 => new_sample,
+      I5 => Q(6),
       O => \read_ptr[6]_i_1_n_0\
     );
 \read_ptr_reg[0]\: unisim.vcomponents.FDRE
@@ -3088,10 +4736,10 @@ pipe_valid_s2_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => clk_audio,
-      CE => \read_ptr_reg[5]_0\,
-      D => \read_ptr_reg[0]_1\,
-      Q => \^read_ptr_reg[0]_0\(0),
-      R => SR(0)
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[0]_i_2_n_0\,
+      Q => read_ptr_reg(0),
+      R => rst_audio
     );
 \read_ptr_reg[1]\: unisim.vcomponents.FDRE
     generic map(
@@ -3099,10 +4747,10 @@ pipe_valid_s2_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => clk_audio,
-      CE => \read_ptr_reg[5]_0\,
+      CE => \read_ptr_reg[6]_0\,
       D => \read_ptr[1]_i_1_n_0\,
       Q => read_ptr_reg(1),
-      R => SR(0)
+      R => rst_audio
     );
 \read_ptr_reg[2]\: unisim.vcomponents.FDRE
     generic map(
@@ -3110,10 +4758,10 @@ pipe_valid_s2_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => clk_audio,
-      CE => \read_ptr_reg[5]_0\,
-      D => \read_ptr[2]_i_1_n_0\,
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[2]_i_1__0_n_0\,
       Q => read_ptr_reg(2),
-      R => SR(0)
+      R => rst_audio
     );
 \read_ptr_reg[3]\: unisim.vcomponents.FDRE
     generic map(
@@ -3121,10 +4769,10 @@ pipe_valid_s2_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => clk_audio,
-      CE => \read_ptr_reg[5]_0\,
-      D => \read_ptr[3]_i_1_n_0\,
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[3]_i_1__0_n_0\,
       Q => read_ptr_reg(3),
-      R => SR(0)
+      R => rst_audio
     );
 \read_ptr_reg[4]\: unisim.vcomponents.FDRE
     generic map(
@@ -3132,10 +4780,10 @@ pipe_valid_s2_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => clk_audio,
-      CE => \read_ptr_reg[5]_0\,
-      D => \read_ptr[4]_i_1_n_0\,
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[4]_i_1__0_n_0\,
       Q => read_ptr_reg(4),
-      R => SR(0)
+      R => rst_audio
     );
 \read_ptr_reg[5]\: unisim.vcomponents.FDRE
     generic map(
@@ -3143,10 +4791,10 @@ pipe_valid_s2_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => clk_audio,
-      CE => \read_ptr_reg[5]_0\,
-      D => \read_ptr[5]_i_1_n_0\,
+      CE => \read_ptr_reg[6]_0\,
+      D => \read_ptr[5]_i_1__0_n_0\,
       Q => read_ptr_reg(5),
-      R => SR(0)
+      R => rst_audio
     );
 \read_ptr_reg[6]\: unisim.vcomponents.FDRE
     generic map(
@@ -3154,10 +4802,10 @@ pipe_valid_s2_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => clk_audio,
-      CE => \read_ptr_reg[5]_0\,
+      CE => \read_ptr_reg[6]_0\,
       D => \read_ptr[6]_i_1_n_0\,
       Q => read_ptr(6),
-      R => SR(0)
+      R => rst_audio
     );
 end STRUCTURE;
 library IEEE;
@@ -3174,7 +4822,7 @@ entity design_1_spatial_audio_top_0_0_hrtf_address_generator is
     clk_audio : in STD_LOGIC;
     new_sample : in STD_LOGIC;
     locked : in STD_LOGIC;
-    target_angle : in STD_LOGIC_VECTOR ( 6 downto 0 )
+    \bram_addr_reg[13]_0\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_hrtf_address_generator : entity is "hrtf_address_generator";
@@ -3239,7 +4887,7 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_hrtf_address_generator 
   attribute SOFT_HLUTNM of \tap_count[6]_i_1\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \tap_count[7]_i_2\ : label is "soft_lutpair4";
 begin
-\accumulator_reg_i_1__0\: unisim.vcomponents.LUT2
+\accumulator_reg_i_1__2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"2"
     )
@@ -3266,7 +4914,7 @@ begin
       I0 => new_sample,
       I1 => state_reg_n_0,
       I2 => \tap_count_reg__0\(7),
-      I3 => target_angle(0),
+      I3 => \bram_addr_reg[13]_0\(0),
       O => \bram_addr[10]_i_2_n_0\
     );
 \bram_addr[13]_i_1\: unisim.vcomponents.LUT2
@@ -3356,7 +5004,7 @@ begin
       I0 => new_sample,
       I1 => state_reg_n_0,
       I2 => \tap_count_reg__0\(7),
-      I3 => target_angle(0),
+      I3 => \bram_addr_reg[13]_0\(0),
       O => \bram_addr[7]_i_1_n_0\
     );
 \bram_addr_reg[0]\: unisim.vcomponents.FDRE
@@ -3384,12 +5032,12 @@ begin
       CO(0) => \bram_addr_reg[10]_i_1_n_3\,
       CYINIT => '0',
       DI(3 downto 1) => B"000",
-      DI(0) => target_angle(0),
+      DI(0) => \bram_addr_reg[13]_0\(0),
       O(3) => \bram_addr_reg[10]_i_1_n_4\,
       O(2) => \bram_addr_reg[10]_i_1_n_5\,
       O(1) => \bram_addr_reg[10]_i_1_n_6\,
       O(0) => \NLW_bram_addr_reg[10]_i_1_O_UNCONNECTED\(0),
-      S(3 downto 1) => target_angle(3 downto 1),
+      S(3 downto 1) => \bram_addr_reg[13]_0\(3 downto 1),
       S(0) => \bram_addr[10]_i_2_n_0\
     );
 \bram_addr_reg[11]\: unisim.vcomponents.FDRE
@@ -3429,7 +5077,7 @@ begin
       O(1) => \bram_addr_reg[13]_i_2_n_6\,
       O(0) => \bram_addr_reg[13]_i_2_n_7\,
       S(3) => '0',
-      S(2 downto 0) => target_angle(6 downto 4)
+      S(2 downto 0) => \bram_addr_reg[13]_0\(6 downto 4)
     );
 \bram_addr_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -3738,16 +5386,528 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
+entity design_1_spatial_audio_top_0_0_hrtf_address_generator_0 is
+  port (
+    state_reg_0 : out STD_LOGIC;
+    Q : out STD_LOGIC_VECTOR ( 13 downto 0 );
+    new_sample : in STD_LOGIC;
+    locked : in STD_LOGIC;
+    rst_audio : in STD_LOGIC;
+    clk_audio : in STD_LOGIC;
+    E : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \bram_addr_reg[13]_0\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_hrtf_address_generator_0 : entity is "hrtf_address_generator";
+end design_1_spatial_audio_top_0_0_hrtf_address_generator_0;
+
+architecture STRUCTURE of design_1_spatial_audio_top_0_0_hrtf_address_generator_0 is
+  signal \bram_addr[0]_i_1__0_n_0\ : STD_LOGIC;
+  signal \bram_addr[10]_i_2__0_n_0\ : STD_LOGIC;
+  signal \bram_addr[1]_i_1__0_n_0\ : STD_LOGIC;
+  signal \bram_addr[2]_i_1__0_n_0\ : STD_LOGIC;
+  signal \bram_addr[3]_i_1__0_n_0\ : STD_LOGIC;
+  signal \bram_addr[4]_i_1__0_n_0\ : STD_LOGIC;
+  signal \bram_addr[5]_i_1__0_n_0\ : STD_LOGIC;
+  signal \bram_addr[6]_i_1__0_n_0\ : STD_LOGIC;
+  signal \bram_addr[6]_i_2__0_n_0\ : STD_LOGIC;
+  signal \bram_addr[7]_i_1__0_n_0\ : STD_LOGIC;
+  signal \bram_addr_reg[10]_i_1__0_n_0\ : STD_LOGIC;
+  signal \bram_addr_reg[10]_i_1__0_n_1\ : STD_LOGIC;
+  signal \bram_addr_reg[10]_i_1__0_n_2\ : STD_LOGIC;
+  signal \bram_addr_reg[10]_i_1__0_n_3\ : STD_LOGIC;
+  signal \bram_addr_reg[10]_i_1__0_n_4\ : STD_LOGIC;
+  signal \bram_addr_reg[10]_i_1__0_n_5\ : STD_LOGIC;
+  signal \bram_addr_reg[10]_i_1__0_n_6\ : STD_LOGIC;
+  signal \bram_addr_reg[13]_i_2__0_n_2\ : STD_LOGIC;
+  signal \bram_addr_reg[13]_i_2__0_n_3\ : STD_LOGIC;
+  signal \bram_addr_reg[13]_i_2__0_n_5\ : STD_LOGIC;
+  signal \bram_addr_reg[13]_i_2__0_n_6\ : STD_LOGIC;
+  signal \bram_addr_reg[13]_i_2__0_n_7\ : STD_LOGIC;
+  signal \p_0_in__0\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal state_i_1_n_0 : STD_LOGIC;
+  signal \state_i_2__0_n_0\ : STD_LOGIC;
+  signal \^state_reg_0\ : STD_LOGIC;
+  signal \tap_count[2]_i_1__0_n_0\ : STD_LOGIC;
+  signal \tap_count[3]_i_1__0_n_0\ : STD_LOGIC;
+  signal \tap_count[4]_i_1__0_n_0\ : STD_LOGIC;
+  signal \tap_count[5]_i_1__0_n_0\ : STD_LOGIC;
+  signal \tap_count[6]_i_1__0_n_0\ : STD_LOGIC;
+  signal \tap_count[7]_i_1__0_n_0\ : STD_LOGIC;
+  signal \tap_count[7]_i_2__0_n_0\ : STD_LOGIC;
+  signal \tap_count_reg__0\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \NLW_bram_addr_reg[10]_i_1__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \NLW_bram_addr_reg[13]_i_2__0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
+  signal \NLW_bram_addr_reg[13]_i_2__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \bram_addr[1]_i_1__0\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \bram_addr[2]_i_1__0\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \bram_addr[3]_i_1__0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \bram_addr[4]_i_1__0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \bram_addr[5]_i_1__0\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \bram_addr[6]_i_2__0\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \tap_count[1]_i_1__0\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \tap_count[2]_i_1__0\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \tap_count[3]_i_1__0\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \tap_count[4]_i_1__0\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \tap_count[6]_i_1__0\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \tap_count[7]_i_2__0\ : label is "soft_lutpair9";
+begin
+  state_reg_0 <= \^state_reg_0\;
+\bram_addr[0]_i_1__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"8A"
+    )
+        port map (
+      I0 => \tap_count_reg__0\(0),
+      I1 => \^state_reg_0\,
+      I2 => new_sample,
+      O => \bram_addr[0]_i_1__0_n_0\
+    );
+\bram_addr[10]_i_2__0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"2FD0"
+    )
+        port map (
+      I0 => new_sample,
+      I1 => \^state_reg_0\,
+      I2 => \tap_count_reg__0\(7),
+      I3 => \bram_addr_reg[13]_0\(0),
+      O => \bram_addr[10]_i_2__0_n_0\
+    );
+\bram_addr[1]_i_1__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"8A"
+    )
+        port map (
+      I0 => \tap_count_reg__0\(1),
+      I1 => \^state_reg_0\,
+      I2 => new_sample,
+      O => \bram_addr[1]_i_1__0_n_0\
+    );
+\bram_addr[2]_i_1__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"8A"
+    )
+        port map (
+      I0 => \tap_count_reg__0\(2),
+      I1 => \^state_reg_0\,
+      I2 => new_sample,
+      O => \bram_addr[2]_i_1__0_n_0\
+    );
+\bram_addr[3]_i_1__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"8A"
+    )
+        port map (
+      I0 => \tap_count_reg__0\(3),
+      I1 => \^state_reg_0\,
+      I2 => new_sample,
+      O => \bram_addr[3]_i_1__0_n_0\
+    );
+\bram_addr[4]_i_1__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"8A"
+    )
+        port map (
+      I0 => \tap_count_reg__0\(4),
+      I1 => \^state_reg_0\,
+      I2 => new_sample,
+      O => \bram_addr[4]_i_1__0_n_0\
+    );
+\bram_addr[5]_i_1__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"8A"
+    )
+        port map (
+      I0 => \tap_count_reg__0\(5),
+      I1 => \^state_reg_0\,
+      I2 => new_sample,
+      O => \bram_addr[5]_i_1__0_n_0\
+    );
+\bram_addr[6]_i_1__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"4F"
+    )
+        port map (
+      I0 => \^state_reg_0\,
+      I1 => new_sample,
+      I2 => locked,
+      O => \bram_addr[6]_i_1__0_n_0\
+    );
+\bram_addr[6]_i_2__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"8A"
+    )
+        port map (
+      I0 => \tap_count_reg__0\(6),
+      I1 => \^state_reg_0\,
+      I2 => new_sample,
+      O => \bram_addr[6]_i_2__0_n_0\
+    );
+\bram_addr[7]_i_1__0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"2FD0"
+    )
+        port map (
+      I0 => new_sample,
+      I1 => \^state_reg_0\,
+      I2 => \tap_count_reg__0\(7),
+      I3 => \bram_addr_reg[13]_0\(0),
+      O => \bram_addr[7]_i_1__0_n_0\
+    );
+\bram_addr_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => E(0),
+      D => \bram_addr[0]_i_1__0_n_0\,
+      Q => Q(0),
+      R => \bram_addr[6]_i_1__0_n_0\
+    );
+\bram_addr_reg[10]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => E(0),
+      D => \bram_addr_reg[10]_i_1__0_n_4\,
+      Q => Q(10),
+      R => rst_audio
+    );
+\bram_addr_reg[10]_i_1__0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => \bram_addr_reg[10]_i_1__0_n_0\,
+      CO(2) => \bram_addr_reg[10]_i_1__0_n_1\,
+      CO(1) => \bram_addr_reg[10]_i_1__0_n_2\,
+      CO(0) => \bram_addr_reg[10]_i_1__0_n_3\,
+      CYINIT => '0',
+      DI(3 downto 1) => B"000",
+      DI(0) => \bram_addr_reg[13]_0\(0),
+      O(3) => \bram_addr_reg[10]_i_1__0_n_4\,
+      O(2) => \bram_addr_reg[10]_i_1__0_n_5\,
+      O(1) => \bram_addr_reg[10]_i_1__0_n_6\,
+      O(0) => \NLW_bram_addr_reg[10]_i_1__0_O_UNCONNECTED\(0),
+      S(3 downto 1) => \bram_addr_reg[13]_0\(3 downto 1),
+      S(0) => \bram_addr[10]_i_2__0_n_0\
+    );
+\bram_addr_reg[11]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => E(0),
+      D => \bram_addr_reg[13]_i_2__0_n_7\,
+      Q => Q(11),
+      R => rst_audio
+    );
+\bram_addr_reg[12]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => E(0),
+      D => \bram_addr_reg[13]_i_2__0_n_6\,
+      Q => Q(12),
+      R => rst_audio
+    );
+\bram_addr_reg[13]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => E(0),
+      D => \bram_addr_reg[13]_i_2__0_n_5\,
+      Q => Q(13),
+      R => rst_audio
+    );
+\bram_addr_reg[13]_i_2__0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \bram_addr_reg[10]_i_1__0_n_0\,
+      CO(3 downto 2) => \NLW_bram_addr_reg[13]_i_2__0_CO_UNCONNECTED\(3 downto 2),
+      CO(1) => \bram_addr_reg[13]_i_2__0_n_2\,
+      CO(0) => \bram_addr_reg[13]_i_2__0_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \NLW_bram_addr_reg[13]_i_2__0_O_UNCONNECTED\(3),
+      O(2) => \bram_addr_reg[13]_i_2__0_n_5\,
+      O(1) => \bram_addr_reg[13]_i_2__0_n_6\,
+      O(0) => \bram_addr_reg[13]_i_2__0_n_7\,
+      S(3) => '0',
+      S(2 downto 0) => \bram_addr_reg[13]_0\(6 downto 4)
+    );
+\bram_addr_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => E(0),
+      D => \bram_addr[1]_i_1__0_n_0\,
+      Q => Q(1),
+      R => \bram_addr[6]_i_1__0_n_0\
+    );
+\bram_addr_reg[2]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => E(0),
+      D => \bram_addr[2]_i_1__0_n_0\,
+      Q => Q(2),
+      R => \bram_addr[6]_i_1__0_n_0\
+    );
+\bram_addr_reg[3]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => E(0),
+      D => \bram_addr[3]_i_1__0_n_0\,
+      Q => Q(3),
+      R => \bram_addr[6]_i_1__0_n_0\
+    );
+\bram_addr_reg[4]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => E(0),
+      D => \bram_addr[4]_i_1__0_n_0\,
+      Q => Q(4),
+      R => \bram_addr[6]_i_1__0_n_0\
+    );
+\bram_addr_reg[5]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => E(0),
+      D => \bram_addr[5]_i_1__0_n_0\,
+      Q => Q(5),
+      R => \bram_addr[6]_i_1__0_n_0\
+    );
+\bram_addr_reg[6]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => E(0),
+      D => \bram_addr[6]_i_2__0_n_0\,
+      Q => Q(6),
+      R => \bram_addr[6]_i_1__0_n_0\
+    );
+\bram_addr_reg[7]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => E(0),
+      D => \bram_addr[7]_i_1__0_n_0\,
+      Q => Q(7),
+      R => rst_audio
+    );
+\bram_addr_reg[8]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => E(0),
+      D => \bram_addr_reg[10]_i_1__0_n_6\,
+      Q => Q(8),
+      R => rst_audio
+    );
+\bram_addr_reg[9]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => E(0),
+      D => \bram_addr_reg[10]_i_1__0_n_5\,
+      Q => Q(9),
+      R => rst_audio
+    );
+state_i_1: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FDFFFD00"
+    )
+        port map (
+      I0 => \tap_count_reg__0\(6),
+      I1 => \state_i_2__0_n_0\,
+      I2 => \tap_count_reg__0\(7),
+      I3 => \^state_reg_0\,
+      I4 => new_sample,
+      O => state_i_1_n_0
+    );
+\state_i_2__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7FFFFFFFFFFFFFFF"
+    )
+        port map (
+      I0 => \tap_count_reg__0\(4),
+      I1 => \tap_count_reg__0\(2),
+      I2 => \tap_count_reg__0\(0),
+      I3 => \tap_count_reg__0\(1),
+      I4 => \tap_count_reg__0\(3),
+      I5 => \tap_count_reg__0\(5),
+      O => \state_i_2__0_n_0\
+    );
+state_reg: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => '1',
+      D => state_i_1_n_0,
+      Q => \^state_reg_0\,
+      R => rst_audio
+    );
+\tap_count[0]_i_1__0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \tap_count_reg__0\(0),
+      O => \p_0_in__0\(0)
+    );
+\tap_count[1]_i_1__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => \tap_count_reg__0\(0),
+      I1 => \tap_count_reg__0\(1),
+      O => \p_0_in__0\(1)
+    );
+\tap_count[2]_i_1__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"78"
+    )
+        port map (
+      I0 => \tap_count_reg__0\(1),
+      I1 => \tap_count_reg__0\(0),
+      I2 => \tap_count_reg__0\(2),
+      O => \tap_count[2]_i_1__0_n_0\
+    );
+\tap_count[3]_i_1__0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"7F80"
+    )
+        port map (
+      I0 => \tap_count_reg__0\(2),
+      I1 => \tap_count_reg__0\(0),
+      I2 => \tap_count_reg__0\(1),
+      I3 => \tap_count_reg__0\(3),
+      O => \tap_count[3]_i_1__0_n_0\
+    );
+\tap_count[4]_i_1__0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"7FFF8000"
+    )
+        port map (
+      I0 => \tap_count_reg__0\(3),
+      I1 => \tap_count_reg__0\(1),
+      I2 => \tap_count_reg__0\(0),
+      I3 => \tap_count_reg__0\(2),
+      I4 => \tap_count_reg__0\(4),
+      O => \tap_count[4]_i_1__0_n_0\
+    );
+\tap_count[5]_i_1__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7FFFFFFF80000000"
+    )
+        port map (
+      I0 => \tap_count_reg__0\(4),
+      I1 => \tap_count_reg__0\(2),
+      I2 => \tap_count_reg__0\(0),
+      I3 => \tap_count_reg__0\(1),
+      I4 => \tap_count_reg__0\(3),
+      I5 => \tap_count_reg__0\(5),
+      O => \tap_count[5]_i_1__0_n_0\
+    );
+\tap_count[6]_i_1__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \state_i_2__0_n_0\,
+      I1 => \tap_count_reg__0\(6),
+      O => \tap_count[6]_i_1__0_n_0\
+    );
+\tap_count[7]_i_1__0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"EF00"
+    )
+        port map (
+      I0 => \tap_count_reg__0\(7),
+      I1 => \state_i_2__0_n_0\,
+      I2 => \tap_count_reg__0\(6),
+      I3 => \^state_reg_0\,
+      O => \tap_count[7]_i_1__0_n_0\
+    );
+\tap_count[7]_i_2__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"D2"
+    )
+        port map (
+      I0 => \tap_count_reg__0\(6),
+      I1 => \state_i_2__0_n_0\,
+      I2 => \tap_count_reg__0\(7),
+      O => \tap_count[7]_i_2__0_n_0\
+    );
+\tap_count_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => \tap_count[7]_i_1__0_n_0\,
+      D => \p_0_in__0\(0),
+      Q => \tap_count_reg__0\(0),
+      R => \bram_addr[6]_i_1__0_n_0\
+    );
+\tap_count_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => \tap_count[7]_i_1__0_n_0\,
+      D => \p_0_in__0\(1),
+      Q => \tap_count_reg__0\(1),
+      R => \bram_addr[6]_i_1__0_n_0\
+    );
+\tap_count_reg[2]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => \tap_count[7]_i_1__0_n_0\,
+      D => \tap_count[2]_i_1__0_n_0\,
+      Q => \tap_count_reg__0\(2),
+      R => \bram_addr[6]_i_1__0_n_0\
+    );
+\tap_count_reg[3]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => \tap_count[7]_i_1__0_n_0\,
+      D => \tap_count[3]_i_1__0_n_0\,
+      Q => \tap_count_reg__0\(3),
+      R => \bram_addr[6]_i_1__0_n_0\
+    );
+\tap_count_reg[4]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => \tap_count[7]_i_1__0_n_0\,
+      D => \tap_count[4]_i_1__0_n_0\,
+      Q => \tap_count_reg__0\(4),
+      R => \bram_addr[6]_i_1__0_n_0\
+    );
+\tap_count_reg[5]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => \tap_count[7]_i_1__0_n_0\,
+      D => \tap_count[5]_i_1__0_n_0\,
+      Q => \tap_count_reg__0\(5),
+      R => \bram_addr[6]_i_1__0_n_0\
+    );
+\tap_count_reg[6]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => \tap_count[7]_i_1__0_n_0\,
+      D => \tap_count[6]_i_1__0_n_0\,
+      Q => \tap_count_reg__0\(6),
+      R => \bram_addr[6]_i_1__0_n_0\
+    );
+\tap_count_reg[7]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => \tap_count[7]_i_1__0_n_0\,
+      D => \tap_count[7]_i_2__0_n_0\,
+      Q => \tap_count_reg__0\(7),
+      R => \bram_addr[6]_i_1__0_n_0\
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
 entity design_1_spatial_audio_top_0_0_i2s_controller is
   port (
     sclk_reg_0 : out STD_LOGIC;
-    SR : out STD_LOGIC_VECTOR ( 0 to 0 );
+    rst_audio : out STD_LOGIC;
     new_sample : out STD_LOGIC;
     rx_lrck : out STD_LOGIC;
     tx_data : out STD_LOGIC;
     locked_0 : out STD_LOGIC;
+    E : out STD_LOGIC_VECTOR ( 0 to 0 );
     new_sample_pulse_reg_0 : out STD_LOGIC;
+    new_sample_pulse_reg_1 : out STD_LOGIC_VECTOR ( 0 to 0 );
     RSTP : out STD_LOGIC;
+    \lockout_counter_reg[8]\ : out STD_LOGIC;
     locked_1 : out STD_LOGIC;
     \l_data_rx_reg[23]_0\ : out STD_LOGIC_VECTOR ( 23 downto 0 );
     \r_data_rx_reg[23]_0\ : out STD_LOGIC_VECTOR ( 23 downto 0 );
@@ -3755,15 +5915,19 @@ entity design_1_spatial_audio_top_0_0_i2s_controller is
     rx_data : in STD_LOGIC;
     locked : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
+    P : in STD_LOGIC_VECTOR ( 23 downto 0 );
     \tx_shift_reg[23]_0\ : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    \tx_shift_reg[23]_1\ : in STD_LOGIC_VECTOR ( 23 downto 0 )
+    \bram_addr_reg[13]\ : in STD_LOGIC;
+    is_locked_out_reg : in STD_LOGIC;
+    is_locked_out_reg_0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    is_locked_out_reg_1 : in STD_LOGIC;
+    is_locked_out_reg_2 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_i2s_controller : entity is "i2s_controller";
 end design_1_spatial_audio_top_0_0_i2s_controller;
 
 architecture STRUCTURE of design_1_spatial_audio_top_0_0_i2s_controller is
-  signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \bit_cnt[2]_i_1_n_0\ : STD_LOGIC;
   signal \bit_cnt[3]_i_1_n_0\ : STD_LOGIC;
   signal \bit_cnt_reg__0\ : STD_LOGIC_VECTOR ( 5 downto 0 );
@@ -3780,9 +5944,9 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_i2s_controller is
   signal new_sample_pulse_i_1_n_0 : STD_LOGIC;
   signal new_sample_pulse_i_2_n_0 : STD_LOGIC;
   signal new_sample_pulse_i_3_n_0 : STD_LOGIC;
-  signal \p_0_in__0\ : STD_LOGIC;
-  signal \p_0_in__1\ : STD_LOGIC_VECTOR ( 5 downto 0 );
-  signal p_1_in : STD_LOGIC;
+  signal \p_0_in__1\ : STD_LOGIC;
+  signal \p_0_in__2\ : STD_LOGIC_VECTOR ( 5 downto 0 );
+  signal \^rst_audio\ : STD_LOGIC;
   signal \^rx_lrck\ : STD_LOGIC;
   signal rx_shift : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal \rx_shift[23]_i_2_n_0\ : STD_LOGIC;
@@ -3793,6 +5957,7 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_i2s_controller is
   signal sd_rx_sync : STD_LOGIC;
   signal sd_tx_i_1_n_0 : STD_LOGIC;
   signal \^tx_data\ : STD_LOGIC;
+  signal tx_shift : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal \tx_shift[0]_i_1_n_0\ : STD_LOGIC;
   signal \tx_shift[10]_i_1_n_0\ : STD_LOGIC;
   signal \tx_shift[11]_i_1_n_0\ : STD_LOGIC;
@@ -3820,51 +5985,30 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_i2s_controller is
   signal \tx_shift[7]_i_1_n_0\ : STD_LOGIC;
   signal \tx_shift[8]_i_1_n_0\ : STD_LOGIC;
   signal \tx_shift[9]_i_1_n_0\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[0]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[10]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[11]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[12]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[13]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[14]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[15]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[16]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[17]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[18]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[19]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[1]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[20]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[21]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[22]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[2]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[3]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[4]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[5]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[6]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[7]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[8]\ : STD_LOGIC;
-  signal \tx_shift_reg_n_0_[9]\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \bit_cnt[0]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \bit_cnt[1]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \bit_cnt[2]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \bit_cnt[3]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \bit_cnt[4]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \div_cnt[0]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \div_cnt[1]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \div_cnt[2]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of lrck_i_2 : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of lrck_i_4 : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of new_sample_pulse_i_2 : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of new_sample_pulse_i_3 : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \rx_shift[23]_i_2\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of sclk_i_2 : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \bit_cnt[0]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \bit_cnt[1]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \bit_cnt[2]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \bit_cnt[3]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \bit_cnt[4]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \div_cnt[0]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \div_cnt[1]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \div_cnt[2]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of is_locked_out_i_1 : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \lockout_counter[8]_i_2\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of lrck_i_2 : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of lrck_i_4 : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of new_sample_pulse_i_2 : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of new_sample_pulse_i_3 : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \rx_shift[23]_i_2\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of sclk_i_2 : label is "soft_lutpair23";
 begin
-  SR(0) <= \^sr\(0);
   new_sample <= \^new_sample\;
+  rst_audio <= \^rst_audio\;
   rx_lrck <= \^rx_lrck\;
   sclk_reg_0 <= \^sclk_reg_0\;
   tx_data <= \^tx_data\;
-\accumulator_reg_i_2__0\: unisim.vcomponents.LUT1
+\accumulator_reg_i_2__2\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
@@ -3872,7 +6016,7 @@ begin
       I0 => \^new_sample\,
       O => new_sample_pulse_reg_0
     );
-\accumulator_reg_i_3__0\: unisim.vcomponents.LUT2
+\accumulator_reg_i_3__2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"B"
     )
@@ -3907,7 +6051,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
     )
         port map (
       I0 => \bit_cnt_reg__0\(0),
-      O => \p_0_in__1\(0)
+      O => \p_0_in__2\(0)
     );
 \bit_cnt[1]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -3916,7 +6060,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
         port map (
       I0 => \bit_cnt_reg__0\(0),
       I1 => \bit_cnt_reg__0\(1),
-      O => \p_0_in__1\(1)
+      O => \p_0_in__2\(1)
     );
 \bit_cnt[2]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -3949,7 +6093,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       I2 => \bit_cnt_reg__0\(2),
       I3 => \bit_cnt_reg__0\(3),
       I4 => \bit_cnt_reg__0\(4),
-      O => \p_0_in__1\(4)
+      O => \p_0_in__2\(4)
     );
 \bit_cnt[5]_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -3973,23 +6117,23 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       I3 => \bit_cnt_reg__0\(0),
       I4 => \bit_cnt_reg__0\(2),
       I5 => \bit_cnt_reg__0\(5),
-      O => \p_0_in__1\(5)
+      O => \p_0_in__2\(5)
     );
 \bit_cnt_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk_audio,
       CE => sclk_fall,
-      D => \p_0_in__1\(0),
+      D => \p_0_in__2\(0),
       Q => \bit_cnt_reg__0\(0),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \bit_cnt_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => clk_audio,
       CE => sclk_fall,
-      D => \p_0_in__1\(1),
+      D => \p_0_in__2\(1),
       Q => \bit_cnt_reg__0\(1),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \bit_cnt_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -3997,7 +6141,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => sclk_fall,
       D => \bit_cnt[2]_i_1_n_0\,
       Q => \bit_cnt_reg__0\(2),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \bit_cnt_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -4005,23 +6149,32 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => sclk_fall,
       D => \bit_cnt[3]_i_1_n_0\,
       Q => \bit_cnt_reg__0\(3),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \bit_cnt_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => clk_audio,
       CE => sclk_fall,
-      D => \p_0_in__1\(4),
+      D => \p_0_in__2\(4),
       Q => \bit_cnt_reg__0\(4),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \bit_cnt_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => clk_audio,
       CE => sclk_fall,
-      D => \p_0_in__1\(5),
+      D => \p_0_in__2\(5),
       Q => \bit_cnt_reg__0\(5),
-      R => \^sr\(0)
+      R => \^rst_audio\
+    );
+\bram_addr[13]_i_1__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \^new_sample\,
+      I1 => \bram_addr_reg[13]\,
+      O => E(0)
     );
 \div_cnt[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
@@ -4056,7 +6209,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => '1',
       D => \div_cnt[0]_i_1_n_0\,
       Q => div_cnt(0),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \div_cnt_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -4064,7 +6217,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => '1',
       D => \div_cnt[1]_i_1_n_0\,
       Q => div_cnt(1),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \div_cnt_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -4072,7 +6225,19 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => '1',
       D => \div_cnt[2]_i_1_n_0\,
       Q => div_cnt(2),
-      R => \^sr\(0)
+      R => \^rst_audio\
+    );
+is_locked_out_i_1: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFFFFF4C"
+    )
+        port map (
+      I0 => is_locked_out_reg_0(0),
+      I1 => is_locked_out_reg,
+      I2 => \^new_sample\,
+      I3 => is_locked_out_reg_1,
+      I4 => is_locked_out_reg_2,
+      O => \lockout_counter_reg[8]\
     );
 \l_data_rx[23]_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -4092,7 +6257,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(0),
       Q => \l_data_rx_reg[23]_0\(0),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[10]\: unisim.vcomponents.FDRE
      port map (
@@ -4100,7 +6265,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(10),
       Q => \l_data_rx_reg[23]_0\(10),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[11]\: unisim.vcomponents.FDRE
      port map (
@@ -4108,7 +6273,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(11),
       Q => \l_data_rx_reg[23]_0\(11),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[12]\: unisim.vcomponents.FDRE
      port map (
@@ -4116,7 +6281,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(12),
       Q => \l_data_rx_reg[23]_0\(12),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[13]\: unisim.vcomponents.FDRE
      port map (
@@ -4124,7 +6289,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(13),
       Q => \l_data_rx_reg[23]_0\(13),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[14]\: unisim.vcomponents.FDRE
      port map (
@@ -4132,7 +6297,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(14),
       Q => \l_data_rx_reg[23]_0\(14),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[15]\: unisim.vcomponents.FDRE
      port map (
@@ -4140,7 +6305,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(15),
       Q => \l_data_rx_reg[23]_0\(15),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[16]\: unisim.vcomponents.FDRE
      port map (
@@ -4148,7 +6313,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(16),
       Q => \l_data_rx_reg[23]_0\(16),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[17]\: unisim.vcomponents.FDRE
      port map (
@@ -4156,7 +6321,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(17),
       Q => \l_data_rx_reg[23]_0\(17),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[18]\: unisim.vcomponents.FDRE
      port map (
@@ -4164,7 +6329,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(18),
       Q => \l_data_rx_reg[23]_0\(18),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[19]\: unisim.vcomponents.FDRE
      port map (
@@ -4172,7 +6337,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(19),
       Q => \l_data_rx_reg[23]_0\(19),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -4180,7 +6345,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(1),
       Q => \l_data_rx_reg[23]_0\(1),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[20]\: unisim.vcomponents.FDRE
      port map (
@@ -4188,7 +6353,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(20),
       Q => \l_data_rx_reg[23]_0\(20),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[21]\: unisim.vcomponents.FDRE
      port map (
@@ -4196,7 +6361,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(21),
       Q => \l_data_rx_reg[23]_0\(21),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[22]\: unisim.vcomponents.FDRE
      port map (
@@ -4204,7 +6369,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(22),
       Q => \l_data_rx_reg[23]_0\(22),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[23]\: unisim.vcomponents.FDRE
      port map (
@@ -4212,7 +6377,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(23),
       Q => \l_data_rx_reg[23]_0\(23),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -4220,7 +6385,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(2),
       Q => \l_data_rx_reg[23]_0\(2),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -4228,7 +6393,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(3),
       Q => \l_data_rx_reg[23]_0\(3),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -4236,7 +6401,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(4),
       Q => \l_data_rx_reg[23]_0\(4),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[5]\: unisim.vcomponents.FDRE
      port map (
@@ -4244,7 +6409,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(5),
       Q => \l_data_rx_reg[23]_0\(5),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[6]\: unisim.vcomponents.FDRE
      port map (
@@ -4252,7 +6417,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(6),
       Q => \l_data_rx_reg[23]_0\(6),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[7]\: unisim.vcomponents.FDRE
      port map (
@@ -4260,7 +6425,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(7),
       Q => \l_data_rx_reg[23]_0\(7),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[8]\: unisim.vcomponents.FDRE
      port map (
@@ -4268,7 +6433,7 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(8),
       Q => \l_data_rx_reg[23]_0\(8),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \l_data_rx_reg[9]\: unisim.vcomponents.FDRE
      port map (
@@ -4276,7 +6441,17 @@ audio_history_reg_64_127_0_2_i_1: unisim.vcomponents.LUT3
       CE => \l_data_rx[23]_i_1_n_0\,
       D => rx_shift(9),
       Q => \l_data_rx_reg[23]_0\(9),
-      R => \^sr\(0)
+      R => \^rst_audio\
+    );
+\lockout_counter[8]_i_2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"08"
+    )
+        port map (
+      I0 => \^new_sample\,
+      I1 => is_locked_out_reg,
+      I2 => is_locked_out_reg_0(0),
+      O => new_sample_pulse_reg_1(0)
     );
 lrck_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -4368,7 +6543,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => '1',
       D => new_sample_pulse_i_1_n_0,
       Q => \^new_sample\,
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -4376,7 +6551,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(0),
       Q => \r_data_rx_reg[23]_0\(0),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[10]\: unisim.vcomponents.FDRE
      port map (
@@ -4384,7 +6559,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(10),
       Q => \r_data_rx_reg[23]_0\(10),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[11]\: unisim.vcomponents.FDRE
      port map (
@@ -4392,7 +6567,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(11),
       Q => \r_data_rx_reg[23]_0\(11),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[12]\: unisim.vcomponents.FDRE
      port map (
@@ -4400,7 +6575,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(12),
       Q => \r_data_rx_reg[23]_0\(12),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[13]\: unisim.vcomponents.FDRE
      port map (
@@ -4408,7 +6583,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(13),
       Q => \r_data_rx_reg[23]_0\(13),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[14]\: unisim.vcomponents.FDRE
      port map (
@@ -4416,7 +6591,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(14),
       Q => \r_data_rx_reg[23]_0\(14),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[15]\: unisim.vcomponents.FDRE
      port map (
@@ -4424,7 +6599,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(15),
       Q => \r_data_rx_reg[23]_0\(15),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[16]\: unisim.vcomponents.FDRE
      port map (
@@ -4432,7 +6607,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(16),
       Q => \r_data_rx_reg[23]_0\(16),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[17]\: unisim.vcomponents.FDRE
      port map (
@@ -4440,7 +6615,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(17),
       Q => \r_data_rx_reg[23]_0\(17),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[18]\: unisim.vcomponents.FDRE
      port map (
@@ -4448,7 +6623,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(18),
       Q => \r_data_rx_reg[23]_0\(18),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[19]\: unisim.vcomponents.FDRE
      port map (
@@ -4456,7 +6631,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(19),
       Q => \r_data_rx_reg[23]_0\(19),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -4464,7 +6639,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(1),
       Q => \r_data_rx_reg[23]_0\(1),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[20]\: unisim.vcomponents.FDRE
      port map (
@@ -4472,7 +6647,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(20),
       Q => \r_data_rx_reg[23]_0\(20),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[21]\: unisim.vcomponents.FDRE
      port map (
@@ -4480,7 +6655,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(21),
       Q => \r_data_rx_reg[23]_0\(21),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[22]\: unisim.vcomponents.FDRE
      port map (
@@ -4488,7 +6663,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(22),
       Q => \r_data_rx_reg[23]_0\(22),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[23]\: unisim.vcomponents.FDRE
      port map (
@@ -4496,7 +6671,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(23),
       Q => \r_data_rx_reg[23]_0\(23),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -4504,7 +6679,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(2),
       Q => \r_data_rx_reg[23]_0\(2),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -4512,7 +6687,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(3),
       Q => \r_data_rx_reg[23]_0\(3),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -4520,7 +6695,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(4),
       Q => \r_data_rx_reg[23]_0\(4),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[5]\: unisim.vcomponents.FDRE
      port map (
@@ -4528,7 +6703,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(5),
       Q => \r_data_rx_reg[23]_0\(5),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[6]\: unisim.vcomponents.FDRE
      port map (
@@ -4536,7 +6711,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(6),
       Q => \r_data_rx_reg[23]_0\(6),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[7]\: unisim.vcomponents.FDRE
      port map (
@@ -4544,7 +6719,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(7),
       Q => \r_data_rx_reg[23]_0\(7),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[8]\: unisim.vcomponents.FDRE
      port map (
@@ -4552,7 +6727,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(8),
       Q => \r_data_rx_reg[23]_0\(8),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \r_data_rx_reg[9]\: unisim.vcomponents.FDRE
      port map (
@@ -4560,7 +6735,7 @@ new_sample_pulse_reg: unisim.vcomponents.FDRE
       CE => new_sample_pulse_i_1_n_0,
       D => rx_shift(9),
       Q => \r_data_rx_reg[23]_0\(9),
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 \rx_shift[23]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -4785,7 +6960,7 @@ sclk_i_1: unisim.vcomponents.LUT1
     )
         port map (
       I0 => locked,
-      O => \^sr\(0)
+      O => \^rst_audio\
     );
 sclk_i_2: unisim.vcomponents.LUT4
     generic map(
@@ -4796,15 +6971,15 @@ sclk_i_2: unisim.vcomponents.LUT4
       I1 => div_cnt(1),
       I2 => div_cnt(2),
       I3 => \^sclk_reg_0\,
-      O => \p_0_in__0\
+      O => \p_0_in__1\
     );
 sclk_reg: unisim.vcomponents.FDRE
      port map (
       C => clk_audio,
       CE => '1',
-      D => \p_0_in__0\,
+      D => \p_0_in__1\,
       Q => \^sclk_reg_0\,
-      R => \^sr\(0)
+      R => \^rst_audio\
     );
 sd_rx_pipe_reg: unisim.vcomponents.FDRE
      port map (
@@ -4829,7 +7004,7 @@ sd_tx_i_1: unisim.vcomponents.LUT6
         port map (
       I0 => locked,
       I1 => \^tx_data\,
-      I2 => p_1_in,
+      I2 => tx_shift(23),
       I3 => \bit_cnt_reg__0\(3),
       I4 => \bit_cnt_reg__0\(4),
       I5 => lrck_i_4_n_0,
@@ -4849,8 +7024,8 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_4_n_0\,
-      I1 => \tx_shift_reg[23]_1\(0),
-      I2 => \tx_shift_reg[23]_0\(0),
+      I1 => \tx_shift_reg[23]_0\(0),
+      I2 => P(0),
       I3 => \tx_shift[23]_i_3_n_0\,
       O => \tx_shift[0]_i_1_n_0\
     );
@@ -4860,10 +7035,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(10),
-      I2 => \tx_shift_reg[23]_1\(10),
+      I1 => P(10),
+      I2 => \tx_shift_reg[23]_0\(10),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[9]\,
+      I4 => tx_shift(9),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[10]_i_1_n_0\
     );
@@ -4873,10 +7048,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(11),
-      I2 => \tx_shift_reg[23]_1\(11),
+      I1 => P(11),
+      I2 => \tx_shift_reg[23]_0\(11),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[10]\,
+      I4 => tx_shift(10),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[11]_i_1_n_0\
     );
@@ -4886,10 +7061,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(12),
-      I2 => \tx_shift_reg[23]_1\(12),
+      I1 => P(12),
+      I2 => \tx_shift_reg[23]_0\(12),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[11]\,
+      I4 => tx_shift(11),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[12]_i_1_n_0\
     );
@@ -4899,10 +7074,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(13),
-      I2 => \tx_shift_reg[23]_1\(13),
+      I1 => P(13),
+      I2 => \tx_shift_reg[23]_0\(13),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[12]\,
+      I4 => tx_shift(12),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[13]_i_1_n_0\
     );
@@ -4912,10 +7087,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(14),
-      I2 => \tx_shift_reg[23]_1\(14),
+      I1 => P(14),
+      I2 => \tx_shift_reg[23]_0\(14),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[13]\,
+      I4 => tx_shift(13),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[14]_i_1_n_0\
     );
@@ -4925,10 +7100,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(15),
-      I2 => \tx_shift_reg[23]_1\(15),
+      I1 => P(15),
+      I2 => \tx_shift_reg[23]_0\(15),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[14]\,
+      I4 => tx_shift(14),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[15]_i_1_n_0\
     );
@@ -4938,10 +7113,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(16),
-      I2 => \tx_shift_reg[23]_1\(16),
+      I1 => P(16),
+      I2 => \tx_shift_reg[23]_0\(16),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[15]\,
+      I4 => tx_shift(15),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[16]_i_1_n_0\
     );
@@ -4951,10 +7126,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(17),
-      I2 => \tx_shift_reg[23]_1\(17),
+      I1 => P(17),
+      I2 => \tx_shift_reg[23]_0\(17),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[16]\,
+      I4 => tx_shift(16),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[17]_i_1_n_0\
     );
@@ -4964,10 +7139,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(18),
-      I2 => \tx_shift_reg[23]_1\(18),
+      I1 => P(18),
+      I2 => \tx_shift_reg[23]_0\(18),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[17]\,
+      I4 => tx_shift(17),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[18]_i_1_n_0\
     );
@@ -4977,10 +7152,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(19),
-      I2 => \tx_shift_reg[23]_1\(19),
+      I1 => P(19),
+      I2 => \tx_shift_reg[23]_0\(19),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[18]\,
+      I4 => tx_shift(18),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[19]_i_1_n_0\
     );
@@ -4990,10 +7165,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(1),
-      I2 => \tx_shift_reg[23]_1\(1),
+      I1 => P(1),
+      I2 => \tx_shift_reg[23]_0\(1),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[0]\,
+      I4 => tx_shift(0),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[1]_i_1_n_0\
     );
@@ -5003,10 +7178,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(20),
-      I2 => \tx_shift_reg[23]_1\(20),
+      I1 => P(20),
+      I2 => \tx_shift_reg[23]_0\(20),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[19]\,
+      I4 => tx_shift(19),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[20]_i_1_n_0\
     );
@@ -5016,10 +7191,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(21),
-      I2 => \tx_shift_reg[23]_1\(21),
+      I1 => P(21),
+      I2 => \tx_shift_reg[23]_0\(21),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[20]\,
+      I4 => tx_shift(20),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[21]_i_1_n_0\
     );
@@ -5029,10 +7204,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(22),
-      I2 => \tx_shift_reg[23]_1\(22),
+      I1 => P(22),
+      I2 => \tx_shift_reg[23]_0\(22),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[21]\,
+      I4 => tx_shift(21),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[22]_i_1_n_0\
     );
@@ -5055,10 +7230,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(23),
-      I2 => \tx_shift_reg[23]_1\(23),
+      I1 => P(23),
+      I2 => \tx_shift_reg[23]_0\(23),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[22]\,
+      I4 => tx_shift(22),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[23]_i_2_n_0\
     );
@@ -5094,10 +7269,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(2),
-      I2 => \tx_shift_reg[23]_1\(2),
+      I1 => P(2),
+      I2 => \tx_shift_reg[23]_0\(2),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[1]\,
+      I4 => tx_shift(1),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[2]_i_1_n_0\
     );
@@ -5107,10 +7282,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(3),
-      I2 => \tx_shift_reg[23]_1\(3),
+      I1 => P(3),
+      I2 => \tx_shift_reg[23]_0\(3),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[2]\,
+      I4 => tx_shift(2),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[3]_i_1_n_0\
     );
@@ -5120,10 +7295,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(4),
-      I2 => \tx_shift_reg[23]_1\(4),
+      I1 => P(4),
+      I2 => \tx_shift_reg[23]_0\(4),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[3]\,
+      I4 => tx_shift(3),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[4]_i_1_n_0\
     );
@@ -5133,10 +7308,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(5),
-      I2 => \tx_shift_reg[23]_1\(5),
+      I1 => P(5),
+      I2 => \tx_shift_reg[23]_0\(5),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[4]\,
+      I4 => tx_shift(4),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[5]_i_1_n_0\
     );
@@ -5146,10 +7321,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(6),
-      I2 => \tx_shift_reg[23]_1\(6),
+      I1 => P(6),
+      I2 => \tx_shift_reg[23]_0\(6),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[5]\,
+      I4 => tx_shift(5),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[6]_i_1_n_0\
     );
@@ -5159,10 +7334,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(7),
-      I2 => \tx_shift_reg[23]_1\(7),
+      I1 => P(7),
+      I2 => \tx_shift_reg[23]_0\(7),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[6]\,
+      I4 => tx_shift(6),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[7]_i_1_n_0\
     );
@@ -5172,10 +7347,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(8),
-      I2 => \tx_shift_reg[23]_1\(8),
+      I1 => P(8),
+      I2 => \tx_shift_reg[23]_0\(8),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[7]\,
+      I4 => tx_shift(7),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[8]_i_1_n_0\
     );
@@ -5185,10 +7360,10 @@ sd_tx_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \tx_shift[23]_i_3_n_0\,
-      I1 => \tx_shift_reg[23]_0\(9),
-      I2 => \tx_shift_reg[23]_1\(9),
+      I1 => P(9),
+      I2 => \tx_shift_reg[23]_0\(9),
       I3 => \tx_shift[23]_i_4_n_0\,
-      I4 => \tx_shift_reg_n_0_[8]\,
+      I4 => tx_shift(8),
       I5 => lrck_i_3_n_0,
       O => \tx_shift[9]_i_1_n_0\
     );
@@ -5197,7 +7372,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[0]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[0]\,
+      Q => tx_shift(0),
       R => '0'
     );
 \tx_shift_reg[10]\: unisim.vcomponents.FDRE
@@ -5205,7 +7380,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[10]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[10]\,
+      Q => tx_shift(10),
       R => '0'
     );
 \tx_shift_reg[11]\: unisim.vcomponents.FDRE
@@ -5213,7 +7388,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[11]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[11]\,
+      Q => tx_shift(11),
       R => '0'
     );
 \tx_shift_reg[12]\: unisim.vcomponents.FDRE
@@ -5221,7 +7396,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[12]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[12]\,
+      Q => tx_shift(12),
       R => '0'
     );
 \tx_shift_reg[13]\: unisim.vcomponents.FDRE
@@ -5229,7 +7404,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[13]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[13]\,
+      Q => tx_shift(13),
       R => '0'
     );
 \tx_shift_reg[14]\: unisim.vcomponents.FDRE
@@ -5237,7 +7412,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[14]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[14]\,
+      Q => tx_shift(14),
       R => '0'
     );
 \tx_shift_reg[15]\: unisim.vcomponents.FDRE
@@ -5245,7 +7420,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[15]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[15]\,
+      Q => tx_shift(15),
       R => '0'
     );
 \tx_shift_reg[16]\: unisim.vcomponents.FDRE
@@ -5253,7 +7428,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[16]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[16]\,
+      Q => tx_shift(16),
       R => '0'
     );
 \tx_shift_reg[17]\: unisim.vcomponents.FDRE
@@ -5261,7 +7436,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[17]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[17]\,
+      Q => tx_shift(17),
       R => '0'
     );
 \tx_shift_reg[18]\: unisim.vcomponents.FDRE
@@ -5269,7 +7444,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[18]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[18]\,
+      Q => tx_shift(18),
       R => '0'
     );
 \tx_shift_reg[19]\: unisim.vcomponents.FDRE
@@ -5277,7 +7452,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[19]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[19]\,
+      Q => tx_shift(19),
       R => '0'
     );
 \tx_shift_reg[1]\: unisim.vcomponents.FDRE
@@ -5285,7 +7460,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[1]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[1]\,
+      Q => tx_shift(1),
       R => '0'
     );
 \tx_shift_reg[20]\: unisim.vcomponents.FDRE
@@ -5293,7 +7468,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[20]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[20]\,
+      Q => tx_shift(20),
       R => '0'
     );
 \tx_shift_reg[21]\: unisim.vcomponents.FDRE
@@ -5301,7 +7476,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[21]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[21]\,
+      Q => tx_shift(21),
       R => '0'
     );
 \tx_shift_reg[22]\: unisim.vcomponents.FDRE
@@ -5309,7 +7484,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[22]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[22]\,
+      Q => tx_shift(22),
       R => '0'
     );
 \tx_shift_reg[23]\: unisim.vcomponents.FDRE
@@ -5317,7 +7492,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[23]_i_2_n_0\,
-      Q => p_1_in,
+      Q => tx_shift(23),
       R => '0'
     );
 \tx_shift_reg[2]\: unisim.vcomponents.FDRE
@@ -5325,7 +7500,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[2]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[2]\,
+      Q => tx_shift(2),
       R => '0'
     );
 \tx_shift_reg[3]\: unisim.vcomponents.FDRE
@@ -5333,7 +7508,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[3]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[3]\,
+      Q => tx_shift(3),
       R => '0'
     );
 \tx_shift_reg[4]\: unisim.vcomponents.FDRE
@@ -5341,7 +7516,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[4]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[4]\,
+      Q => tx_shift(4),
       R => '0'
     );
 \tx_shift_reg[5]\: unisim.vcomponents.FDRE
@@ -5349,7 +7524,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[5]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[5]\,
+      Q => tx_shift(5),
       R => '0'
     );
 \tx_shift_reg[6]\: unisim.vcomponents.FDRE
@@ -5357,7 +7532,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[6]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[6]\,
+      Q => tx_shift(6),
       R => '0'
     );
 \tx_shift_reg[7]\: unisim.vcomponents.FDRE
@@ -5365,7 +7540,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[7]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[7]\,
+      Q => tx_shift(7),
       R => '0'
     );
 \tx_shift_reg[8]\: unisim.vcomponents.FDRE
@@ -5373,7 +7548,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[8]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[8]\,
+      Q => tx_shift(8),
       R => '0'
     );
 \tx_shift_reg[9]\: unisim.vcomponents.FDRE
@@ -5381,7 +7556,7 @@ sd_tx_reg: unisim.vcomponents.FDRE
       C => clk_audio,
       CE => \tx_shift[23]_i_1_n_0\,
       D => \tx_shift[9]_i_1_n_0\,
-      Q => \tx_shift_reg_n_0_[9]\,
+      Q => tx_shift(9),
       R => '0'
     );
 end STRUCTURE;
@@ -5416,16 +7591,45 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_1_spatial_audio_top_0_0_bindec_1 is
+entity design_1_spatial_audio_top_0_0_bindec_5 is
+  port (
+    enb_array : out STD_LOGIC_VECTOR ( 0 to 0 );
+    addrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    enb : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_bindec_5 : entity is "bindec";
+end design_1_spatial_audio_top_0_0_bindec_5;
+
+architecture STRUCTURE of design_1_spatial_audio_top_0_0_bindec_5 is
+begin
+\ENOUT_inferred__7/i_\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"01000000"
+    )
+        port map (
+      I0 => addrb(2),
+      I1 => addrb(1),
+      I2 => addrb(0),
+      I3 => enb,
+      I4 => addrb(3),
+      O => enb_array(0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity design_1_spatial_audio_top_0_0_bindec_6 is
   port (
     ena_array : out STD_LOGIC_VECTOR ( 0 to 0 );
     addra : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_bindec_1 : entity is "bindec";
-end design_1_spatial_audio_top_0_0_bindec_1;
+  attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_bindec_6 : entity is "bindec";
+end design_1_spatial_audio_top_0_0_bindec_6;
 
-architecture STRUCTURE of design_1_spatial_audio_top_0_0_bindec_1 is
+architecture STRUCTURE of design_1_spatial_audio_top_0_0_bindec_6 is
 begin
 \ENOUT_inferred__7/i_\: unisim.vcomponents.LUT4
     generic map(
@@ -5437,6 +7641,35 @@ begin
       I2 => addra(3),
       I3 => addra(0),
       O => ena_array(0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity design_1_spatial_audio_top_0_0_bindec_7 is
+  port (
+    enb_array : out STD_LOGIC_VECTOR ( 0 to 0 );
+    addrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    enb : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_bindec_7 : entity is "bindec";
+end design_1_spatial_audio_top_0_0_bindec_7;
+
+architecture STRUCTURE of design_1_spatial_audio_top_0_0_bindec_7 is
+begin
+\ENOUT_inferred__7/i_\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"01000000"
+    )
+        port map (
+      I0 => addrb(2),
+      I1 => addrb(1),
+      I2 => addrb(0),
+      I3 => enb,
+      I4 => addrb(3),
+      O => enb_array(0)
     );
 end STRUCTURE;
 library IEEE;
@@ -5776,7 +8009,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_1_spatial_audio_top_0_0_blk_mem_gen_mux_2 is
+entity design_1_spatial_audio_top_0_0_blk_mem_gen_mux_8 is
   port (
     douta : out STD_LOGIC_VECTOR ( 15 downto 0 );
     addra : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -5789,10 +8022,10 @@ entity design_1_spatial_audio_top_0_0_blk_mem_gen_mux_2 is
     accumulator_reg_1 : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_blk_mem_gen_mux_2 : entity is "blk_mem_gen_mux";
-end design_1_spatial_audio_top_0_0_blk_mem_gen_mux_2;
+  attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_blk_mem_gen_mux_8 : entity is "blk_mem_gen_mux";
+end design_1_spatial_audio_top_0_0_blk_mem_gen_mux_8;
 
-architecture STRUCTURE of design_1_spatial_audio_top_0_0_blk_mem_gen_mux_2 is
+architecture STRUCTURE of design_1_spatial_audio_top_0_0_blk_mem_gen_mux_8 is
   signal \douta[15]_INST_0_i_1_n_0\ : STD_LOGIC;
   signal sel_pipe : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal sel_pipe_d1 : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -6109,35 +8342,720 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
+entity \design_1_spatial_audio_top_0_0_blk_mem_gen_mux__parameterized0\ is
+  port (
+    doutb : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    enb : in STD_LOGIC;
+    addrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    clkb : in STD_LOGIC;
+    ram_doutb : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    DOBDO : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    accumulator_reg : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    DOPBDOP : in STD_LOGIC_VECTOR ( 0 to 0 );
+    accumulator_reg_0 : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    accumulator_reg_1 : in STD_LOGIC_VECTOR ( 6 downto 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_mux__parameterized0\ : entity is "blk_mem_gen_mux";
+end \design_1_spatial_audio_top_0_0_blk_mem_gen_mux__parameterized0\;
+
+architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_mux__parameterized0\ is
+  signal \doutb[15]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[0]\ : STD_LOGIC;
+  signal \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[1]\ : STD_LOGIC;
+  signal \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\ : STD_LOGIC;
+  signal \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\ : STD_LOGIC;
+  signal \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[0]\ : STD_LOGIC;
+  signal \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[1]\ : STD_LOGIC;
+  signal \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[2]\ : STD_LOGIC;
+  signal \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[3]\ : STD_LOGIC;
+begin
+\doutb[0]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => ram_doutb(0),
+      I3 => DOBDO(0),
+      I4 => accumulator_reg(0),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(0)
+    );
+\doutb[10]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => accumulator_reg_0(1),
+      I3 => accumulator_reg_1(1),
+      I4 => accumulator_reg(10),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(10)
+    );
+\doutb[11]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => accumulator_reg_0(2),
+      I3 => accumulator_reg_1(2),
+      I4 => accumulator_reg(11),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(11)
+    );
+\doutb[12]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => accumulator_reg_0(3),
+      I3 => accumulator_reg_1(3),
+      I4 => accumulator_reg(12),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(12)
+    );
+\doutb[13]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => accumulator_reg_0(4),
+      I3 => accumulator_reg_1(4),
+      I4 => accumulator_reg(13),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(13)
+    );
+\doutb[14]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => accumulator_reg_0(5),
+      I3 => accumulator_reg_1(5),
+      I4 => accumulator_reg(14),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(14)
+    );
+\doutb[15]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => accumulator_reg_0(6),
+      I3 => accumulator_reg_1(6),
+      I4 => accumulator_reg(15),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(15)
+    );
+\doutb[15]_INST_0_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0004"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I2 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[1]\,
+      I3 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[0]\,
+      O => \doutb[15]_INST_0_i_1_n_0\
+    );
+\doutb[1]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => ram_doutb(1),
+      I3 => DOBDO(1),
+      I4 => accumulator_reg(1),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(1)
+    );
+\doutb[2]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => ram_doutb(2),
+      I3 => DOBDO(2),
+      I4 => accumulator_reg(2),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(2)
+    );
+\doutb[3]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => ram_doutb(3),
+      I3 => DOBDO(3),
+      I4 => accumulator_reg(3),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(3)
+    );
+\doutb[4]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => ram_doutb(4),
+      I3 => DOBDO(4),
+      I4 => accumulator_reg(4),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(4)
+    );
+\doutb[5]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => ram_doutb(5),
+      I3 => DOBDO(5),
+      I4 => accumulator_reg(5),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(5)
+    );
+\doutb[6]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => ram_doutb(6),
+      I3 => DOBDO(6),
+      I4 => accumulator_reg(6),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(6)
+    );
+\doutb[7]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => ram_doutb(7),
+      I3 => DOBDO(7),
+      I4 => accumulator_reg(7),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(7)
+    );
+\doutb[8]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => ram_doutb(8),
+      I3 => DOPBDOP(0),
+      I4 => accumulator_reg(8),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(8)
+    );
+\doutb[9]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => accumulator_reg_0(0),
+      I3 => accumulator_reg_1(0),
+      I4 => accumulator_reg(9),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(9)
+    );
+\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[0]\,
+      Q => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[0]\,
+      R => '0'
+    );
+\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[1]\,
+      Q => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[1]\,
+      R => '0'
+    );
+\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[2]\,
+      Q => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      R => '0'
+    );
+\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[3]\,
+      Q => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      R => '0'
+    );
+\no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => addrb(0),
+      Q => \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[0]\,
+      R => '0'
+    );
+\no_softecc_sel_reg.ce_pri.sel_pipe_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => addrb(1),
+      Q => \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[1]\,
+      R => '0'
+    );
+\no_softecc_sel_reg.ce_pri.sel_pipe_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => addrb(2),
+      Q => \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[2]\,
+      R => '0'
+    );
+\no_softecc_sel_reg.ce_pri.sel_pipe_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => addrb(3),
+      Q => \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[3]\,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \design_1_spatial_audio_top_0_0_blk_mem_gen_mux__parameterized0_9\ is
+  port (
+    doutb : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    enb : in STD_LOGIC;
+    addrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    clkb : in STD_LOGIC;
+    ram_doutb : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    DOBDO : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    accumulator_reg : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    DOPBDOP : in STD_LOGIC_VECTOR ( 0 to 0 );
+    accumulator_reg_0 : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    accumulator_reg_1 : in STD_LOGIC_VECTOR ( 6 downto 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_mux__parameterized0_9\ : entity is "blk_mem_gen_mux";
+end \design_1_spatial_audio_top_0_0_blk_mem_gen_mux__parameterized0_9\;
+
+architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_mux__parameterized0_9\ is
+  signal \doutb[15]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[0]\ : STD_LOGIC;
+  signal \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[1]\ : STD_LOGIC;
+  signal \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\ : STD_LOGIC;
+  signal \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\ : STD_LOGIC;
+  signal \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[0]\ : STD_LOGIC;
+  signal \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[1]\ : STD_LOGIC;
+  signal \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[2]\ : STD_LOGIC;
+  signal \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[3]\ : STD_LOGIC;
+begin
+\doutb[0]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => ram_doutb(0),
+      I3 => DOBDO(0),
+      I4 => accumulator_reg(0),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(0)
+    );
+\doutb[10]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => accumulator_reg_0(1),
+      I3 => accumulator_reg_1(1),
+      I4 => accumulator_reg(10),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(10)
+    );
+\doutb[11]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => accumulator_reg_0(2),
+      I3 => accumulator_reg_1(2),
+      I4 => accumulator_reg(11),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(11)
+    );
+\doutb[12]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => accumulator_reg_0(3),
+      I3 => accumulator_reg_1(3),
+      I4 => accumulator_reg(12),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(12)
+    );
+\doutb[13]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => accumulator_reg_0(4),
+      I3 => accumulator_reg_1(4),
+      I4 => accumulator_reg(13),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(13)
+    );
+\doutb[14]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => accumulator_reg_0(5),
+      I3 => accumulator_reg_1(5),
+      I4 => accumulator_reg(14),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(14)
+    );
+\doutb[15]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => accumulator_reg_0(6),
+      I3 => accumulator_reg_1(6),
+      I4 => accumulator_reg(15),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(15)
+    );
+\doutb[15]_INST_0_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0004"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I2 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[1]\,
+      I3 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[0]\,
+      O => \doutb[15]_INST_0_i_1_n_0\
+    );
+\doutb[1]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => ram_doutb(1),
+      I3 => DOBDO(1),
+      I4 => accumulator_reg(1),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(1)
+    );
+\doutb[2]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => ram_doutb(2),
+      I3 => DOBDO(2),
+      I4 => accumulator_reg(2),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(2)
+    );
+\doutb[3]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => ram_doutb(3),
+      I3 => DOBDO(3),
+      I4 => accumulator_reg(3),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(3)
+    );
+\doutb[4]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => ram_doutb(4),
+      I3 => DOBDO(4),
+      I4 => accumulator_reg(4),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(4)
+    );
+\doutb[5]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => ram_doutb(5),
+      I3 => DOBDO(5),
+      I4 => accumulator_reg(5),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(5)
+    );
+\doutb[6]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => ram_doutb(6),
+      I3 => DOBDO(6),
+      I4 => accumulator_reg(6),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(6)
+    );
+\doutb[7]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => ram_doutb(7),
+      I3 => DOBDO(7),
+      I4 => accumulator_reg(7),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(7)
+    );
+\doutb[8]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => ram_doutb(8),
+      I3 => DOPBDOP(0),
+      I4 => accumulator_reg(8),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(8)
+    );
+\doutb[9]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFF541054105410"
+    )
+        port map (
+      I0 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      I1 => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      I2 => accumulator_reg_0(0),
+      I3 => accumulator_reg_1(0),
+      I4 => accumulator_reg(9),
+      I5 => \doutb[15]_INST_0_i_1_n_0\,
+      O => doutb(9)
+    );
+\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[0]\,
+      Q => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[0]\,
+      R => '0'
+    );
+\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[1]\,
+      Q => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[1]\,
+      R => '0'
+    );
+\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[2]\,
+      Q => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[2]\,
+      R => '0'
+    );
+\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[3]\,
+      Q => \no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg_n_0_[3]\,
+      R => '0'
+    );
+\no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => addrb(0),
+      Q => \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[0]\,
+      R => '0'
+    );
+\no_softecc_sel_reg.ce_pri.sel_pipe_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => addrb(1),
+      Q => \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[1]\,
+      R => '0'
+    );
+\no_softecc_sel_reg.ce_pri.sel_pipe_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => addrb(2),
+      Q => \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[2]\,
+      R => '0'
+    );
+\no_softecc_sel_reg.ce_pri.sel_pipe_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clkb,
+      CE => enb,
+      D => addrb(3),
+      Q => \no_softecc_sel_reg.ce_pri.sel_pipe_reg_n_0_[3]\,
+      R => '0'
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
 entity design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init is
   port (
     ram_douta : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    ram_doutb : out STD_LOGIC_VECTOR ( 8 downto 0 );
     clka : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 11 downto 0 )
+    clkb : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\ : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
 end design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init;
 
 architecture STRUCTURE of design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init is
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
   attribute box_type : string;
-  attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
+  attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
 begin
-\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
+\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 1,
-      DOB_REG => 0,
+      DOB_REG => 1,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"CFDA295141DC63F61FBF749546F83880EFEA1778FF842BE09E79188AA93C0000",
@@ -6298,7 +9216,7 @@ begin
       RAM_EXTENSION_A => "NONE",
       RAM_EXTENSION_B => "NONE",
       RAM_MODE => "TDP",
-      RDADDR_COLLISION_HWCONFIG => "PERFORMANCE",
+      RDADDR_COLLISION_HWCONFIG => "DELAYED_WRITE",
       READ_WIDTH_A => 9,
       READ_WIDTH_B => 9,
       RSTREG_PRIORITY_A => "REGCE",
@@ -6316,37 +9234,41 @@ begin
       ADDRARDADDR(15) => '1',
       ADDRARDADDR(14 downto 3) => addra(11 downto 0),
       ADDRARDADDR(2 downto 0) => B"111",
-      ADDRBWRADDR(15 downto 0) => B"0000000000000000",
+      ADDRBWRADDR(15) => '1',
+      ADDRBWRADDR(14 downto 3) => addrb(11 downto 0),
+      ADDRBWRADDR(2 downto 0) => B"111",
       CASCADEINA => '0',
       CASCADEINB => '0',
-      CASCADEOUTA => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\,
-      CASCADEOUTB => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\,
+      CASCADEOUTA => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\,
+      CASCADEOUTB => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\,
       CLKARDCLK => clka,
-      CLKBWRCLK => clka,
-      DBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\,
+      CLKBWRCLK => clkb,
+      DBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\,
       DIADI(31 downto 0) => B"00000000000000000000000000000000",
       DIBDI(31 downto 0) => B"00000000000000000000000000000000",
       DIPADIP(3 downto 0) => B"0000",
       DIPBDIP(3 downto 0) => B"0000",
-      DOADO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\(31 downto 8),
+      DOADO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\(31 downto 8),
       DOADO(7 downto 0) => ram_douta(7 downto 0),
-      DOBDO(31 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\(31 downto 0),
-      DOPADOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\(3 downto 1),
+      DOBDO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\(31 downto 8),
+      DOBDO(7 downto 0) => ram_doutb(7 downto 0),
+      DOPADOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\(3 downto 1),
       DOPADOP(0) => ram_douta(8),
-      DOPBDOP(3 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\(3 downto 0),
-      ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\,
-      ENBWREN => '0',
+      DOPBDOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\(3 downto 1),
+      DOPBDOP(0) => ram_doutb(8),
+      ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
+      ENARDEN => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\,
+      ENBWREN => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
-      RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
+      RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '1',
-      REGCEB => '0',
+      REGCEB => enb,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
       RSTREGB => '0',
-      SBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\,
+      SBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\,
       WEA(3 downto 0) => B"0000",
       WEBWE(7 downto 0) => B"00000000"
     );
@@ -6358,33 +9280,39 @@ use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized0\ is
   port (
     DOADO : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPADOP : out STD_LOGIC_VECTOR ( 0 to 0 );
+    DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
     clka : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 11 downto 0 )
+    clkb : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\ : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized0\ : entity is "blk_mem_gen_prim_wrapper_init";
 end \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized0\;
 
 architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized0\ is
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
   attribute box_type : string;
-  attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
+  attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
 begin
-\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
+\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 1,
-      DOB_REG => 0,
+      DOB_REG => 1,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0F432FF73CF4752C9D30E1557701CC009CC0C033936170A56B31A2A8FF020400",
@@ -6545,7 +9473,7 @@ begin
       RAM_EXTENSION_A => "NONE",
       RAM_EXTENSION_B => "NONE",
       RAM_MODE => "TDP",
-      RDADDR_COLLISION_HWCONFIG => "PERFORMANCE",
+      RDADDR_COLLISION_HWCONFIG => "DELAYED_WRITE",
       READ_WIDTH_A => 9,
       READ_WIDTH_B => 9,
       RSTREG_PRIORITY_A => "REGCE",
@@ -6563,37 +9491,41 @@ begin
       ADDRARDADDR(15) => '1',
       ADDRARDADDR(14 downto 3) => addra(11 downto 0),
       ADDRARDADDR(2 downto 0) => B"111",
-      ADDRBWRADDR(15 downto 0) => B"0000000000000000",
+      ADDRBWRADDR(15) => '1',
+      ADDRBWRADDR(14 downto 3) => addrb(11 downto 0),
+      ADDRBWRADDR(2 downto 0) => B"111",
       CASCADEINA => '0',
       CASCADEINB => '0',
-      CASCADEOUTA => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\,
-      CASCADEOUTB => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\,
+      CASCADEOUTA => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\,
+      CASCADEOUTB => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\,
       CLKARDCLK => clka,
-      CLKBWRCLK => clka,
-      DBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\,
+      CLKBWRCLK => clkb,
+      DBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\,
       DIADI(31 downto 0) => B"00000000000000000000000000000000",
       DIBDI(31 downto 0) => B"00000000000000000000000000000000",
       DIPADIP(3 downto 0) => B"0000",
       DIPBDIP(3 downto 0) => B"0000",
-      DOADO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\(31 downto 8),
+      DOADO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\(31 downto 8),
       DOADO(7 downto 0) => DOADO(7 downto 0),
-      DOBDO(31 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\(31 downto 0),
-      DOPADOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\(3 downto 1),
+      DOBDO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\(31 downto 8),
+      DOBDO(7 downto 0) => DOBDO(7 downto 0),
+      DOPADOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\(3 downto 1),
       DOPADOP(0) => DOPADOP(0),
-      DOPBDOP(3 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\(3 downto 0),
-      ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\,
-      ENBWREN => '0',
+      DOPBDOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\(3 downto 1),
+      DOPBDOP(0) => DOPBDOP(0),
+      ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
+      ENARDEN => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\,
+      ENBWREN => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
-      RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
+      RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '1',
-      REGCEB => '0',
+      REGCEB => enb,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
       RSTREGB => '0',
-      SBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\,
+      SBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\,
       WEA(3 downto 0) => B"0000",
       WEBWE(7 downto 0) => B"00000000"
     );
@@ -6604,27 +9536,32 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized1\ is
   port (
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_0\ : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\ : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_1\ : out STD_LOGIC_VECTOR ( 15 downto 0 );
     clka : in STD_LOGIC;
+    clkb : in STD_LOGIC;
     ena_array : in STD_LOGIC_VECTOR ( 0 to 0 );
-    addra : in STD_LOGIC_VECTOR ( 9 downto 0 )
+    enb_array : in STD_LOGIC_VECTOR ( 0 to 0 );
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized1\ : entity is "blk_mem_gen_prim_wrapper_init";
 end \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized1\;
 
 architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized1\ is
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_n_32\ : STD_LOGIC;
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_n_33\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_n_32\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_n_33\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_n_34\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_n_35\ : STD_LOGIC;
   attribute box_type : string;
-  attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\ : label is "PRIMITIVE";
+  attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\ : label is "PRIMITIVE";
 begin
-\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\: unisim.vcomponents.RAMB18E1
+\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\: unisim.vcomponents.RAMB18E1
     generic map(
       DOA_REG => 1,
-      DOB_REG => 0,
+      DOB_REG => 1,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_01 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_02 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -6709,7 +9646,7 @@ begin
       IS_RSTREGARSTREG_INVERTED => '0',
       IS_RSTREGB_INVERTED => '0',
       RAM_MODE => "TDP",
-      RDADDR_COLLISION_HWCONFIG => "PERFORMANCE",
+      RDADDR_COLLISION_HWCONFIG => "DELAYED_WRITE",
       READ_WIDTH_A => 18,
       READ_WIDTH_B => 18,
       RSTREG_PRIORITY_A => "REGCE",
@@ -6726,22 +9663,24 @@ begin
         port map (
       ADDRARDADDR(13 downto 4) => addra(9 downto 0),
       ADDRARDADDR(3 downto 0) => B"0000",
-      ADDRBWRADDR(13 downto 0) => B"00000000000000",
+      ADDRBWRADDR(13 downto 4) => addrb(9 downto 0),
+      ADDRBWRADDR(3 downto 0) => B"0000",
       CLKARDCLK => clka,
-      CLKBWRCLK => clka,
+      CLKBWRCLK => clkb,
       DIADI(15 downto 0) => B"0000000000000000",
       DIBDI(15 downto 0) => B"0000000000000000",
       DIPADIP(1 downto 0) => B"00",
       DIPBDIP(1 downto 0) => B"00",
-      DOADO(15 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_0\(15 downto 0),
-      DOBDO(15 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_DOBDO_UNCONNECTED\(15 downto 0),
-      DOPADOP(1) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_n_32\,
-      DOPADOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_n_33\,
-      DOPBDOP(1 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_DOPBDOP_UNCONNECTED\(1 downto 0),
+      DOADO(15 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(15 downto 0),
+      DOBDO(15 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_1\(15 downto 0),
+      DOPADOP(1) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_n_32\,
+      DOPADOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_n_33\,
+      DOPBDOP(1) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_n_34\,
+      DOPBDOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_n_35\,
       ENARDEN => ena_array(0),
-      ENBWREN => '0',
+      ENBWREN => enb_array(0),
       REGCEAREGCE => '1',
-      REGCEB => '0',
+      REGCEB => enb,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -6756,35 +9695,42 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized2\ is
   port (
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
     clka : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1\ : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 11 downto 0 )
+    clkb : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\ : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_3\ : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized2\ : entity is "blk_mem_gen_prim_wrapper_init";
 end \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized2\;
 
 architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized2\ is
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_28\ : STD_LOGIC;
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_71\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_28\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_60\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_71\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_75\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
   attribute box_type : string;
-  attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
+  attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
 begin
-\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
+\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 1,
-      DOB_REG => 0,
+      DOB_REG => 1,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -6945,7 +9891,7 @@ begin
       RAM_EXTENSION_A => "NONE",
       RAM_EXTENSION_B => "NONE",
       RAM_MODE => "TDP",
-      RDADDR_COLLISION_HWCONFIG => "PERFORMANCE",
+      RDADDR_COLLISION_HWCONFIG => "DELAYED_WRITE",
       READ_WIDTH_A => 9,
       READ_WIDTH_B => 9,
       RSTREG_PRIORITY_A => "REGCE",
@@ -6963,38 +9909,43 @@ begin
       ADDRARDADDR(15) => '1',
       ADDRARDADDR(14 downto 3) => addra(11 downto 0),
       ADDRARDADDR(2 downto 0) => B"111",
-      ADDRBWRADDR(15 downto 0) => B"0000000000000000",
+      ADDRBWRADDR(15) => '1',
+      ADDRBWRADDR(14 downto 3) => addrb(11 downto 0),
+      ADDRBWRADDR(2 downto 0) => B"111",
       CASCADEINA => '0',
       CASCADEINB => '0',
-      CASCADEOUTA => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\,
-      CASCADEOUTB => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\,
+      CASCADEOUTA => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\,
+      CASCADEOUTB => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\,
       CLKARDCLK => clka,
-      CLKBWRCLK => clka,
-      DBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\,
+      CLKBWRCLK => clkb,
+      DBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\,
       DIADI(31 downto 0) => B"00000000000000000000000000000000",
       DIBDI(31 downto 0) => B"00000000000000000000000000000000",
       DIPADIP(3 downto 0) => B"0000",
       DIPBDIP(3 downto 0) => B"0000",
-      DOADO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\(31 downto 8),
-      DOADO(7) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_28\,
-      DOADO(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\(6 downto 0),
-      DOBDO(31 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\(31 downto 0),
-      DOPADOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\(3 downto 1),
-      DOPADOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_71\,
-      DOPBDOP(3 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\(3 downto 0),
-      ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1\,
-      ENBWREN => '0',
+      DOADO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\(31 downto 8),
+      DOADO(7) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_28\,
+      DOADO(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(6 downto 0),
+      DOBDO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\(31 downto 8),
+      DOBDO(7) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_60\,
+      DOBDO(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\(6 downto 0),
+      DOPADOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\(3 downto 1),
+      DOPADOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_71\,
+      DOPBDOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\(3 downto 1),
+      DOPBDOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_75\,
+      ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
+      ENARDEN => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\,
+      ENBWREN => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_3\,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
-      RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
+      RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '1',
-      REGCEB => '0',
+      REGCEB => enb,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
       RSTREGB => '0',
-      SBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\,
+      SBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\,
       WEA(3 downto 0) => B"0000",
       WEBWE(7 downto 0) => B"00000000"
     );
@@ -7005,35 +9956,42 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized3\ is
   port (
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
     clka : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1\ : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 11 downto 0 )
+    clkb : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\ : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_3\ : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized3\ : entity is "blk_mem_gen_prim_wrapper_init";
 end \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized3\;
 
 architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized3\ is
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_28\ : STD_LOGIC;
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_71\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_28\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_60\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_71\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_75\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
   attribute box_type : string;
-  attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
+  attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
 begin
-\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
+\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 1,
-      DOB_REG => 0,
+      DOB_REG => 1,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -7194,7 +10152,7 @@ begin
       RAM_EXTENSION_A => "NONE",
       RAM_EXTENSION_B => "NONE",
       RAM_MODE => "TDP",
-      RDADDR_COLLISION_HWCONFIG => "PERFORMANCE",
+      RDADDR_COLLISION_HWCONFIG => "DELAYED_WRITE",
       READ_WIDTH_A => 9,
       READ_WIDTH_B => 9,
       RSTREG_PRIORITY_A => "REGCE",
@@ -7212,38 +10170,43 @@ begin
       ADDRARDADDR(15) => '1',
       ADDRARDADDR(14 downto 3) => addra(11 downto 0),
       ADDRARDADDR(2 downto 0) => B"111",
-      ADDRBWRADDR(15 downto 0) => B"0000000000000000",
+      ADDRBWRADDR(15) => '1',
+      ADDRBWRADDR(14 downto 3) => addrb(11 downto 0),
+      ADDRBWRADDR(2 downto 0) => B"111",
       CASCADEINA => '0',
       CASCADEINB => '0',
-      CASCADEOUTA => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\,
-      CASCADEOUTB => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\,
+      CASCADEOUTA => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\,
+      CASCADEOUTB => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\,
       CLKARDCLK => clka,
-      CLKBWRCLK => clka,
-      DBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\,
+      CLKBWRCLK => clkb,
+      DBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\,
       DIADI(31 downto 0) => B"00000000000000000000000000000000",
       DIBDI(31 downto 0) => B"00000000000000000000000000000000",
       DIPADIP(3 downto 0) => B"0000",
       DIPBDIP(3 downto 0) => B"0000",
-      DOADO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\(31 downto 8),
-      DOADO(7) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_28\,
-      DOADO(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\(6 downto 0),
-      DOBDO(31 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\(31 downto 0),
-      DOPADOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\(3 downto 1),
-      DOPADOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_71\,
-      DOPBDOP(3 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\(3 downto 0),
-      ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1\,
-      ENBWREN => '0',
+      DOADO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\(31 downto 8),
+      DOADO(7) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_28\,
+      DOADO(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(6 downto 0),
+      DOBDO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\(31 downto 8),
+      DOBDO(7) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_60\,
+      DOBDO(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\(6 downto 0),
+      DOPADOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\(3 downto 1),
+      DOPADOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_71\,
+      DOPBDOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\(3 downto 1),
+      DOPBDOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_75\,
+      ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
+      ENARDEN => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\,
+      ENBWREN => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_3\,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
-      RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
+      RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '1',
-      REGCEB => '0',
+      REGCEB => enb,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
       RSTREGB => '0',
-      SBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\,
+      SBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\,
       WEA(3 downto 0) => B"0000",
       WEBWE(7 downto 0) => B"00000000"
     );
@@ -7255,32 +10218,37 @@ use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized4\ is
   port (
     ram_douta : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    ram_doutb : out STD_LOGIC_VECTOR ( 8 downto 0 );
     clka : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 11 downto 0 )
+    clkb : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\ : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized4\ : entity is "blk_mem_gen_prim_wrapper_init";
 end \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized4\;
 
 architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized4\ is
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
   attribute box_type : string;
-  attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
+  attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
 begin
-\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
+\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 1,
-      DOB_REG => 0,
+      DOB_REG => 1,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"C9EA322AA950BC84CA5950B555BE0E20DFCA6B17E2355980B473DC8AA1FC1C60",
@@ -7441,7 +10409,7 @@ begin
       RAM_EXTENSION_A => "NONE",
       RAM_EXTENSION_B => "NONE",
       RAM_MODE => "TDP",
-      RDADDR_COLLISION_HWCONFIG => "PERFORMANCE",
+      RDADDR_COLLISION_HWCONFIG => "DELAYED_WRITE",
       READ_WIDTH_A => 9,
       READ_WIDTH_B => 9,
       RSTREG_PRIORITY_A => "REGCE",
@@ -7459,37 +10427,41 @@ begin
       ADDRARDADDR(15) => '1',
       ADDRARDADDR(14 downto 3) => addra(11 downto 0),
       ADDRARDADDR(2 downto 0) => B"111",
-      ADDRBWRADDR(15 downto 0) => B"0000000000000000",
+      ADDRBWRADDR(15) => '1',
+      ADDRBWRADDR(14 downto 3) => addrb(11 downto 0),
+      ADDRBWRADDR(2 downto 0) => B"111",
       CASCADEINA => '0',
       CASCADEINB => '0',
-      CASCADEOUTA => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\,
-      CASCADEOUTB => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\,
+      CASCADEOUTA => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\,
+      CASCADEOUTB => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\,
       CLKARDCLK => clka,
-      CLKBWRCLK => clka,
-      DBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\,
+      CLKBWRCLK => clkb,
+      DBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\,
       DIADI(31 downto 0) => B"00000000000000000000000000000000",
       DIBDI(31 downto 0) => B"00000000000000000000000000000000",
       DIPADIP(3 downto 0) => B"0000",
       DIPBDIP(3 downto 0) => B"0000",
-      DOADO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\(31 downto 8),
+      DOADO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\(31 downto 8),
       DOADO(7 downto 0) => ram_douta(7 downto 0),
-      DOBDO(31 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\(31 downto 0),
-      DOPADOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\(3 downto 1),
+      DOBDO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\(31 downto 8),
+      DOBDO(7 downto 0) => ram_doutb(7 downto 0),
+      DOPADOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\(3 downto 1),
       DOPADOP(0) => ram_douta(8),
-      DOPBDOP(3 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\(3 downto 0),
-      ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\,
-      ENBWREN => '0',
+      DOPBDOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\(3 downto 1),
+      DOPBDOP(0) => ram_doutb(8),
+      ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
+      ENARDEN => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\,
+      ENBWREN => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
-      RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
+      RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '1',
-      REGCEB => '0',
+      REGCEB => enb,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
       RSTREGB => '0',
-      SBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\,
+      SBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\,
       WEA(3 downto 0) => B"0000",
       WEBWE(7 downto 0) => B"00000000"
     );
@@ -7501,33 +10473,39 @@ use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized5\ is
   port (
     DOADO : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPADOP : out STD_LOGIC_VECTOR ( 0 to 0 );
+    DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
     clka : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 11 downto 0 )
+    clkb : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\ : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized5\ : entity is "blk_mem_gen_prim_wrapper_init";
 end \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized5\;
 
 architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized5\ is
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
   attribute box_type : string;
-  attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
+  attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
 begin
-\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
+\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 1,
-      DOB_REG => 0,
+      DOB_REG => 1,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"37847A39CCE50144DC19537543FE066039931D599EF084BE6EF1B2BAAAFF01E0",
@@ -7688,7 +10666,7 @@ begin
       RAM_EXTENSION_A => "NONE",
       RAM_EXTENSION_B => "NONE",
       RAM_MODE => "TDP",
-      RDADDR_COLLISION_HWCONFIG => "PERFORMANCE",
+      RDADDR_COLLISION_HWCONFIG => "DELAYED_WRITE",
       READ_WIDTH_A => 9,
       READ_WIDTH_B => 9,
       RSTREG_PRIORITY_A => "REGCE",
@@ -7706,37 +10684,41 @@ begin
       ADDRARDADDR(15) => '1',
       ADDRARDADDR(14 downto 3) => addra(11 downto 0),
       ADDRARDADDR(2 downto 0) => B"111",
-      ADDRBWRADDR(15 downto 0) => B"0000000000000000",
+      ADDRBWRADDR(15) => '1',
+      ADDRBWRADDR(14 downto 3) => addrb(11 downto 0),
+      ADDRBWRADDR(2 downto 0) => B"111",
       CASCADEINA => '0',
       CASCADEINB => '0',
-      CASCADEOUTA => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\,
-      CASCADEOUTB => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\,
+      CASCADEOUTA => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\,
+      CASCADEOUTB => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\,
       CLKARDCLK => clka,
-      CLKBWRCLK => clka,
-      DBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\,
+      CLKBWRCLK => clkb,
+      DBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\,
       DIADI(31 downto 0) => B"00000000000000000000000000000000",
       DIBDI(31 downto 0) => B"00000000000000000000000000000000",
       DIPADIP(3 downto 0) => B"0000",
       DIPBDIP(3 downto 0) => B"0000",
-      DOADO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\(31 downto 8),
+      DOADO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\(31 downto 8),
       DOADO(7 downto 0) => DOADO(7 downto 0),
-      DOBDO(31 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\(31 downto 0),
-      DOPADOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\(3 downto 1),
+      DOBDO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\(31 downto 8),
+      DOBDO(7 downto 0) => DOBDO(7 downto 0),
+      DOPADOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\(3 downto 1),
       DOPADOP(0) => DOPADOP(0),
-      DOPBDOP(3 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\(3 downto 0),
-      ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\,
-      ENBWREN => '0',
+      DOPBDOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\(3 downto 1),
+      DOPBDOP(0) => DOPBDOP(0),
+      ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
+      ENARDEN => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\,
+      ENBWREN => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
-      RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
+      RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '1',
-      REGCEB => '0',
+      REGCEB => enb,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
       RSTREGB => '0',
-      SBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\,
+      SBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\,
       WEA(3 downto 0) => B"0000",
       WEBWE(7 downto 0) => B"00000000"
     );
@@ -7747,27 +10729,32 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized6\ is
   port (
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_0\ : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\ : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_1\ : out STD_LOGIC_VECTOR ( 15 downto 0 );
     clka : in STD_LOGIC;
+    clkb : in STD_LOGIC;
     ena_array : in STD_LOGIC_VECTOR ( 0 to 0 );
-    addra : in STD_LOGIC_VECTOR ( 9 downto 0 )
+    enb_array : in STD_LOGIC_VECTOR ( 0 to 0 );
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized6\ : entity is "blk_mem_gen_prim_wrapper_init";
 end \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized6\;
 
 architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized6\ is
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_n_32\ : STD_LOGIC;
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_n_33\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_n_32\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_n_33\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_n_34\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_n_35\ : STD_LOGIC;
   attribute box_type : string;
-  attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\ : label is "PRIMITIVE";
+  attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\ : label is "PRIMITIVE";
 begin
-\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\: unisim.vcomponents.RAMB18E1
+\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\: unisim.vcomponents.RAMB18E1
     generic map(
       DOA_REG => 1,
-      DOB_REG => 0,
+      DOB_REG => 1,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_01 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_02 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -7852,7 +10839,7 @@ begin
       IS_RSTREGARSTREG_INVERTED => '0',
       IS_RSTREGB_INVERTED => '0',
       RAM_MODE => "TDP",
-      RDADDR_COLLISION_HWCONFIG => "PERFORMANCE",
+      RDADDR_COLLISION_HWCONFIG => "DELAYED_WRITE",
       READ_WIDTH_A => 18,
       READ_WIDTH_B => 18,
       RSTREG_PRIORITY_A => "REGCE",
@@ -7869,22 +10856,24 @@ begin
         port map (
       ADDRARDADDR(13 downto 4) => addra(9 downto 0),
       ADDRARDADDR(3 downto 0) => B"0000",
-      ADDRBWRADDR(13 downto 0) => B"00000000000000",
+      ADDRBWRADDR(13 downto 4) => addrb(9 downto 0),
+      ADDRBWRADDR(3 downto 0) => B"0000",
       CLKARDCLK => clka,
-      CLKBWRCLK => clka,
+      CLKBWRCLK => clkb,
       DIADI(15 downto 0) => B"0000000000000000",
       DIBDI(15 downto 0) => B"0000000000000000",
       DIPADIP(1 downto 0) => B"00",
       DIPBDIP(1 downto 0) => B"00",
-      DOADO(15 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_0\(15 downto 0),
-      DOBDO(15 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_DOBDO_UNCONNECTED\(15 downto 0),
-      DOPADOP(1) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_n_32\,
-      DOPADOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_n_33\,
-      DOPBDOP(1 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_DOPBDOP_UNCONNECTED\(1 downto 0),
+      DOADO(15 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(15 downto 0),
+      DOBDO(15 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_1\(15 downto 0),
+      DOPADOP(1) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_n_32\,
+      DOPADOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_n_33\,
+      DOPBDOP(1) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_n_34\,
+      DOPBDOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_n_35\,
       ENARDEN => ena_array(0),
-      ENBWREN => '0',
+      ENBWREN => enb_array(0),
       REGCEAREGCE => '1',
-      REGCEB => '0',
+      REGCEB => enb,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -7899,35 +10888,42 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized7\ is
   port (
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
     clka : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1\ : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 11 downto 0 )
+    clkb : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\ : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_3\ : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized7\ : entity is "blk_mem_gen_prim_wrapper_init";
 end \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized7\;
 
 architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized7\ is
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_28\ : STD_LOGIC;
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_71\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_28\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_60\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_71\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_75\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
   attribute box_type : string;
-  attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
+  attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
 begin
-\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
+\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 1,
-      DOB_REG => 0,
+      DOB_REG => 1,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -8088,7 +11084,7 @@ begin
       RAM_EXTENSION_A => "NONE",
       RAM_EXTENSION_B => "NONE",
       RAM_MODE => "TDP",
-      RDADDR_COLLISION_HWCONFIG => "PERFORMANCE",
+      RDADDR_COLLISION_HWCONFIG => "DELAYED_WRITE",
       READ_WIDTH_A => 9,
       READ_WIDTH_B => 9,
       RSTREG_PRIORITY_A => "REGCE",
@@ -8106,38 +11102,43 @@ begin
       ADDRARDADDR(15) => '1',
       ADDRARDADDR(14 downto 3) => addra(11 downto 0),
       ADDRARDADDR(2 downto 0) => B"111",
-      ADDRBWRADDR(15 downto 0) => B"0000000000000000",
+      ADDRBWRADDR(15) => '1',
+      ADDRBWRADDR(14 downto 3) => addrb(11 downto 0),
+      ADDRBWRADDR(2 downto 0) => B"111",
       CASCADEINA => '0',
       CASCADEINB => '0',
-      CASCADEOUTA => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\,
-      CASCADEOUTB => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\,
+      CASCADEOUTA => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\,
+      CASCADEOUTB => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\,
       CLKARDCLK => clka,
-      CLKBWRCLK => clka,
-      DBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\,
+      CLKBWRCLK => clkb,
+      DBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\,
       DIADI(31 downto 0) => B"00000000000000000000000000000000",
       DIBDI(31 downto 0) => B"00000000000000000000000000000000",
       DIPADIP(3 downto 0) => B"0000",
       DIPBDIP(3 downto 0) => B"0000",
-      DOADO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\(31 downto 8),
-      DOADO(7) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_28\,
-      DOADO(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\(6 downto 0),
-      DOBDO(31 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\(31 downto 0),
-      DOPADOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\(3 downto 1),
-      DOPADOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_71\,
-      DOPBDOP(3 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\(3 downto 0),
-      ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1\,
-      ENBWREN => '0',
+      DOADO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\(31 downto 8),
+      DOADO(7) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_28\,
+      DOADO(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(6 downto 0),
+      DOBDO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\(31 downto 8),
+      DOBDO(7) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_60\,
+      DOBDO(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\(6 downto 0),
+      DOPADOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\(3 downto 1),
+      DOPADOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_71\,
+      DOPBDOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\(3 downto 1),
+      DOPBDOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_75\,
+      ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
+      ENARDEN => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\,
+      ENBWREN => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_3\,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
-      RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
+      RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '1',
-      REGCEB => '0',
+      REGCEB => enb,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
       RSTREGB => '0',
-      SBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\,
+      SBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\,
       WEA(3 downto 0) => B"0000",
       WEBWE(7 downto 0) => B"00000000"
     );
@@ -8148,35 +11149,42 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized8\ is
   port (
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
     clka : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1\ : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 11 downto 0 )
+    clkb : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\ : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_3\ : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized8\ : entity is "blk_mem_gen_prim_wrapper_init";
 end \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized8\;
 
 architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized8\ is
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_28\ : STD_LOGIC;
-  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_71\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\ : STD_LOGIC;
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_28\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_60\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_71\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_75\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 31 downto 8 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\ : STD_LOGIC_VECTOR ( 8 downto 0 );
   attribute box_type : string;
-  attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
+  attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\ : label is "PRIMITIVE";
 begin
-\DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
+\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
       DOA_REG => 1,
-      DOB_REG => 0,
+      DOB_REG => 1,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -8337,7 +11345,7 @@ begin
       RAM_EXTENSION_A => "NONE",
       RAM_EXTENSION_B => "NONE",
       RAM_MODE => "TDP",
-      RDADDR_COLLISION_HWCONFIG => "PERFORMANCE",
+      RDADDR_COLLISION_HWCONFIG => "DELAYED_WRITE",
       READ_WIDTH_A => 9,
       READ_WIDTH_B => 9,
       RSTREG_PRIORITY_A => "REGCE",
@@ -8355,40 +11363,2528 @@ begin
       ADDRARDADDR(15) => '1',
       ADDRARDADDR(14 downto 3) => addra(11 downto 0),
       ADDRARDADDR(2 downto 0) => B"111",
-      ADDRBWRADDR(15 downto 0) => B"0000000000000000",
+      ADDRBWRADDR(15) => '1',
+      ADDRBWRADDR(14 downto 3) => addrb(11 downto 0),
+      ADDRBWRADDR(2 downto 0) => B"111",
       CASCADEINA => '0',
       CASCADEINB => '0',
-      CASCADEOUTA => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\,
-      CASCADEOUTB => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\,
+      CASCADEOUTA => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTA_UNCONNECTED\,
+      CASCADEOUTB => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_CASCADEOUTB_UNCONNECTED\,
       CLKARDCLK => clka,
-      CLKBWRCLK => clka,
-      DBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\,
+      CLKBWRCLK => clkb,
+      DBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DBITERR_UNCONNECTED\,
       DIADI(31 downto 0) => B"00000000000000000000000000000000",
       DIBDI(31 downto 0) => B"00000000000000000000000000000000",
       DIPADIP(3 downto 0) => B"0000",
       DIPBDIP(3 downto 0) => B"0000",
-      DOADO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\(31 downto 8),
-      DOADO(7) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_28\,
-      DOADO(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\(6 downto 0),
-      DOBDO(31 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\(31 downto 0),
-      DOPADOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\(3 downto 1),
-      DOPADOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_n_71\,
-      DOPBDOP(3 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\(3 downto 0),
-      ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1\,
-      ENBWREN => '0',
+      DOADO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOADO_UNCONNECTED\(31 downto 8),
+      DOADO(7) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_28\,
+      DOADO(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(6 downto 0),
+      DOBDO(31 downto 8) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOBDO_UNCONNECTED\(31 downto 8),
+      DOBDO(7) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_60\,
+      DOBDO(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\(6 downto 0),
+      DOPADOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPADOP_UNCONNECTED\(3 downto 1),
+      DOPADOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_71\,
+      DOPBDOP(3 downto 1) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_DOPBDOP_UNCONNECTED\(3 downto 1),
+      DOPBDOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_n_75\,
+      ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
+      ENARDEN => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\,
+      ENBWREN => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_3\,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
-      RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
+      RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '1',
-      REGCEB => '0',
+      REGCEB => enb,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
       RSTREGB => '0',
-      SBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\,
+      SBITERR => \NLW_DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_SBITERR_UNCONNECTED\,
       WEA(3 downto 0) => B"0000",
       WEBWE(7 downto 0) => B"00000000"
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity design_1_spatial_audio_top_0_0_hrtf_crossfader is
+  port (
+    pipe_valid_s2_reg : out STD_LOGIC;
+    P : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    fade_target : out STD_LOGIC_VECTOR ( 0 to 0 );
+    Q : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    S : out STD_LOGIC_VECTOR ( 0 to 0 );
+    pipe_audio_s1 : in STD_LOGIC;
+    accumulator_reg : in STD_LOGIC;
+    clk_audio : in STD_LOGIC;
+    rst_audio : in STD_LOGIC;
+    RSTP : in STD_LOGIC;
+    doutb : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    new_sample : in STD_LOGIC;
+    douta : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    \read_ptr_reg[6]\ : in STD_LOGIC;
+    pipe_valid_s1_reg : in STD_LOGIC;
+    crossfade_trig : in STD_LOGIC;
+    \fade_counter0_carry__0_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \fade_target_reg[8]_0\ : in STD_LOGIC;
+    locked : in STD_LOGIC;
+    accumulator_reg_0 : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    accumulator_reg_1 : in STD_LOGIC;
+    accumulator_reg_2 : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_hrtf_crossfader : entity is "hrtf_crossfader";
+end design_1_spatial_audio_top_0_0_hrtf_crossfader;
+
+architecture STRUCTURE of design_1_spatial_audio_top_0_0_hrtf_crossfader is
+  signal \^q\ : STD_LOGIC_VECTOR ( 6 downto 0 );
+  signal fade_counter : STD_LOGIC;
+  signal \fade_counter0_carry__0_i_1_n_0\ : STD_LOGIC;
+  signal \fade_counter0_carry__0_i_2_n_0\ : STD_LOGIC;
+  signal \fade_counter0_carry__0_n_3\ : STD_LOGIC;
+  signal fade_counter0_carry_i_1_n_0 : STD_LOGIC;
+  signal fade_counter0_carry_i_2_n_0 : STD_LOGIC;
+  signal fade_counter0_carry_i_3_n_0 : STD_LOGIC;
+  signal fade_counter0_carry_i_4_n_0 : STD_LOGIC;
+  signal fade_counter0_carry_i_5_n_0 : STD_LOGIC;
+  signal fade_counter0_carry_i_6_n_0 : STD_LOGIC;
+  signal fade_counter0_carry_i_7_n_0 : STD_LOGIC;
+  signal fade_counter0_carry_i_8_n_0 : STD_LOGIC;
+  signal fade_counter0_carry_n_0 : STD_LOGIC;
+  signal fade_counter0_carry_n_1 : STD_LOGIC;
+  signal fade_counter0_carry_n_2 : STD_LOGIC;
+  signal fade_counter0_carry_n_3 : STD_LOGIC;
+  signal \fade_counter[4]_i_2_n_0\ : STD_LOGIC;
+  signal \fade_counter[4]_i_3_n_0\ : STD_LOGIC;
+  signal \fade_counter[4]_i_4_n_0\ : STD_LOGIC;
+  signal \fade_counter[4]_i_5_n_0\ : STD_LOGIC;
+  signal \fade_counter[4]_i_6_n_0\ : STD_LOGIC;
+  signal \fade_counter[8]_i_2_n_0\ : STD_LOGIC;
+  signal \fade_counter[8]_i_3_n_0\ : STD_LOGIC;
+  signal \fade_counter[8]_i_4_n_0\ : STD_LOGIC;
+  signal \fade_counter[8]_i_5_n_0\ : STD_LOGIC;
+  signal \fade_counter_reg[4]_i_1_n_0\ : STD_LOGIC;
+  signal \fade_counter_reg[4]_i_1_n_1\ : STD_LOGIC;
+  signal \fade_counter_reg[4]_i_1_n_2\ : STD_LOGIC;
+  signal \fade_counter_reg[4]_i_1_n_3\ : STD_LOGIC;
+  signal \fade_counter_reg[4]_i_1_n_4\ : STD_LOGIC;
+  signal \fade_counter_reg[4]_i_1_n_5\ : STD_LOGIC;
+  signal \fade_counter_reg[4]_i_1_n_6\ : STD_LOGIC;
+  signal \fade_counter_reg[4]_i_1_n_7\ : STD_LOGIC;
+  signal \fade_counter_reg[8]_i_1_n_1\ : STD_LOGIC;
+  signal \fade_counter_reg[8]_i_1_n_2\ : STD_LOGIC;
+  signal \fade_counter_reg[8]_i_1_n_3\ : STD_LOGIC;
+  signal \fade_counter_reg[8]_i_1_n_4\ : STD_LOGIC;
+  signal \fade_counter_reg[8]_i_1_n_5\ : STD_LOGIC;
+  signal \fade_counter_reg[8]_i_1_n_6\ : STD_LOGIC;
+  signal \fade_counter_reg[8]_i_1_n_7\ : STD_LOGIC;
+  signal \fade_counter_reg__0\ : STD_LOGIC_VECTOR ( 8 downto 1 );
+  signal \fade_counter_reg__1\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \^fade_target\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \fade_target[8]_i_1_n_0\ : STD_LOGIC;
+  signal fir_a_n_0 : STD_LOGIC;
+  signal fir_a_n_1 : STD_LOGIC;
+  signal fir_a_n_10 : STD_LOGIC;
+  signal fir_a_n_11 : STD_LOGIC;
+  signal fir_a_n_12 : STD_LOGIC;
+  signal fir_a_n_13 : STD_LOGIC;
+  signal fir_a_n_14 : STD_LOGIC;
+  signal fir_a_n_15 : STD_LOGIC;
+  signal fir_a_n_16 : STD_LOGIC;
+  signal fir_a_n_17 : STD_LOGIC;
+  signal fir_a_n_18 : STD_LOGIC;
+  signal fir_a_n_19 : STD_LOGIC;
+  signal fir_a_n_2 : STD_LOGIC;
+  signal fir_a_n_20 : STD_LOGIC;
+  signal fir_a_n_21 : STD_LOGIC;
+  signal fir_a_n_22 : STD_LOGIC;
+  signal fir_a_n_23 : STD_LOGIC;
+  signal fir_a_n_3 : STD_LOGIC;
+  signal fir_a_n_4 : STD_LOGIC;
+  signal fir_a_n_5 : STD_LOGIC;
+  signal fir_a_n_6 : STD_LOGIC;
+  signal fir_a_n_7 : STD_LOGIC;
+  signal fir_a_n_8 : STD_LOGIC;
+  signal fir_a_n_9 : STD_LOGIC;
+  signal fir_b_n_0 : STD_LOGIC;
+  signal fir_b_n_1 : STD_LOGIC;
+  signal fir_b_n_10 : STD_LOGIC;
+  signal fir_b_n_11 : STD_LOGIC;
+  signal fir_b_n_12 : STD_LOGIC;
+  signal fir_b_n_13 : STD_LOGIC;
+  signal fir_b_n_14 : STD_LOGIC;
+  signal fir_b_n_15 : STD_LOGIC;
+  signal fir_b_n_16 : STD_LOGIC;
+  signal fir_b_n_17 : STD_LOGIC;
+  signal fir_b_n_18 : STD_LOGIC;
+  signal fir_b_n_19 : STD_LOGIC;
+  signal fir_b_n_2 : STD_LOGIC;
+  signal fir_b_n_20 : STD_LOGIC;
+  signal fir_b_n_21 : STD_LOGIC;
+  signal fir_b_n_22 : STD_LOGIC;
+  signal fir_b_n_23 : STD_LOGIC;
+  signal fir_b_n_3 : STD_LOGIC;
+  signal fir_b_n_4 : STD_LOGIC;
+  signal fir_b_n_5 : STD_LOGIC;
+  signal fir_b_n_6 : STD_LOGIC;
+  signal fir_b_n_7 : STD_LOGIC;
+  signal fir_b_n_8 : STD_LOGIC;
+  signal fir_b_n_9 : STD_LOGIC;
+  signal is_fading : STD_LOGIC;
+  signal is_fading_i_1_n_0 : STD_LOGIC;
+  signal mix_b_mult_i_10_n_0 : STD_LOGIC;
+  signal mix_b_mult_i_11_n_0 : STD_LOGIC;
+  signal mix_b_mult_i_12_n_0 : STD_LOGIC;
+  signal mix_b_mult_i_13_n_0 : STD_LOGIC;
+  signal mix_b_mult_i_14_n_0 : STD_LOGIC;
+  signal mix_b_mult_i_2_n_1 : STD_LOGIC;
+  signal mix_b_mult_i_2_n_2 : STD_LOGIC;
+  signal mix_b_mult_i_2_n_3 : STD_LOGIC;
+  signal mix_b_mult_i_2_n_4 : STD_LOGIC;
+  signal mix_b_mult_i_2_n_5 : STD_LOGIC;
+  signal mix_b_mult_i_2_n_6 : STD_LOGIC;
+  signal mix_b_mult_i_2_n_7 : STD_LOGIC;
+  signal mix_b_mult_i_3_n_0 : STD_LOGIC;
+  signal mix_b_mult_i_3_n_1 : STD_LOGIC;
+  signal mix_b_mult_i_3_n_2 : STD_LOGIC;
+  signal mix_b_mult_i_3_n_3 : STD_LOGIC;
+  signal mix_b_mult_i_3_n_4 : STD_LOGIC;
+  signal mix_b_mult_i_3_n_5 : STD_LOGIC;
+  signal mix_b_mult_i_3_n_6 : STD_LOGIC;
+  signal mix_b_mult_i_4_n_0 : STD_LOGIC;
+  signal mix_b_mult_i_5_n_0 : STD_LOGIC;
+  signal mix_b_mult_i_6_n_0 : STD_LOGIC;
+  signal mix_b_mult_i_7_n_0 : STD_LOGIC;
+  signal mix_b_mult_i_8_n_0 : STD_LOGIC;
+  signal mix_b_mult_i_9_n_0 : STD_LOGIC;
+  signal mix_b_mult_n_100 : STD_LOGIC;
+  signal mix_b_mult_n_101 : STD_LOGIC;
+  signal mix_b_mult_n_102 : STD_LOGIC;
+  signal mix_b_mult_n_103 : STD_LOGIC;
+  signal mix_b_mult_n_104 : STD_LOGIC;
+  signal mix_b_mult_n_105 : STD_LOGIC;
+  signal mix_b_mult_n_72 : STD_LOGIC;
+  signal mix_b_mult_n_73 : STD_LOGIC;
+  signal mix_b_mult_n_74 : STD_LOGIC;
+  signal mix_b_mult_n_75 : STD_LOGIC;
+  signal mix_b_mult_n_76 : STD_LOGIC;
+  signal mix_b_mult_n_77 : STD_LOGIC;
+  signal mix_b_mult_n_78 : STD_LOGIC;
+  signal mix_b_mult_n_79 : STD_LOGIC;
+  signal mix_b_mult_n_80 : STD_LOGIC;
+  signal mix_b_mult_n_81 : STD_LOGIC;
+  signal mix_b_mult_n_82 : STD_LOGIC;
+  signal mix_b_mult_n_83 : STD_LOGIC;
+  signal mix_b_mult_n_84 : STD_LOGIC;
+  signal mix_b_mult_n_85 : STD_LOGIC;
+  signal mix_b_mult_n_86 : STD_LOGIC;
+  signal mix_b_mult_n_87 : STD_LOGIC;
+  signal mix_b_mult_n_88 : STD_LOGIC;
+  signal mix_b_mult_n_89 : STD_LOGIC;
+  signal mix_b_mult_n_90 : STD_LOGIC;
+  signal mix_b_mult_n_91 : STD_LOGIC;
+  signal mix_b_mult_n_92 : STD_LOGIC;
+  signal mix_b_mult_n_93 : STD_LOGIC;
+  signal mix_b_mult_n_94 : STD_LOGIC;
+  signal mix_b_mult_n_95 : STD_LOGIC;
+  signal mix_b_mult_n_96 : STD_LOGIC;
+  signal mix_b_mult_n_97 : STD_LOGIC;
+  signal mix_b_mult_n_98 : STD_LOGIC;
+  signal mix_b_mult_n_99 : STD_LOGIC;
+  signal mix_sum_i_1_n_0 : STD_LOGIC;
+  signal mix_sum_i_2_n_0 : STD_LOGIC;
+  signal mix_sum_i_3_n_0 : STD_LOGIC;
+  signal mix_sum_i_4_n_0 : STD_LOGIC;
+  signal mix_sum_i_5_n_0 : STD_LOGIC;
+  signal mix_sum_i_6_n_0 : STD_LOGIC;
+  signal mix_sum_i_7_n_0 : STD_LOGIC;
+  signal mix_sum_i_8_n_0 : STD_LOGIC;
+  signal mix_sum_i_9_n_0 : STD_LOGIC;
+  signal mix_sum_n_100 : STD_LOGIC;
+  signal mix_sum_n_101 : STD_LOGIC;
+  signal mix_sum_n_102 : STD_LOGIC;
+  signal mix_sum_n_103 : STD_LOGIC;
+  signal mix_sum_n_104 : STD_LOGIC;
+  signal mix_sum_n_105 : STD_LOGIC;
+  signal mix_sum_n_98 : STD_LOGIC;
+  signal mix_sum_n_99 : STD_LOGIC;
+  signal \^pipe_valid_s2_reg\ : STD_LOGIC;
+  signal NLW_fade_counter0_carry_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_fade_counter0_carry__0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_fade_counter0_carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_fade_counter_reg[8]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
+  signal NLW_mix_b_mult_CARRYCASCOUT_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_b_mult_MULTSIGNOUT_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_b_mult_OVERFLOW_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_b_mult_PATTERNBDETECT_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_b_mult_PATTERNDETECT_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_b_mult_UNDERFLOW_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_b_mult_ACOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 29 downto 0 );
+  signal NLW_mix_b_mult_BCOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 17 downto 0 );
+  signal NLW_mix_b_mult_CARRYOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_mix_b_mult_P_UNCONNECTED : STD_LOGIC_VECTOR ( 47 downto 34 );
+  signal NLW_mix_b_mult_PCOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 47 downto 0 );
+  signal NLW_mix_b_mult_i_2_CO_UNCONNECTED : STD_LOGIC_VECTOR ( 3 to 3 );
+  signal NLW_mix_b_mult_i_3_O_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_mix_sum_CARRYCASCOUT_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_sum_MULTSIGNOUT_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_sum_OVERFLOW_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_sum_PATTERNBDETECT_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_sum_PATTERNDETECT_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_sum_UNDERFLOW_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_sum_ACOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 29 downto 0 );
+  signal NLW_mix_sum_BCOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 17 downto 0 );
+  signal NLW_mix_sum_CARRYOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_mix_sum_P_UNCONNECTED : STD_LOGIC_VECTOR ( 47 downto 32 );
+  signal NLW_mix_sum_PCOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 47 downto 0 );
+  attribute METHODOLOGY_DRC_VIOS : string;
+  attribute METHODOLOGY_DRC_VIOS of fade_counter0_carry : label is "{SYNTH-8 {cell *THIS*}}";
+  attribute METHODOLOGY_DRC_VIOS of \fade_counter0_carry__0\ : label is "{SYNTH-8 {cell *THIS*}}";
+  attribute METHODOLOGY_DRC_VIOS of \fade_counter_reg[4]_i_1\ : label is "{SYNTH-8 {cell *THIS*}}";
+  attribute METHODOLOGY_DRC_VIOS of \fade_counter_reg[8]_i_1\ : label is "{SYNTH-8 {cell *THIS*}}";
+  attribute METHODOLOGY_DRC_VIOS of mix_b_mult : label is "{SYNTH-11 {cell *THIS*}}";
+  attribute METHODOLOGY_DRC_VIOS of mix_b_mult_i_2 : label is "{SYNTH-8 {cell *THIS*}}";
+  attribute METHODOLOGY_DRC_VIOS of mix_b_mult_i_3 : label is "{SYNTH-8 {cell *THIS*}}";
+begin
+  Q(6 downto 0) <= \^q\(6 downto 0);
+  fade_target(0) <= \^fade_target\(0);
+  pipe_valid_s2_reg <= \^pipe_valid_s2_reg\;
+fade_counter0_carry: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => fade_counter0_carry_n_0,
+      CO(2) => fade_counter0_carry_n_1,
+      CO(1) => fade_counter0_carry_n_2,
+      CO(0) => fade_counter0_carry_n_3,
+      CYINIT => '0',
+      DI(3) => fade_counter0_carry_i_1_n_0,
+      DI(2) => fade_counter0_carry_i_2_n_0,
+      DI(1) => fade_counter0_carry_i_3_n_0,
+      DI(0) => fade_counter0_carry_i_4_n_0,
+      O(3 downto 0) => NLW_fade_counter0_carry_O_UNCONNECTED(3 downto 0),
+      S(3) => fade_counter0_carry_i_5_n_0,
+      S(2) => fade_counter0_carry_i_6_n_0,
+      S(1) => fade_counter0_carry_i_7_n_0,
+      S(0) => fade_counter0_carry_i_8_n_0
+    );
+\fade_counter0_carry__0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => fade_counter0_carry_n_0,
+      CO(3 downto 1) => \NLW_fade_counter0_carry__0_CO_UNCONNECTED\(3 downto 1),
+      CO(0) => \fade_counter0_carry__0_n_3\,
+      CYINIT => '0',
+      DI(3 downto 1) => B"000",
+      DI(0) => \fade_counter0_carry__0_i_1_n_0\,
+      O(3 downto 0) => \NLW_fade_counter0_carry__0_O_UNCONNECTED\(3 downto 0),
+      S(3 downto 1) => B"000",
+      S(0) => \fade_counter0_carry__0_i_2_n_0\
+    );
+\fade_counter0_carry__0_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(8),
+      I1 => \^fade_target\(0),
+      O => \fade_counter0_carry__0_i_1_n_0\
+    );
+\fade_counter0_carry__0_i_2\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \^fade_target\(0),
+      I1 => \fade_counter_reg__0\(8),
+      O => \fade_counter0_carry__0_i_2_n_0\
+    );
+\fade_counter0_carry__0_i_2__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \^fade_target\(0),
+      I1 => \fade_counter0_carry__0_0\(0),
+      O => S(0)
+    );
+fade_counter0_carry_i_1: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(6),
+      I1 => \fade_counter_reg__0\(7),
+      O => fade_counter0_carry_i_1_n_0
+    );
+fade_counter0_carry_i_2: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(4),
+      I1 => \fade_counter_reg__0\(5),
+      O => fade_counter0_carry_i_2_n_0
+    );
+fade_counter0_carry_i_3: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(2),
+      I1 => \fade_counter_reg__0\(3),
+      O => fade_counter0_carry_i_3_n_0
+    );
+fade_counter0_carry_i_4: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \fade_counter_reg__1\(0),
+      I1 => \fade_counter_reg__0\(1),
+      O => fade_counter0_carry_i_4_n_0
+    );
+fade_counter0_carry_i_5: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(7),
+      I1 => \fade_counter_reg__0\(6),
+      O => fade_counter0_carry_i_5_n_0
+    );
+fade_counter0_carry_i_6: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(5),
+      I1 => \fade_counter_reg__0\(4),
+      O => fade_counter0_carry_i_6_n_0
+    );
+fade_counter0_carry_i_7: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(3),
+      I1 => \fade_counter_reg__0\(2),
+      O => fade_counter0_carry_i_7_n_0
+    );
+fade_counter0_carry_i_8: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(1),
+      I1 => \fade_counter_reg__1\(0),
+      O => fade_counter0_carry_i_8_n_0
+    );
+\fade_counter[4]_i_2\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(1),
+      O => \fade_counter[4]_i_2_n_0\
+    );
+\fade_counter[4]_i_3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(3),
+      I1 => \fade_counter_reg__0\(4),
+      O => \fade_counter[4]_i_3_n_0\
+    );
+\fade_counter[4]_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(2),
+      I1 => \fade_counter_reg__0\(3),
+      O => \fade_counter[4]_i_4_n_0\
+    );
+\fade_counter[4]_i_5\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(1),
+      I1 => \fade_counter_reg__0\(2),
+      O => \fade_counter[4]_i_5_n_0\
+    );
+\fade_counter[4]_i_6\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"65"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(1),
+      I1 => \fade_counter_reg__0\(8),
+      I2 => \^fade_target\(0),
+      O => \fade_counter[4]_i_6_n_0\
+    );
+\fade_counter[8]_i_2\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(7),
+      I1 => \fade_counter_reg__0\(8),
+      O => \fade_counter[8]_i_2_n_0\
+    );
+\fade_counter[8]_i_3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(6),
+      I1 => \fade_counter_reg__0\(7),
+      O => \fade_counter[8]_i_3_n_0\
+    );
+\fade_counter[8]_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(5),
+      I1 => \fade_counter_reg__0\(6),
+      O => \fade_counter[8]_i_4_n_0\
+    );
+\fade_counter[8]_i_5\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(4),
+      I1 => \fade_counter_reg__0\(5),
+      O => \fade_counter[8]_i_5_n_0\
+    );
+\fade_counter_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => fade_counter,
+      D => mix_b_mult_i_5_n_0,
+      Q => \fade_counter_reg__1\(0),
+      R => rst_audio
+    );
+\fade_counter_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => fade_counter,
+      D => \fade_counter_reg[4]_i_1_n_7\,
+      Q => \fade_counter_reg__0\(1),
+      R => rst_audio
+    );
+\fade_counter_reg[2]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => fade_counter,
+      D => \fade_counter_reg[4]_i_1_n_6\,
+      Q => \fade_counter_reg__0\(2),
+      R => rst_audio
+    );
+\fade_counter_reg[3]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => fade_counter,
+      D => \fade_counter_reg[4]_i_1_n_5\,
+      Q => \fade_counter_reg__0\(3),
+      R => rst_audio
+    );
+\fade_counter_reg[4]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => fade_counter,
+      D => \fade_counter_reg[4]_i_1_n_4\,
+      Q => \fade_counter_reg__0\(4),
+      R => rst_audio
+    );
+\fade_counter_reg[4]_i_1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => \fade_counter_reg[4]_i_1_n_0\,
+      CO(2) => \fade_counter_reg[4]_i_1_n_1\,
+      CO(1) => \fade_counter_reg[4]_i_1_n_2\,
+      CO(0) => \fade_counter_reg[4]_i_1_n_3\,
+      CYINIT => \fade_counter_reg__1\(0),
+      DI(3 downto 1) => \fade_counter_reg__0\(3 downto 1),
+      DI(0) => \fade_counter[4]_i_2_n_0\,
+      O(3) => \fade_counter_reg[4]_i_1_n_4\,
+      O(2) => \fade_counter_reg[4]_i_1_n_5\,
+      O(1) => \fade_counter_reg[4]_i_1_n_6\,
+      O(0) => \fade_counter_reg[4]_i_1_n_7\,
+      S(3) => \fade_counter[4]_i_3_n_0\,
+      S(2) => \fade_counter[4]_i_4_n_0\,
+      S(1) => \fade_counter[4]_i_5_n_0\,
+      S(0) => \fade_counter[4]_i_6_n_0\
+    );
+\fade_counter_reg[5]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => fade_counter,
+      D => \fade_counter_reg[8]_i_1_n_7\,
+      Q => \fade_counter_reg__0\(5),
+      R => rst_audio
+    );
+\fade_counter_reg[6]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => fade_counter,
+      D => \fade_counter_reg[8]_i_1_n_6\,
+      Q => \fade_counter_reg__0\(6),
+      R => rst_audio
+    );
+\fade_counter_reg[7]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => fade_counter,
+      D => \fade_counter_reg[8]_i_1_n_5\,
+      Q => \fade_counter_reg__0\(7),
+      R => rst_audio
+    );
+\fade_counter_reg[8]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => fade_counter,
+      D => \fade_counter_reg[8]_i_1_n_4\,
+      Q => \fade_counter_reg__0\(8),
+      R => rst_audio
+    );
+\fade_counter_reg[8]_i_1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \fade_counter_reg[4]_i_1_n_0\,
+      CO(3) => \NLW_fade_counter_reg[8]_i_1_CO_UNCONNECTED\(3),
+      CO(2) => \fade_counter_reg[8]_i_1_n_1\,
+      CO(1) => \fade_counter_reg[8]_i_1_n_2\,
+      CO(0) => \fade_counter_reg[8]_i_1_n_3\,
+      CYINIT => '0',
+      DI(3) => '0',
+      DI(2 downto 0) => \fade_counter_reg__0\(6 downto 4),
+      O(3) => \fade_counter_reg[8]_i_1_n_4\,
+      O(2) => \fade_counter_reg[8]_i_1_n_5\,
+      O(1) => \fade_counter_reg[8]_i_1_n_6\,
+      O(0) => \fade_counter_reg[8]_i_1_n_7\,
+      S(3) => \fade_counter[8]_i_2_n_0\,
+      S(2) => \fade_counter[8]_i_3_n_0\,
+      S(1) => \fade_counter[8]_i_4_n_0\,
+      S(0) => \fade_counter[8]_i_5_n_0\
+    );
+\fade_target[8]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => \fade_target_reg[8]_0\,
+      I1 => crossfade_trig,
+      I2 => \^fade_target\(0),
+      O => \fade_target[8]_i_1_n_0\
+    );
+\fade_target_reg[8]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => '1',
+      D => \fade_target[8]_i_1_n_0\,
+      Q => \^fade_target\(0),
+      R => rst_audio
+    );
+fir_a: entity work.design_1_spatial_audio_top_0_0_dsp_fir_folded_3
+     port map (
+      P(23) => fir_a_n_0,
+      P(22) => fir_a_n_1,
+      P(21) => fir_a_n_2,
+      P(20) => fir_a_n_3,
+      P(19) => fir_a_n_4,
+      P(18) => fir_a_n_5,
+      P(17) => fir_a_n_6,
+      P(16) => fir_a_n_7,
+      P(15) => fir_a_n_8,
+      P(14) => fir_a_n_9,
+      P(13) => fir_a_n_10,
+      P(12) => fir_a_n_11,
+      P(11) => fir_a_n_12,
+      P(10) => fir_a_n_13,
+      P(9) => fir_a_n_14,
+      P(8) => fir_a_n_15,
+      P(7) => fir_a_n_16,
+      P(6) => fir_a_n_17,
+      P(5) => fir_a_n_18,
+      P(4) => fir_a_n_19,
+      P(3) => fir_a_n_20,
+      P(2) => fir_a_n_21,
+      P(1) => fir_a_n_22,
+      P(0) => fir_a_n_23,
+      Q(6 downto 0) => \^q\(6 downto 0),
+      RSTP => RSTP,
+      accumulator_reg_0 => accumulator_reg,
+      accumulator_reg_1(23 downto 0) => accumulator_reg_0(23 downto 0),
+      accumulator_reg_2 => accumulator_reg_1,
+      accumulator_reg_3 => accumulator_reg_2,
+      clk_audio => clk_audio,
+      douta(15 downto 0) => douta(15 downto 0),
+      locked => locked,
+      new_sample => new_sample,
+      pipe_audio_s1 => pipe_audio_s1,
+      pipe_valid_s1_reg_0 => pipe_valid_s1_reg,
+      pipe_valid_s2_reg_0 => \^pipe_valid_s2_reg\,
+      \read_ptr_reg[6]_0\ => \read_ptr_reg[6]\,
+      rst_audio => rst_audio
+    );
+fir_b: entity work.design_1_spatial_audio_top_0_0_dsp_fir_folded_4
+     port map (
+      P(23) => fir_b_n_0,
+      P(22) => fir_b_n_1,
+      P(21) => fir_b_n_2,
+      P(20) => fir_b_n_3,
+      P(19) => fir_b_n_4,
+      P(18) => fir_b_n_5,
+      P(17) => fir_b_n_6,
+      P(16) => fir_b_n_7,
+      P(15) => fir_b_n_8,
+      P(14) => fir_b_n_9,
+      P(13) => fir_b_n_10,
+      P(12) => fir_b_n_11,
+      P(11) => fir_b_n_12,
+      P(10) => fir_b_n_13,
+      P(9) => fir_b_n_14,
+      P(8) => fir_b_n_15,
+      P(7) => fir_b_n_16,
+      P(6) => fir_b_n_17,
+      P(5) => fir_b_n_18,
+      P(4) => fir_b_n_19,
+      P(3) => fir_b_n_20,
+      P(2) => fir_b_n_21,
+      P(1) => fir_b_n_22,
+      P(0) => fir_b_n_23,
+      Q(6 downto 0) => \^q\(6 downto 0),
+      RSTP => RSTP,
+      accumulator_reg_0 => accumulator_reg,
+      accumulator_reg_1 => \^pipe_valid_s2_reg\,
+      accumulator_reg_2(23 downto 0) => accumulator_reg_0(23 downto 0),
+      accumulator_reg_3 => accumulator_reg_1,
+      accumulator_reg_4 => accumulator_reg_2,
+      clk_audio => clk_audio,
+      doutb(15 downto 0) => doutb(15 downto 0),
+      new_sample => new_sample,
+      pipe_audio_s1 => pipe_audio_s1,
+      \read_ptr_reg[6]_0\ => \read_ptr_reg[6]\,
+      rst_audio => rst_audio
+    );
+is_fading_i_1: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFF400FF00"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(8),
+      I1 => \^fade_target\(0),
+      I2 => \fade_counter0_carry__0_n_3\,
+      I3 => is_fading,
+      I4 => new_sample,
+      I5 => crossfade_trig,
+      O => is_fading_i_1_n_0
+    );
+is_fading_reg: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => '1',
+      D => is_fading_i_1_n_0,
+      Q => is_fading,
+      R => rst_audio
+    );
+mix_b_mult: unisim.vcomponents.DSP48E1
+    generic map(
+      ACASCREG => 1,
+      ADREG => 1,
+      ALUMODEREG => 0,
+      AREG => 1,
+      AUTORESET_PATDET => "NO_RESET",
+      A_INPUT => "DIRECT",
+      BCASCREG => 1,
+      BREG => 1,
+      B_INPUT => "DIRECT",
+      CARRYINREG => 0,
+      CARRYINSELREG => 0,
+      CREG => 1,
+      DREG => 1,
+      INMODEREG => 0,
+      MASK => X"3FFFFFFFFFFF",
+      MREG => 0,
+      OPMODEREG => 0,
+      PATTERN => X"000000000000",
+      PREG => 0,
+      SEL_MASK => "MASK",
+      SEL_PATTERN => "PATTERN",
+      USE_DPORT => false,
+      USE_MULT => "MULTIPLY",
+      USE_PATTERN_DETECT => "NO_PATDET",
+      USE_SIMD => "ONE48"
+    )
+        port map (
+      A(29) => fir_b_n_0,
+      A(28) => fir_b_n_0,
+      A(27) => fir_b_n_0,
+      A(26) => fir_b_n_0,
+      A(25) => fir_b_n_0,
+      A(24) => fir_b_n_0,
+      A(23) => fir_b_n_0,
+      A(22) => fir_b_n_1,
+      A(21) => fir_b_n_2,
+      A(20) => fir_b_n_3,
+      A(19) => fir_b_n_4,
+      A(18) => fir_b_n_5,
+      A(17) => fir_b_n_6,
+      A(16) => fir_b_n_7,
+      A(15) => fir_b_n_8,
+      A(14) => fir_b_n_9,
+      A(13) => fir_b_n_10,
+      A(12) => fir_b_n_11,
+      A(11) => fir_b_n_12,
+      A(10) => fir_b_n_13,
+      A(9) => fir_b_n_14,
+      A(8) => fir_b_n_15,
+      A(7) => fir_b_n_16,
+      A(6) => fir_b_n_17,
+      A(5) => fir_b_n_18,
+      A(4) => fir_b_n_19,
+      A(3) => fir_b_n_20,
+      A(2) => fir_b_n_21,
+      A(1) => fir_b_n_22,
+      A(0) => fir_b_n_23,
+      ACIN(29 downto 0) => B"000000000000000000000000000000",
+      ACOUT(29 downto 0) => NLW_mix_b_mult_ACOUT_UNCONNECTED(29 downto 0),
+      ALUMODE(3 downto 0) => B"0000",
+      B(17 downto 9) => B"000000000",
+      B(8) => mix_b_mult_i_2_n_4,
+      B(7) => mix_b_mult_i_2_n_5,
+      B(6) => mix_b_mult_i_2_n_6,
+      B(5) => mix_b_mult_i_2_n_7,
+      B(4) => mix_b_mult_i_3_n_4,
+      B(3) => mix_b_mult_i_3_n_5,
+      B(2) => mix_b_mult_i_3_n_6,
+      B(1) => mix_b_mult_i_4_n_0,
+      B(0) => mix_b_mult_i_5_n_0,
+      BCIN(17 downto 0) => B"000000000000000000",
+      BCOUT(17 downto 0) => NLW_mix_b_mult_BCOUT_UNCONNECTED(17 downto 0),
+      C(47 downto 0) => B"111111111111111111111111111111111111111111111111",
+      CARRYCASCIN => '0',
+      CARRYCASCOUT => NLW_mix_b_mult_CARRYCASCOUT_UNCONNECTED,
+      CARRYIN => '0',
+      CARRYINSEL(2 downto 0) => B"000",
+      CARRYOUT(3 downto 0) => NLW_mix_b_mult_CARRYOUT_UNCONNECTED(3 downto 0),
+      CEA1 => '0',
+      CEA2 => new_sample,
+      CEAD => '0',
+      CEALUMODE => '0',
+      CEB1 => '0',
+      CEB2 => fade_counter,
+      CEC => '0',
+      CECARRYIN => '0',
+      CECTRL => '0',
+      CED => '0',
+      CEINMODE => '0',
+      CEM => '0',
+      CEP => '0',
+      CLK => clk_audio,
+      D(24 downto 0) => B"0000000000000000000000000",
+      INMODE(4 downto 0) => B"00000",
+      MULTSIGNIN => '0',
+      MULTSIGNOUT => NLW_mix_b_mult_MULTSIGNOUT_UNCONNECTED,
+      OPMODE(6 downto 0) => B"0000101",
+      OVERFLOW => NLW_mix_b_mult_OVERFLOW_UNCONNECTED,
+      P(47 downto 34) => NLW_mix_b_mult_P_UNCONNECTED(47 downto 34),
+      P(33) => mix_b_mult_n_72,
+      P(32) => mix_b_mult_n_73,
+      P(31) => mix_b_mult_n_74,
+      P(30) => mix_b_mult_n_75,
+      P(29) => mix_b_mult_n_76,
+      P(28) => mix_b_mult_n_77,
+      P(27) => mix_b_mult_n_78,
+      P(26) => mix_b_mult_n_79,
+      P(25) => mix_b_mult_n_80,
+      P(24) => mix_b_mult_n_81,
+      P(23) => mix_b_mult_n_82,
+      P(22) => mix_b_mult_n_83,
+      P(21) => mix_b_mult_n_84,
+      P(20) => mix_b_mult_n_85,
+      P(19) => mix_b_mult_n_86,
+      P(18) => mix_b_mult_n_87,
+      P(17) => mix_b_mult_n_88,
+      P(16) => mix_b_mult_n_89,
+      P(15) => mix_b_mult_n_90,
+      P(14) => mix_b_mult_n_91,
+      P(13) => mix_b_mult_n_92,
+      P(12) => mix_b_mult_n_93,
+      P(11) => mix_b_mult_n_94,
+      P(10) => mix_b_mult_n_95,
+      P(9) => mix_b_mult_n_96,
+      P(8) => mix_b_mult_n_97,
+      P(7) => mix_b_mult_n_98,
+      P(6) => mix_b_mult_n_99,
+      P(5) => mix_b_mult_n_100,
+      P(4) => mix_b_mult_n_101,
+      P(3) => mix_b_mult_n_102,
+      P(2) => mix_b_mult_n_103,
+      P(1) => mix_b_mult_n_104,
+      P(0) => mix_b_mult_n_105,
+      PATTERNBDETECT => NLW_mix_b_mult_PATTERNBDETECT_UNCONNECTED,
+      PATTERNDETECT => NLW_mix_b_mult_PATTERNDETECT_UNCONNECTED,
+      PCIN(47 downto 0) => B"000000000000000000000000000000000000000000000000",
+      PCOUT(47 downto 0) => NLW_mix_b_mult_PCOUT_UNCONNECTED(47 downto 0),
+      RSTA => rst_audio,
+      RSTALLCARRYIN => '0',
+      RSTALUMODE => '0',
+      RSTB => rst_audio,
+      RSTC => '0',
+      RSTCTRL => '0',
+      RSTD => '0',
+      RSTINMODE => '0',
+      RSTM => '0',
+      RSTP => '0',
+      UNDERFLOW => NLW_mix_b_mult_UNDERFLOW_UNCONNECTED
+    );
+mix_b_mult_i_1: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0800080008080800"
+    )
+        port map (
+      I0 => is_fading,
+      I1 => new_sample,
+      I2 => crossfade_trig,
+      I3 => \fade_counter0_carry__0_n_3\,
+      I4 => \^fade_target\(0),
+      I5 => \fade_counter_reg__0\(8),
+      O => fade_counter
+    );
+mix_b_mult_i_10: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(1),
+      O => mix_b_mult_i_10_n_0
+    );
+mix_b_mult_i_11: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(3),
+      I1 => \fade_counter_reg__0\(4),
+      O => mix_b_mult_i_11_n_0
+    );
+mix_b_mult_i_12: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(2),
+      I1 => \fade_counter_reg__0\(3),
+      O => mix_b_mult_i_12_n_0
+    );
+mix_b_mult_i_13: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(1),
+      I1 => \fade_counter_reg__0\(2),
+      O => mix_b_mult_i_13_n_0
+    );
+mix_b_mult_i_14: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"65"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(1),
+      I1 => \fade_counter_reg__0\(8),
+      I2 => \^fade_target\(0),
+      O => mix_b_mult_i_14_n_0
+    );
+mix_b_mult_i_2: unisim.vcomponents.CARRY4
+     port map (
+      CI => mix_b_mult_i_3_n_0,
+      CO(3) => NLW_mix_b_mult_i_2_CO_UNCONNECTED(3),
+      CO(2) => mix_b_mult_i_2_n_1,
+      CO(1) => mix_b_mult_i_2_n_2,
+      CO(0) => mix_b_mult_i_2_n_3,
+      CYINIT => '0',
+      DI(3) => '0',
+      DI(2 downto 0) => \fade_counter_reg__0\(6 downto 4),
+      O(3) => mix_b_mult_i_2_n_4,
+      O(2) => mix_b_mult_i_2_n_5,
+      O(1) => mix_b_mult_i_2_n_6,
+      O(0) => mix_b_mult_i_2_n_7,
+      S(3) => mix_b_mult_i_6_n_0,
+      S(2) => mix_b_mult_i_7_n_0,
+      S(1) => mix_b_mult_i_8_n_0,
+      S(0) => mix_b_mult_i_9_n_0
+    );
+mix_b_mult_i_3: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => mix_b_mult_i_3_n_0,
+      CO(2) => mix_b_mult_i_3_n_1,
+      CO(1) => mix_b_mult_i_3_n_2,
+      CO(0) => mix_b_mult_i_3_n_3,
+      CYINIT => \fade_counter_reg__1\(0),
+      DI(3 downto 1) => \fade_counter_reg__0\(3 downto 1),
+      DI(0) => mix_b_mult_i_10_n_0,
+      O(3) => mix_b_mult_i_3_n_4,
+      O(2) => mix_b_mult_i_3_n_5,
+      O(1) => mix_b_mult_i_3_n_6,
+      O(0) => NLW_mix_b_mult_i_3_O_UNCONNECTED(0),
+      S(3) => mix_b_mult_i_11_n_0,
+      S(2) => mix_b_mult_i_12_n_0,
+      S(1) => mix_b_mult_i_13_n_0,
+      S(0) => mix_b_mult_i_14_n_0
+    );
+mix_b_mult_i_4: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"A659"
+    )
+        port map (
+      I0 => \fade_counter_reg__1\(0),
+      I1 => \^fade_target\(0),
+      I2 => \fade_counter_reg__0\(8),
+      I3 => \fade_counter_reg__0\(1),
+      O => mix_b_mult_i_4_n_0
+    );
+mix_b_mult_i_5: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \fade_counter_reg__1\(0),
+      O => mix_b_mult_i_5_n_0
+    );
+mix_b_mult_i_6: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(7),
+      I1 => \fade_counter_reg__0\(8),
+      O => mix_b_mult_i_6_n_0
+    );
+mix_b_mult_i_7: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(6),
+      I1 => \fade_counter_reg__0\(7),
+      O => mix_b_mult_i_7_n_0
+    );
+mix_b_mult_i_8: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(5),
+      I1 => \fade_counter_reg__0\(6),
+      O => mix_b_mult_i_8_n_0
+    );
+mix_b_mult_i_9: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(4),
+      I1 => \fade_counter_reg__0\(5),
+      O => mix_b_mult_i_9_n_0
+    );
+mix_sum: unisim.vcomponents.DSP48E1
+    generic map(
+      ACASCREG => 1,
+      ADREG => 1,
+      ALUMODEREG => 0,
+      AREG => 1,
+      AUTORESET_PATDET => "NO_RESET",
+      A_INPUT => "DIRECT",
+      BCASCREG => 0,
+      BREG => 0,
+      B_INPUT => "DIRECT",
+      CARRYINREG => 0,
+      CARRYINSELREG => 0,
+      CREG => 0,
+      DREG => 1,
+      INMODEREG => 0,
+      MASK => X"3FFFFFFFFFFF",
+      MREG => 0,
+      OPMODEREG => 0,
+      PATTERN => X"000000000000",
+      PREG => 1,
+      SEL_MASK => "MASK",
+      SEL_PATTERN => "PATTERN",
+      USE_DPORT => false,
+      USE_MULT => "MULTIPLY",
+      USE_PATTERN_DETECT => "NO_PATDET",
+      USE_SIMD => "ONE48"
+    )
+        port map (
+      A(29) => fir_a_n_0,
+      A(28) => fir_a_n_0,
+      A(27) => fir_a_n_0,
+      A(26) => fir_a_n_0,
+      A(25) => fir_a_n_0,
+      A(24) => fir_a_n_0,
+      A(23) => fir_a_n_0,
+      A(22) => fir_a_n_1,
+      A(21) => fir_a_n_2,
+      A(20) => fir_a_n_3,
+      A(19) => fir_a_n_4,
+      A(18) => fir_a_n_5,
+      A(17) => fir_a_n_6,
+      A(16) => fir_a_n_7,
+      A(15) => fir_a_n_8,
+      A(14) => fir_a_n_9,
+      A(13) => fir_a_n_10,
+      A(12) => fir_a_n_11,
+      A(11) => fir_a_n_12,
+      A(10) => fir_a_n_13,
+      A(9) => fir_a_n_14,
+      A(8) => fir_a_n_15,
+      A(7) => fir_a_n_16,
+      A(6) => fir_a_n_17,
+      A(5) => fir_a_n_18,
+      A(4) => fir_a_n_19,
+      A(3) => fir_a_n_20,
+      A(2) => fir_a_n_21,
+      A(1) => fir_a_n_22,
+      A(0) => fir_a_n_23,
+      ACIN(29 downto 0) => B"000000000000000000000000000000",
+      ACOUT(29 downto 0) => NLW_mix_sum_ACOUT_UNCONNECTED(29 downto 0),
+      ALUMODE(3 downto 0) => B"0000",
+      B(17 downto 9) => B"000000000",
+      B(8) => mix_sum_i_1_n_0,
+      B(7) => mix_sum_i_2_n_0,
+      B(6) => mix_sum_i_3_n_0,
+      B(5) => mix_sum_i_4_n_0,
+      B(4) => mix_sum_i_5_n_0,
+      B(3) => mix_sum_i_6_n_0,
+      B(2) => mix_sum_i_7_n_0,
+      B(1) => mix_sum_i_8_n_0,
+      B(0) => \fade_counter_reg__1\(0),
+      BCIN(17 downto 0) => B"000000000000000000",
+      BCOUT(17 downto 0) => NLW_mix_sum_BCOUT_UNCONNECTED(17 downto 0),
+      C(47) => mix_b_mult_n_74,
+      C(46) => mix_b_mult_n_74,
+      C(45) => mix_b_mult_n_74,
+      C(44) => mix_b_mult_n_74,
+      C(43) => mix_b_mult_n_74,
+      C(42) => mix_b_mult_n_74,
+      C(41) => mix_b_mult_n_74,
+      C(40) => mix_b_mult_n_74,
+      C(39) => mix_b_mult_n_74,
+      C(38) => mix_b_mult_n_74,
+      C(37) => mix_b_mult_n_74,
+      C(36) => mix_b_mult_n_74,
+      C(35) => mix_b_mult_n_74,
+      C(34) => mix_b_mult_n_74,
+      C(33) => mix_b_mult_n_74,
+      C(32) => mix_b_mult_n_74,
+      C(31) => mix_b_mult_n_74,
+      C(30) => mix_b_mult_n_75,
+      C(29) => mix_b_mult_n_76,
+      C(28) => mix_b_mult_n_77,
+      C(27) => mix_b_mult_n_78,
+      C(26) => mix_b_mult_n_79,
+      C(25) => mix_b_mult_n_80,
+      C(24) => mix_b_mult_n_81,
+      C(23) => mix_b_mult_n_82,
+      C(22) => mix_b_mult_n_83,
+      C(21) => mix_b_mult_n_84,
+      C(20) => mix_b_mult_n_85,
+      C(19) => mix_b_mult_n_86,
+      C(18) => mix_b_mult_n_87,
+      C(17) => mix_b_mult_n_88,
+      C(16) => mix_b_mult_n_89,
+      C(15) => mix_b_mult_n_90,
+      C(14) => mix_b_mult_n_91,
+      C(13) => mix_b_mult_n_92,
+      C(12) => mix_b_mult_n_93,
+      C(11) => mix_b_mult_n_94,
+      C(10) => mix_b_mult_n_95,
+      C(9) => mix_b_mult_n_96,
+      C(8) => mix_b_mult_n_97,
+      C(7) => mix_b_mult_n_98,
+      C(6) => mix_b_mult_n_99,
+      C(5) => mix_b_mult_n_100,
+      C(4) => mix_b_mult_n_101,
+      C(3) => mix_b_mult_n_102,
+      C(2) => mix_b_mult_n_103,
+      C(1) => mix_b_mult_n_104,
+      C(0) => mix_b_mult_n_105,
+      CARRYCASCIN => '0',
+      CARRYCASCOUT => NLW_mix_sum_CARRYCASCOUT_UNCONNECTED,
+      CARRYIN => '0',
+      CARRYINSEL(2 downto 0) => B"000",
+      CARRYOUT(3 downto 0) => NLW_mix_sum_CARRYOUT_UNCONNECTED(3 downto 0),
+      CEA1 => '0',
+      CEA2 => new_sample,
+      CEAD => '0',
+      CEALUMODE => '0',
+      CEB1 => '0',
+      CEB2 => '0',
+      CEC => '0',
+      CECARRYIN => '0',
+      CECTRL => '0',
+      CED => '0',
+      CEINMODE => '0',
+      CEM => '0',
+      CEP => '1',
+      CLK => clk_audio,
+      D(24 downto 0) => B"0000000000000000000000000",
+      INMODE(4 downto 0) => B"00000",
+      MULTSIGNIN => '0',
+      MULTSIGNOUT => NLW_mix_sum_MULTSIGNOUT_UNCONNECTED,
+      OPMODE(6 downto 0) => B"0110101",
+      OVERFLOW => NLW_mix_sum_OVERFLOW_UNCONNECTED,
+      P(47 downto 32) => NLW_mix_sum_P_UNCONNECTED(47 downto 32),
+      P(31 downto 8) => P(23 downto 0),
+      P(7) => mix_sum_n_98,
+      P(6) => mix_sum_n_99,
+      P(5) => mix_sum_n_100,
+      P(4) => mix_sum_n_101,
+      P(3) => mix_sum_n_102,
+      P(2) => mix_sum_n_103,
+      P(1) => mix_sum_n_104,
+      P(0) => mix_sum_n_105,
+      PATTERNBDETECT => NLW_mix_sum_PATTERNBDETECT_UNCONNECTED,
+      PATTERNDETECT => NLW_mix_sum_PATTERNDETECT_UNCONNECTED,
+      PCIN(47 downto 0) => B"000000000000000000000000000000000000000000000000",
+      PCOUT(47 downto 0) => NLW_mix_sum_PCOUT_UNCONNECTED(47 downto 0),
+      RSTA => rst_audio,
+      RSTALLCARRYIN => '0',
+      RSTALUMODE => '0',
+      RSTB => '0',
+      RSTC => '0',
+      RSTCTRL => '0',
+      RSTD => '0',
+      RSTINMODE => '0',
+      RSTM => '0',
+      RSTP => rst_audio,
+      UNDERFLOW => NLW_mix_sum_UNDERFLOW_UNCONNECTED
+    );
+mix_sum_i_1: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFD00000002"
+    )
+        port map (
+      I0 => mix_sum_i_9_n_0,
+      I1 => \fade_counter_reg__0\(7),
+      I2 => \fade_counter_reg__0\(6),
+      I3 => \fade_counter_reg__0\(5),
+      I4 => \fade_counter_reg__0\(4),
+      I5 => \fade_counter_reg__0\(8),
+      O => mix_sum_i_1_n_0
+    );
+mix_sum_i_2: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"0002FFFD"
+    )
+        port map (
+      I0 => mix_sum_i_9_n_0,
+      I1 => \fade_counter_reg__0\(5),
+      I2 => \fade_counter_reg__0\(4),
+      I3 => \fade_counter_reg__0\(6),
+      I4 => \fade_counter_reg__0\(7),
+      O => mix_sum_i_2_n_0
+    );
+mix_sum_i_3: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"10EF"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(4),
+      I1 => \fade_counter_reg__0\(5),
+      I2 => mix_sum_i_9_n_0,
+      I3 => \fade_counter_reg__0\(6),
+      O => mix_sum_i_3_n_0
+    );
+mix_sum_i_4: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00000001FFFFFFFE"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(4),
+      I1 => \fade_counter_reg__0\(3),
+      I2 => \fade_counter_reg__0\(2),
+      I3 => \fade_counter_reg__0\(1),
+      I4 => \fade_counter_reg__1\(0),
+      I5 => \fade_counter_reg__0\(5),
+      O => mix_sum_i_4_n_0
+    );
+mix_sum_i_5: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"0001FFFE"
+    )
+        port map (
+      I0 => \fade_counter_reg__1\(0),
+      I1 => \fade_counter_reg__0\(1),
+      I2 => \fade_counter_reg__0\(2),
+      I3 => \fade_counter_reg__0\(3),
+      I4 => \fade_counter_reg__0\(4),
+      O => mix_sum_i_5_n_0
+    );
+mix_sum_i_6: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"01FE"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(2),
+      I1 => \fade_counter_reg__1\(0),
+      I2 => \fade_counter_reg__0\(1),
+      I3 => \fade_counter_reg__0\(3),
+      O => mix_sum_i_6_n_0
+    );
+mix_sum_i_7: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"1E"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(1),
+      I1 => \fade_counter_reg__1\(0),
+      I2 => \fade_counter_reg__0\(2),
+      O => mix_sum_i_7_n_0
+    );
+mix_sum_i_8: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => \fade_counter_reg__1\(0),
+      I1 => \fade_counter_reg__0\(1),
+      O => mix_sum_i_8_n_0
+    );
+mix_sum_i_9: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0001"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(3),
+      I1 => \fade_counter_reg__0\(2),
+      I2 => \fade_counter_reg__0\(1),
+      I3 => \fade_counter_reg__1\(0),
+      O => mix_sum_i_9_n_0
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity design_1_spatial_audio_top_0_0_hrtf_crossfader_1 is
+  port (
+    P : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    Q : out STD_LOGIC_VECTOR ( 0 to 0 );
+    pipe_audio_s1 : in STD_LOGIC;
+    accumulator_reg : in STD_LOGIC;
+    accumulator_reg_0 : in STD_LOGIC;
+    clk_audio : in STD_LOGIC;
+    rst_audio : in STD_LOGIC;
+    RSTP : in STD_LOGIC;
+    doutb : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    new_sample : in STD_LOGIC;
+    douta : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    S : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \read_ptr_reg[6]\ : in STD_LOGIC;
+    fade_target : in STD_LOGIC_VECTOR ( 0 to 0 );
+    crossfade_trig : in STD_LOGIC;
+    \read_ptr_reg[6]_0\ : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    accumulator_reg_1 : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    accumulator_reg_2 : in STD_LOGIC;
+    accumulator_reg_3 : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_hrtf_crossfader_1 : entity is "hrtf_crossfader";
+end design_1_spatial_audio_top_0_0_hrtf_crossfader_1;
+
+architecture STRUCTURE of design_1_spatial_audio_top_0_0_hrtf_crossfader_1 is
+  signal \^q\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal fade_counter : STD_LOGIC;
+  signal \fade_counter0_carry__0_i_1__0_n_0\ : STD_LOGIC;
+  signal \fade_counter0_carry__0_n_3\ : STD_LOGIC;
+  signal \fade_counter0_carry_i_1__0_n_0\ : STD_LOGIC;
+  signal \fade_counter0_carry_i_2__0_n_0\ : STD_LOGIC;
+  signal \fade_counter0_carry_i_3__0_n_0\ : STD_LOGIC;
+  signal \fade_counter0_carry_i_4__0_n_0\ : STD_LOGIC;
+  signal \fade_counter0_carry_i_5__0_n_0\ : STD_LOGIC;
+  signal \fade_counter0_carry_i_6__0_n_0\ : STD_LOGIC;
+  signal \fade_counter0_carry_i_7__0_n_0\ : STD_LOGIC;
+  signal \fade_counter0_carry_i_8__0_n_0\ : STD_LOGIC;
+  signal fade_counter0_carry_n_0 : STD_LOGIC;
+  signal fade_counter0_carry_n_1 : STD_LOGIC;
+  signal fade_counter0_carry_n_2 : STD_LOGIC;
+  signal fade_counter0_carry_n_3 : STD_LOGIC;
+  signal \fade_counter[4]_i_2__0_n_0\ : STD_LOGIC;
+  signal \fade_counter[4]_i_3__0_n_0\ : STD_LOGIC;
+  signal \fade_counter[4]_i_4__0_n_0\ : STD_LOGIC;
+  signal \fade_counter[4]_i_5__0_n_0\ : STD_LOGIC;
+  signal \fade_counter[4]_i_6__0_n_0\ : STD_LOGIC;
+  signal \fade_counter[8]_i_2__0_n_0\ : STD_LOGIC;
+  signal \fade_counter[8]_i_3__0_n_0\ : STD_LOGIC;
+  signal \fade_counter[8]_i_4__0_n_0\ : STD_LOGIC;
+  signal \fade_counter[8]_i_5__0_n_0\ : STD_LOGIC;
+  signal \fade_counter_reg[4]_i_1__0_n_0\ : STD_LOGIC;
+  signal \fade_counter_reg[4]_i_1__0_n_1\ : STD_LOGIC;
+  signal \fade_counter_reg[4]_i_1__0_n_2\ : STD_LOGIC;
+  signal \fade_counter_reg[4]_i_1__0_n_3\ : STD_LOGIC;
+  signal \fade_counter_reg[4]_i_1__0_n_4\ : STD_LOGIC;
+  signal \fade_counter_reg[4]_i_1__0_n_5\ : STD_LOGIC;
+  signal \fade_counter_reg[4]_i_1__0_n_6\ : STD_LOGIC;
+  signal \fade_counter_reg[4]_i_1__0_n_7\ : STD_LOGIC;
+  signal \fade_counter_reg[8]_i_1__0_n_1\ : STD_LOGIC;
+  signal \fade_counter_reg[8]_i_1__0_n_2\ : STD_LOGIC;
+  signal \fade_counter_reg[8]_i_1__0_n_3\ : STD_LOGIC;
+  signal \fade_counter_reg[8]_i_1__0_n_4\ : STD_LOGIC;
+  signal \fade_counter_reg[8]_i_1__0_n_5\ : STD_LOGIC;
+  signal \fade_counter_reg[8]_i_1__0_n_6\ : STD_LOGIC;
+  signal \fade_counter_reg[8]_i_1__0_n_7\ : STD_LOGIC;
+  signal \fade_counter_reg__0\ : STD_LOGIC_VECTOR ( 7 downto 1 );
+  signal \fade_counter_reg__1\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal fir_a_n_0 : STD_LOGIC;
+  signal fir_a_n_1 : STD_LOGIC;
+  signal fir_a_n_10 : STD_LOGIC;
+  signal fir_a_n_11 : STD_LOGIC;
+  signal fir_a_n_12 : STD_LOGIC;
+  signal fir_a_n_13 : STD_LOGIC;
+  signal fir_a_n_14 : STD_LOGIC;
+  signal fir_a_n_15 : STD_LOGIC;
+  signal fir_a_n_16 : STD_LOGIC;
+  signal fir_a_n_17 : STD_LOGIC;
+  signal fir_a_n_18 : STD_LOGIC;
+  signal fir_a_n_19 : STD_LOGIC;
+  signal fir_a_n_2 : STD_LOGIC;
+  signal fir_a_n_20 : STD_LOGIC;
+  signal fir_a_n_21 : STD_LOGIC;
+  signal fir_a_n_22 : STD_LOGIC;
+  signal fir_a_n_23 : STD_LOGIC;
+  signal fir_a_n_3 : STD_LOGIC;
+  signal fir_a_n_4 : STD_LOGIC;
+  signal fir_a_n_5 : STD_LOGIC;
+  signal fir_a_n_6 : STD_LOGIC;
+  signal fir_a_n_7 : STD_LOGIC;
+  signal fir_a_n_8 : STD_LOGIC;
+  signal fir_a_n_9 : STD_LOGIC;
+  signal fir_b_n_0 : STD_LOGIC;
+  signal fir_b_n_1 : STD_LOGIC;
+  signal fir_b_n_10 : STD_LOGIC;
+  signal fir_b_n_11 : STD_LOGIC;
+  signal fir_b_n_12 : STD_LOGIC;
+  signal fir_b_n_13 : STD_LOGIC;
+  signal fir_b_n_14 : STD_LOGIC;
+  signal fir_b_n_15 : STD_LOGIC;
+  signal fir_b_n_16 : STD_LOGIC;
+  signal fir_b_n_17 : STD_LOGIC;
+  signal fir_b_n_18 : STD_LOGIC;
+  signal fir_b_n_19 : STD_LOGIC;
+  signal fir_b_n_2 : STD_LOGIC;
+  signal fir_b_n_20 : STD_LOGIC;
+  signal fir_b_n_21 : STD_LOGIC;
+  signal fir_b_n_22 : STD_LOGIC;
+  signal fir_b_n_23 : STD_LOGIC;
+  signal fir_b_n_3 : STD_LOGIC;
+  signal fir_b_n_4 : STD_LOGIC;
+  signal fir_b_n_5 : STD_LOGIC;
+  signal fir_b_n_6 : STD_LOGIC;
+  signal fir_b_n_7 : STD_LOGIC;
+  signal fir_b_n_8 : STD_LOGIC;
+  signal fir_b_n_9 : STD_LOGIC;
+  signal is_fading : STD_LOGIC;
+  signal \is_fading_i_1__0_n_0\ : STD_LOGIC;
+  signal \mix_b_mult_i_10__0_n_0\ : STD_LOGIC;
+  signal \mix_b_mult_i_11__0_n_0\ : STD_LOGIC;
+  signal \mix_b_mult_i_12__0_n_0\ : STD_LOGIC;
+  signal \mix_b_mult_i_13__0_n_0\ : STD_LOGIC;
+  signal \mix_b_mult_i_14__0_n_0\ : STD_LOGIC;
+  signal \mix_b_mult_i_2__0_n_1\ : STD_LOGIC;
+  signal \mix_b_mult_i_2__0_n_2\ : STD_LOGIC;
+  signal \mix_b_mult_i_2__0_n_3\ : STD_LOGIC;
+  signal \mix_b_mult_i_2__0_n_4\ : STD_LOGIC;
+  signal \mix_b_mult_i_2__0_n_5\ : STD_LOGIC;
+  signal \mix_b_mult_i_2__0_n_6\ : STD_LOGIC;
+  signal \mix_b_mult_i_2__0_n_7\ : STD_LOGIC;
+  signal \mix_b_mult_i_3__0_n_0\ : STD_LOGIC;
+  signal \mix_b_mult_i_3__0_n_1\ : STD_LOGIC;
+  signal \mix_b_mult_i_3__0_n_2\ : STD_LOGIC;
+  signal \mix_b_mult_i_3__0_n_3\ : STD_LOGIC;
+  signal \mix_b_mult_i_3__0_n_4\ : STD_LOGIC;
+  signal \mix_b_mult_i_3__0_n_5\ : STD_LOGIC;
+  signal \mix_b_mult_i_3__0_n_6\ : STD_LOGIC;
+  signal \mix_b_mult_i_4__0_n_0\ : STD_LOGIC;
+  signal \mix_b_mult_i_5__0_n_0\ : STD_LOGIC;
+  signal \mix_b_mult_i_6__0_n_0\ : STD_LOGIC;
+  signal \mix_b_mult_i_7__0_n_0\ : STD_LOGIC;
+  signal \mix_b_mult_i_8__0_n_0\ : STD_LOGIC;
+  signal \mix_b_mult_i_9__0_n_0\ : STD_LOGIC;
+  signal mix_b_mult_n_100 : STD_LOGIC;
+  signal mix_b_mult_n_101 : STD_LOGIC;
+  signal mix_b_mult_n_102 : STD_LOGIC;
+  signal mix_b_mult_n_103 : STD_LOGIC;
+  signal mix_b_mult_n_104 : STD_LOGIC;
+  signal mix_b_mult_n_105 : STD_LOGIC;
+  signal mix_b_mult_n_72 : STD_LOGIC;
+  signal mix_b_mult_n_73 : STD_LOGIC;
+  signal mix_b_mult_n_74 : STD_LOGIC;
+  signal mix_b_mult_n_75 : STD_LOGIC;
+  signal mix_b_mult_n_76 : STD_LOGIC;
+  signal mix_b_mult_n_77 : STD_LOGIC;
+  signal mix_b_mult_n_78 : STD_LOGIC;
+  signal mix_b_mult_n_79 : STD_LOGIC;
+  signal mix_b_mult_n_80 : STD_LOGIC;
+  signal mix_b_mult_n_81 : STD_LOGIC;
+  signal mix_b_mult_n_82 : STD_LOGIC;
+  signal mix_b_mult_n_83 : STD_LOGIC;
+  signal mix_b_mult_n_84 : STD_LOGIC;
+  signal mix_b_mult_n_85 : STD_LOGIC;
+  signal mix_b_mult_n_86 : STD_LOGIC;
+  signal mix_b_mult_n_87 : STD_LOGIC;
+  signal mix_b_mult_n_88 : STD_LOGIC;
+  signal mix_b_mult_n_89 : STD_LOGIC;
+  signal mix_b_mult_n_90 : STD_LOGIC;
+  signal mix_b_mult_n_91 : STD_LOGIC;
+  signal mix_b_mult_n_92 : STD_LOGIC;
+  signal mix_b_mult_n_93 : STD_LOGIC;
+  signal mix_b_mult_n_94 : STD_LOGIC;
+  signal mix_b_mult_n_95 : STD_LOGIC;
+  signal mix_b_mult_n_96 : STD_LOGIC;
+  signal mix_b_mult_n_97 : STD_LOGIC;
+  signal mix_b_mult_n_98 : STD_LOGIC;
+  signal mix_b_mult_n_99 : STD_LOGIC;
+  signal \mix_sum_i_1__0_n_0\ : STD_LOGIC;
+  signal \mix_sum_i_2__0_n_0\ : STD_LOGIC;
+  signal \mix_sum_i_3__0_n_0\ : STD_LOGIC;
+  signal \mix_sum_i_4__0_n_0\ : STD_LOGIC;
+  signal \mix_sum_i_5__0_n_0\ : STD_LOGIC;
+  signal \mix_sum_i_6__0_n_0\ : STD_LOGIC;
+  signal \mix_sum_i_7__0_n_0\ : STD_LOGIC;
+  signal \mix_sum_i_8__0_n_0\ : STD_LOGIC;
+  signal \mix_sum_i_9__0_n_0\ : STD_LOGIC;
+  signal mix_sum_n_100 : STD_LOGIC;
+  signal mix_sum_n_101 : STD_LOGIC;
+  signal mix_sum_n_102 : STD_LOGIC;
+  signal mix_sum_n_103 : STD_LOGIC;
+  signal mix_sum_n_104 : STD_LOGIC;
+  signal mix_sum_n_105 : STD_LOGIC;
+  signal mix_sum_n_98 : STD_LOGIC;
+  signal mix_sum_n_99 : STD_LOGIC;
+  signal NLW_fade_counter0_carry_O_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_fade_counter0_carry__0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_fade_counter0_carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \NLW_fade_counter_reg[8]_i_1__0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
+  signal NLW_mix_b_mult_CARRYCASCOUT_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_b_mult_MULTSIGNOUT_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_b_mult_OVERFLOW_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_b_mult_PATTERNBDETECT_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_b_mult_PATTERNDETECT_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_b_mult_UNDERFLOW_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_b_mult_ACOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 29 downto 0 );
+  signal NLW_mix_b_mult_BCOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 17 downto 0 );
+  signal NLW_mix_b_mult_CARRYOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_mix_b_mult_P_UNCONNECTED : STD_LOGIC_VECTOR ( 47 downto 34 );
+  signal NLW_mix_b_mult_PCOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 47 downto 0 );
+  signal \NLW_mix_b_mult_i_2__0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
+  signal \NLW_mix_b_mult_i_3__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_mix_sum_CARRYCASCOUT_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_sum_MULTSIGNOUT_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_sum_OVERFLOW_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_sum_PATTERNBDETECT_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_sum_PATTERNDETECT_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_sum_UNDERFLOW_UNCONNECTED : STD_LOGIC;
+  signal NLW_mix_sum_ACOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 29 downto 0 );
+  signal NLW_mix_sum_BCOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 17 downto 0 );
+  signal NLW_mix_sum_CARRYOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_mix_sum_P_UNCONNECTED : STD_LOGIC_VECTOR ( 47 downto 32 );
+  signal NLW_mix_sum_PCOUT_UNCONNECTED : STD_LOGIC_VECTOR ( 47 downto 0 );
+  attribute METHODOLOGY_DRC_VIOS : string;
+  attribute METHODOLOGY_DRC_VIOS of fade_counter0_carry : label is "{SYNTH-8 {cell *THIS*}}";
+  attribute METHODOLOGY_DRC_VIOS of \fade_counter0_carry__0\ : label is "{SYNTH-8 {cell *THIS*}}";
+  attribute METHODOLOGY_DRC_VIOS of \fade_counter_reg[4]_i_1__0\ : label is "{SYNTH-8 {cell *THIS*}}";
+  attribute METHODOLOGY_DRC_VIOS of \fade_counter_reg[8]_i_1__0\ : label is "{SYNTH-8 {cell *THIS*}}";
+  attribute METHODOLOGY_DRC_VIOS of mix_b_mult : label is "{SYNTH-11 {cell *THIS*}}";
+  attribute METHODOLOGY_DRC_VIOS of \mix_b_mult_i_2__0\ : label is "{SYNTH-8 {cell *THIS*}}";
+  attribute METHODOLOGY_DRC_VIOS of \mix_b_mult_i_3__0\ : label is "{SYNTH-8 {cell *THIS*}}";
+begin
+  Q(0) <= \^q\(0);
+fade_counter0_carry: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => fade_counter0_carry_n_0,
+      CO(2) => fade_counter0_carry_n_1,
+      CO(1) => fade_counter0_carry_n_2,
+      CO(0) => fade_counter0_carry_n_3,
+      CYINIT => '0',
+      DI(3) => \fade_counter0_carry_i_1__0_n_0\,
+      DI(2) => \fade_counter0_carry_i_2__0_n_0\,
+      DI(1) => \fade_counter0_carry_i_3__0_n_0\,
+      DI(0) => \fade_counter0_carry_i_4__0_n_0\,
+      O(3 downto 0) => NLW_fade_counter0_carry_O_UNCONNECTED(3 downto 0),
+      S(3) => \fade_counter0_carry_i_5__0_n_0\,
+      S(2) => \fade_counter0_carry_i_6__0_n_0\,
+      S(1) => \fade_counter0_carry_i_7__0_n_0\,
+      S(0) => \fade_counter0_carry_i_8__0_n_0\
+    );
+\fade_counter0_carry__0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => fade_counter0_carry_n_0,
+      CO(3 downto 1) => \NLW_fade_counter0_carry__0_CO_UNCONNECTED\(3 downto 1),
+      CO(0) => \fade_counter0_carry__0_n_3\,
+      CYINIT => '0',
+      DI(3 downto 1) => B"000",
+      DI(0) => \fade_counter0_carry__0_i_1__0_n_0\,
+      O(3 downto 0) => \NLW_fade_counter0_carry__0_O_UNCONNECTED\(3 downto 0),
+      S(3 downto 1) => B"000",
+      S(0) => S(0)
+    );
+\fade_counter0_carry__0_i_1__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => \^q\(0),
+      I1 => fade_target(0),
+      O => \fade_counter0_carry__0_i_1__0_n_0\
+    );
+\fade_counter0_carry_i_1__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(6),
+      I1 => \fade_counter_reg__0\(7),
+      O => \fade_counter0_carry_i_1__0_n_0\
+    );
+\fade_counter0_carry_i_2__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(4),
+      I1 => \fade_counter_reg__0\(5),
+      O => \fade_counter0_carry_i_2__0_n_0\
+    );
+\fade_counter0_carry_i_3__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(2),
+      I1 => \fade_counter_reg__0\(3),
+      O => \fade_counter0_carry_i_3__0_n_0\
+    );
+\fade_counter0_carry_i_4__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \fade_counter_reg__1\(0),
+      I1 => \fade_counter_reg__0\(1),
+      O => \fade_counter0_carry_i_4__0_n_0\
+    );
+\fade_counter0_carry_i_5__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(7),
+      I1 => \fade_counter_reg__0\(6),
+      O => \fade_counter0_carry_i_5__0_n_0\
+    );
+\fade_counter0_carry_i_6__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(5),
+      I1 => \fade_counter_reg__0\(4),
+      O => \fade_counter0_carry_i_6__0_n_0\
+    );
+\fade_counter0_carry_i_7__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(3),
+      I1 => \fade_counter_reg__0\(2),
+      O => \fade_counter0_carry_i_7__0_n_0\
+    );
+\fade_counter0_carry_i_8__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(1),
+      I1 => \fade_counter_reg__1\(0),
+      O => \fade_counter0_carry_i_8__0_n_0\
+    );
+\fade_counter[4]_i_2__0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(1),
+      O => \fade_counter[4]_i_2__0_n_0\
+    );
+\fade_counter[4]_i_3__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(3),
+      I1 => \fade_counter_reg__0\(4),
+      O => \fade_counter[4]_i_3__0_n_0\
+    );
+\fade_counter[4]_i_4__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(2),
+      I1 => \fade_counter_reg__0\(3),
+      O => \fade_counter[4]_i_4__0_n_0\
+    );
+\fade_counter[4]_i_5__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(1),
+      I1 => \fade_counter_reg__0\(2),
+      O => \fade_counter[4]_i_5__0_n_0\
+    );
+\fade_counter[4]_i_6__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"65"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(1),
+      I1 => \^q\(0),
+      I2 => fade_target(0),
+      O => \fade_counter[4]_i_6__0_n_0\
+    );
+\fade_counter[8]_i_2__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(7),
+      I1 => \^q\(0),
+      O => \fade_counter[8]_i_2__0_n_0\
+    );
+\fade_counter[8]_i_3__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(6),
+      I1 => \fade_counter_reg__0\(7),
+      O => \fade_counter[8]_i_3__0_n_0\
+    );
+\fade_counter[8]_i_4__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(5),
+      I1 => \fade_counter_reg__0\(6),
+      O => \fade_counter[8]_i_4__0_n_0\
+    );
+\fade_counter[8]_i_5__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(4),
+      I1 => \fade_counter_reg__0\(5),
+      O => \fade_counter[8]_i_5__0_n_0\
+    );
+\fade_counter_reg[0]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => fade_counter,
+      D => \mix_b_mult_i_5__0_n_0\,
+      Q => \fade_counter_reg__1\(0),
+      R => rst_audio
+    );
+\fade_counter_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => fade_counter,
+      D => \fade_counter_reg[4]_i_1__0_n_7\,
+      Q => \fade_counter_reg__0\(1),
+      R => rst_audio
+    );
+\fade_counter_reg[2]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => fade_counter,
+      D => \fade_counter_reg[4]_i_1__0_n_6\,
+      Q => \fade_counter_reg__0\(2),
+      R => rst_audio
+    );
+\fade_counter_reg[3]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => fade_counter,
+      D => \fade_counter_reg[4]_i_1__0_n_5\,
+      Q => \fade_counter_reg__0\(3),
+      R => rst_audio
+    );
+\fade_counter_reg[4]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => fade_counter,
+      D => \fade_counter_reg[4]_i_1__0_n_4\,
+      Q => \fade_counter_reg__0\(4),
+      R => rst_audio
+    );
+\fade_counter_reg[4]_i_1__0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => \fade_counter_reg[4]_i_1__0_n_0\,
+      CO(2) => \fade_counter_reg[4]_i_1__0_n_1\,
+      CO(1) => \fade_counter_reg[4]_i_1__0_n_2\,
+      CO(0) => \fade_counter_reg[4]_i_1__0_n_3\,
+      CYINIT => \fade_counter_reg__1\(0),
+      DI(3 downto 1) => \fade_counter_reg__0\(3 downto 1),
+      DI(0) => \fade_counter[4]_i_2__0_n_0\,
+      O(3) => \fade_counter_reg[4]_i_1__0_n_4\,
+      O(2) => \fade_counter_reg[4]_i_1__0_n_5\,
+      O(1) => \fade_counter_reg[4]_i_1__0_n_6\,
+      O(0) => \fade_counter_reg[4]_i_1__0_n_7\,
+      S(3) => \fade_counter[4]_i_3__0_n_0\,
+      S(2) => \fade_counter[4]_i_4__0_n_0\,
+      S(1) => \fade_counter[4]_i_5__0_n_0\,
+      S(0) => \fade_counter[4]_i_6__0_n_0\
+    );
+\fade_counter_reg[5]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => fade_counter,
+      D => \fade_counter_reg[8]_i_1__0_n_7\,
+      Q => \fade_counter_reg__0\(5),
+      R => rst_audio
+    );
+\fade_counter_reg[6]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => fade_counter,
+      D => \fade_counter_reg[8]_i_1__0_n_6\,
+      Q => \fade_counter_reg__0\(6),
+      R => rst_audio
+    );
+\fade_counter_reg[7]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => fade_counter,
+      D => \fade_counter_reg[8]_i_1__0_n_5\,
+      Q => \fade_counter_reg__0\(7),
+      R => rst_audio
+    );
+\fade_counter_reg[8]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => fade_counter,
+      D => \fade_counter_reg[8]_i_1__0_n_4\,
+      Q => \^q\(0),
+      R => rst_audio
+    );
+\fade_counter_reg[8]_i_1__0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \fade_counter_reg[4]_i_1__0_n_0\,
+      CO(3) => \NLW_fade_counter_reg[8]_i_1__0_CO_UNCONNECTED\(3),
+      CO(2) => \fade_counter_reg[8]_i_1__0_n_1\,
+      CO(1) => \fade_counter_reg[8]_i_1__0_n_2\,
+      CO(0) => \fade_counter_reg[8]_i_1__0_n_3\,
+      CYINIT => '0',
+      DI(3) => '0',
+      DI(2 downto 0) => \fade_counter_reg__0\(6 downto 4),
+      O(3) => \fade_counter_reg[8]_i_1__0_n_4\,
+      O(2) => \fade_counter_reg[8]_i_1__0_n_5\,
+      O(1) => \fade_counter_reg[8]_i_1__0_n_6\,
+      O(0) => \fade_counter_reg[8]_i_1__0_n_7\,
+      S(3) => \fade_counter[8]_i_2__0_n_0\,
+      S(2) => \fade_counter[8]_i_3__0_n_0\,
+      S(1) => \fade_counter[8]_i_4__0_n_0\,
+      S(0) => \fade_counter[8]_i_5__0_n_0\
+    );
+fir_a: entity work.design_1_spatial_audio_top_0_0_dsp_fir_folded
+     port map (
+      P(23) => fir_a_n_0,
+      P(22) => fir_a_n_1,
+      P(21) => fir_a_n_2,
+      P(20) => fir_a_n_3,
+      P(19) => fir_a_n_4,
+      P(18) => fir_a_n_5,
+      P(17) => fir_a_n_6,
+      P(16) => fir_a_n_7,
+      P(15) => fir_a_n_8,
+      P(14) => fir_a_n_9,
+      P(13) => fir_a_n_10,
+      P(12) => fir_a_n_11,
+      P(11) => fir_a_n_12,
+      P(10) => fir_a_n_13,
+      P(9) => fir_a_n_14,
+      P(8) => fir_a_n_15,
+      P(7) => fir_a_n_16,
+      P(6) => fir_a_n_17,
+      P(5) => fir_a_n_18,
+      P(4) => fir_a_n_19,
+      P(3) => fir_a_n_20,
+      P(2) => fir_a_n_21,
+      P(1) => fir_a_n_22,
+      P(0) => fir_a_n_23,
+      RSTP => RSTP,
+      accumulator_reg_0 => accumulator_reg,
+      accumulator_reg_1 => accumulator_reg_0,
+      accumulator_reg_2(23 downto 0) => accumulator_reg_1(23 downto 0),
+      accumulator_reg_3 => accumulator_reg_2,
+      accumulator_reg_4 => accumulator_reg_3,
+      clk_audio => clk_audio,
+      douta(15 downto 0) => douta(15 downto 0),
+      new_sample => new_sample,
+      pipe_audio_s1 => pipe_audio_s1,
+      \read_ptr_reg[6]_0\ => \read_ptr_reg[6]\,
+      \read_ptr_reg[6]_1\(6 downto 0) => \read_ptr_reg[6]_0\(6 downto 0),
+      rst_audio => rst_audio
+    );
+fir_b: entity work.design_1_spatial_audio_top_0_0_dsp_fir_folded_2
+     port map (
+      P(23) => fir_b_n_0,
+      P(22) => fir_b_n_1,
+      P(21) => fir_b_n_2,
+      P(20) => fir_b_n_3,
+      P(19) => fir_b_n_4,
+      P(18) => fir_b_n_5,
+      P(17) => fir_b_n_6,
+      P(16) => fir_b_n_7,
+      P(15) => fir_b_n_8,
+      P(14) => fir_b_n_9,
+      P(13) => fir_b_n_10,
+      P(12) => fir_b_n_11,
+      P(11) => fir_b_n_12,
+      P(10) => fir_b_n_13,
+      P(9) => fir_b_n_14,
+      P(8) => fir_b_n_15,
+      P(7) => fir_b_n_16,
+      P(6) => fir_b_n_17,
+      P(5) => fir_b_n_18,
+      P(4) => fir_b_n_19,
+      P(3) => fir_b_n_20,
+      P(2) => fir_b_n_21,
+      P(1) => fir_b_n_22,
+      P(0) => fir_b_n_23,
+      RSTP => RSTP,
+      accumulator_reg_0 => accumulator_reg,
+      accumulator_reg_1 => accumulator_reg_0,
+      accumulator_reg_2(23 downto 0) => accumulator_reg_1(23 downto 0),
+      accumulator_reg_3 => accumulator_reg_2,
+      accumulator_reg_4 => accumulator_reg_3,
+      clk_audio => clk_audio,
+      doutb(15 downto 0) => doutb(15 downto 0),
+      new_sample => new_sample,
+      pipe_audio_s1 => pipe_audio_s1,
+      \read_ptr_reg[6]_0\ => \read_ptr_reg[6]\,
+      \read_ptr_reg[6]_1\(6 downto 0) => \read_ptr_reg[6]_0\(6 downto 0),
+      rst_audio => rst_audio
+    );
+\is_fading_i_1__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFF400FF00"
+    )
+        port map (
+      I0 => \^q\(0),
+      I1 => fade_target(0),
+      I2 => \fade_counter0_carry__0_n_3\,
+      I3 => is_fading,
+      I4 => new_sample,
+      I5 => crossfade_trig,
+      O => \is_fading_i_1__0_n_0\
+    );
+is_fading_reg: unisim.vcomponents.FDRE
+     port map (
+      C => clk_audio,
+      CE => '1',
+      D => \is_fading_i_1__0_n_0\,
+      Q => is_fading,
+      R => rst_audio
+    );
+mix_b_mult: unisim.vcomponents.DSP48E1
+    generic map(
+      ACASCREG => 1,
+      ADREG => 1,
+      ALUMODEREG => 0,
+      AREG => 1,
+      AUTORESET_PATDET => "NO_RESET",
+      A_INPUT => "DIRECT",
+      BCASCREG => 1,
+      BREG => 1,
+      B_INPUT => "DIRECT",
+      CARRYINREG => 0,
+      CARRYINSELREG => 0,
+      CREG => 1,
+      DREG => 1,
+      INMODEREG => 0,
+      MASK => X"3FFFFFFFFFFF",
+      MREG => 0,
+      OPMODEREG => 0,
+      PATTERN => X"000000000000",
+      PREG => 0,
+      SEL_MASK => "MASK",
+      SEL_PATTERN => "PATTERN",
+      USE_DPORT => false,
+      USE_MULT => "MULTIPLY",
+      USE_PATTERN_DETECT => "NO_PATDET",
+      USE_SIMD => "ONE48"
+    )
+        port map (
+      A(29) => fir_b_n_0,
+      A(28) => fir_b_n_0,
+      A(27) => fir_b_n_0,
+      A(26) => fir_b_n_0,
+      A(25) => fir_b_n_0,
+      A(24) => fir_b_n_0,
+      A(23) => fir_b_n_0,
+      A(22) => fir_b_n_1,
+      A(21) => fir_b_n_2,
+      A(20) => fir_b_n_3,
+      A(19) => fir_b_n_4,
+      A(18) => fir_b_n_5,
+      A(17) => fir_b_n_6,
+      A(16) => fir_b_n_7,
+      A(15) => fir_b_n_8,
+      A(14) => fir_b_n_9,
+      A(13) => fir_b_n_10,
+      A(12) => fir_b_n_11,
+      A(11) => fir_b_n_12,
+      A(10) => fir_b_n_13,
+      A(9) => fir_b_n_14,
+      A(8) => fir_b_n_15,
+      A(7) => fir_b_n_16,
+      A(6) => fir_b_n_17,
+      A(5) => fir_b_n_18,
+      A(4) => fir_b_n_19,
+      A(3) => fir_b_n_20,
+      A(2) => fir_b_n_21,
+      A(1) => fir_b_n_22,
+      A(0) => fir_b_n_23,
+      ACIN(29 downto 0) => B"000000000000000000000000000000",
+      ACOUT(29 downto 0) => NLW_mix_b_mult_ACOUT_UNCONNECTED(29 downto 0),
+      ALUMODE(3 downto 0) => B"0000",
+      B(17 downto 9) => B"000000000",
+      B(8) => \mix_b_mult_i_2__0_n_4\,
+      B(7) => \mix_b_mult_i_2__0_n_5\,
+      B(6) => \mix_b_mult_i_2__0_n_6\,
+      B(5) => \mix_b_mult_i_2__0_n_7\,
+      B(4) => \mix_b_mult_i_3__0_n_4\,
+      B(3) => \mix_b_mult_i_3__0_n_5\,
+      B(2) => \mix_b_mult_i_3__0_n_6\,
+      B(1) => \mix_b_mult_i_4__0_n_0\,
+      B(0) => \mix_b_mult_i_5__0_n_0\,
+      BCIN(17 downto 0) => B"000000000000000000",
+      BCOUT(17 downto 0) => NLW_mix_b_mult_BCOUT_UNCONNECTED(17 downto 0),
+      C(47 downto 0) => B"111111111111111111111111111111111111111111111111",
+      CARRYCASCIN => '0',
+      CARRYCASCOUT => NLW_mix_b_mult_CARRYCASCOUT_UNCONNECTED,
+      CARRYIN => '0',
+      CARRYINSEL(2 downto 0) => B"000",
+      CARRYOUT(3 downto 0) => NLW_mix_b_mult_CARRYOUT_UNCONNECTED(3 downto 0),
+      CEA1 => '0',
+      CEA2 => new_sample,
+      CEAD => '0',
+      CEALUMODE => '0',
+      CEB1 => '0',
+      CEB2 => fade_counter,
+      CEC => '0',
+      CECARRYIN => '0',
+      CECTRL => '0',
+      CED => '0',
+      CEINMODE => '0',
+      CEM => '0',
+      CEP => '0',
+      CLK => clk_audio,
+      D(24 downto 0) => B"0000000000000000000000000",
+      INMODE(4 downto 0) => B"00000",
+      MULTSIGNIN => '0',
+      MULTSIGNOUT => NLW_mix_b_mult_MULTSIGNOUT_UNCONNECTED,
+      OPMODE(6 downto 0) => B"0000101",
+      OVERFLOW => NLW_mix_b_mult_OVERFLOW_UNCONNECTED,
+      P(47 downto 34) => NLW_mix_b_mult_P_UNCONNECTED(47 downto 34),
+      P(33) => mix_b_mult_n_72,
+      P(32) => mix_b_mult_n_73,
+      P(31) => mix_b_mult_n_74,
+      P(30) => mix_b_mult_n_75,
+      P(29) => mix_b_mult_n_76,
+      P(28) => mix_b_mult_n_77,
+      P(27) => mix_b_mult_n_78,
+      P(26) => mix_b_mult_n_79,
+      P(25) => mix_b_mult_n_80,
+      P(24) => mix_b_mult_n_81,
+      P(23) => mix_b_mult_n_82,
+      P(22) => mix_b_mult_n_83,
+      P(21) => mix_b_mult_n_84,
+      P(20) => mix_b_mult_n_85,
+      P(19) => mix_b_mult_n_86,
+      P(18) => mix_b_mult_n_87,
+      P(17) => mix_b_mult_n_88,
+      P(16) => mix_b_mult_n_89,
+      P(15) => mix_b_mult_n_90,
+      P(14) => mix_b_mult_n_91,
+      P(13) => mix_b_mult_n_92,
+      P(12) => mix_b_mult_n_93,
+      P(11) => mix_b_mult_n_94,
+      P(10) => mix_b_mult_n_95,
+      P(9) => mix_b_mult_n_96,
+      P(8) => mix_b_mult_n_97,
+      P(7) => mix_b_mult_n_98,
+      P(6) => mix_b_mult_n_99,
+      P(5) => mix_b_mult_n_100,
+      P(4) => mix_b_mult_n_101,
+      P(3) => mix_b_mult_n_102,
+      P(2) => mix_b_mult_n_103,
+      P(1) => mix_b_mult_n_104,
+      P(0) => mix_b_mult_n_105,
+      PATTERNBDETECT => NLW_mix_b_mult_PATTERNBDETECT_UNCONNECTED,
+      PATTERNDETECT => NLW_mix_b_mult_PATTERNDETECT_UNCONNECTED,
+      PCIN(47 downto 0) => B"000000000000000000000000000000000000000000000000",
+      PCOUT(47 downto 0) => NLW_mix_b_mult_PCOUT_UNCONNECTED(47 downto 0),
+      RSTA => rst_audio,
+      RSTALLCARRYIN => '0',
+      RSTALUMODE => '0',
+      RSTB => rst_audio,
+      RSTC => '0',
+      RSTCTRL => '0',
+      RSTD => '0',
+      RSTINMODE => '0',
+      RSTM => '0',
+      RSTP => '0',
+      UNDERFLOW => NLW_mix_b_mult_UNDERFLOW_UNCONNECTED
+    );
+\mix_b_mult_i_10__0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(1),
+      O => \mix_b_mult_i_10__0_n_0\
+    );
+\mix_b_mult_i_11__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(3),
+      I1 => \fade_counter_reg__0\(4),
+      O => \mix_b_mult_i_11__0_n_0\
+    );
+\mix_b_mult_i_12__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(2),
+      I1 => \fade_counter_reg__0\(3),
+      O => \mix_b_mult_i_12__0_n_0\
+    );
+\mix_b_mult_i_13__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(1),
+      I1 => \fade_counter_reg__0\(2),
+      O => \mix_b_mult_i_13__0_n_0\
+    );
+\mix_b_mult_i_14__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"65"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(1),
+      I1 => \^q\(0),
+      I2 => fade_target(0),
+      O => \mix_b_mult_i_14__0_n_0\
+    );
+\mix_b_mult_i_1__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0800080008080800"
+    )
+        port map (
+      I0 => is_fading,
+      I1 => new_sample,
+      I2 => crossfade_trig,
+      I3 => \fade_counter0_carry__0_n_3\,
+      I4 => fade_target(0),
+      I5 => \^q\(0),
+      O => fade_counter
+    );
+\mix_b_mult_i_2__0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \mix_b_mult_i_3__0_n_0\,
+      CO(3) => \NLW_mix_b_mult_i_2__0_CO_UNCONNECTED\(3),
+      CO(2) => \mix_b_mult_i_2__0_n_1\,
+      CO(1) => \mix_b_mult_i_2__0_n_2\,
+      CO(0) => \mix_b_mult_i_2__0_n_3\,
+      CYINIT => '0',
+      DI(3) => '0',
+      DI(2 downto 0) => \fade_counter_reg__0\(6 downto 4),
+      O(3) => \mix_b_mult_i_2__0_n_4\,
+      O(2) => \mix_b_mult_i_2__0_n_5\,
+      O(1) => \mix_b_mult_i_2__0_n_6\,
+      O(0) => \mix_b_mult_i_2__0_n_7\,
+      S(3) => \mix_b_mult_i_6__0_n_0\,
+      S(2) => \mix_b_mult_i_7__0_n_0\,
+      S(1) => \mix_b_mult_i_8__0_n_0\,
+      S(0) => \mix_b_mult_i_9__0_n_0\
+    );
+\mix_b_mult_i_3__0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => \mix_b_mult_i_3__0_n_0\,
+      CO(2) => \mix_b_mult_i_3__0_n_1\,
+      CO(1) => \mix_b_mult_i_3__0_n_2\,
+      CO(0) => \mix_b_mult_i_3__0_n_3\,
+      CYINIT => \fade_counter_reg__1\(0),
+      DI(3 downto 1) => \fade_counter_reg__0\(3 downto 1),
+      DI(0) => \mix_b_mult_i_10__0_n_0\,
+      O(3) => \mix_b_mult_i_3__0_n_4\,
+      O(2) => \mix_b_mult_i_3__0_n_5\,
+      O(1) => \mix_b_mult_i_3__0_n_6\,
+      O(0) => \NLW_mix_b_mult_i_3__0_O_UNCONNECTED\(0),
+      S(3) => \mix_b_mult_i_11__0_n_0\,
+      S(2) => \mix_b_mult_i_12__0_n_0\,
+      S(1) => \mix_b_mult_i_13__0_n_0\,
+      S(0) => \mix_b_mult_i_14__0_n_0\
+    );
+\mix_b_mult_i_4__0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"A659"
+    )
+        port map (
+      I0 => \fade_counter_reg__1\(0),
+      I1 => fade_target(0),
+      I2 => \^q\(0),
+      I3 => \fade_counter_reg__0\(1),
+      O => \mix_b_mult_i_4__0_n_0\
+    );
+\mix_b_mult_i_5__0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \fade_counter_reg__1\(0),
+      O => \mix_b_mult_i_5__0_n_0\
+    );
+\mix_b_mult_i_6__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(7),
+      I1 => \^q\(0),
+      O => \mix_b_mult_i_6__0_n_0\
+    );
+\mix_b_mult_i_7__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(6),
+      I1 => \fade_counter_reg__0\(7),
+      O => \mix_b_mult_i_7__0_n_0\
+    );
+\mix_b_mult_i_8__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(5),
+      I1 => \fade_counter_reg__0\(6),
+      O => \mix_b_mult_i_8__0_n_0\
+    );
+\mix_b_mult_i_9__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(4),
+      I1 => \fade_counter_reg__0\(5),
+      O => \mix_b_mult_i_9__0_n_0\
+    );
+mix_sum: unisim.vcomponents.DSP48E1
+    generic map(
+      ACASCREG => 1,
+      ADREG => 1,
+      ALUMODEREG => 0,
+      AREG => 1,
+      AUTORESET_PATDET => "NO_RESET",
+      A_INPUT => "DIRECT",
+      BCASCREG => 0,
+      BREG => 0,
+      B_INPUT => "DIRECT",
+      CARRYINREG => 0,
+      CARRYINSELREG => 0,
+      CREG => 0,
+      DREG => 1,
+      INMODEREG => 0,
+      MASK => X"3FFFFFFFFFFF",
+      MREG => 0,
+      OPMODEREG => 0,
+      PATTERN => X"000000000000",
+      PREG => 1,
+      SEL_MASK => "MASK",
+      SEL_PATTERN => "PATTERN",
+      USE_DPORT => false,
+      USE_MULT => "MULTIPLY",
+      USE_PATTERN_DETECT => "NO_PATDET",
+      USE_SIMD => "ONE48"
+    )
+        port map (
+      A(29) => fir_a_n_0,
+      A(28) => fir_a_n_0,
+      A(27) => fir_a_n_0,
+      A(26) => fir_a_n_0,
+      A(25) => fir_a_n_0,
+      A(24) => fir_a_n_0,
+      A(23) => fir_a_n_0,
+      A(22) => fir_a_n_1,
+      A(21) => fir_a_n_2,
+      A(20) => fir_a_n_3,
+      A(19) => fir_a_n_4,
+      A(18) => fir_a_n_5,
+      A(17) => fir_a_n_6,
+      A(16) => fir_a_n_7,
+      A(15) => fir_a_n_8,
+      A(14) => fir_a_n_9,
+      A(13) => fir_a_n_10,
+      A(12) => fir_a_n_11,
+      A(11) => fir_a_n_12,
+      A(10) => fir_a_n_13,
+      A(9) => fir_a_n_14,
+      A(8) => fir_a_n_15,
+      A(7) => fir_a_n_16,
+      A(6) => fir_a_n_17,
+      A(5) => fir_a_n_18,
+      A(4) => fir_a_n_19,
+      A(3) => fir_a_n_20,
+      A(2) => fir_a_n_21,
+      A(1) => fir_a_n_22,
+      A(0) => fir_a_n_23,
+      ACIN(29 downto 0) => B"000000000000000000000000000000",
+      ACOUT(29 downto 0) => NLW_mix_sum_ACOUT_UNCONNECTED(29 downto 0),
+      ALUMODE(3 downto 0) => B"0000",
+      B(17 downto 9) => B"000000000",
+      B(8) => \mix_sum_i_1__0_n_0\,
+      B(7) => \mix_sum_i_2__0_n_0\,
+      B(6) => \mix_sum_i_3__0_n_0\,
+      B(5) => \mix_sum_i_4__0_n_0\,
+      B(4) => \mix_sum_i_5__0_n_0\,
+      B(3) => \mix_sum_i_6__0_n_0\,
+      B(2) => \mix_sum_i_7__0_n_0\,
+      B(1) => \mix_sum_i_8__0_n_0\,
+      B(0) => \fade_counter_reg__1\(0),
+      BCIN(17 downto 0) => B"000000000000000000",
+      BCOUT(17 downto 0) => NLW_mix_sum_BCOUT_UNCONNECTED(17 downto 0),
+      C(47) => mix_b_mult_n_74,
+      C(46) => mix_b_mult_n_74,
+      C(45) => mix_b_mult_n_74,
+      C(44) => mix_b_mult_n_74,
+      C(43) => mix_b_mult_n_74,
+      C(42) => mix_b_mult_n_74,
+      C(41) => mix_b_mult_n_74,
+      C(40) => mix_b_mult_n_74,
+      C(39) => mix_b_mult_n_74,
+      C(38) => mix_b_mult_n_74,
+      C(37) => mix_b_mult_n_74,
+      C(36) => mix_b_mult_n_74,
+      C(35) => mix_b_mult_n_74,
+      C(34) => mix_b_mult_n_74,
+      C(33) => mix_b_mult_n_74,
+      C(32) => mix_b_mult_n_74,
+      C(31) => mix_b_mult_n_74,
+      C(30) => mix_b_mult_n_75,
+      C(29) => mix_b_mult_n_76,
+      C(28) => mix_b_mult_n_77,
+      C(27) => mix_b_mult_n_78,
+      C(26) => mix_b_mult_n_79,
+      C(25) => mix_b_mult_n_80,
+      C(24) => mix_b_mult_n_81,
+      C(23) => mix_b_mult_n_82,
+      C(22) => mix_b_mult_n_83,
+      C(21) => mix_b_mult_n_84,
+      C(20) => mix_b_mult_n_85,
+      C(19) => mix_b_mult_n_86,
+      C(18) => mix_b_mult_n_87,
+      C(17) => mix_b_mult_n_88,
+      C(16) => mix_b_mult_n_89,
+      C(15) => mix_b_mult_n_90,
+      C(14) => mix_b_mult_n_91,
+      C(13) => mix_b_mult_n_92,
+      C(12) => mix_b_mult_n_93,
+      C(11) => mix_b_mult_n_94,
+      C(10) => mix_b_mult_n_95,
+      C(9) => mix_b_mult_n_96,
+      C(8) => mix_b_mult_n_97,
+      C(7) => mix_b_mult_n_98,
+      C(6) => mix_b_mult_n_99,
+      C(5) => mix_b_mult_n_100,
+      C(4) => mix_b_mult_n_101,
+      C(3) => mix_b_mult_n_102,
+      C(2) => mix_b_mult_n_103,
+      C(1) => mix_b_mult_n_104,
+      C(0) => mix_b_mult_n_105,
+      CARRYCASCIN => '0',
+      CARRYCASCOUT => NLW_mix_sum_CARRYCASCOUT_UNCONNECTED,
+      CARRYIN => '0',
+      CARRYINSEL(2 downto 0) => B"000",
+      CARRYOUT(3 downto 0) => NLW_mix_sum_CARRYOUT_UNCONNECTED(3 downto 0),
+      CEA1 => '0',
+      CEA2 => new_sample,
+      CEAD => '0',
+      CEALUMODE => '0',
+      CEB1 => '0',
+      CEB2 => '0',
+      CEC => '0',
+      CECARRYIN => '0',
+      CECTRL => '0',
+      CED => '0',
+      CEINMODE => '0',
+      CEM => '0',
+      CEP => '1',
+      CLK => clk_audio,
+      D(24 downto 0) => B"0000000000000000000000000",
+      INMODE(4 downto 0) => B"00000",
+      MULTSIGNIN => '0',
+      MULTSIGNOUT => NLW_mix_sum_MULTSIGNOUT_UNCONNECTED,
+      OPMODE(6 downto 0) => B"0110101",
+      OVERFLOW => NLW_mix_sum_OVERFLOW_UNCONNECTED,
+      P(47 downto 32) => NLW_mix_sum_P_UNCONNECTED(47 downto 32),
+      P(31 downto 8) => P(23 downto 0),
+      P(7) => mix_sum_n_98,
+      P(6) => mix_sum_n_99,
+      P(5) => mix_sum_n_100,
+      P(4) => mix_sum_n_101,
+      P(3) => mix_sum_n_102,
+      P(2) => mix_sum_n_103,
+      P(1) => mix_sum_n_104,
+      P(0) => mix_sum_n_105,
+      PATTERNBDETECT => NLW_mix_sum_PATTERNBDETECT_UNCONNECTED,
+      PATTERNDETECT => NLW_mix_sum_PATTERNDETECT_UNCONNECTED,
+      PCIN(47 downto 0) => B"000000000000000000000000000000000000000000000000",
+      PCOUT(47 downto 0) => NLW_mix_sum_PCOUT_UNCONNECTED(47 downto 0),
+      RSTA => rst_audio,
+      RSTALLCARRYIN => '0',
+      RSTALUMODE => '0',
+      RSTB => '0',
+      RSTC => '0',
+      RSTCTRL => '0',
+      RSTD => '0',
+      RSTINMODE => '0',
+      RSTM => '0',
+      RSTP => rst_audio,
+      UNDERFLOW => NLW_mix_sum_UNDERFLOW_UNCONNECTED
+    );
+\mix_sum_i_1__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFD00000002"
+    )
+        port map (
+      I0 => \mix_sum_i_9__0_n_0\,
+      I1 => \fade_counter_reg__0\(7),
+      I2 => \fade_counter_reg__0\(6),
+      I3 => \fade_counter_reg__0\(5),
+      I4 => \fade_counter_reg__0\(4),
+      I5 => \^q\(0),
+      O => \mix_sum_i_1__0_n_0\
+    );
+\mix_sum_i_2__0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"0002FFFD"
+    )
+        port map (
+      I0 => \mix_sum_i_9__0_n_0\,
+      I1 => \fade_counter_reg__0\(5),
+      I2 => \fade_counter_reg__0\(4),
+      I3 => \fade_counter_reg__0\(6),
+      I4 => \fade_counter_reg__0\(7),
+      O => \mix_sum_i_2__0_n_0\
+    );
+\mix_sum_i_3__0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"10EF"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(4),
+      I1 => \fade_counter_reg__0\(5),
+      I2 => \mix_sum_i_9__0_n_0\,
+      I3 => \fade_counter_reg__0\(6),
+      O => \mix_sum_i_3__0_n_0\
+    );
+\mix_sum_i_4__0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00000001FFFFFFFE"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(4),
+      I1 => \fade_counter_reg__0\(3),
+      I2 => \fade_counter_reg__0\(2),
+      I3 => \fade_counter_reg__0\(1),
+      I4 => \fade_counter_reg__1\(0),
+      I5 => \fade_counter_reg__0\(5),
+      O => \mix_sum_i_4__0_n_0\
+    );
+\mix_sum_i_5__0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"0001FFFE"
+    )
+        port map (
+      I0 => \fade_counter_reg__1\(0),
+      I1 => \fade_counter_reg__0\(1),
+      I2 => \fade_counter_reg__0\(2),
+      I3 => \fade_counter_reg__0\(3),
+      I4 => \fade_counter_reg__0\(4),
+      O => \mix_sum_i_5__0_n_0\
+    );
+\mix_sum_i_6__0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"01FE"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(2),
+      I1 => \fade_counter_reg__1\(0),
+      I2 => \fade_counter_reg__0\(1),
+      I3 => \fade_counter_reg__0\(3),
+      O => \mix_sum_i_6__0_n_0\
+    );
+\mix_sum_i_7__0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"1E"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(1),
+      I1 => \fade_counter_reg__1\(0),
+      I2 => \fade_counter_reg__0\(2),
+      O => \mix_sum_i_7__0_n_0\
+    );
+\mix_sum_i_8__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => \fade_counter_reg__1\(0),
+      I1 => \fade_counter_reg__0\(1),
+      O => \mix_sum_i_8__0_n_0\
+    );
+\mix_sum_i_9__0\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0001"
+    )
+        port map (
+      I0 => \fade_counter_reg__0\(3),
+      I1 => \fade_counter_reg__0\(2),
+      I2 => \fade_counter_reg__0\(1),
+      I3 => \fade_counter_reg__1\(0),
+      O => \mix_sum_i_9__0_n_0\
     );
 end STRUCTURE;
 library IEEE;
@@ -8398,9 +13894,14 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width is
   port (
     ram_douta : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    ram_doutb : out STD_LOGIC_VECTOR ( 8 downto 0 );
     clka : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 11 downto 0 )
+    clkb : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\ : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
@@ -8410,10 +13911,15 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width 
 begin
 \prim_init.ram\: entity work.design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init
      port map (
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\ => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\ => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\,
       addra(11 downto 0) => addra(11 downto 0),
+      addrb(11 downto 0) => addrb(11 downto 0),
       clka => clka,
-      ram_douta(8 downto 0) => ram_douta(8 downto 0)
+      clkb => clkb,
+      enb => enb,
+      ram_douta(8 downto 0) => ram_douta(8 downto 0),
+      ram_doutb(8 downto 0) => ram_doutb(8 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -8423,10 +13929,16 @@ use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized0\ is
   port (
     DOADO : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPADOP : out STD_LOGIC_VECTOR ( 0 to 0 );
+    DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
     clka : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 11 downto 0 )
+    clkb : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\ : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized0\ : entity is "blk_mem_gen_prim_width";
@@ -8436,11 +13948,17 @@ architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width
 begin
 \prim_init.ram\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized0\
      port map (
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\ => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\ => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\,
       DOADO(7 downto 0) => DOADO(7 downto 0),
+      DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPADOP(0) => DOPADOP(0),
+      DOPBDOP(0) => DOPBDOP(0),
       addra(11 downto 0) => addra(11 downto 0),
-      clka => clka
+      addrb(11 downto 0) => addrb(11 downto 0),
+      clka => clka,
+      clkb => clkb,
+      enb => enb
     );
 end STRUCTURE;
 library IEEE;
@@ -8449,10 +13967,15 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized1\ is
   port (
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\ : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\ : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\ : out STD_LOGIC_VECTOR ( 15 downto 0 );
     clka : in STD_LOGIC;
+    clkb : in STD_LOGIC;
     ena_array : in STD_LOGIC_VECTOR ( 0 to 0 );
-    addra : in STD_LOGIC_VECTOR ( 9 downto 0 )
+    enb_array : in STD_LOGIC_VECTOR ( 0 to 0 );
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized1\ : entity is "blk_mem_gen_prim_width";
@@ -8462,10 +13985,15 @@ architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width
 begin
 \prim_init.ram\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized1\
      port map (
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_0\(15 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(15 downto 0),
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(15 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(15 downto 0),
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_1\(15 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(15 downto 0),
       addra(9 downto 0) => addra(9 downto 0),
+      addrb(9 downto 0) => addrb(9 downto 0),
       clka => clka,
-      ena_array(0) => ena_array(0)
+      clkb => clkb,
+      ena_array(0) => ena_array(0),
+      enb => enb,
+      enb_array(0) => enb_array(0)
     );
 end STRUCTURE;
 library IEEE;
@@ -8474,10 +14002,15 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized2\ is
   port (
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
     clka : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 11 downto 0 )
+    clkb : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\ : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\ : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized2\ : entity is "blk_mem_gen_prim_width";
@@ -8487,10 +14020,15 @@ architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width
 begin
 \prim_init.ram\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized2\
      port map (
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(6 downto 0),
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1\ => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(6 downto 0),
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(6 downto 0),
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\ => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_3\ => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\,
       addra(11 downto 0) => addra(11 downto 0),
-      clka => clka
+      addrb(11 downto 0) => addrb(11 downto 0),
+      clka => clka,
+      clkb => clkb,
+      enb => enb
     );
 end STRUCTURE;
 library IEEE;
@@ -8499,10 +14037,15 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized3\ is
   port (
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
     clka : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 11 downto 0 )
+    clkb : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\ : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\ : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized3\ : entity is "blk_mem_gen_prim_width";
@@ -8512,10 +14055,15 @@ architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width
 begin
 \prim_init.ram\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized3\
      port map (
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(6 downto 0),
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1\ => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(6 downto 0),
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(6 downto 0),
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\ => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_3\ => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\,
       addra(11 downto 0) => addra(11 downto 0),
-      clka => clka
+      addrb(11 downto 0) => addrb(11 downto 0),
+      clka => clka,
+      clkb => clkb,
+      enb => enb
     );
 end STRUCTURE;
 library IEEE;
@@ -8525,9 +14073,14 @@ use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized4\ is
   port (
     ram_douta : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    ram_doutb : out STD_LOGIC_VECTOR ( 8 downto 0 );
     clka : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 11 downto 0 )
+    clkb : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\ : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized4\ : entity is "blk_mem_gen_prim_width";
@@ -8537,10 +14090,15 @@ architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width
 begin
 \prim_init.ram\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized4\
      port map (
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\ => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\ => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\,
       addra(11 downto 0) => addra(11 downto 0),
+      addrb(11 downto 0) => addrb(11 downto 0),
       clka => clka,
-      ram_douta(8 downto 0) => ram_douta(8 downto 0)
+      clkb => clkb,
+      enb => enb,
+      ram_douta(8 downto 0) => ram_douta(8 downto 0),
+      ram_doutb(8 downto 0) => ram_doutb(8 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -8550,10 +14108,16 @@ use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized5\ is
   port (
     DOADO : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    DOBDO : out STD_LOGIC_VECTOR ( 7 downto 0 );
     DOPADOP : out STD_LOGIC_VECTOR ( 0 to 0 );
+    DOPBDOP : out STD_LOGIC_VECTOR ( 0 to 0 );
     clka : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 11 downto 0 )
+    clkb : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\ : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized5\ : entity is "blk_mem_gen_prim_width";
@@ -8563,11 +14127,17 @@ architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width
 begin
 \prim_init.ram\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized5\
      port map (
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\ => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\ => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\,
       DOADO(7 downto 0) => DOADO(7 downto 0),
+      DOBDO(7 downto 0) => DOBDO(7 downto 0),
       DOPADOP(0) => DOPADOP(0),
+      DOPBDOP(0) => DOPBDOP(0),
       addra(11 downto 0) => addra(11 downto 0),
-      clka => clka
+      addrb(11 downto 0) => addrb(11 downto 0),
+      clka => clka,
+      clkb => clkb,
+      enb => enb
     );
 end STRUCTURE;
 library IEEE;
@@ -8576,10 +14146,15 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized6\ is
   port (
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\ : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\ : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\ : out STD_LOGIC_VECTOR ( 15 downto 0 );
     clka : in STD_LOGIC;
+    clkb : in STD_LOGIC;
     ena_array : in STD_LOGIC_VECTOR ( 0 to 0 );
-    addra : in STD_LOGIC_VECTOR ( 9 downto 0 )
+    enb_array : in STD_LOGIC_VECTOR ( 0 to 0 );
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized6\ : entity is "blk_mem_gen_prim_width";
@@ -8589,10 +14164,15 @@ architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width
 begin
 \prim_init.ram\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized6\
      port map (
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_0\(15 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(15 downto 0),
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(15 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(15 downto 0),
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_1\(15 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(15 downto 0),
       addra(9 downto 0) => addra(9 downto 0),
+      addrb(9 downto 0) => addrb(9 downto 0),
       clka => clka,
-      ena_array(0) => ena_array(0)
+      clkb => clkb,
+      ena_array(0) => ena_array(0),
+      enb => enb,
+      enb_array(0) => enb_array(0)
     );
 end STRUCTURE;
 library IEEE;
@@ -8601,10 +14181,15 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized7\ is
   port (
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
     clka : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 11 downto 0 )
+    clkb : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\ : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\ : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized7\ : entity is "blk_mem_gen_prim_width";
@@ -8614,10 +14199,15 @@ architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width
 begin
 \prim_init.ram\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized7\
      port map (
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(6 downto 0),
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1\ => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(6 downto 0),
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(6 downto 0),
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\ => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_3\ => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\,
       addra(11 downto 0) => addra(11 downto 0),
-      clka => clka
+      addrb(11 downto 0) => addrb(11 downto 0),
+      clka => clka,
+      clkb => clkb,
+      enb => enb
     );
 end STRUCTURE;
 library IEEE;
@@ -8626,10 +14216,15 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized8\ is
   port (
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ : out STD_LOGIC_VECTOR ( 6 downto 0 );
     clka : in STD_LOGIC;
-    \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\ : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 11 downto 0 )
+    clkb : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\ : in STD_LOGIC;
+    \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\ : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized8\ : entity is "blk_mem_gen_prim_width";
@@ -8639,10 +14234,15 @@ architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width
 begin
 \prim_init.ram\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_prim_wrapper_init__parameterized8\
      port map (
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(6 downto 0),
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_1\ => \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(6 downto 0),
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\(6 downto 0) => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(6 downto 0),
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\ => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_3\ => \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\,
       addra(11 downto 0) => addra(11 downto 0),
-      clka => clka
+      addrb(11 downto 0) => addrb(11 downto 0),
+      clka => clka,
+      clkb => clkb,
+      enb => enb
     );
 end STRUCTURE;
 library IEEE;
@@ -8652,8 +14252,12 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_spatial_audio_top_0_0_blk_mem_gen_generic_cstr is
   port (
     douta : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    doutb : out STD_LOGIC_VECTOR ( 15 downto 0 );
     clka : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 13 downto 0 )
+    clkb : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 13 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 13 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
@@ -8661,11 +14265,23 @@ end design_1_spatial_audio_top_0_0_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of design_1_spatial_audio_top_0_0_blk_mem_gen_generic_cstr is
   signal ena_array : STD_LOGIC_VECTOR ( 8 to 8 );
+  signal enb_array : STD_LOGIC_VECTOR ( 8 to 8 );
   signal ram_douta : STD_LOGIC_VECTOR ( 8 downto 0 );
+  signal ram_doutb : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal \ram_ena_inferred__0/i__n_0\ : STD_LOGIC;
   signal ram_ena_n_0 : STD_LOGIC;
+  signal \ram_enb_inferred__0/i__n_0\ : STD_LOGIC;
+  signal ram_enb_n_0 : STD_LOGIC;
   signal \ramloop[1].ram.r_n_0\ : STD_LOGIC;
   signal \ramloop[1].ram.r_n_1\ : STD_LOGIC;
+  signal \ramloop[1].ram.r_n_10\ : STD_LOGIC;
+  signal \ramloop[1].ram.r_n_11\ : STD_LOGIC;
+  signal \ramloop[1].ram.r_n_12\ : STD_LOGIC;
+  signal \ramloop[1].ram.r_n_13\ : STD_LOGIC;
+  signal \ramloop[1].ram.r_n_14\ : STD_LOGIC;
+  signal \ramloop[1].ram.r_n_15\ : STD_LOGIC;
+  signal \ramloop[1].ram.r_n_16\ : STD_LOGIC;
+  signal \ramloop[1].ram.r_n_17\ : STD_LOGIC;
   signal \ramloop[1].ram.r_n_2\ : STD_LOGIC;
   signal \ramloop[1].ram.r_n_3\ : STD_LOGIC;
   signal \ramloop[1].ram.r_n_4\ : STD_LOGIC;
@@ -8673,6 +14289,7 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_blk_mem_gen_generic_cst
   signal \ramloop[1].ram.r_n_6\ : STD_LOGIC;
   signal \ramloop[1].ram.r_n_7\ : STD_LOGIC;
   signal \ramloop[1].ram.r_n_8\ : STD_LOGIC;
+  signal \ramloop[1].ram.r_n_9\ : STD_LOGIC;
   signal \ramloop[2].ram.r_n_0\ : STD_LOGIC;
   signal \ramloop[2].ram.r_n_1\ : STD_LOGIC;
   signal \ramloop[2].ram.r_n_10\ : STD_LOGIC;
@@ -8681,8 +14298,24 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_blk_mem_gen_generic_cst
   signal \ramloop[2].ram.r_n_13\ : STD_LOGIC;
   signal \ramloop[2].ram.r_n_14\ : STD_LOGIC;
   signal \ramloop[2].ram.r_n_15\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_16\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_17\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_18\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_19\ : STD_LOGIC;
   signal \ramloop[2].ram.r_n_2\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_20\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_21\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_22\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_23\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_24\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_25\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_26\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_27\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_28\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_29\ : STD_LOGIC;
   signal \ramloop[2].ram.r_n_3\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_30\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_31\ : STD_LOGIC;
   signal \ramloop[2].ram.r_n_4\ : STD_LOGIC;
   signal \ramloop[2].ram.r_n_5\ : STD_LOGIC;
   signal \ramloop[2].ram.r_n_6\ : STD_LOGIC;
@@ -8691,25 +14324,45 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_blk_mem_gen_generic_cst
   signal \ramloop[2].ram.r_n_9\ : STD_LOGIC;
   signal \ramloop[3].ram.r_n_0\ : STD_LOGIC;
   signal \ramloop[3].ram.r_n_1\ : STD_LOGIC;
+  signal \ramloop[3].ram.r_n_10\ : STD_LOGIC;
+  signal \ramloop[3].ram.r_n_11\ : STD_LOGIC;
+  signal \ramloop[3].ram.r_n_12\ : STD_LOGIC;
+  signal \ramloop[3].ram.r_n_13\ : STD_LOGIC;
   signal \ramloop[3].ram.r_n_2\ : STD_LOGIC;
   signal \ramloop[3].ram.r_n_3\ : STD_LOGIC;
   signal \ramloop[3].ram.r_n_4\ : STD_LOGIC;
   signal \ramloop[3].ram.r_n_5\ : STD_LOGIC;
   signal \ramloop[3].ram.r_n_6\ : STD_LOGIC;
+  signal \ramloop[3].ram.r_n_7\ : STD_LOGIC;
+  signal \ramloop[3].ram.r_n_8\ : STD_LOGIC;
+  signal \ramloop[3].ram.r_n_9\ : STD_LOGIC;
   signal \ramloop[4].ram.r_n_0\ : STD_LOGIC;
   signal \ramloop[4].ram.r_n_1\ : STD_LOGIC;
+  signal \ramloop[4].ram.r_n_10\ : STD_LOGIC;
+  signal \ramloop[4].ram.r_n_11\ : STD_LOGIC;
+  signal \ramloop[4].ram.r_n_12\ : STD_LOGIC;
+  signal \ramloop[4].ram.r_n_13\ : STD_LOGIC;
   signal \ramloop[4].ram.r_n_2\ : STD_LOGIC;
   signal \ramloop[4].ram.r_n_3\ : STD_LOGIC;
   signal \ramloop[4].ram.r_n_4\ : STD_LOGIC;
   signal \ramloop[4].ram.r_n_5\ : STD_LOGIC;
   signal \ramloop[4].ram.r_n_6\ : STD_LOGIC;
+  signal \ramloop[4].ram.r_n_7\ : STD_LOGIC;
+  signal \ramloop[4].ram.r_n_8\ : STD_LOGIC;
+  signal \ramloop[4].ram.r_n_9\ : STD_LOGIC;
 begin
-\bindec_a.bindec_inst_a\: entity work.design_1_spatial_audio_top_0_0_bindec_1
+\bindec_a.bindec_inst_a\: entity work.design_1_spatial_audio_top_0_0_bindec_6
      port map (
       addra(3 downto 0) => addra(13 downto 10),
       ena_array(0) => ena_array(8)
     );
-\has_mux_a.A\: entity work.design_1_spatial_audio_top_0_0_blk_mem_gen_mux_2
+\bindec_b.bindec_inst_b\: entity work.design_1_spatial_audio_top_0_0_bindec_7
+     port map (
+      addrb(3 downto 0) => addrb(13 downto 10),
+      enb => enb,
+      enb_array(0) => enb_array(8)
+    );
+\has_mux_a.A\: entity work.design_1_spatial_audio_top_0_0_blk_mem_gen_mux_8
      port map (
       DOADO(7) => \ramloop[1].ram.r_n_0\,
       DOADO(6) => \ramloop[1].ram.r_n_1\,
@@ -8719,7 +14372,7 @@ begin
       DOADO(2) => \ramloop[1].ram.r_n_5\,
       DOADO(1) => \ramloop[1].ram.r_n_6\,
       DOADO(0) => \ramloop[1].ram.r_n_7\,
-      DOPADOP(0) => \ramloop[1].ram.r_n_8\,
+      DOPADOP(0) => \ramloop[1].ram.r_n_16\,
       accumulator_reg(15) => \ramloop[2].ram.r_n_0\,
       accumulator_reg(14) => \ramloop[2].ram.r_n_1\,
       accumulator_reg(13) => \ramloop[2].ram.r_n_2\,
@@ -8755,6 +14408,53 @@ begin
       douta(15 downto 0) => douta(15 downto 0),
       ram_douta(8 downto 0) => ram_douta(8 downto 0)
     );
+\has_mux_b.B\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_mux__parameterized0_9\
+     port map (
+      DOBDO(7) => \ramloop[1].ram.r_n_8\,
+      DOBDO(6) => \ramloop[1].ram.r_n_9\,
+      DOBDO(5) => \ramloop[1].ram.r_n_10\,
+      DOBDO(4) => \ramloop[1].ram.r_n_11\,
+      DOBDO(3) => \ramloop[1].ram.r_n_12\,
+      DOBDO(2) => \ramloop[1].ram.r_n_13\,
+      DOBDO(1) => \ramloop[1].ram.r_n_14\,
+      DOBDO(0) => \ramloop[1].ram.r_n_15\,
+      DOPBDOP(0) => \ramloop[1].ram.r_n_17\,
+      accumulator_reg(15) => \ramloop[2].ram.r_n_16\,
+      accumulator_reg(14) => \ramloop[2].ram.r_n_17\,
+      accumulator_reg(13) => \ramloop[2].ram.r_n_18\,
+      accumulator_reg(12) => \ramloop[2].ram.r_n_19\,
+      accumulator_reg(11) => \ramloop[2].ram.r_n_20\,
+      accumulator_reg(10) => \ramloop[2].ram.r_n_21\,
+      accumulator_reg(9) => \ramloop[2].ram.r_n_22\,
+      accumulator_reg(8) => \ramloop[2].ram.r_n_23\,
+      accumulator_reg(7) => \ramloop[2].ram.r_n_24\,
+      accumulator_reg(6) => \ramloop[2].ram.r_n_25\,
+      accumulator_reg(5) => \ramloop[2].ram.r_n_26\,
+      accumulator_reg(4) => \ramloop[2].ram.r_n_27\,
+      accumulator_reg(3) => \ramloop[2].ram.r_n_28\,
+      accumulator_reg(2) => \ramloop[2].ram.r_n_29\,
+      accumulator_reg(1) => \ramloop[2].ram.r_n_30\,
+      accumulator_reg(0) => \ramloop[2].ram.r_n_31\,
+      accumulator_reg_0(6) => \ramloop[3].ram.r_n_7\,
+      accumulator_reg_0(5) => \ramloop[3].ram.r_n_8\,
+      accumulator_reg_0(4) => \ramloop[3].ram.r_n_9\,
+      accumulator_reg_0(3) => \ramloop[3].ram.r_n_10\,
+      accumulator_reg_0(2) => \ramloop[3].ram.r_n_11\,
+      accumulator_reg_0(1) => \ramloop[3].ram.r_n_12\,
+      accumulator_reg_0(0) => \ramloop[3].ram.r_n_13\,
+      accumulator_reg_1(6) => \ramloop[4].ram.r_n_7\,
+      accumulator_reg_1(5) => \ramloop[4].ram.r_n_8\,
+      accumulator_reg_1(4) => \ramloop[4].ram.r_n_9\,
+      accumulator_reg_1(3) => \ramloop[4].ram.r_n_10\,
+      accumulator_reg_1(2) => \ramloop[4].ram.r_n_11\,
+      accumulator_reg_1(1) => \ramloop[4].ram.r_n_12\,
+      accumulator_reg_1(0) => \ramloop[4].ram.r_n_13\,
+      addrb(3 downto 0) => addrb(13 downto 10),
+      clkb => clkb,
+      doutb(15 downto 0) => doutb(15 downto 0),
+      enb => enb,
+      ram_doutb(8 downto 0) => ram_doutb(8 downto 0)
+    );
 ram_ena: unisim.vcomponents.LUT2
     generic map(
       INIT => X"1"
@@ -8773,16 +14473,42 @@ ram_ena: unisim.vcomponents.LUT2
       I1 => addra(12),
       O => \ram_ena_inferred__0/i__n_0\
     );
+ram_enb: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"10"
+    )
+        port map (
+      I0 => addrb(13),
+      I1 => addrb(12),
+      I2 => enb,
+      O => ram_enb_n_0
+    );
+\ram_enb_inferred__0/i_\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"40"
+    )
+        port map (
+      I0 => addrb(13),
+      I1 => enb,
+      I2 => addrb(12),
+      O => \ram_enb_inferred__0/i__n_0\
+    );
 \ramloop[0].ram.r\: entity work.design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width
      port map (
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ => ram_ena_n_0,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\ => ram_ena_n_0,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ => ram_enb_n_0,
       addra(11 downto 0) => addra(11 downto 0),
+      addrb(11 downto 0) => addrb(11 downto 0),
       clka => clka,
-      ram_douta(8 downto 0) => ram_douta(8 downto 0)
+      clkb => clkb,
+      enb => enb,
+      ram_douta(8 downto 0) => ram_douta(8 downto 0),
+      ram_doutb(8 downto 0) => ram_doutb(8 downto 0)
     );
 \ramloop[1].ram.r\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized0\
      port map (
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ => \ram_ena_inferred__0/i__n_0\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\ => \ram_ena_inferred__0/i__n_0\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ => \ram_enb_inferred__0/i__n_0\,
       DOADO(7) => \ramloop[1].ram.r_n_0\,
       DOADO(6) => \ramloop[1].ram.r_n_1\,
       DOADO(5) => \ramloop[1].ram.r_n_2\,
@@ -8791,57 +14517,111 @@ ram_ena: unisim.vcomponents.LUT2
       DOADO(2) => \ramloop[1].ram.r_n_5\,
       DOADO(1) => \ramloop[1].ram.r_n_6\,
       DOADO(0) => \ramloop[1].ram.r_n_7\,
-      DOPADOP(0) => \ramloop[1].ram.r_n_8\,
+      DOBDO(7) => \ramloop[1].ram.r_n_8\,
+      DOBDO(6) => \ramloop[1].ram.r_n_9\,
+      DOBDO(5) => \ramloop[1].ram.r_n_10\,
+      DOBDO(4) => \ramloop[1].ram.r_n_11\,
+      DOBDO(3) => \ramloop[1].ram.r_n_12\,
+      DOBDO(2) => \ramloop[1].ram.r_n_13\,
+      DOBDO(1) => \ramloop[1].ram.r_n_14\,
+      DOBDO(0) => \ramloop[1].ram.r_n_15\,
+      DOPADOP(0) => \ramloop[1].ram.r_n_16\,
+      DOPBDOP(0) => \ramloop[1].ram.r_n_17\,
       addra(11 downto 0) => addra(11 downto 0),
-      clka => clka
+      addrb(11 downto 0) => addrb(11 downto 0),
+      clka => clka,
+      clkb => clkb,
+      enb => enb
     );
 \ramloop[2].ram.r\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized1\
      port map (
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(15) => \ramloop[2].ram.r_n_0\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(14) => \ramloop[2].ram.r_n_1\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(13) => \ramloop[2].ram.r_n_2\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(12) => \ramloop[2].ram.r_n_3\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(11) => \ramloop[2].ram.r_n_4\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(10) => \ramloop[2].ram.r_n_5\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(9) => \ramloop[2].ram.r_n_6\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(8) => \ramloop[2].ram.r_n_7\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(7) => \ramloop[2].ram.r_n_8\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(6) => \ramloop[2].ram.r_n_9\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(5) => \ramloop[2].ram.r_n_10\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(4) => \ramloop[2].ram.r_n_11\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(3) => \ramloop[2].ram.r_n_12\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(2) => \ramloop[2].ram.r_n_13\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(1) => \ramloop[2].ram.r_n_14\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(0) => \ramloop[2].ram.r_n_15\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(15) => \ramloop[2].ram.r_n_0\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(14) => \ramloop[2].ram.r_n_1\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(13) => \ramloop[2].ram.r_n_2\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(12) => \ramloop[2].ram.r_n_3\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(11) => \ramloop[2].ram.r_n_4\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(10) => \ramloop[2].ram.r_n_5\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(9) => \ramloop[2].ram.r_n_6\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(8) => \ramloop[2].ram.r_n_7\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(7) => \ramloop[2].ram.r_n_8\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(6) => \ramloop[2].ram.r_n_9\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(5) => \ramloop[2].ram.r_n_10\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(4) => \ramloop[2].ram.r_n_11\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(3) => \ramloop[2].ram.r_n_12\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(2) => \ramloop[2].ram.r_n_13\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(1) => \ramloop[2].ram.r_n_14\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(0) => \ramloop[2].ram.r_n_15\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(15) => \ramloop[2].ram.r_n_16\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(14) => \ramloop[2].ram.r_n_17\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(13) => \ramloop[2].ram.r_n_18\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(12) => \ramloop[2].ram.r_n_19\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(11) => \ramloop[2].ram.r_n_20\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(10) => \ramloop[2].ram.r_n_21\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(9) => \ramloop[2].ram.r_n_22\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(8) => \ramloop[2].ram.r_n_23\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(7) => \ramloop[2].ram.r_n_24\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(6) => \ramloop[2].ram.r_n_25\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(5) => \ramloop[2].ram.r_n_26\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(4) => \ramloop[2].ram.r_n_27\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(3) => \ramloop[2].ram.r_n_28\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(2) => \ramloop[2].ram.r_n_29\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(1) => \ramloop[2].ram.r_n_30\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(0) => \ramloop[2].ram.r_n_31\,
       addra(9 downto 0) => addra(9 downto 0),
+      addrb(9 downto 0) => addrb(9 downto 0),
       clka => clka,
-      ena_array(0) => ena_array(8)
+      clkb => clkb,
+      ena_array(0) => ena_array(8),
+      enb => enb,
+      enb_array(0) => enb_array(8)
     );
 \ramloop[3].ram.r\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized2\
      port map (
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(6) => \ramloop[3].ram.r_n_0\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(5) => \ramloop[3].ram.r_n_1\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(4) => \ramloop[3].ram.r_n_2\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(3) => \ramloop[3].ram.r_n_3\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(2) => \ramloop[3].ram.r_n_4\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(1) => \ramloop[3].ram.r_n_5\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(0) => \ramloop[3].ram.r_n_6\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\ => ram_ena_n_0,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(6) => \ramloop[3].ram.r_n_0\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(5) => \ramloop[3].ram.r_n_1\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(4) => \ramloop[3].ram.r_n_2\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(3) => \ramloop[3].ram.r_n_3\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(2) => \ramloop[3].ram.r_n_4\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(1) => \ramloop[3].ram.r_n_5\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(0) => \ramloop[3].ram.r_n_6\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(6) => \ramloop[3].ram.r_n_7\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(5) => \ramloop[3].ram.r_n_8\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(4) => \ramloop[3].ram.r_n_9\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(3) => \ramloop[3].ram.r_n_10\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(2) => \ramloop[3].ram.r_n_11\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(1) => \ramloop[3].ram.r_n_12\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(0) => \ramloop[3].ram.r_n_13\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\ => ram_ena_n_0,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\ => ram_enb_n_0,
       addra(11 downto 0) => addra(11 downto 0),
-      clka => clka
+      addrb(11 downto 0) => addrb(11 downto 0),
+      clka => clka,
+      clkb => clkb,
+      enb => enb
     );
 \ramloop[4].ram.r\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized3\
      port map (
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(6) => \ramloop[4].ram.r_n_0\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(5) => \ramloop[4].ram.r_n_1\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(4) => \ramloop[4].ram.r_n_2\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(3) => \ramloop[4].ram.r_n_3\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(2) => \ramloop[4].ram.r_n_4\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(1) => \ramloop[4].ram.r_n_5\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(0) => \ramloop[4].ram.r_n_6\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\ => \ram_ena_inferred__0/i__n_0\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(6) => \ramloop[4].ram.r_n_0\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(5) => \ramloop[4].ram.r_n_1\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(4) => \ramloop[4].ram.r_n_2\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(3) => \ramloop[4].ram.r_n_3\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(2) => \ramloop[4].ram.r_n_4\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(1) => \ramloop[4].ram.r_n_5\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(0) => \ramloop[4].ram.r_n_6\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(6) => \ramloop[4].ram.r_n_7\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(5) => \ramloop[4].ram.r_n_8\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(4) => \ramloop[4].ram.r_n_9\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(3) => \ramloop[4].ram.r_n_10\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(2) => \ramloop[4].ram.r_n_11\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(1) => \ramloop[4].ram.r_n_12\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(0) => \ramloop[4].ram.r_n_13\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\ => \ram_ena_inferred__0/i__n_0\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\ => \ram_enb_inferred__0/i__n_0\,
       addra(11 downto 0) => addra(11 downto 0),
-      clka => clka
+      addrb(11 downto 0) => addrb(11 downto 0),
+      clka => clka,
+      clkb => clkb,
+      enb => enb
     );
 end STRUCTURE;
 library IEEE;
@@ -8851,8 +14631,12 @@ use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_generic_cstr__parameterized0\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    doutb : out STD_LOGIC_VECTOR ( 15 downto 0 );
     clka : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 13 downto 0 )
+    clkb : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 13 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 13 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_generic_cstr__parameterized0\ : entity is "blk_mem_gen_generic_cstr";
@@ -8860,11 +14644,23 @@ end \design_1_spatial_audio_top_0_0_blk_mem_gen_generic_cstr__parameterized0\;
 
 architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_generic_cstr__parameterized0\ is
   signal ena_array : STD_LOGIC_VECTOR ( 8 to 8 );
+  signal enb_array : STD_LOGIC_VECTOR ( 8 to 8 );
   signal ram_douta : STD_LOGIC_VECTOR ( 8 downto 0 );
+  signal ram_doutb : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal \ram_ena_inferred__0/i__n_0\ : STD_LOGIC;
   signal ram_ena_n_0 : STD_LOGIC;
+  signal \ram_enb_inferred__0/i__n_0\ : STD_LOGIC;
+  signal ram_enb_n_0 : STD_LOGIC;
   signal \ramloop[1].ram.r_n_0\ : STD_LOGIC;
   signal \ramloop[1].ram.r_n_1\ : STD_LOGIC;
+  signal \ramloop[1].ram.r_n_10\ : STD_LOGIC;
+  signal \ramloop[1].ram.r_n_11\ : STD_LOGIC;
+  signal \ramloop[1].ram.r_n_12\ : STD_LOGIC;
+  signal \ramloop[1].ram.r_n_13\ : STD_LOGIC;
+  signal \ramloop[1].ram.r_n_14\ : STD_LOGIC;
+  signal \ramloop[1].ram.r_n_15\ : STD_LOGIC;
+  signal \ramloop[1].ram.r_n_16\ : STD_LOGIC;
+  signal \ramloop[1].ram.r_n_17\ : STD_LOGIC;
   signal \ramloop[1].ram.r_n_2\ : STD_LOGIC;
   signal \ramloop[1].ram.r_n_3\ : STD_LOGIC;
   signal \ramloop[1].ram.r_n_4\ : STD_LOGIC;
@@ -8872,6 +14668,7 @@ architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_generic_cs
   signal \ramloop[1].ram.r_n_6\ : STD_LOGIC;
   signal \ramloop[1].ram.r_n_7\ : STD_LOGIC;
   signal \ramloop[1].ram.r_n_8\ : STD_LOGIC;
+  signal \ramloop[1].ram.r_n_9\ : STD_LOGIC;
   signal \ramloop[2].ram.r_n_0\ : STD_LOGIC;
   signal \ramloop[2].ram.r_n_1\ : STD_LOGIC;
   signal \ramloop[2].ram.r_n_10\ : STD_LOGIC;
@@ -8880,8 +14677,24 @@ architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_generic_cs
   signal \ramloop[2].ram.r_n_13\ : STD_LOGIC;
   signal \ramloop[2].ram.r_n_14\ : STD_LOGIC;
   signal \ramloop[2].ram.r_n_15\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_16\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_17\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_18\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_19\ : STD_LOGIC;
   signal \ramloop[2].ram.r_n_2\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_20\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_21\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_22\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_23\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_24\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_25\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_26\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_27\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_28\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_29\ : STD_LOGIC;
   signal \ramloop[2].ram.r_n_3\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_30\ : STD_LOGIC;
+  signal \ramloop[2].ram.r_n_31\ : STD_LOGIC;
   signal \ramloop[2].ram.r_n_4\ : STD_LOGIC;
   signal \ramloop[2].ram.r_n_5\ : STD_LOGIC;
   signal \ramloop[2].ram.r_n_6\ : STD_LOGIC;
@@ -8890,23 +14703,43 @@ architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_generic_cs
   signal \ramloop[2].ram.r_n_9\ : STD_LOGIC;
   signal \ramloop[3].ram.r_n_0\ : STD_LOGIC;
   signal \ramloop[3].ram.r_n_1\ : STD_LOGIC;
+  signal \ramloop[3].ram.r_n_10\ : STD_LOGIC;
+  signal \ramloop[3].ram.r_n_11\ : STD_LOGIC;
+  signal \ramloop[3].ram.r_n_12\ : STD_LOGIC;
+  signal \ramloop[3].ram.r_n_13\ : STD_LOGIC;
   signal \ramloop[3].ram.r_n_2\ : STD_LOGIC;
   signal \ramloop[3].ram.r_n_3\ : STD_LOGIC;
   signal \ramloop[3].ram.r_n_4\ : STD_LOGIC;
   signal \ramloop[3].ram.r_n_5\ : STD_LOGIC;
   signal \ramloop[3].ram.r_n_6\ : STD_LOGIC;
+  signal \ramloop[3].ram.r_n_7\ : STD_LOGIC;
+  signal \ramloop[3].ram.r_n_8\ : STD_LOGIC;
+  signal \ramloop[3].ram.r_n_9\ : STD_LOGIC;
   signal \ramloop[4].ram.r_n_0\ : STD_LOGIC;
   signal \ramloop[4].ram.r_n_1\ : STD_LOGIC;
+  signal \ramloop[4].ram.r_n_10\ : STD_LOGIC;
+  signal \ramloop[4].ram.r_n_11\ : STD_LOGIC;
+  signal \ramloop[4].ram.r_n_12\ : STD_LOGIC;
+  signal \ramloop[4].ram.r_n_13\ : STD_LOGIC;
   signal \ramloop[4].ram.r_n_2\ : STD_LOGIC;
   signal \ramloop[4].ram.r_n_3\ : STD_LOGIC;
   signal \ramloop[4].ram.r_n_4\ : STD_LOGIC;
   signal \ramloop[4].ram.r_n_5\ : STD_LOGIC;
   signal \ramloop[4].ram.r_n_6\ : STD_LOGIC;
+  signal \ramloop[4].ram.r_n_7\ : STD_LOGIC;
+  signal \ramloop[4].ram.r_n_8\ : STD_LOGIC;
+  signal \ramloop[4].ram.r_n_9\ : STD_LOGIC;
 begin
 \bindec_a.bindec_inst_a\: entity work.design_1_spatial_audio_top_0_0_bindec
      port map (
       addra(3 downto 0) => addra(13 downto 10),
       ena_array(0) => ena_array(8)
+    );
+\bindec_b.bindec_inst_b\: entity work.design_1_spatial_audio_top_0_0_bindec_5
+     port map (
+      addrb(3 downto 0) => addrb(13 downto 10),
+      enb => enb,
+      enb_array(0) => enb_array(8)
     );
 \has_mux_a.A\: entity work.design_1_spatial_audio_top_0_0_blk_mem_gen_mux
      port map (
@@ -8918,7 +14751,7 @@ begin
       DOADO(2) => \ramloop[1].ram.r_n_5\,
       DOADO(1) => \ramloop[1].ram.r_n_6\,
       DOADO(0) => \ramloop[1].ram.r_n_7\,
-      DOPADOP(0) => \ramloop[1].ram.r_n_8\,
+      DOPADOP(0) => \ramloop[1].ram.r_n_16\,
       accumulator_reg(15) => \ramloop[2].ram.r_n_0\,
       accumulator_reg(14) => \ramloop[2].ram.r_n_1\,
       accumulator_reg(13) => \ramloop[2].ram.r_n_2\,
@@ -8954,6 +14787,53 @@ begin
       douta(15 downto 0) => douta(15 downto 0),
       ram_douta(8 downto 0) => ram_douta(8 downto 0)
     );
+\has_mux_b.B\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_mux__parameterized0\
+     port map (
+      DOBDO(7) => \ramloop[1].ram.r_n_8\,
+      DOBDO(6) => \ramloop[1].ram.r_n_9\,
+      DOBDO(5) => \ramloop[1].ram.r_n_10\,
+      DOBDO(4) => \ramloop[1].ram.r_n_11\,
+      DOBDO(3) => \ramloop[1].ram.r_n_12\,
+      DOBDO(2) => \ramloop[1].ram.r_n_13\,
+      DOBDO(1) => \ramloop[1].ram.r_n_14\,
+      DOBDO(0) => \ramloop[1].ram.r_n_15\,
+      DOPBDOP(0) => \ramloop[1].ram.r_n_17\,
+      accumulator_reg(15) => \ramloop[2].ram.r_n_16\,
+      accumulator_reg(14) => \ramloop[2].ram.r_n_17\,
+      accumulator_reg(13) => \ramloop[2].ram.r_n_18\,
+      accumulator_reg(12) => \ramloop[2].ram.r_n_19\,
+      accumulator_reg(11) => \ramloop[2].ram.r_n_20\,
+      accumulator_reg(10) => \ramloop[2].ram.r_n_21\,
+      accumulator_reg(9) => \ramloop[2].ram.r_n_22\,
+      accumulator_reg(8) => \ramloop[2].ram.r_n_23\,
+      accumulator_reg(7) => \ramloop[2].ram.r_n_24\,
+      accumulator_reg(6) => \ramloop[2].ram.r_n_25\,
+      accumulator_reg(5) => \ramloop[2].ram.r_n_26\,
+      accumulator_reg(4) => \ramloop[2].ram.r_n_27\,
+      accumulator_reg(3) => \ramloop[2].ram.r_n_28\,
+      accumulator_reg(2) => \ramloop[2].ram.r_n_29\,
+      accumulator_reg(1) => \ramloop[2].ram.r_n_30\,
+      accumulator_reg(0) => \ramloop[2].ram.r_n_31\,
+      accumulator_reg_0(6) => \ramloop[3].ram.r_n_7\,
+      accumulator_reg_0(5) => \ramloop[3].ram.r_n_8\,
+      accumulator_reg_0(4) => \ramloop[3].ram.r_n_9\,
+      accumulator_reg_0(3) => \ramloop[3].ram.r_n_10\,
+      accumulator_reg_0(2) => \ramloop[3].ram.r_n_11\,
+      accumulator_reg_0(1) => \ramloop[3].ram.r_n_12\,
+      accumulator_reg_0(0) => \ramloop[3].ram.r_n_13\,
+      accumulator_reg_1(6) => \ramloop[4].ram.r_n_7\,
+      accumulator_reg_1(5) => \ramloop[4].ram.r_n_8\,
+      accumulator_reg_1(4) => \ramloop[4].ram.r_n_9\,
+      accumulator_reg_1(3) => \ramloop[4].ram.r_n_10\,
+      accumulator_reg_1(2) => \ramloop[4].ram.r_n_11\,
+      accumulator_reg_1(1) => \ramloop[4].ram.r_n_12\,
+      accumulator_reg_1(0) => \ramloop[4].ram.r_n_13\,
+      addrb(3 downto 0) => addrb(13 downto 10),
+      clkb => clkb,
+      doutb(15 downto 0) => doutb(15 downto 0),
+      enb => enb,
+      ram_doutb(8 downto 0) => ram_doutb(8 downto 0)
+    );
 ram_ena: unisim.vcomponents.LUT2
     generic map(
       INIT => X"1"
@@ -8972,16 +14852,42 @@ ram_ena: unisim.vcomponents.LUT2
       I1 => addra(12),
       O => \ram_ena_inferred__0/i__n_0\
     );
+ram_enb: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"10"
+    )
+        port map (
+      I0 => addrb(13),
+      I1 => addrb(12),
+      I2 => enb,
+      O => ram_enb_n_0
+    );
+\ram_enb_inferred__0/i_\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"40"
+    )
+        port map (
+      I0 => addrb(13),
+      I1 => enb,
+      I2 => addrb(12),
+      O => \ram_enb_inferred__0/i__n_0\
+    );
 \ramloop[0].ram.r\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized4\
      port map (
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ => ram_ena_n_0,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\ => ram_ena_n_0,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ => ram_enb_n_0,
       addra(11 downto 0) => addra(11 downto 0),
+      addrb(11 downto 0) => addrb(11 downto 0),
       clka => clka,
-      ram_douta(8 downto 0) => ram_douta(8 downto 0)
+      clkb => clkb,
+      enb => enb,
+      ram_douta(8 downto 0) => ram_douta(8 downto 0),
+      ram_doutb(8 downto 0) => ram_doutb(8 downto 0)
     );
 \ramloop[1].ram.r\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized5\
      port map (
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\ => \ram_ena_inferred__0/i__n_0\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\ => \ram_ena_inferred__0/i__n_0\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\ => \ram_enb_inferred__0/i__n_0\,
       DOADO(7) => \ramloop[1].ram.r_n_0\,
       DOADO(6) => \ramloop[1].ram.r_n_1\,
       DOADO(5) => \ramloop[1].ram.r_n_2\,
@@ -8990,57 +14896,111 @@ ram_ena: unisim.vcomponents.LUT2
       DOADO(2) => \ramloop[1].ram.r_n_5\,
       DOADO(1) => \ramloop[1].ram.r_n_6\,
       DOADO(0) => \ramloop[1].ram.r_n_7\,
-      DOPADOP(0) => \ramloop[1].ram.r_n_8\,
+      DOBDO(7) => \ramloop[1].ram.r_n_8\,
+      DOBDO(6) => \ramloop[1].ram.r_n_9\,
+      DOBDO(5) => \ramloop[1].ram.r_n_10\,
+      DOBDO(4) => \ramloop[1].ram.r_n_11\,
+      DOBDO(3) => \ramloop[1].ram.r_n_12\,
+      DOBDO(2) => \ramloop[1].ram.r_n_13\,
+      DOBDO(1) => \ramloop[1].ram.r_n_14\,
+      DOBDO(0) => \ramloop[1].ram.r_n_15\,
+      DOPADOP(0) => \ramloop[1].ram.r_n_16\,
+      DOPBDOP(0) => \ramloop[1].ram.r_n_17\,
       addra(11 downto 0) => addra(11 downto 0),
-      clka => clka
+      addrb(11 downto 0) => addrb(11 downto 0),
+      clka => clka,
+      clkb => clkb,
+      enb => enb
     );
 \ramloop[2].ram.r\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized6\
      port map (
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(15) => \ramloop[2].ram.r_n_0\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(14) => \ramloop[2].ram.r_n_1\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(13) => \ramloop[2].ram.r_n_2\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(12) => \ramloop[2].ram.r_n_3\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(11) => \ramloop[2].ram.r_n_4\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(10) => \ramloop[2].ram.r_n_5\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(9) => \ramloop[2].ram.r_n_6\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(8) => \ramloop[2].ram.r_n_7\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(7) => \ramloop[2].ram.r_n_8\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(6) => \ramloop[2].ram.r_n_9\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(5) => \ramloop[2].ram.r_n_10\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(4) => \ramloop[2].ram.r_n_11\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(3) => \ramloop[2].ram.r_n_12\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(2) => \ramloop[2].ram.r_n_13\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(1) => \ramloop[2].ram.r_n_14\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram\(0) => \ramloop[2].ram.r_n_15\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(15) => \ramloop[2].ram.r_n_0\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(14) => \ramloop[2].ram.r_n_1\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(13) => \ramloop[2].ram.r_n_2\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(12) => \ramloop[2].ram.r_n_3\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(11) => \ramloop[2].ram.r_n_4\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(10) => \ramloop[2].ram.r_n_5\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(9) => \ramloop[2].ram.r_n_6\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(8) => \ramloop[2].ram.r_n_7\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(7) => \ramloop[2].ram.r_n_8\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(6) => \ramloop[2].ram.r_n_9\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(5) => \ramloop[2].ram.r_n_10\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(4) => \ramloop[2].ram.r_n_11\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(3) => \ramloop[2].ram.r_n_12\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(2) => \ramloop[2].ram.r_n_13\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(1) => \ramloop[2].ram.r_n_14\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram\(0) => \ramloop[2].ram.r_n_15\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(15) => \ramloop[2].ram.r_n_16\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(14) => \ramloop[2].ram.r_n_17\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(13) => \ramloop[2].ram.r_n_18\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(12) => \ramloop[2].ram.r_n_19\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(11) => \ramloop[2].ram.r_n_20\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(10) => \ramloop[2].ram.r_n_21\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(9) => \ramloop[2].ram.r_n_22\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(8) => \ramloop[2].ram.r_n_23\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(7) => \ramloop[2].ram.r_n_24\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(6) => \ramloop[2].ram.r_n_25\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(5) => \ramloop[2].ram.r_n_26\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(4) => \ramloop[2].ram.r_n_27\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(3) => \ramloop[2].ram.r_n_28\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(2) => \ramloop[2].ram.r_n_29\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(1) => \ramloop[2].ram.r_n_30\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_0\(0) => \ramloop[2].ram.r_n_31\,
       addra(9 downto 0) => addra(9 downto 0),
+      addrb(9 downto 0) => addrb(9 downto 0),
       clka => clka,
-      ena_array(0) => ena_array(8)
+      clkb => clkb,
+      ena_array(0) => ena_array(8),
+      enb => enb,
+      enb_array(0) => enb_array(8)
     );
 \ramloop[3].ram.r\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized7\
      port map (
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(6) => \ramloop[3].ram.r_n_0\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(5) => \ramloop[3].ram.r_n_1\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(4) => \ramloop[3].ram.r_n_2\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(3) => \ramloop[3].ram.r_n_3\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(2) => \ramloop[3].ram.r_n_4\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(1) => \ramloop[3].ram.r_n_5\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(0) => \ramloop[3].ram.r_n_6\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\ => ram_ena_n_0,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(6) => \ramloop[3].ram.r_n_0\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(5) => \ramloop[3].ram.r_n_1\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(4) => \ramloop[3].ram.r_n_2\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(3) => \ramloop[3].ram.r_n_3\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(2) => \ramloop[3].ram.r_n_4\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(1) => \ramloop[3].ram.r_n_5\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(0) => \ramloop[3].ram.r_n_6\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(6) => \ramloop[3].ram.r_n_7\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(5) => \ramloop[3].ram.r_n_8\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(4) => \ramloop[3].ram.r_n_9\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(3) => \ramloop[3].ram.r_n_10\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(2) => \ramloop[3].ram.r_n_11\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(1) => \ramloop[3].ram.r_n_12\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(0) => \ramloop[3].ram.r_n_13\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\ => ram_ena_n_0,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\ => ram_enb_n_0,
       addra(11 downto 0) => addra(11 downto 0),
-      clka => clka
+      addrb(11 downto 0) => addrb(11 downto 0),
+      clka => clka,
+      clkb => clkb,
+      enb => enb
     );
 \ramloop[4].ram.r\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_prim_width__parameterized8\
      port map (
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(6) => \ramloop[4].ram.r_n_0\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(5) => \ramloop[4].ram.r_n_1\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(4) => \ramloop[4].ram.r_n_2\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(3) => \ramloop[4].ram.r_n_3\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(2) => \ramloop[4].ram.r_n_4\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(1) => \ramloop[4].ram.r_n_5\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram\(0) => \ramloop[4].ram.r_n_6\,
-      \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_0\ => \ram_ena_inferred__0/i__n_0\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(6) => \ramloop[4].ram.r_n_0\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(5) => \ramloop[4].ram.r_n_1\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(4) => \ramloop[4].ram.r_n_2\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(3) => \ramloop[4].ram.r_n_3\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(2) => \ramloop[4].ram.r_n_4\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(1) => \ramloop[4].ram.r_n_5\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram\(0) => \ramloop[4].ram.r_n_6\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(6) => \ramloop[4].ram.r_n_7\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(5) => \ramloop[4].ram.r_n_8\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(4) => \ramloop[4].ram.r_n_9\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(3) => \ramloop[4].ram.r_n_10\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(2) => \ramloop[4].ram.r_n_11\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(1) => \ramloop[4].ram.r_n_12\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_0\(0) => \ramloop[4].ram.r_n_13\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_1\ => \ram_ena_inferred__0/i__n_0\,
+      \DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram_2\ => \ram_enb_inferred__0/i__n_0\,
       addra(11 downto 0) => addra(11 downto 0),
-      clka => clka
+      addrb(11 downto 0) => addrb(11 downto 0),
+      clka => clka,
+      clkb => clkb,
+      enb => enb
     );
 end STRUCTURE;
 library IEEE;
@@ -9050,8 +15010,12 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_spatial_audio_top_0_0_blk_mem_gen_top is
   port (
     douta : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    doutb : out STD_LOGIC_VECTOR ( 15 downto 0 );
     clka : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 13 downto 0 )
+    clkb : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 13 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 13 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_blk_mem_gen_top : entity is "blk_mem_gen_top";
@@ -9062,8 +15026,12 @@ begin
 \valid.cstr\: entity work.design_1_spatial_audio_top_0_0_blk_mem_gen_generic_cstr
      port map (
       addra(13 downto 0) => addra(13 downto 0),
+      addrb(13 downto 0) => addrb(13 downto 0),
       clka => clka,
-      douta(15 downto 0) => douta(15 downto 0)
+      clkb => clkb,
+      douta(15 downto 0) => douta(15 downto 0),
+      doutb(15 downto 0) => doutb(15 downto 0),
+      enb => enb
     );
 end STRUCTURE;
 library IEEE;
@@ -9073,8 +15041,12 @@ use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_top__parameterized0\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    doutb : out STD_LOGIC_VECTOR ( 15 downto 0 );
     clka : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 13 downto 0 )
+    clkb : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 13 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 13 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_top__parameterized0\ : entity is "blk_mem_gen_top";
@@ -9085,8 +15057,12 @@ begin
 \valid.cstr\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_generic_cstr__parameterized0\
      port map (
       addra(13 downto 0) => addra(13 downto 0),
+      addrb(13 downto 0) => addrb(13 downto 0),
       clka => clka,
-      douta(15 downto 0) => douta(15 downto 0)
+      clkb => clkb,
+      douta(15 downto 0) => douta(15 downto 0),
+      doutb(15 downto 0) => doutb(15 downto 0),
+      enb => enb
     );
 end STRUCTURE;
 library IEEE;
@@ -9096,8 +15072,12 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2_synth is
   port (
     douta : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    doutb : out STD_LOGIC_VECTOR ( 15 downto 0 );
     clka : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 13 downto 0 )
+    clkb : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 13 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 13 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2_synth : entity is "blk_mem_gen_v8_4_2_synth";
@@ -9108,8 +15088,12 @@ begin
 \gnbram.gnativebmg.native_blk_mem_gen\: entity work.design_1_spatial_audio_top_0_0_blk_mem_gen_top
      port map (
       addra(13 downto 0) => addra(13 downto 0),
+      addrb(13 downto 0) => addrb(13 downto 0),
       clka => clka,
-      douta(15 downto 0) => douta(15 downto 0)
+      clkb => clkb,
+      douta(15 downto 0) => douta(15 downto 0),
+      doutb(15 downto 0) => doutb(15 downto 0),
+      enb => enb
     );
 end STRUCTURE;
 library IEEE;
@@ -9119,8 +15103,12 @@ use UNISIM.VCOMPONENTS.ALL;
 entity \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2_synth__parameterized0\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    doutb : out STD_LOGIC_VECTOR ( 15 downto 0 );
     clka : in STD_LOGIC;
-    addra : in STD_LOGIC_VECTOR ( 13 downto 0 )
+    clkb : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addra : in STD_LOGIC_VECTOR ( 13 downto 0 );
+    addrb : in STD_LOGIC_VECTOR ( 13 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2_synth__parameterized0\ : entity is "blk_mem_gen_v8_4_2_synth";
@@ -9131,8 +15119,12 @@ begin
 \gnbram.gnativebmg.native_blk_mem_gen\: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_top__parameterized0\
      port map (
       addra(13 downto 0) => addra(13 downto 0),
+      addrb(13 downto 0) => addrb(13 downto 0),
       clka => clka,
-      douta(15 downto 0) => douta(15 downto 0)
+      clkb => clkb,
+      douta(15 downto 0) => douta(15 downto 0),
+      doutb(15 downto 0) => doutb(15 downto 0),
+      enb => enb
     );
 end STRUCTURE;
 library IEEE;
@@ -9252,7 +15244,7 @@ entity design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2 is
   attribute C_EN_SLEEP_PIN : integer;
   attribute C_EN_SLEEP_PIN of design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2 : entity is "Estimated Power for IP     :     4.286356 mW";
+  attribute C_EST_POWER_SUMMARY of design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2 : entity is "Estimated Power for IP     :     8.572712 mW";
   attribute C_FAMILY : string;
   attribute C_FAMILY of design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2 : entity is "artix7";
   attribute C_HAS_AXI_ID : integer;
@@ -9260,13 +15252,13 @@ entity design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2 is
   attribute C_HAS_ENA : integer;
   attribute C_HAS_ENA of design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_ENB : integer;
-  attribute C_HAS_ENB of design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2 : entity is 0;
+  attribute C_HAS_ENB of design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2 : entity is 1;
   attribute C_HAS_INJECTERR : integer;
   attribute C_HAS_INJECTERR of design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_A : integer;
   attribute C_HAS_MEM_OUTPUT_REGS_A of design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2 : entity is 1;
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_B of design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2 : entity is 0;
+  attribute C_HAS_MEM_OUTPUT_REGS_B of design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2 : entity is 1;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;
   attribute C_HAS_MUX_OUTPUT_REGS_A of design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_B : integer;
@@ -9296,7 +15288,7 @@ entity design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2 is
   attribute C_LOAD_INIT_FILE : integer;
   attribute C_LOAD_INIT_FILE of design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2 : entity is 1;
   attribute C_MEM_TYPE : integer;
-  attribute C_MEM_TYPE of design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2 : entity is 3;
+  attribute C_MEM_TYPE of design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2 : entity is 4;
   attribute C_MUX_PIPELINE_STAGES : integer;
   attribute C_MUX_PIPELINE_STAGES of design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2 : entity is 0;
   attribute C_PRIM_TYPE : integer;
@@ -9365,22 +15357,6 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2 is
   signal \<const0>\ : STD_LOGIC;
 begin
   dbiterr <= \<const0>\;
-  doutb(15) <= \<const0>\;
-  doutb(14) <= \<const0>\;
-  doutb(13) <= \<const0>\;
-  doutb(12) <= \<const0>\;
-  doutb(11) <= \<const0>\;
-  doutb(10) <= \<const0>\;
-  doutb(9) <= \<const0>\;
-  doutb(8) <= \<const0>\;
-  doutb(7) <= \<const0>\;
-  doutb(6) <= \<const0>\;
-  doutb(5) <= \<const0>\;
-  doutb(4) <= \<const0>\;
-  doutb(3) <= \<const0>\;
-  doutb(2) <= \<const0>\;
-  doutb(1) <= \<const0>\;
-  doutb(0) <= \<const0>\;
   rdaddrecc(13) <= \<const0>\;
   rdaddrecc(12) <= \<const0>\;
   rdaddrecc(11) <= \<const0>\;
@@ -9455,8 +15431,12 @@ GND: unisim.vcomponents.GND
 inst_blk_mem_gen: entity work.design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2_synth
      port map (
       addra(13 downto 0) => addra(13 downto 0),
+      addrb(13 downto 0) => addrb(13 downto 0),
       clka => clka,
-      douta(15 downto 0) => douta(15 downto 0)
+      clkb => clkb,
+      douta(15 downto 0) => douta(15 downto 0),
+      doutb(15 downto 0) => doutb(15 downto 0),
+      enb => enb
     );
 end STRUCTURE;
 library IEEE;
@@ -9576,7 +15556,7 @@ entity \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__parameterized1\ is
   attribute C_EN_SLEEP_PIN : integer;
   attribute C_EN_SLEEP_PIN of \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__parameterized1\ : entity is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__parameterized1\ : entity is "Estimated Power for IP     :     4.286356 mW";
+  attribute C_EST_POWER_SUMMARY of \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__parameterized1\ : entity is "Estimated Power for IP     :     8.572712 mW";
   attribute C_FAMILY : string;
   attribute C_FAMILY of \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__parameterized1\ : entity is "artix7";
   attribute C_HAS_AXI_ID : integer;
@@ -9584,13 +15564,13 @@ entity \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__parameterized1\ is
   attribute C_HAS_ENA : integer;
   attribute C_HAS_ENA of \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__parameterized1\ : entity is 0;
   attribute C_HAS_ENB : integer;
-  attribute C_HAS_ENB of \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__parameterized1\ : entity is 0;
+  attribute C_HAS_ENB of \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__parameterized1\ : entity is 1;
   attribute C_HAS_INJECTERR : integer;
   attribute C_HAS_INJECTERR of \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__parameterized1\ : entity is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_A : integer;
   attribute C_HAS_MEM_OUTPUT_REGS_A of \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__parameterized1\ : entity is 1;
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_B of \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__parameterized1\ : entity is 0;
+  attribute C_HAS_MEM_OUTPUT_REGS_B of \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__parameterized1\ : entity is 1;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;
   attribute C_HAS_MUX_OUTPUT_REGS_A of \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__parameterized1\ : entity is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_B : integer;
@@ -9620,7 +15600,7 @@ entity \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__parameterized1\ is
   attribute C_LOAD_INIT_FILE : integer;
   attribute C_LOAD_INIT_FILE of \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__parameterized1\ : entity is 1;
   attribute C_MEM_TYPE : integer;
-  attribute C_MEM_TYPE of \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__parameterized1\ : entity is 3;
+  attribute C_MEM_TYPE of \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__parameterized1\ : entity is 4;
   attribute C_MUX_PIPELINE_STAGES : integer;
   attribute C_MUX_PIPELINE_STAGES of \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__parameterized1\ : entity is 0;
   attribute C_PRIM_TYPE : integer;
@@ -9689,22 +15669,6 @@ architecture STRUCTURE of \design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__pa
   signal \<const0>\ : STD_LOGIC;
 begin
   dbiterr <= \<const0>\;
-  doutb(15) <= \<const0>\;
-  doutb(14) <= \<const0>\;
-  doutb(13) <= \<const0>\;
-  doutb(12) <= \<const0>\;
-  doutb(11) <= \<const0>\;
-  doutb(10) <= \<const0>\;
-  doutb(9) <= \<const0>\;
-  doutb(8) <= \<const0>\;
-  doutb(7) <= \<const0>\;
-  doutb(6) <= \<const0>\;
-  doutb(5) <= \<const0>\;
-  doutb(4) <= \<const0>\;
-  doutb(3) <= \<const0>\;
-  doutb(2) <= \<const0>\;
-  doutb(1) <= \<const0>\;
-  doutb(0) <= \<const0>\;
   rdaddrecc(13) <= \<const0>\;
   rdaddrecc(12) <= \<const0>\;
   rdaddrecc(11) <= \<const0>\;
@@ -9779,8 +15743,12 @@ GND: unisim.vcomponents.GND
 inst_blk_mem_gen: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2_synth__parameterized0\
      port map (
       addra(13 downto 0) => addra(13 downto 0),
+      addrb(13 downto 0) => addrb(13 downto 0),
       clka => clka,
-      douta(15 downto 0) => douta(15 downto 0)
+      clkb => clkb,
+      douta(15 downto 0) => douta(15 downto 0),
+      doutb(15 downto 0) => doutb(15 downto 0),
+      enb => enb
     );
 end STRUCTURE;
 library IEEE;
@@ -9791,7 +15759,11 @@ entity design_1_spatial_audio_top_0_0_rom_hrtf_left is
   port (
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 13 downto 0 );
-    douta : out STD_LOGIC_VECTOR ( 15 downto 0 )
+    douta : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    clkb : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addrb : in STD_LOGIC_VECTOR ( 13 downto 0 );
+    doutb : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of design_1_spatial_audio_top_0_0_rom_hrtf_left : entity is "rom_hrtf_left,blk_mem_gen_v8_4_2,{}";
@@ -9816,7 +15788,6 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_rom_hrtf_left is
   signal NLW_U0_s_axi_sbiterr_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_s_axi_wready_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_sbiterr_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_doutb_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal NLW_U0_rdaddrecc_UNCONNECTED : STD_LOGIC_VECTOR ( 13 downto 0 );
   signal NLW_U0_s_axi_bid_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_U0_s_axi_bresp_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -9871,7 +15842,7 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_rom_hrtf_left is
   attribute C_EN_SLEEP_PIN : integer;
   attribute C_EN_SLEEP_PIN of U0 : label is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of U0 : label is "Estimated Power for IP     :     4.286356 mW";
+  attribute C_EST_POWER_SUMMARY of U0 : label is "Estimated Power for IP     :     8.572712 mW";
   attribute C_FAMILY : string;
   attribute C_FAMILY of U0 : label is "artix7";
   attribute C_HAS_AXI_ID : integer;
@@ -9879,13 +15850,13 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_rom_hrtf_left is
   attribute C_HAS_ENA : integer;
   attribute C_HAS_ENA of U0 : label is 0;
   attribute C_HAS_ENB : integer;
-  attribute C_HAS_ENB of U0 : label is 0;
+  attribute C_HAS_ENB of U0 : label is 1;
   attribute C_HAS_INJECTERR : integer;
   attribute C_HAS_INJECTERR of U0 : label is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_A : integer;
   attribute C_HAS_MEM_OUTPUT_REGS_A of U0 : label is 1;
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_B of U0 : label is 0;
+  attribute C_HAS_MEM_OUTPUT_REGS_B of U0 : label is 1;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;
   attribute C_HAS_MUX_OUTPUT_REGS_A of U0 : label is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_B : integer;
@@ -9915,7 +15886,7 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_rom_hrtf_left is
   attribute C_LOAD_INIT_FILE : integer;
   attribute C_LOAD_INIT_FILE of U0 : label is 1;
   attribute C_MEM_TYPE : integer;
-  attribute C_MEM_TYPE of U0 : label is 3;
+  attribute C_MEM_TYPE of U0 : label is 4;
   attribute C_MUX_PIPELINE_STAGES : integer;
   attribute C_MUX_PIPELINE_STAGES of U0 : label is 0;
   attribute C_PRIM_TYPE : integer;
@@ -9979,24 +15950,29 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_rom_hrtf_left is
   attribute x_interface_info of clka : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA CLK";
   attribute x_interface_parameter : string;
   attribute x_interface_parameter of clka : signal is "XIL_INTERFACENAME BRAM_PORTA, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1";
+  attribute x_interface_info of clkb : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTB CLK";
+  attribute x_interface_parameter of clkb : signal is "XIL_INTERFACENAME BRAM_PORTB, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1";
+  attribute x_interface_info of enb : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTB EN";
   attribute x_interface_info of addra : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR";
+  attribute x_interface_info of addrb : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTB ADDR";
   attribute x_interface_info of douta : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA DOUT";
+  attribute x_interface_info of doutb : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTB DOUT";
 begin
 U0: entity work.design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2
      port map (
       addra(13 downto 0) => addra(13 downto 0),
-      addrb(13 downto 0) => B"00000000000000",
+      addrb(13 downto 0) => addrb(13 downto 0),
       clka => clka,
-      clkb => '0',
+      clkb => clkb,
       dbiterr => NLW_U0_dbiterr_UNCONNECTED,
       deepsleep => '0',
       dina(15 downto 0) => B"0000000000000000",
       dinb(15 downto 0) => B"0000000000000000",
       douta(15 downto 0) => douta(15 downto 0),
-      doutb(15 downto 0) => NLW_U0_doutb_UNCONNECTED(15 downto 0),
+      doutb(15 downto 0) => doutb(15 downto 0),
       eccpipece => '0',
       ena => '0',
-      enb => '0',
+      enb => enb,
       injectdbiterr => '0',
       injectsbiterr => '0',
       rdaddrecc(13 downto 0) => NLW_U0_rdaddrecc_UNCONNECTED(13 downto 0),
@@ -10057,7 +16033,11 @@ entity design_1_spatial_audio_top_0_0_rom_hrtf_right is
   port (
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 13 downto 0 );
-    douta : out STD_LOGIC_VECTOR ( 15 downto 0 )
+    douta : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    clkb : in STD_LOGIC;
+    enb : in STD_LOGIC;
+    addrb : in STD_LOGIC_VECTOR ( 13 downto 0 );
+    doutb : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of design_1_spatial_audio_top_0_0_rom_hrtf_right : entity is "rom_hrtf_right,blk_mem_gen_v8_4_2,{}";
@@ -10082,7 +16062,6 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_rom_hrtf_right is
   signal NLW_U0_s_axi_sbiterr_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_s_axi_wready_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_sbiterr_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_doutb_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal NLW_U0_rdaddrecc_UNCONNECTED : STD_LOGIC_VECTOR ( 13 downto 0 );
   signal NLW_U0_s_axi_bid_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_U0_s_axi_bresp_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -10137,7 +16116,7 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_rom_hrtf_right is
   attribute C_EN_SLEEP_PIN : integer;
   attribute C_EN_SLEEP_PIN of U0 : label is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of U0 : label is "Estimated Power for IP     :     4.286356 mW";
+  attribute C_EST_POWER_SUMMARY of U0 : label is "Estimated Power for IP     :     8.572712 mW";
   attribute C_FAMILY : string;
   attribute C_FAMILY of U0 : label is "artix7";
   attribute C_HAS_AXI_ID : integer;
@@ -10145,13 +16124,13 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_rom_hrtf_right is
   attribute C_HAS_ENA : integer;
   attribute C_HAS_ENA of U0 : label is 0;
   attribute C_HAS_ENB : integer;
-  attribute C_HAS_ENB of U0 : label is 0;
+  attribute C_HAS_ENB of U0 : label is 1;
   attribute C_HAS_INJECTERR : integer;
   attribute C_HAS_INJECTERR of U0 : label is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_A : integer;
   attribute C_HAS_MEM_OUTPUT_REGS_A of U0 : label is 1;
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_B of U0 : label is 0;
+  attribute C_HAS_MEM_OUTPUT_REGS_B of U0 : label is 1;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;
   attribute C_HAS_MUX_OUTPUT_REGS_A of U0 : label is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_B : integer;
@@ -10181,7 +16160,7 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_rom_hrtf_right is
   attribute C_LOAD_INIT_FILE : integer;
   attribute C_LOAD_INIT_FILE of U0 : label is 1;
   attribute C_MEM_TYPE : integer;
-  attribute C_MEM_TYPE of U0 : label is 3;
+  attribute C_MEM_TYPE of U0 : label is 4;
   attribute C_MUX_PIPELINE_STAGES : integer;
   attribute C_MUX_PIPELINE_STAGES of U0 : label is 0;
   attribute C_PRIM_TYPE : integer;
@@ -10245,24 +16224,29 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_rom_hrtf_right is
   attribute x_interface_info of clka : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA CLK";
   attribute x_interface_parameter : string;
   attribute x_interface_parameter of clka : signal is "XIL_INTERFACENAME BRAM_PORTA, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1";
+  attribute x_interface_info of clkb : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTB CLK";
+  attribute x_interface_parameter of clkb : signal is "XIL_INTERFACENAME BRAM_PORTB, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1";
+  attribute x_interface_info of enb : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTB EN";
   attribute x_interface_info of addra : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR";
+  attribute x_interface_info of addrb : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTB ADDR";
   attribute x_interface_info of douta : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA DOUT";
+  attribute x_interface_info of doutb : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTB DOUT";
 begin
 U0: entity work.\design_1_spatial_audio_top_0_0_blk_mem_gen_v8_4_2__parameterized1\
      port map (
       addra(13 downto 0) => addra(13 downto 0),
-      addrb(13 downto 0) => B"00000000000000",
+      addrb(13 downto 0) => addrb(13 downto 0),
       clka => clka,
-      clkb => '0',
+      clkb => clkb,
       dbiterr => NLW_U0_dbiterr_UNCONNECTED,
       deepsleep => '0',
       dina(15 downto 0) => B"0000000000000000",
       dinb(15 downto 0) => B"0000000000000000",
       douta(15 downto 0) => douta(15 downto 0),
-      doutb(15 downto 0) => NLW_U0_doutb_UNCONNECTED(15 downto 0),
+      doutb(15 downto 0) => doutb(15 downto 0),
       eccpipece => '0',
       ena => '0',
-      enb => '0',
+      enb => enb,
       injectdbiterr => '0',
       injectsbiterr => '0',
       rdaddrecc(13 downto 0) => NLW_U0_rdaddrecc_UNCONNECTED(13 downto 0),
@@ -10325,9 +16309,9 @@ entity design_1_spatial_audio_top_0_0_spatial_audio_top is
     tx_data : out STD_LOGIC;
     rx_lrck : out STD_LOGIC;
     locked : in STD_LOGIC;
-    target_angle : in STD_LOGIC_VECTOR ( 6 downto 0 );
     clk_audio : in STD_LOGIC;
-    rx_data : in STD_LOGIC
+    rx_data : in STD_LOGIC;
+    target_angle : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_1_spatial_audio_top_0_0_spatial_audio_top : entity is "spatial_audio_top";
@@ -10335,48 +16319,111 @@ end design_1_spatial_audio_top_0_0_spatial_audio_top;
 
 architecture STRUCTURE of design_1_spatial_audio_top_0_0_spatial_audio_top is
   signal RSTP : STD_LOGIC;
-  signal addr_gen_n_1 : STD_LOGIC;
-  signal addr_gen_n_2 : STD_LOGIC;
-  signal audio_out : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal bram_addr : STD_LOGIC_VECTOR ( 13 downto 0 );
-  signal coeff_l : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal coeff_r : STD_LOGIC_VECTOR ( 15 downto 0 );
-  signal fir_left_n_7 : STD_LOGIC;
-  signal fir_right_n_0 : STD_LOGIC;
-  signal fir_right_n_10 : STD_LOGIC;
-  signal fir_right_n_11 : STD_LOGIC;
-  signal fir_right_n_12 : STD_LOGIC;
-  signal fir_right_n_13 : STD_LOGIC;
-  signal fir_right_n_14 : STD_LOGIC;
-  signal fir_right_n_15 : STD_LOGIC;
-  signal fir_right_n_16 : STD_LOGIC;
-  signal fir_right_n_17 : STD_LOGIC;
-  signal fir_right_n_18 : STD_LOGIC;
-  signal fir_right_n_19 : STD_LOGIC;
-  signal fir_right_n_2 : STD_LOGIC;
-  signal fir_right_n_20 : STD_LOGIC;
-  signal fir_right_n_21 : STD_LOGIC;
-  signal fir_right_n_22 : STD_LOGIC;
-  signal fir_right_n_23 : STD_LOGIC;
-  signal fir_right_n_24 : STD_LOGIC;
-  signal fir_right_n_25 : STD_LOGIC;
-  signal fir_right_n_3 : STD_LOGIC;
-  signal fir_right_n_4 : STD_LOGIC;
-  signal fir_right_n_5 : STD_LOGIC;
-  signal fir_right_n_6 : STD_LOGIC;
-  signal fir_right_n_7 : STD_LOGIC;
-  signal fir_right_n_8 : STD_LOGIC;
-  signal fir_right_n_9 : STD_LOGIC;
+  signal active_channel_i_1_n_0 : STD_LOGIC;
+  signal active_channel_i_2_n_0 : STD_LOGIC;
+  signal active_channel_reg_n_0 : STD_LOGIC;
+  signal addr_gen_a_n_1 : STD_LOGIC;
+  signal addr_gen_a_n_2 : STD_LOGIC;
+  signal addr_gen_b_n_0 : STD_LOGIC;
+  signal \angle_a[7]_i_1_n_0\ : STD_LOGIC;
+  signal \angle_a[7]_i_2_n_0\ : STD_LOGIC;
+  signal \angle_a[7]_i_3_n_0\ : STD_LOGIC;
+  signal \angle_a[7]_i_4_n_0\ : STD_LOGIC;
+  signal \angle_a[7]_i_5_n_0\ : STD_LOGIC;
+  signal \angle_a[7]_i_6_n_0\ : STD_LOGIC;
+  signal \angle_a_reg_n_0_[0]\ : STD_LOGIC;
+  signal \angle_a_reg_n_0_[1]\ : STD_LOGIC;
+  signal \angle_a_reg_n_0_[2]\ : STD_LOGIC;
+  signal \angle_a_reg_n_0_[3]\ : STD_LOGIC;
+  signal \angle_a_reg_n_0_[4]\ : STD_LOGIC;
+  signal \angle_a_reg_n_0_[5]\ : STD_LOGIC;
+  signal \angle_a_reg_n_0_[6]\ : STD_LOGIC;
+  signal \angle_a_reg_n_0_[7]\ : STD_LOGIC;
+  signal \angle_b[7]_i_1_n_0\ : STD_LOGIC;
+  signal \angle_b[7]_i_2_n_0\ : STD_LOGIC;
+  signal \angle_b[7]_i_3_n_0\ : STD_LOGIC;
+  signal \angle_b[7]_i_4_n_0\ : STD_LOGIC;
+  signal \angle_b[7]_i_5_n_0\ : STD_LOGIC;
+  signal \angle_b[7]_i_6_n_0\ : STD_LOGIC;
+  signal \angle_b_reg_n_0_[0]\ : STD_LOGIC;
+  signal \angle_b_reg_n_0_[1]\ : STD_LOGIC;
+  signal \angle_b_reg_n_0_[2]\ : STD_LOGIC;
+  signal \angle_b_reg_n_0_[3]\ : STD_LOGIC;
+  signal \angle_b_reg_n_0_[4]\ : STD_LOGIC;
+  signal \angle_b_reg_n_0_[5]\ : STD_LOGIC;
+  signal \angle_b_reg_n_0_[6]\ : STD_LOGIC;
+  signal \angle_b_reg_n_0_[7]\ : STD_LOGIC;
+  signal audio_out_mixed : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal bram_addr_a : STD_LOGIC_VECTOR ( 13 downto 0 );
+  signal bram_addr_b : STD_LOGIC_VECTOR ( 13 downto 0 );
+  signal coeff_l_a : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal coeff_l_b : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal coeff_r_a : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal coeff_r_b : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal crossfade_left_n_0 : STD_LOGIC;
+  signal crossfade_left_n_33 : STD_LOGIC;
+  signal crossfade_right_n_0 : STD_LOGIC;
+  signal crossfade_right_n_1 : STD_LOGIC;
+  signal crossfade_right_n_10 : STD_LOGIC;
+  signal crossfade_right_n_11 : STD_LOGIC;
+  signal crossfade_right_n_12 : STD_LOGIC;
+  signal crossfade_right_n_13 : STD_LOGIC;
+  signal crossfade_right_n_14 : STD_LOGIC;
+  signal crossfade_right_n_15 : STD_LOGIC;
+  signal crossfade_right_n_16 : STD_LOGIC;
+  signal crossfade_right_n_17 : STD_LOGIC;
+  signal crossfade_right_n_18 : STD_LOGIC;
+  signal crossfade_right_n_19 : STD_LOGIC;
+  signal crossfade_right_n_2 : STD_LOGIC;
+  signal crossfade_right_n_20 : STD_LOGIC;
+  signal crossfade_right_n_21 : STD_LOGIC;
+  signal crossfade_right_n_22 : STD_LOGIC;
+  signal crossfade_right_n_23 : STD_LOGIC;
+  signal crossfade_right_n_3 : STD_LOGIC;
+  signal crossfade_right_n_4 : STD_LOGIC;
+  signal crossfade_right_n_5 : STD_LOGIC;
+  signal crossfade_right_n_6 : STD_LOGIC;
+  signal crossfade_right_n_7 : STD_LOGIC;
+  signal crossfade_right_n_8 : STD_LOGIC;
+  signal crossfade_right_n_9 : STD_LOGIC;
+  signal crossfade_trig : STD_LOGIC;
+  signal crossfade_trig_i_1_n_0 : STD_LOGIC;
+  signal \fade_counter_reg__0\ : STD_LOGIC_VECTOR ( 8 to 8 );
+  signal fade_target : STD_LOGIC_VECTOR ( 8 to 8 );
+  signal \fir_a/pipe_audio_s1\ : STD_LOGIC;
+  signal \fir_b/write_ptr_reg\ : STD_LOGIC_VECTOR ( 6 downto 0 );
+  signal i2s_n_10 : STD_LOGIC;
+  signal i2s_n_11 : STD_LOGIC;
   signal i2s_n_5 : STD_LOGIC;
   signal i2s_n_6 : STD_LOGIC;
-  signal i2s_n_8 : STD_LOGIC;
+  signal i2s_n_7 : STD_LOGIC;
+  signal is_locked_out_reg_n_0 : STD_LOGIC;
   signal l_data_rx : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal lockout_counter : STD_LOGIC;
+  signal \lockout_counter[8]_i_1_n_0\ : STD_LOGIC;
+  signal \lockout_counter[8]_i_4_n_0\ : STD_LOGIC;
+  signal \lockout_counter_reg__0\ : STD_LOGIC_VECTOR ( 8 to 8 );
+  signal \lockout_counter_reg_n_0_[0]\ : STD_LOGIC;
+  signal \lockout_counter_reg_n_0_[1]\ : STD_LOGIC;
+  signal \lockout_counter_reg_n_0_[2]\ : STD_LOGIC;
+  signal \lockout_counter_reg_n_0_[3]\ : STD_LOGIC;
+  signal \lockout_counter_reg_n_0_[4]\ : STD_LOGIC;
+  signal \lockout_counter_reg_n_0_[5]\ : STD_LOGIC;
+  signal \lockout_counter_reg_n_0_[6]\ : STD_LOGIC;
+  signal \lockout_counter_reg_n_0_[7]\ : STD_LOGIC;
   signal new_sample : STD_LOGIC;
-  signal pipe_audio_s1 : STD_LOGIC;
+  signal \p_0_in__4\ : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal r_data_rx : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal read_ptr_reg : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_audio : STD_LOGIC;
-  signal write_ptr_reg : STD_LOGIC_VECTOR ( 6 downto 0 );
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \lockout_counter[0]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \lockout_counter[1]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \lockout_counter[2]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \lockout_counter[3]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \lockout_counter[4]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \lockout_counter[7]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \lockout_counter[8]_i_3\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \lockout_counter[8]_i_4\ : label is "soft_lutpair29";
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of rom_l : label is "rom_hrtf_left,blk_mem_gen_v8_4_2,{}";
   attribute downgradeipidentifiedwarnings : string;
@@ -10387,135 +16434,770 @@ architecture STRUCTURE of design_1_spatial_audio_top_0_0_spatial_audio_top is
   attribute downgradeipidentifiedwarnings of rom_r : label is "yes";
   attribute x_core_info of rom_r : label is "blk_mem_gen_v8_4_2,Vivado 2018.3";
 begin
-addr_gen: entity work.design_1_spatial_audio_top_0_0_hrtf_address_generator
+active_channel_i_1: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"30DC"
+    )
+        port map (
+      I0 => is_locked_out_reg_n_0,
+      I1 => active_channel_reg_n_0,
+      I2 => active_channel_i_2_n_0,
+      I3 => \angle_a[7]_i_2_n_0\,
+      O => active_channel_i_1_n_0
+    );
+active_channel_i_2: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => \angle_b[7]_i_6_n_0\,
+      I1 => \angle_b[7]_i_5_n_0\,
+      I2 => \angle_b[7]_i_4_n_0\,
+      I3 => \angle_b[7]_i_3_n_0\,
+      O => active_channel_i_2_n_0
+    );
+active_channel_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => '1',
+      D => active_channel_i_1_n_0,
+      Q => active_channel_reg_n_0,
+      R => rst_audio
+    );
+addr_gen_a: entity work.design_1_spatial_audio_top_0_0_hrtf_address_generator
      port map (
-      Q(13 downto 0) => bram_addr(13 downto 0),
+      Q(13 downto 0) => bram_addr_a(13 downto 0),
+      \bram_addr_reg[13]_0\(6) => \angle_a_reg_n_0_[6]\,
+      \bram_addr_reg[13]_0\(5) => \angle_a_reg_n_0_[5]\,
+      \bram_addr_reg[13]_0\(4) => \angle_a_reg_n_0_[4]\,
+      \bram_addr_reg[13]_0\(3) => \angle_a_reg_n_0_[3]\,
+      \bram_addr_reg[13]_0\(2) => \angle_a_reg_n_0_[2]\,
+      \bram_addr_reg[13]_0\(1) => \angle_a_reg_n_0_[1]\,
+      \bram_addr_reg[13]_0\(0) => \angle_a_reg_n_0_[0]\,
       clk_audio => clk_audio,
-      conv_en_reg_0 => addr_gen_n_1,
-      conv_en_reg_1 => addr_gen_n_2,
+      conv_en_reg_0 => addr_gen_a_n_1,
+      conv_en_reg_1 => addr_gen_a_n_2,
       locked => locked,
       new_sample => new_sample,
-      pipe_audio_s1 => pipe_audio_s1,
-      rst_audio => rst_audio,
-      target_angle(6 downto 0) => target_angle(6 downto 0)
+      pipe_audio_s1 => \fir_a/pipe_audio_s1\,
+      rst_audio => rst_audio
     );
-fir_left: entity work.design_1_spatial_audio_top_0_0_dsp_fir_folded
+addr_gen_b: entity work.design_1_spatial_audio_top_0_0_hrtf_address_generator_0
      port map (
-      Q(6 downto 0) => write_ptr_reg(6 downto 0),
-      RSTP => RSTP,
-      accumulator_reg_0 => i2s_n_6,
-      accumulator_reg_1 => fir_right_n_0,
-      accumulator_reg_2(23 downto 0) => l_data_rx(23 downto 0),
-      accumulator_reg_3 => i2s_n_5,
-      accumulator_reg_4 => i2s_n_8,
-      \audio_out_reg[23]_0\(23 downto 0) => audio_out(23 downto 0),
+      E(0) => i2s_n_6,
+      Q(13 downto 0) => bram_addr_b(13 downto 0),
+      \bram_addr_reg[13]_0\(6) => \angle_b_reg_n_0_[6]\,
+      \bram_addr_reg[13]_0\(5) => \angle_b_reg_n_0_[5]\,
+      \bram_addr_reg[13]_0\(4) => \angle_b_reg_n_0_[4]\,
+      \bram_addr_reg[13]_0\(3) => \angle_b_reg_n_0_[3]\,
+      \bram_addr_reg[13]_0\(2) => \angle_b_reg_n_0_[2]\,
+      \bram_addr_reg[13]_0\(1) => \angle_b_reg_n_0_[1]\,
+      \bram_addr_reg[13]_0\(0) => \angle_b_reg_n_0_[0]\,
       clk_audio => clk_audio,
-      douta(15 downto 0) => coeff_l(15 downto 0),
+      locked => locked,
       new_sample => new_sample,
-      pipe_audio_s1 => pipe_audio_s1,
-      read_ptr_reg(0) => read_ptr_reg(0),
-      \read_ptr_reg[0]_0\ => addr_gen_n_1,
       rst_audio => rst_audio,
-      \write_ptr_reg[0]_0\ => fir_left_n_7
+      state_reg_0 => addr_gen_b_n_0
     );
-fir_right: entity work.design_1_spatial_audio_top_0_0_dsp_fir_folded_0
+\angle_a[7]_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"B"
+    )
+        port map (
+      I0 => \angle_a[7]_i_2_n_0\,
+      I1 => locked,
+      O => \angle_a[7]_i_1_n_0\
+    );
+\angle_a[7]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000FFFE00000000"
+    )
+        port map (
+      I0 => \angle_a[7]_i_3_n_0\,
+      I1 => \angle_a[7]_i_4_n_0\,
+      I2 => \angle_a[7]_i_5_n_0\,
+      I3 => \angle_a[7]_i_6_n_0\,
+      I4 => is_locked_out_reg_n_0,
+      I5 => active_channel_reg_n_0,
+      O => \angle_a[7]_i_2_n_0\
+    );
+\angle_a[7]_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"6FF6"
+    )
+        port map (
+      I0 => target_angle(5),
+      I1 => \angle_b_reg_n_0_[5]\,
+      I2 => target_angle(0),
+      I3 => \angle_b_reg_n_0_[0]\,
+      O => \angle_a[7]_i_3_n_0\
+    );
+\angle_a[7]_i_4\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"6FF6"
+    )
+        port map (
+      I0 => target_angle(1),
+      I1 => \angle_b_reg_n_0_[1]\,
+      I2 => target_angle(2),
+      I3 => \angle_b_reg_n_0_[2]\,
+      O => \angle_a[7]_i_4_n_0\
+    );
+\angle_a[7]_i_5\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"6FF6"
+    )
+        port map (
+      I0 => target_angle(6),
+      I1 => \angle_b_reg_n_0_[6]\,
+      I2 => target_angle(7),
+      I3 => \angle_b_reg_n_0_[7]\,
+      O => \angle_a[7]_i_5_n_0\
+    );
+\angle_a[7]_i_6\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"6FF6"
+    )
+        port map (
+      I0 => target_angle(3),
+      I1 => \angle_b_reg_n_0_[3]\,
+      I2 => target_angle(4),
+      I3 => \angle_b_reg_n_0_[4]\,
+      O => \angle_a[7]_i_6_n_0\
+    );
+\angle_a_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \angle_a[7]_i_1_n_0\,
+      D => target_angle(0),
+      Q => \angle_a_reg_n_0_[0]\,
+      R => '0'
+    );
+\angle_a_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \angle_a[7]_i_1_n_0\,
+      D => target_angle(1),
+      Q => \angle_a_reg_n_0_[1]\,
+      R => '0'
+    );
+\angle_a_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \angle_a[7]_i_1_n_0\,
+      D => target_angle(2),
+      Q => \angle_a_reg_n_0_[2]\,
+      R => '0'
+    );
+\angle_a_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \angle_a[7]_i_1_n_0\,
+      D => target_angle(3),
+      Q => \angle_a_reg_n_0_[3]\,
+      R => '0'
+    );
+\angle_a_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \angle_a[7]_i_1_n_0\,
+      D => target_angle(4),
+      Q => \angle_a_reg_n_0_[4]\,
+      R => '0'
+    );
+\angle_a_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \angle_a[7]_i_1_n_0\,
+      D => target_angle(5),
+      Q => \angle_a_reg_n_0_[5]\,
+      R => '0'
+    );
+\angle_a_reg[6]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \angle_a[7]_i_1_n_0\,
+      D => target_angle(6),
+      Q => \angle_a_reg_n_0_[6]\,
+      R => '0'
+    );
+\angle_a_reg[7]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \angle_a[7]_i_1_n_0\,
+      D => target_angle(7),
+      Q => \angle_a_reg_n_0_[7]\,
+      R => '0'
+    );
+\angle_b[7]_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"B"
+    )
+        port map (
+      I0 => \angle_b[7]_i_2_n_0\,
+      I1 => locked,
+      O => \angle_b[7]_i_1_n_0\
+    );
+\angle_b[7]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"000000000000FFFE"
+    )
+        port map (
+      I0 => \angle_b[7]_i_3_n_0\,
+      I1 => \angle_b[7]_i_4_n_0\,
+      I2 => \angle_b[7]_i_5_n_0\,
+      I3 => \angle_b[7]_i_6_n_0\,
+      I4 => active_channel_reg_n_0,
+      I5 => is_locked_out_reg_n_0,
+      O => \angle_b[7]_i_2_n_0\
+    );
+\angle_b[7]_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"6FF6"
+    )
+        port map (
+      I0 => target_angle(5),
+      I1 => \angle_a_reg_n_0_[5]\,
+      I2 => target_angle(0),
+      I3 => \angle_a_reg_n_0_[0]\,
+      O => \angle_b[7]_i_3_n_0\
+    );
+\angle_b[7]_i_4\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"6FF6"
+    )
+        port map (
+      I0 => target_angle(1),
+      I1 => \angle_a_reg_n_0_[1]\,
+      I2 => target_angle(2),
+      I3 => \angle_a_reg_n_0_[2]\,
+      O => \angle_b[7]_i_4_n_0\
+    );
+\angle_b[7]_i_5\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"6FF6"
+    )
+        port map (
+      I0 => target_angle(6),
+      I1 => \angle_a_reg_n_0_[6]\,
+      I2 => target_angle(7),
+      I3 => \angle_a_reg_n_0_[7]\,
+      O => \angle_b[7]_i_5_n_0\
+    );
+\angle_b[7]_i_6\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"6FF6"
+    )
+        port map (
+      I0 => target_angle(3),
+      I1 => \angle_a_reg_n_0_[3]\,
+      I2 => target_angle(4),
+      I3 => \angle_a_reg_n_0_[4]\,
+      O => \angle_b[7]_i_6_n_0\
+    );
+\angle_b_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \angle_b[7]_i_1_n_0\,
+      D => target_angle(0),
+      Q => \angle_b_reg_n_0_[0]\,
+      R => '0'
+    );
+\angle_b_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \angle_b[7]_i_1_n_0\,
+      D => target_angle(1),
+      Q => \angle_b_reg_n_0_[1]\,
+      R => '0'
+    );
+\angle_b_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \angle_b[7]_i_1_n_0\,
+      D => target_angle(2),
+      Q => \angle_b_reg_n_0_[2]\,
+      R => '0'
+    );
+\angle_b_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \angle_b[7]_i_1_n_0\,
+      D => target_angle(3),
+      Q => \angle_b_reg_n_0_[3]\,
+      R => '0'
+    );
+\angle_b_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \angle_b[7]_i_1_n_0\,
+      D => target_angle(4),
+      Q => \angle_b_reg_n_0_[4]\,
+      R => '0'
+    );
+\angle_b_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \angle_b[7]_i_1_n_0\,
+      D => target_angle(5),
+      Q => \angle_b_reg_n_0_[5]\,
+      R => '0'
+    );
+\angle_b_reg[6]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \angle_b[7]_i_1_n_0\,
+      D => target_angle(6),
+      Q => \angle_b_reg_n_0_[6]\,
+      R => '0'
+    );
+\angle_b_reg[7]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => \angle_b[7]_i_1_n_0\,
+      D => target_angle(7),
+      Q => \angle_b_reg_n_0_[7]\,
+      R => '0'
+    );
+crossfade_left: entity work.design_1_spatial_audio_top_0_0_hrtf_crossfader
      port map (
-      Q(6 downto 0) => write_ptr_reg(6 downto 0),
+      P(23 downto 0) => audio_out_mixed(23 downto 0),
+      Q(6 downto 0) => \fir_b/write_ptr_reg\(6 downto 0),
       RSTP => RSTP,
-      SR(0) => rst_audio,
-      accumulator_reg_0 => i2s_n_6,
+      S(0) => crossfade_left_n_33,
+      accumulator_reg => i2s_n_7,
+      accumulator_reg_0(23 downto 0) => l_data_rx(23 downto 0),
+      accumulator_reg_1 => i2s_n_5,
+      accumulator_reg_2 => i2s_n_11,
+      clk_audio => clk_audio,
+      crossfade_trig => crossfade_trig,
+      douta(15 downto 0) => coeff_l_a(15 downto 0),
+      doutb(15 downto 0) => coeff_l_b(15 downto 0),
+      \fade_counter0_carry__0_0\(0) => \fade_counter_reg__0\(8),
+      fade_target(0) => fade_target(8),
+      \fade_target_reg[8]_0\ => active_channel_reg_n_0,
+      locked => locked,
+      new_sample => new_sample,
+      pipe_audio_s1 => \fir_a/pipe_audio_s1\,
+      pipe_valid_s1_reg => addr_gen_a_n_2,
+      pipe_valid_s2_reg => crossfade_left_n_0,
+      \read_ptr_reg[6]\ => addr_gen_a_n_1,
+      rst_audio => rst_audio
+    );
+crossfade_right: entity work.design_1_spatial_audio_top_0_0_hrtf_crossfader_1
+     port map (
+      P(23) => crossfade_right_n_0,
+      P(22) => crossfade_right_n_1,
+      P(21) => crossfade_right_n_2,
+      P(20) => crossfade_right_n_3,
+      P(19) => crossfade_right_n_4,
+      P(18) => crossfade_right_n_5,
+      P(17) => crossfade_right_n_6,
+      P(16) => crossfade_right_n_7,
+      P(15) => crossfade_right_n_8,
+      P(14) => crossfade_right_n_9,
+      P(13) => crossfade_right_n_10,
+      P(12) => crossfade_right_n_11,
+      P(11) => crossfade_right_n_12,
+      P(10) => crossfade_right_n_13,
+      P(9) => crossfade_right_n_14,
+      P(8) => crossfade_right_n_15,
+      P(7) => crossfade_right_n_16,
+      P(6) => crossfade_right_n_17,
+      P(5) => crossfade_right_n_18,
+      P(4) => crossfade_right_n_19,
+      P(3) => crossfade_right_n_20,
+      P(2) => crossfade_right_n_21,
+      P(1) => crossfade_right_n_22,
+      P(0) => crossfade_right_n_23,
+      Q(0) => \fade_counter_reg__0\(8),
+      RSTP => RSTP,
+      S(0) => crossfade_left_n_33,
+      accumulator_reg => i2s_n_7,
+      accumulator_reg_0 => crossfade_left_n_0,
       accumulator_reg_1(23 downto 0) => r_data_rx(23 downto 0),
       accumulator_reg_2 => i2s_n_5,
-      accumulator_reg_3 => i2s_n_8,
-      \audio_out_reg[23]_0\(23) => fir_right_n_2,
-      \audio_out_reg[23]_0\(22) => fir_right_n_3,
-      \audio_out_reg[23]_0\(21) => fir_right_n_4,
-      \audio_out_reg[23]_0\(20) => fir_right_n_5,
-      \audio_out_reg[23]_0\(19) => fir_right_n_6,
-      \audio_out_reg[23]_0\(18) => fir_right_n_7,
-      \audio_out_reg[23]_0\(17) => fir_right_n_8,
-      \audio_out_reg[23]_0\(16) => fir_right_n_9,
-      \audio_out_reg[23]_0\(15) => fir_right_n_10,
-      \audio_out_reg[23]_0\(14) => fir_right_n_11,
-      \audio_out_reg[23]_0\(13) => fir_right_n_12,
-      \audio_out_reg[23]_0\(12) => fir_right_n_13,
-      \audio_out_reg[23]_0\(11) => fir_right_n_14,
-      \audio_out_reg[23]_0\(10) => fir_right_n_15,
-      \audio_out_reg[23]_0\(9) => fir_right_n_16,
-      \audio_out_reg[23]_0\(8) => fir_right_n_17,
-      \audio_out_reg[23]_0\(7) => fir_right_n_18,
-      \audio_out_reg[23]_0\(6) => fir_right_n_19,
-      \audio_out_reg[23]_0\(5) => fir_right_n_20,
-      \audio_out_reg[23]_0\(4) => fir_right_n_21,
-      \audio_out_reg[23]_0\(3) => fir_right_n_22,
-      \audio_out_reg[23]_0\(2) => fir_right_n_23,
-      \audio_out_reg[23]_0\(1) => fir_right_n_24,
-      \audio_out_reg[23]_0\(0) => fir_right_n_25,
+      accumulator_reg_3 => i2s_n_11,
       clk_audio => clk_audio,
-      douta(15 downto 0) => coeff_r(15 downto 0),
-      locked => locked,
+      crossfade_trig => crossfade_trig,
+      douta(15 downto 0) => coeff_r_a(15 downto 0),
+      doutb(15 downto 0) => coeff_r_b(15 downto 0),
+      fade_target(0) => fade_target(8),
       new_sample => new_sample,
-      pipe_audio_s1 => pipe_audio_s1,
-      pipe_valid_s1_reg_0 => addr_gen_n_2,
-      pipe_valid_s2_reg_0 => fir_right_n_0,
-      \read_ptr_reg[0]_0\(0) => read_ptr_reg(0),
-      \read_ptr_reg[0]_1\ => fir_left_n_7,
-      \read_ptr_reg[5]_0\ => addr_gen_n_1
+      pipe_audio_s1 => \fir_a/pipe_audio_s1\,
+      \read_ptr_reg[6]\ => addr_gen_a_n_1,
+      \read_ptr_reg[6]_0\(6 downto 0) => \fir_b/write_ptr_reg\(6 downto 0),
+      rst_audio => rst_audio
+    );
+crossfade_trig_i_1: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"E0"
+    )
+        port map (
+      I0 => \angle_a[7]_i_2_n_0\,
+      I1 => \angle_b[7]_i_2_n_0\,
+      I2 => locked,
+      O => crossfade_trig_i_1_n_0
+    );
+crossfade_trig_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => '1',
+      D => crossfade_trig_i_1_n_0,
+      Q => crossfade_trig,
+      R => '0'
     );
 i2s: entity work.design_1_spatial_audio_top_0_0_i2s_controller
      port map (
-      Q(0) => write_ptr_reg(6),
+      E(0) => i2s_n_6,
+      P(23) => crossfade_right_n_0,
+      P(22) => crossfade_right_n_1,
+      P(21) => crossfade_right_n_2,
+      P(20) => crossfade_right_n_3,
+      P(19) => crossfade_right_n_4,
+      P(18) => crossfade_right_n_5,
+      P(17) => crossfade_right_n_6,
+      P(16) => crossfade_right_n_7,
+      P(15) => crossfade_right_n_8,
+      P(14) => crossfade_right_n_9,
+      P(13) => crossfade_right_n_10,
+      P(12) => crossfade_right_n_11,
+      P(11) => crossfade_right_n_12,
+      P(10) => crossfade_right_n_13,
+      P(9) => crossfade_right_n_14,
+      P(8) => crossfade_right_n_15,
+      P(7) => crossfade_right_n_16,
+      P(6) => crossfade_right_n_17,
+      P(5) => crossfade_right_n_18,
+      P(4) => crossfade_right_n_19,
+      P(3) => crossfade_right_n_20,
+      P(2) => crossfade_right_n_21,
+      P(1) => crossfade_right_n_22,
+      P(0) => crossfade_right_n_23,
+      Q(0) => \fir_b/write_ptr_reg\(6),
       RSTP => RSTP,
-      SR(0) => rst_audio,
+      \bram_addr_reg[13]\ => addr_gen_b_n_0,
       clk_audio => clk_audio,
+      is_locked_out_reg => is_locked_out_reg_n_0,
+      is_locked_out_reg_0(0) => \lockout_counter_reg__0\(8),
+      is_locked_out_reg_1 => \angle_a[7]_i_2_n_0\,
+      is_locked_out_reg_2 => \angle_b[7]_i_2_n_0\,
       \l_data_rx_reg[23]_0\(23 downto 0) => l_data_rx(23 downto 0),
       locked => locked,
       locked_0 => i2s_n_5,
-      locked_1 => i2s_n_8,
+      locked_1 => i2s_n_11,
+      \lockout_counter_reg[8]\ => i2s_n_10,
       new_sample => new_sample,
-      new_sample_pulse_reg_0 => i2s_n_6,
+      new_sample_pulse_reg_0 => i2s_n_7,
+      new_sample_pulse_reg_1(0) => lockout_counter,
       \r_data_rx_reg[23]_0\(23 downto 0) => r_data_rx(23 downto 0),
+      rst_audio => rst_audio,
       rx_data => rx_data,
       rx_lrck => rx_lrck,
       sclk_reg_0 => rx_sclk,
       tx_data => tx_data,
-      \tx_shift_reg[23]_0\(23) => fir_right_n_2,
-      \tx_shift_reg[23]_0\(22) => fir_right_n_3,
-      \tx_shift_reg[23]_0\(21) => fir_right_n_4,
-      \tx_shift_reg[23]_0\(20) => fir_right_n_5,
-      \tx_shift_reg[23]_0\(19) => fir_right_n_6,
-      \tx_shift_reg[23]_0\(18) => fir_right_n_7,
-      \tx_shift_reg[23]_0\(17) => fir_right_n_8,
-      \tx_shift_reg[23]_0\(16) => fir_right_n_9,
-      \tx_shift_reg[23]_0\(15) => fir_right_n_10,
-      \tx_shift_reg[23]_0\(14) => fir_right_n_11,
-      \tx_shift_reg[23]_0\(13) => fir_right_n_12,
-      \tx_shift_reg[23]_0\(12) => fir_right_n_13,
-      \tx_shift_reg[23]_0\(11) => fir_right_n_14,
-      \tx_shift_reg[23]_0\(10) => fir_right_n_15,
-      \tx_shift_reg[23]_0\(9) => fir_right_n_16,
-      \tx_shift_reg[23]_0\(8) => fir_right_n_17,
-      \tx_shift_reg[23]_0\(7) => fir_right_n_18,
-      \tx_shift_reg[23]_0\(6) => fir_right_n_19,
-      \tx_shift_reg[23]_0\(5) => fir_right_n_20,
-      \tx_shift_reg[23]_0\(4) => fir_right_n_21,
-      \tx_shift_reg[23]_0\(3) => fir_right_n_22,
-      \tx_shift_reg[23]_0\(2) => fir_right_n_23,
-      \tx_shift_reg[23]_0\(1) => fir_right_n_24,
-      \tx_shift_reg[23]_0\(0) => fir_right_n_25,
-      \tx_shift_reg[23]_1\(23 downto 0) => audio_out(23 downto 0)
+      \tx_shift_reg[23]_0\(23 downto 0) => audio_out_mixed(23 downto 0)
+    );
+is_locked_out_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => '1',
+      D => i2s_n_10,
+      Q => is_locked_out_reg_n_0,
+      R => rst_audio
+    );
+\lockout_counter[0]_i_1\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \lockout_counter_reg_n_0_[0]\,
+      O => \p_0_in__4\(0)
+    );
+\lockout_counter[1]_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => \lockout_counter_reg_n_0_[0]\,
+      I1 => \lockout_counter_reg_n_0_[1]\,
+      O => \p_0_in__4\(1)
+    );
+\lockout_counter[2]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"78"
+    )
+        port map (
+      I0 => \lockout_counter_reg_n_0_[1]\,
+      I1 => \lockout_counter_reg_n_0_[0]\,
+      I2 => \lockout_counter_reg_n_0_[2]\,
+      O => \p_0_in__4\(2)
+    );
+\lockout_counter[3]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"7F80"
+    )
+        port map (
+      I0 => \lockout_counter_reg_n_0_[2]\,
+      I1 => \lockout_counter_reg_n_0_[0]\,
+      I2 => \lockout_counter_reg_n_0_[1]\,
+      I3 => \lockout_counter_reg_n_0_[3]\,
+      O => \p_0_in__4\(3)
+    );
+\lockout_counter[4]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"7FFF8000"
+    )
+        port map (
+      I0 => \lockout_counter_reg_n_0_[3]\,
+      I1 => \lockout_counter_reg_n_0_[1]\,
+      I2 => \lockout_counter_reg_n_0_[0]\,
+      I3 => \lockout_counter_reg_n_0_[2]\,
+      I4 => \lockout_counter_reg_n_0_[4]\,
+      O => \p_0_in__4\(4)
+    );
+\lockout_counter[5]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7FFFFFFF80000000"
+    )
+        port map (
+      I0 => \lockout_counter_reg_n_0_[4]\,
+      I1 => \lockout_counter_reg_n_0_[2]\,
+      I2 => \lockout_counter_reg_n_0_[0]\,
+      I3 => \lockout_counter_reg_n_0_[1]\,
+      I4 => \lockout_counter_reg_n_0_[3]\,
+      I5 => \lockout_counter_reg_n_0_[5]\,
+      O => \p_0_in__4\(5)
+    );
+\lockout_counter[6]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"78"
+    )
+        port map (
+      I0 => \lockout_counter_reg_n_0_[5]\,
+      I1 => \lockout_counter[8]_i_4_n_0\,
+      I2 => \lockout_counter_reg_n_0_[6]\,
+      O => \p_0_in__4\(6)
+    );
+\lockout_counter[7]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"7F80"
+    )
+        port map (
+      I0 => \lockout_counter[8]_i_4_n_0\,
+      I1 => \lockout_counter_reg_n_0_[5]\,
+      I2 => \lockout_counter_reg_n_0_[6]\,
+      I3 => \lockout_counter_reg_n_0_[7]\,
+      O => \p_0_in__4\(7)
+    );
+\lockout_counter[8]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"EF"
+    )
+        port map (
+      I0 => \angle_a[7]_i_2_n_0\,
+      I1 => \angle_b[7]_i_2_n_0\,
+      I2 => locked,
+      O => \lockout_counter[8]_i_1_n_0\
+    );
+\lockout_counter[8]_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"8000"
+    )
+        port map (
+      I0 => \lockout_counter[8]_i_4_n_0\,
+      I1 => \lockout_counter_reg_n_0_[7]\,
+      I2 => \lockout_counter_reg_n_0_[6]\,
+      I3 => \lockout_counter_reg_n_0_[5]\,
+      O => \p_0_in__4\(8)
+    );
+\lockout_counter[8]_i_4\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"80000000"
+    )
+        port map (
+      I0 => \lockout_counter_reg_n_0_[3]\,
+      I1 => \lockout_counter_reg_n_0_[1]\,
+      I2 => \lockout_counter_reg_n_0_[0]\,
+      I3 => \lockout_counter_reg_n_0_[2]\,
+      I4 => \lockout_counter_reg_n_0_[4]\,
+      O => \lockout_counter[8]_i_4_n_0\
+    );
+\lockout_counter_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => lockout_counter,
+      D => \p_0_in__4\(0),
+      Q => \lockout_counter_reg_n_0_[0]\,
+      R => \lockout_counter[8]_i_1_n_0\
+    );
+\lockout_counter_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => lockout_counter,
+      D => \p_0_in__4\(1),
+      Q => \lockout_counter_reg_n_0_[1]\,
+      R => \lockout_counter[8]_i_1_n_0\
+    );
+\lockout_counter_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => lockout_counter,
+      D => \p_0_in__4\(2),
+      Q => \lockout_counter_reg_n_0_[2]\,
+      R => \lockout_counter[8]_i_1_n_0\
+    );
+\lockout_counter_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => lockout_counter,
+      D => \p_0_in__4\(3),
+      Q => \lockout_counter_reg_n_0_[3]\,
+      R => \lockout_counter[8]_i_1_n_0\
+    );
+\lockout_counter_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => lockout_counter,
+      D => \p_0_in__4\(4),
+      Q => \lockout_counter_reg_n_0_[4]\,
+      R => \lockout_counter[8]_i_1_n_0\
+    );
+\lockout_counter_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => lockout_counter,
+      D => \p_0_in__4\(5),
+      Q => \lockout_counter_reg_n_0_[5]\,
+      R => \lockout_counter[8]_i_1_n_0\
+    );
+\lockout_counter_reg[6]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => lockout_counter,
+      D => \p_0_in__4\(6),
+      Q => \lockout_counter_reg_n_0_[6]\,
+      R => \lockout_counter[8]_i_1_n_0\
+    );
+\lockout_counter_reg[7]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => lockout_counter,
+      D => \p_0_in__4\(7),
+      Q => \lockout_counter_reg_n_0_[7]\,
+      R => \lockout_counter[8]_i_1_n_0\
+    );
+\lockout_counter_reg[8]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk_audio,
+      CE => lockout_counter,
+      D => \p_0_in__4\(8),
+      Q => \lockout_counter_reg__0\(8),
+      R => \lockout_counter[8]_i_1_n_0\
     );
 rom_l: entity work.design_1_spatial_audio_top_0_0_rom_hrtf_left
      port map (
-      addra(13 downto 0) => bram_addr(13 downto 0),
+      addra(13 downto 0) => bram_addr_a(13 downto 0),
+      addrb(13 downto 0) => bram_addr_b(13 downto 0),
       clka => clk_audio,
-      douta(15 downto 0) => coeff_l(15 downto 0)
+      clkb => clk_audio,
+      douta(15 downto 0) => coeff_l_a(15 downto 0),
+      doutb(15 downto 0) => coeff_l_b(15 downto 0),
+      enb => '0'
     );
 rom_r: entity work.design_1_spatial_audio_top_0_0_rom_hrtf_right
      port map (
-      addra(13 downto 0) => bram_addr(13 downto 0),
+      addra(13 downto 0) => bram_addr_a(13 downto 0),
+      addrb(13 downto 0) => bram_addr_b(13 downto 0),
       clka => clk_audio,
-      douta(15 downto 0) => coeff_r(15 downto 0)
+      clkb => clk_audio,
+      douta(15 downto 0) => coeff_r_a(15 downto 0),
+      doutb(15 downto 0) => coeff_r_b(15 downto 0),
+      enb => '0'
     );
 end STRUCTURE;
 library IEEE;
@@ -10567,7 +17249,7 @@ inst: entity work.design_1_spatial_audio_top_0_0_spatial_audio_top
       rx_data => rx_data,
       rx_lrck => \^rx_lrck\,
       rx_sclk => \^tx_sclk\,
-      target_angle(6 downto 0) => target_angle(6 downto 0),
+      target_angle(7 downto 0) => target_angle(7 downto 0),
       tx_data => tx_data
     );
 end STRUCTURE;
