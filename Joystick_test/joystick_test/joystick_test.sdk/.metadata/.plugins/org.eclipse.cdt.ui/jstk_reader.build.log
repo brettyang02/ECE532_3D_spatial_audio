@@ -1,21 +1,6 @@
-23:52:20 **** Auto Build of configuration Debug for project jstk_reader ****
+16:59:53 **** Incremental Build of configuration Debug for project jstk_reader ****
 make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../jstk_reader_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
-' '
-'Building target: jstk_reader.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../jstk_reader_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "jstk_reader.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: jstk_reader.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size jstk_reader.elf  |tee "jstk_reader.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  28692	    304	   2196	  31192	   79d8	jstk_reader.elf
-'Finished building: jstk_reader.elf.size'
-' '
+make: Nothing to be done for 'all'.
 
-23:52:21 Build Finished (took 832ms)
+16:59:54 Build Finished (took 183ms)
 
