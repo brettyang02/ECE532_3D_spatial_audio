@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Tue Mar 10 23:39:30 2026
+//Date        : Wed Mar 11 02:23:43 2026
 //Host        : Brett_PC running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -108,6 +108,7 @@ module design_1
   wire PmodJSTK2_0_Pmod_out_PIN9_I;
   wire PmodJSTK2_0_Pmod_out_PIN9_O;
   wire PmodJSTK2_0_Pmod_out_PIN9_T;
+  wire [3:0]axi_gpio_0_gpio2_io_o;
   wire [7:0]axi_gpio_0_gpio_io_o;
   wire axi_intc_0_interrupt_INTERRUPT;
   wire axi_uartlite_0_UART_RxD;
@@ -363,7 +364,8 @@ module design_1
         .s_axi_aclk(microblaze_0_Clk),
         .s_axi_aresetn(rst_clk_wiz_1_100M_peripheral_aresetn));
   design_1_axi_gpio_0_0 axi_gpio_0
-       (.gpio_io_o(axi_gpio_0_gpio_io_o),
+       (.gpio2_io_o(axi_gpio_0_gpio2_io_o),
+        .gpio_io_o(axi_gpio_0_gpio_io_o),
         .s_axi_aclk(microblaze_0_Clk),
         .s_axi_araddr(microblaze_0_axi_periph_M01_AXI_ARADDR[8:0]),
         .s_axi_aresetn(rst_clk_wiz_1_100M_peripheral_aresetn),
@@ -657,6 +659,7 @@ module design_1
         .rx_mclk(spatial_audio_top_0_rx_mclk),
         .rx_sclk(spatial_audio_top_0_rx_sclk),
         .target_angle(axi_gpio_0_gpio_io_o),
+        .target_elevation(axi_gpio_0_gpio2_io_o),
         .tx_data(spatial_audio_top_0_tx_data),
         .tx_lrck(spatial_audio_top_0_tx_lrck),
         .tx_mclk(spatial_audio_top_0_tx_mclk),

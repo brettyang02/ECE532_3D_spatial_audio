@@ -66,7 +66,8 @@ module design_1_spatial_audio_top_0_0 (
   rx_lrck,
   rx_sclk,
   rx_data,
-  target_angle
+  target_angle,
+  target_elevation
 );
 
 input wire clk_audio;
@@ -80,6 +81,7 @@ output wire rx_lrck;
 output wire rx_sclk;
 input wire rx_data;
 input wire [7 : 0] target_angle;
+input wire [3 : 0] target_elevation;
 
   spatial_audio_top inst (
     .clk_audio(clk_audio),
@@ -92,6 +94,7 @@ input wire [7 : 0] target_angle;
     .rx_lrck(rx_lrck),
     .rx_sclk(rx_sclk),
     .rx_data(rx_data),
-    .target_angle(target_angle)
+    .target_angle(target_angle),
+    .target_elevation(target_elevation)
   );
 endmodule

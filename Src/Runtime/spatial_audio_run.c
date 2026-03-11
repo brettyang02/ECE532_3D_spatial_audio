@@ -11,7 +11,7 @@
 PmodJSTK2 joystick;
 XGpio angle_gpio;
 
-int main() {
+int main_1D() {
     init_platform();
 
     print("--- Spatial Audio Control (Joystick) ---\n\r");

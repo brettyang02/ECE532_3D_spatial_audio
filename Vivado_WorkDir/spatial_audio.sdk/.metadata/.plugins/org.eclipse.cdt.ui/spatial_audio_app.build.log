@@ -1,21 +1,6 @@
-23:47:53 **** Auto Build of configuration Debug for project spatial_audio_app ****
+02:33:52 **** Incremental Build of configuration Debug for project spatial_audio_app ****
 make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../spatial_audio_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: spatial_audio_app.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../spatial_audio_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "spatial_audio_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: spatial_audio_app.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size spatial_audio_app.elf  |tee "spatial_audio_app.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  31644	    364	   3232	  35240	   89a8	spatial_audio_app.elf
-'Finished building: spatial_audio_app.elf.size'
-' '
+make: Nothing to be done for 'all'.
 
-23:47:54 Build Finished (took 675ms)
+02:33:52 Build Finished (took 99ms)
 
