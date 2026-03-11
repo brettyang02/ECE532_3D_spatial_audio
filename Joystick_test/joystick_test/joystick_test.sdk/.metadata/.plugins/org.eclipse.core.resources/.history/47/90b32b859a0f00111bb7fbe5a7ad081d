@@ -1,0 +1,35 @@
+/*
+ * main.c
+ *
+ *  Created on: Feb 21, 2026
+ *      Author: andyl
+ */
+
+#include "PmodJSTK2.h"
+#include "xparameters.h"
+#include "sleep.h"
+
+PmodJSTK2 joystick;
+
+int main() {
+    // Initialize the joystick
+    JSTK2_begin(
+        &joystick,
+        XPAR_PMODJSTK2_0_AXI_LITE_SPI_BASEADDR,
+        XPAR_PMODJSTK2_0_AXI_LITE_GPIO_BASEADDR
+    );
+
+    // Volatile variables so the compiler doesn't optimize them away
+    volatile int x_pos = 0;
+    volatile int y_pos = 0;
+    volatile int buttons = 0;
+
+    while (1) {
+        JSTK2_Position position = JSTK2_getPosition(&joystick);
+        x_pos = position.XData;
+        y_pos = position.YData;
+        buttons = JSTK2_getButtons(&joystick);
+        usleep(50000);
+    }
+    return 0;
+}

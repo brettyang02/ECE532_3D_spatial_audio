@@ -1,0 +1,21 @@
+
+*** Running vivado
+    with args -log design_gyro_ilmb_v10_2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_gyro_ilmb_v10_2.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source design_gyro_ilmb_v10_2.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-395] Problem validating against XML schema: see 'xilinx:packagingInfo' : Bad end of element
+CRITICAL WARNING: [IP_Flow 19-1977] Unable to read IP file c:/Users/eliza/Documents/1_Local/ECE532_local/vivado-library-master/ip/Zmods/ZmodDigitizerController/component.xml. This IP will not be included in the IP Catalog.
+WARNING: [IP_Flow 19-395] Problem validating against XML schema: see 'xilinx:packagingInfo' : Bad end of element
+CRITICAL WARNING: [IP_Flow 19-1977] Unable to read IP file c:/Users/eliza/Documents/1_Local/ECE532_local/vivado-library-master/ip/Zmods/ZmodSDRController/component.xml. This IP will not be included in the IP Catalog.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/eliza/Documents/1_Local/ECE532_local/vivado-library-master'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 332.480 ; gain = 54.441
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_gyro_ilmb_v10_2, cache-ID = 5d9eb59c65cf4a66.
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 24 15:55:59 2026...

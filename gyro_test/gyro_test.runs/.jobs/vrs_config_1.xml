@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_gyro_proc_sys_reset_0_0_synth_1" LaunchDir="C:/Users/eliza/Documents/1_Local/ECE532_local/gyro_test/gyro_test.runs/design_gyro_proc_sys_reset_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_gyro_clk_wiz_0_synth_1" LaunchDir="C:/Users/eliza/Documents/1_Local/ECE532_local/gyro_test/gyro_test.runs/design_gyro_clk_wiz_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_gyro_PmodGYRO_0_0_synth_1" LaunchDir="C:/Users/eliza/Documents/1_Local/ECE532_local/gyro_test/gyro_test.runs/design_gyro_PmodGYRO_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/eliza/Documents/1_Local/ECE532_local/gyro_test/gyro_test.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="design_gyro_proc_sys_reset_0_0_synth_1"/>
+		<Parent Id="design_gyro_clk_wiz_0_synth_1"/>
+		<Parent Id="design_gyro_PmodGYRO_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="C:/Users/eliza/Documents/1_Local/ECE532_local/gyro_test/gyro_test.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="design_gyro_proc_sys_reset_0_0_synth_1"/>
+		<Parent Id="design_gyro_clk_wiz_0_synth_1"/>
+		<Parent Id="design_gyro_PmodGYRO_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

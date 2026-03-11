@@ -1,0 +1,62 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Feb 10 12:21:26 2026
+# Process ID: 33720
+# Current directory: C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27380 C:\Users\andyl\Desktop\ECE532_3D_spatial_audio\I2S_test\I2S_test.xpr
+# Log file: C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/vivado.log
+# Journal file: C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/I2S_test.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_sine_tb_behav.wcfg
+open_wave_config C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_tb_behav.wcfg
+source i2s_controller_tb.tcl
+run 3 ms
+run 3 ms
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top i2s_controller_sine_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_sine_tb_behav.wcfg
+open_wave_config C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_tb_behav.wcfg
+source i2s_controller_sine_tb.tcl
+run 3 ms
+run 3 ms
+run 3 ms
+restart
+run 3 ms
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_i2s_controller [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_sine_tb_behav.wcfg
+open_wave_config C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_tb_behav.wcfg
+source tb_i2s_controller.tcl
+run 3 ms
+restart
+run 10 ms
+close_sim
+launch_simulation
+open_wave_config C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_sine_tb_behav.wcfg
+open_wave_config C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/I2S_test/i2s_controller_tb_behav.wcfg
+source tb_i2s_controller.tcl
+restart
+run 10 ms
+close_sim
+current_sim simulation_2
+close_sim
+close_sim
