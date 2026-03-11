@@ -52,8 +52,8 @@ preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 2 620J 460 880
 preplace netloc clk_wiz_1_locked 1 1 5 220 670 NJ 670 NJ 670 NJ 670 NJ
 preplace netloc axi_uartlite_0_UART 1 6 1 NJ
 preplace netloc clk_wiz_1_clk_out2 1 1 5 N 650 NJ 650 NJ 650 NJ 650 NJ
-preplace netloc microblaze_0_dlmb_1 1 4 1 1390
 preplace netloc microblaze_0_axi_periph_M02_AXI 1 5 1 1710
+preplace netloc microblaze_0_dlmb_1 1 4 1 1390
 preplace netloc spatial_audio_top_0_rx_lrck 1 6 1 2020J
 preplace netloc spatial_audio_top_0_rx_mclk 1 6 1 2020J
 preplace netloc microblaze_0_debug 1 3 1 870

@@ -23,58 +23,61 @@ module spatial_audio_top (
     // 1. Safe System Reset
     wire rst_audio = ~locked; 
 
+    // --- DECLARATIONS MOVED UP HERE TO FIX COMPILATION ERROR ---
+    wire [23:0] l_in, r_in;
+    wire [23:0] l_out, r_out;
+    wire new_sample;
+    // -----------------------------------------------------------
+
     // ==========================================
-    // FIXED: Ping-Pong Trigger Logic & Lockout
+    // Ping-Pong Trigger Logic & Lockout
     // ==========================================
-    reg [7:0] angle_a = 0;     // Feeds Port A Address Generator
-    reg [7:0] angle_b = 0;     // Feeds Port B Address Generator
-    reg active_channel = 0;    // 0 = Port A is loud, 1 = Port B is loud
+    reg [7:0] angle_a = 0;     
+    reg [7:0] angle_b = 0;     
+    reg active_channel = 0;    
     reg crossfade_trig = 0;
 
-    reg [8:0] lockout_counter = 0;
+    // Expanded to 11 bits to lock out for 1024 samples
+    reg [10:0] lockout_counter = 0;
     reg is_locked_out = 0;
 
     always @(posedge clk_audio) begin
         if (rst_audio) begin
             angle_a <= target_angle;
             angle_b <= target_angle;
-            active_channel <= 1'b0; // Start with A loud
+            active_channel <= 1'b0;
             crossfade_trig <= 1'b0;
             is_locked_out <= 1'b0;
-            lockout_counter <= 9'd0;
+            lockout_counter <= 11'd0;
         end else begin
-            // Default: Keep trigger low
             crossfade_trig <= 1'b0; 
 
             if (is_locked_out) begin
-                // A crossfade is currently happening. Wait for 256 samples.
+                // A crossfade is currently happening. Wait for 1024 samples.
                 if (new_sample) begin
-                    if (lockout_counter < 9'd256) begin
+                    if (lockout_counter < 11'd1024) begin
                         lockout_counter <= lockout_counter + 1'b1;
                     end else begin
-                        is_locked_out <= 1'b0; // Fade finished! Unlock.
+                        is_locked_out <= 1'b0; 
                     end
                 end
             end 
             else begin
-                // We are NOT fading. Check if the joystick has moved from the currently playing angle.
                 if (active_channel == 1'b0) begin
-                    // --- PORT A IS CURRENTLY LOUD ---
                     if (target_angle != angle_a) begin
-                        angle_b <= target_angle; // Load new angle into SILENT Port B
-                        active_channel <= 1'b1;  // Tell crossfader to fade TO B
-                        crossfade_trig <= 1'b1;  // Fire the trigger pulse
-                        is_locked_out <= 1'b1;   // Lock out new inputs
-                        lockout_counter <= 9'd0;
+                        angle_b <= target_angle; 
+                        active_channel <= 1'b1;  
+                        crossfade_trig <= 1'b1;  
+                        is_locked_out <= 1'b1;   
+                        lockout_counter <= 11'd0;
                     end
                 end else begin
-                    // --- PORT B IS CURRENTLY LOUD ---
                     if (target_angle != angle_b) begin
-                        angle_a <= target_angle; // Load new angle into SILENT Port A
-                        active_channel <= 1'b0;  // Tell crossfader to fade TO A
-                        crossfade_trig <= 1'b1;  // Fire the trigger pulse
-                        is_locked_out <= 1'b1;   // Lock out new inputs
-                        lockout_counter <= 9'd0;
+                        angle_a <= target_angle; 
+                        active_channel <= 1'b0;  
+                        crossfade_trig <= 1'b1;  
+                        is_locked_out <= 1'b1;   
+                        lockout_counter <= 11'd0;
                     end
                 end
             end
@@ -84,10 +87,6 @@ module spatial_audio_top (
     // ==========================================
     // 2. I2S Controller
     // ==========================================
-    wire [23:0] l_in, r_in;
-    wire [23:0] l_out, r_out;
-    wire new_sample;
-    
     i2s_controller i2s (
         .clk_audio(clk_audio),
         .reset(rst_audio), 
@@ -104,13 +103,12 @@ module spatial_audio_top (
     );
 
     // ==========================================
-    // 3. Address Generators (Dual Instantiation)
+    // 3. Address Generators
     // ==========================================
     wire [15:0] bram_addr_a;
     wire [15:0] bram_addr_b;
     wire conv_en;
     
-    // Generates addresses for Port A
     hrtf_address_generator addr_gen_a (
         .clk(clk_audio),
         .reset(rst_audio), 
@@ -121,14 +119,13 @@ module spatial_audio_top (
         .conv_done()
     );
 
-    // Generates addresses for Port B
     hrtf_address_generator addr_gen_b (
         .clk(clk_audio),
         .reset(rst_audio), 
         .start_trigger(new_sample),
         .angle_index(angle_b), 
         .bram_addr(bram_addr_b),
-        .conv_en(),  // Only need conv_en from the first one
+        .conv_en(),  
         .conv_done() 
     );
 
@@ -139,11 +136,9 @@ module spatial_audio_top (
     wire [15:0] coeff_l_b;
     
     rom_hrtf_left rom_l (
-        // Port A
         .clka(clk_audio),
         .addra(bram_addr_a[13:0]), 
         .douta(coeff_l_a),
-        // Port B
         .clkb(clk_audio),
         .addrb(bram_addr_b[13:0]),
         .doutb(coeff_l_b)
@@ -158,7 +153,7 @@ module spatial_audio_top (
         .coeff_a(coeff_l_a),
         .coeff_b(coeff_l_b),
         .start_crossfade_trig(crossfade_trig),
-        .fade_to_b(active_channel), // 0 = Fade to A, 1 = Fade to B
+        .fade_to_b(active_channel), 
         .audio_out_mixed(l_out)
     );
 
@@ -169,11 +164,9 @@ module spatial_audio_top (
     wire [15:0] coeff_r_b;
     
     rom_hrtf_right rom_r (
-        // Port A
         .clka(clk_audio),
         .addra(bram_addr_a[13:0]),
         .douta(coeff_r_a),
-        // Port B
         .clkb(clk_audio),
         .addrb(bram_addr_b[13:0]),
         .doutb(coeff_r_b)
@@ -188,7 +181,7 @@ module spatial_audio_top (
         .coeff_a(coeff_r_a),
         .coeff_b(coeff_r_b),
         .start_crossfade_trig(crossfade_trig),
-        .fade_to_b(active_channel), // 0 = Fade to A, 1 = Fade to B
+        .fade_to_b(active_channel),
         .audio_out_mixed(r_out)
     );
 
