@@ -59,7 +59,6 @@ rom_hrtf_left your_instance_name (
   .addra(addra),  // input wire [13 : 0] addra
   .douta(douta),  // output wire [15 : 0] douta
   .clkb(clkb),    // input wire clkb
-  .enb(enb),      // input wire enb
   .addrb(addrb),  // input wire [13 : 0] addrb
   .doutb(doutb)  // output wire [15 : 0] doutb
 );

@@ -1,6 +1,6 @@
 {
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS-threadsafe
 #  -string -flagsOSRD
 preplace port tx_data -pg 1 -y 680 -defaultsOSRD
 preplace port rx_sclk -pg 1 -y 770 -defaultsOSRD
@@ -27,38 +27,38 @@ preplace inst clk_wiz_1 -pg 1 -lvl 1 -y 650 -defaultsOSRD
 preplace inst microblaze_0_local_memory -pg 1 -lvl 5 -y 570 -defaultsOSRD
 preplace inst PmodJSTK2_0 -pg 1 -lvl 6 -y 100 -defaultsOSRD
 preplace netloc axi_intc_0_interrupt 1 3 1 910
-preplace netloc rx_data_1 1 0 6 NJ 480 210J 690 NJ 690 NJ 690 NJ 690 NJ
-preplace netloc microblaze_0_axi_periph_M04_AXI 1 5 1 1730
-preplace netloc spatial_audio_top_0_tx_lrck 1 6 1 2020J
+preplace netloc rx_data_1 1 0 6 NJ 480 210J 610 NJ 610 NJ 610 1410J 480 1730J
+preplace netloc microblaze_0_axi_periph_M04_AXI 1 5 1 1740
+preplace netloc spatial_audio_top_0_tx_lrck 1 6 1 2030J
 preplace netloc reset_btn_1 1 0 2 10 490 N
 preplace netloc PmodJSTK2_0_Pmod_out 1 6 1 NJ
-preplace netloc spatial_audio_top_0_tx_sclk 1 6 1 2010J
-preplace netloc axi_uartlite_0_interrupt 1 1 6 230 610 630J 430 900J 400 1370J 480 NJ 480 2010
-preplace netloc spatial_audio_top_0_rx_sclk 1 6 1 2010J
-preplace netloc microblaze_0_Clk 1 1 5 200 630 610 450 890 580 1400 50 1720
-preplace netloc microblaze_0_axi_periph_M03_AXI 1 5 1 1700
+preplace netloc spatial_audio_top_0_tx_sclk 1 6 1 2020J
+preplace netloc axi_uartlite_0_interrupt 1 1 6 200 -10 NJ -10 NJ -10 NJ -10 NJ -10 2030
+preplace netloc spatial_audio_top_0_rx_sclk 1 6 1 2020J
+preplace netloc microblaze_0_Clk 1 1 5 200 630 620 440 900 580 1380 40 1750
+preplace netloc microblaze_0_axi_periph_M03_AXI 1 5 1 1720
 preplace netloc microblaze_0_ilmb_1 1 4 1 1370
-preplace netloc microblaze_0_axi_periph_M00_AXI 1 2 4 590 60 NJ 60 NJ 60 1690
-preplace netloc microblaze_0_M_AXI_DP 1 4 1 1380
+preplace netloc microblaze_0_axi_periph_M00_AXI 1 2 4 620 50 NJ 50 NJ 50 1700
+preplace netloc microblaze_0_M_AXI_DP 1 4 1 1390
 preplace netloc sys_clock_1 1 0 1 NJ
-preplace netloc spatial_audio_top_0_tx_mclk 1 6 1 2010J
-preplace netloc axi_gpio_0_gpio_io_o 1 5 2 1710 490 2020
+preplace netloc spatial_audio_top_0_tx_mclk 1 6 1 2020J
+preplace netloc axi_gpio_0_gpio_io_o 1 5 2 1760 0 2020
 preplace netloc xlconcat_0_dout 1 2 1 NJ
-preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 2 3 600J 600 NJ 600 N
+preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 2 3 600J 450 880J 600 N
 preplace netloc microblaze_0_axi_periph_M01_AXI 1 5 1 N
 preplace netloc spatial_audio_top_0_tx_data 1 6 1 NJ
-preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 2 4 590 440 900J 590 1410 460 1740
-preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 2 620J 460 880
+preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 2 4 590 250 NJ 250 1400 60 1710
+preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 2 610J 460 890
 preplace netloc clk_wiz_1_locked 1 1 5 220 670 NJ 670 NJ 670 NJ 670 NJ
 preplace netloc axi_uartlite_0_UART 1 6 1 NJ
 preplace netloc clk_wiz_1_clk_out2 1 1 5 N 650 NJ 650 NJ 650 NJ 650 NJ
-preplace netloc microblaze_0_axi_periph_M02_AXI 1 5 1 1710
-preplace netloc microblaze_0_dlmb_1 1 4 1 1390
-preplace netloc spatial_audio_top_0_rx_lrck 1 6 1 2020J
-preplace netloc spatial_audio_top_0_rx_mclk 1 6 1 2020J
+preplace netloc microblaze_0_dlmb_1 1 4 1 1400
+preplace netloc microblaze_0_axi_periph_M02_AXI 1 5 1 1730
+preplace netloc spatial_audio_top_0_rx_lrck 1 6 1 2030J
+preplace netloc spatial_audio_top_0_rx_mclk 1 6 1 2030J
 preplace netloc microblaze_0_debug 1 3 1 870
-preplace netloc mdm_1_debug_sys_rst 1 1 3 240 620 NJ 620 870
-levelinfo -pg 1 -10 110 420 750 1140 1550 1880 2050 -top 0 -bot 800
+preplace netloc mdm_1_debug_sys_rst 1 1 3 230 620 NJ 620 870
+levelinfo -pg 1 -10 110 420 750 1140 1560 1890 2050 -top -20 -bot 880
 "
 }
 {

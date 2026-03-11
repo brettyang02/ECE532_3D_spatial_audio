@@ -58,7 +58,6 @@ module rom_hrtf_right (
   addra,
   douta,
   clkb,
-  enb,
   addrb,
   doutb
 );
@@ -72,8 +71,6 @@ input wire [13 : 0] addra;
 output wire [15 : 0] douta;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB CLK" *)
 input wire clkb;
-(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB EN" *)
-input wire enb;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB ADDR" *)
 input wire [13 : 0] addrb;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTB, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1" *)
@@ -119,7 +116,7 @@ output wire [15 : 0] doutb;
     .C_RST_PRIORITY_B("CE"),
     .C_RSTRAM_B(0),
     .C_INITB_VAL("0"),
-    .C_HAS_ENB(1),
+    .C_HAS_ENB(0),
     .C_HAS_REGCEB(0),
     .C_USE_BYTE_WEB(0),
     .C_WEB_WIDTH(1),
@@ -167,7 +164,7 @@ output wire [15 : 0] doutb;
     .douta(douta),
     .clkb(clkb),
     .rstb(1'D0),
-    .enb(enb),
+    .enb(1'D0),
     .regceb(1'D0),
     .web(1'B0),
     .addrb(addrb),

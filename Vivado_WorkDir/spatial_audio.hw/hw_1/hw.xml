@@ -4,14 +4,154 @@
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="2">
-  <device name="xc7a100t_0" gui_info=""/>
+  <device name="xc7a100t_0" gui_info="dashboard1=hw_ila_1[xc7a100t_0/hw_ila_1/Settings=ILA_SETTINGS_1;xc7a100t_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7a100t_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7a100t_0/hw_ila_1/Status=ILA_STATUS_1;xc7a100t_0/hw_ila_1/Waveform=ILA_WAVE_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7a100t_0" gui_info="">
-      <Properties Property="FULL_PROBES.FILE" value=""/>
-      <Properties Property="PROBES.FILE" value=""/>
+      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/design_1_wrapper.ltx"/>
+      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/design_1_wrapper.ltx"/>
       <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/design_1_wrapper.bit"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
   </ObjectList>
-  <probeset name="hw project" active="false"/>
+  <ObjectList object_type="hw_ila" gui_info="">
+    <Object name="u_ila_0" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="design_1_i/spatial_audio_top_0/inst/active_channel" gui_info="Trigger Setup=0"/>
+    <Object name="design_1_i/spatial_audio_top_0/inst/coeff_l_a[15:0]" gui_info=""/>
+  </ObjectList>
+  <probeset name="hw project" active="false">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b1"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/spatial_audio_top_0/inst/active_channel"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[15:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/spatial_audio_top_0/inst/bram_addr_b[15]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/bram_addr_b[14]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/bram_addr_b[13]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/bram_addr_b[12]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/bram_addr_b[11]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/bram_addr_b[10]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/bram_addr_b[9]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/bram_addr_b[8]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/bram_addr_b[7]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/bram_addr_b[6]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/bram_addr_b[5]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/bram_addr_b[4]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/bram_addr_b[3]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/bram_addr_b[2]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/bram_addr_b[1]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/bram_addr_b[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[15:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_a[15]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_a[14]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_a[13]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_a[12]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_a[11]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_a[10]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_a[9]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_a[8]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_a[7]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_a[6]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_a[5]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_a[4]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_a[3]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_a[2]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_a[1]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_a[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[15:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_b[15]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_b[14]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_b[13]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_b[12]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_b[11]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_b[10]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_b[9]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_b[8]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_b[7]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_b[6]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_b[5]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_b[4]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_b[3]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_b[2]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_b[1]"/>
+        <net name="design_1_i/spatial_audio_top_0/inst/coeff_l_b[0]"/>
+      </nets>
+    </probe>
+  </probeset>
 </hwsession>

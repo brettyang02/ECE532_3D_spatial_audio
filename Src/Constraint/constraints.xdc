@@ -7,18 +7,25 @@ set_false_path -from [get_clocks -of_objects [get_pins design_1_i/clk_wiz_1/inst
 
 ## ---- Pmod I2S2 on JA ----
 ## DAC (pins 1-4)
-set_property PACKAGE_PIN C17 [get_ports tx_mclk]   ;# JA1
-set_property PACKAGE_PIN D18 [get_ports tx_lrck]   ;# JA2
-set_property PACKAGE_PIN E18 [get_ports tx_sclk]   ;# JA3
-set_property PACKAGE_PIN G17 [get_ports tx_data]   ;# JA4
+set_property PACKAGE_PIN C17 [get_ports tx_mclk]
+set_property PACKAGE_PIN D18 [get_ports tx_lrck]
+set_property PACKAGE_PIN E18 [get_ports tx_sclk]
+set_property PACKAGE_PIN G17 [get_ports tx_data]
 
 ## ADC (pins 7-10)
-set_property PACKAGE_PIN D17 [get_ports rx_mclk]   ;# JA7
-set_property PACKAGE_PIN E17 [get_ports rx_lrck]   ;# JA8
-set_property PACKAGE_PIN F18 [get_ports rx_sclk]   ;# JA9
-set_property PACKAGE_PIN G18 [get_ports rx_data]  ;# JA10
+set_property PACKAGE_PIN D17 [get_ports rx_mclk]
+set_property PACKAGE_PIN E17 [get_ports rx_lrck]
+set_property PACKAGE_PIN F18 [get_ports rx_sclk]
+set_property PACKAGE_PIN G18 [get_ports rx_data]
 
-set_property IOSTANDARD LVCMOS33 [get_ports {tx_mclk tx_lrck tx_sclk tx_data rx_mclk rx_lrck rx_sclk rx_data}]
+set_property IOSTANDARD LVCMOS33 [get_ports tx_mclk]
+set_property IOSTANDARD LVCMOS33 [get_ports tx_lrck]
+set_property IOSTANDARD LVCMOS33 [get_ports tx_sclk]
+set_property IOSTANDARD LVCMOS33 [get_ports tx_data]
+set_property IOSTANDARD LVCMOS33 [get_ports rx_mclk]
+set_property IOSTANDARD LVCMOS33 [get_ports rx_lrck]
+set_property IOSTANDARD LVCMOS33 [get_ports rx_sclk]
+set_property IOSTANDARD LVCMOS33 [get_ports rx_data]
 
 ##USB-RS232 Interface
 set_property-dict { PACKAGE_PIN C4 IOSTANDARD LVCMOS33 } [get_ports { uart_rtl_0_rxd }];
@@ -39,4 +46,4 @@ set_property-dict { PACKAGE_PIN D4 IOSTANDARD LVCMOS33 } [get_ports { uart_rtl_0
 ## ----------------------------------------------------------------------------
 ## Reset Button (CPU Reset)
 ## ----------------------------------------------------------------------------
-set_property -dict { PACKAGE_PIN C12   IOSTANDARD LVCMOS33 } [get_ports { reset_btn }];
+set_property -dict {PACKAGE_PIN C12 IOSTANDARD LVCMOS33} [get_ports reset_btn]

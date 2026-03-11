@@ -34,6 +34,7 @@ module spatial_audio_top (
     // ==========================================
     reg [7:0] angle_a = 0;     
     reg [7:0] angle_b = 0;     
+    //(* mark_debug = "true" *) reg active_channel = 0;
     reg active_channel = 0;    
     reg crossfade_trig = 0;
 

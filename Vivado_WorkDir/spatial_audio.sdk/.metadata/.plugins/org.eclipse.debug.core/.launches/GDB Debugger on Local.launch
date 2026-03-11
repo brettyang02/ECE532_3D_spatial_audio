@@ -8,7 +8,7 @@
 <stringAttribute key="com.xilinx.sdk.tcf.debug.uidebug.type" value="STANDALONE_DEBUG"/>
 <booleanAttribute key="com.xilinx.sdk.tcf.debug.uienable.crosstrigger" value="false"/>
 <stringAttribute key="com.xilinx.sdk.tcf.debug.uifpga.device" value="Auto Detect"/>
-<stringAttribute key="com.xilinx.sdk.tcf.debug.uihw.bit.file" value="download.bit"/>
+<stringAttribute key="com.xilinx.sdk.tcf.debug.uihw.bit.file" value="design_1_wrapper.bit"/>
 <stringAttribute key="com.xilinx.sdk.tcf.debug.uihw.init.tcl" value=""/>
 <stringAttribute key="com.xilinx.sdk.tcf.debug.uihw_platform.name" value="design_1_wrapper_hw_platform_0"/>
 <booleanAttribute key="com.xilinx.sdk.tcf.debug.uipl.powerup" value="false"/>
@@ -35,14 +35,12 @@
 <booleanAttribute key="org.eclipse.cdt.dsf.gdb.internal.ui.launching.RemoteApplicationCDebuggerTab.DEFAULTS_SET" value="true"/>
 <stringAttribute key="org.eclipse.cdt.launch.COREFILE_PATH" value=""/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="gdbserver"/>
-<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_REGISTER_GROUPS" value=""/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_START_MODE" value="remote"/>
 <booleanAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN" value="true"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="Debug/spatial_audio_app.elf"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="spatial_audio_app"/>
 <booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="true"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value=""/>
-<stringAttribute key="org.eclipse.dsf.launch.MEMORY_BLOCKS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;memoryBlockExpressionList context=&quot;reserved-for-future-use&quot;/&gt;&#13;&#10;"/>
 <booleanAttribute key="org.eclipse.tcf.debug.AttachChildren" value="true"/>
 <booleanAttribute key="org.eclipse.tcf.debug.DisconnectOnCtxExit" value="false"/>
 <booleanAttribute key="org.eclipse.tcf.debug.StopAtEntry" value="false"/>
