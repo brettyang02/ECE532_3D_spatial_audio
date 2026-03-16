@@ -2,8 +2,8 @@
 # Webtalk v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # 
-# Start of session at: Sun Mar  1 16:16:01 2026
-# Process ID: 26376
+# Start of session at: Sun Mar 15 20:27:18 2026
+# Process ID: 43780
 # Current directory: C:/Users/eliza/Documents/1_Local/ECE532_local/gyro_test/gyro_test.sdk/webtalk
 # Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
 # Log file: C:/Users/eliza/Documents/1_Local/ECE532_local/gyro_test/gyro_test.sdk/webtalk/webtalk.log
@@ -12,7 +12,7 @@
 source sdk_webtalk.tcl
 # webtalk_init -webtalk_dir C:\\Users\\eliza\\Documents\\1_Local\\ECE532_local\\gyro_test\\gyro_test.sdk\\webtalk
 # webtalk_register_client -client project
-# webtalk_add_data -client project -key date_generated -value "2026-03-01 16:15:58" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key date_generated -value "2026-03-15 20:27:14" -context "software_version_and_target_device"
 # webtalk_add_data -client project -key product_version -value "SDK v2018.3" -context "software_version_and_target_device"
 # webtalk_add_data -client project -key build_version -value "2018.3" -context "software_version_and_target_device"
 # webtalk_add_data -client project -key os_platform -value "amd64" -context "software_version_and_target_device"
@@ -24,9 +24,9 @@ source sdk_webtalk.tcl
 # webtalk_add_data -client project -key target_device -value "NA" -context "software_version_and_target_device"
 # webtalk_add_data -client project -key target_package -value "NA" -context "software_version_and_target_device"
 # webtalk_add_data -client project -key target_speed -value "NA" -context "software_version_and_target_device"
-# webtalk_add_data -client project -key random_id -value "a33ihq2iohagf28kmgr52hdudn" -context "software_version_and_target_device"
-# webtalk_add_data -client project -key project_id -value "2018.3_6" -context "software_version_and_target_device"
-# webtalk_add_data -client project -key project_iteration -value "6" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key random_id -value "3pda8to46u4dpeio3g2sci5i9j" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key project_id -value "2018.3_8" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key project_iteration -value "8" -context "software_version_and_target_device"
 # webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 # webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 # webtalk_add_data -client project -key cpu_name -value "AMD Ryzen 7 6800H with Radeon Graphics         " -context "user_environment"
@@ -34,40 +34,29 @@ source sdk_webtalk.tcl
 # webtalk_add_data -client project -key total_processors -value "1" -context "user_environment"
 # webtalk_add_data -client project -key system_ram -value "16.312 GB" -context "user_environment"
 # webtalk_register_client -client sdk
-# webtalk_add_data -client sdk -key uid -value "1772395833581" -context "sdk\\\\hardware/1772395833581"
-# webtalk_add_data -client sdk -key isZynq -value "false" -context "sdk\\\\hardware/1772395833581"
-# webtalk_add_data -client sdk -key isZynqMP -value "false" -context "sdk\\\\hardware/1772395833581"
-# webtalk_add_data -client sdk -key Processors -value "1" -context "sdk\\\\hardware/1772395833581"
-# webtalk_add_data -client sdk -key VivadoVersion -value "2018.3" -context "sdk\\\\hardware/1772395833581"
-# webtalk_add_data -client sdk -key Arch -value "artix7" -context "sdk\\\\hardware/1772395833581"
-# webtalk_add_data -client sdk -key Device -value "7a100t" -context "sdk\\\\hardware/1772395833581"
-# webtalk_add_data -client sdk -key IsHandoff -value "true" -context "sdk\\\\hardware/1772395833581"
-# webtalk_add_data -client sdk -key os -value "NA" -context "sdk\\\\hardware/1772395833581"
-# webtalk_add_data -client sdk -key apptemplate -value "NA" -context "sdk\\\\hardware/1772395833581"
-# webtalk_add_data -client sdk -key RecordType -value "HWCreation" -context "sdk\\\\hardware/1772395833581"
-# webtalk_add_data -client sdk -key uid -value "1772396000019" -context "sdk\\\\bsp/1772396000019"
-# webtalk_add_data -client sdk -key hwid -value "1772395833581" -context "sdk\\\\bsp/1772396000019"
-# webtalk_add_data -client sdk -key os -value "standalone" -context "sdk\\\\bsp/1772396000019"
-# webtalk_add_data -client sdk -key apptemplate -value "hello_world" -context "sdk\\\\bsp/1772396000019"
-# webtalk_add_data -client sdk -key RecordType -value "BSPCreation" -context "sdk\\\\bsp/1772396000019"
-# webtalk_add_data -client sdk -key uid -value "1772396006121" -context "sdk\\\\application/1772396006121"
-# webtalk_add_data -client sdk -key hwid -value "1772395833581" -context "sdk\\\\application/1772396006121"
-# webtalk_add_data -client sdk -key bspid -value "1772396000019" -context "sdk\\\\application/1772396006121"
-# webtalk_add_data -client sdk -key newbsp -value "true" -context "sdk\\\\application/1772396006121"
-# webtalk_add_data -client sdk -key os -value "standalone" -context "sdk\\\\application/1772396006121"
-# webtalk_add_data -client sdk -key apptemplate -value "hello_world" -context "sdk\\\\application/1772396006121"
-# webtalk_add_data -client sdk -key RecordType -value "APPCreation" -context "sdk\\\\application/1772396006121"
-# webtalk_add_data -client sdk -key LangUsed -value "C" -context "sdk\\\\application/1772396006121"
-# webtalk_add_data -client sdk -key Procused -value "microblaze" -context "sdk\\\\application/1772396006121"
-# webtalk_add_data -client sdk -key projSize -value "154.3125" -context "sdk\\\\application/1772396006121"
-# webtalk_add_data -client sdk -key uid -value "NA" -context "sdk\\\\bsp/1772399758780"
-# webtalk_add_data -client sdk -key RecordType -value "ToolUsage" -context "sdk\\\\bsp/1772399758780"
-# webtalk_add_data -client sdk -key BootgenCount -value "0" -context "sdk\\\\bsp/1772399758780"
-# webtalk_add_data -client sdk -key DebugCount -value "0" -context "sdk\\\\bsp/1772399758780"
-# webtalk_add_data -client sdk -key PerfCount -value "0" -context "sdk\\\\bsp/1772399758780"
-# webtalk_add_data -client sdk -key FlashCount -value "0" -context "sdk\\\\bsp/1772399758780"
-# webtalk_add_data -client sdk -key CrossTriggCount -value "0" -context "sdk\\\\bsp/1772399758780"
-# webtalk_add_data -client sdk -key QemuDebugCount -value "0" -context "sdk\\\\bsp/1772399758780"
-# webtalk_transmit -clientid 3899228310 -regid "" -xml C:\\Users\\eliza\\Documents\\1_Local\\ECE532_local\\gyro_test\\gyro_test.sdk\\webtalk\\usage_statistics_ext_sdk.xml -html C:\\Users\\eliza\\Documents\\1_Local\\ECE532_local\\gyro_test\\gyro_test.sdk\\webtalk\\usage_statistics_ext_sdk.html -wdm C:\\Users\\eliza\\Documents\\1_Local\\ECE532_local\\gyro_test\\gyro_test.sdk\\webtalk\\sdk_webtalk.wdm -intro "<H3>SDK Usage Report</H3><BR>"
+# webtalk_add_data -client sdk -key uid -value "1773612707167" -context "sdk\\\\bsp/1773612707167"
+# webtalk_add_data -client sdk -key hwid -value "1772395833581" -context "sdk\\\\bsp/1773612707167"
+# webtalk_add_data -client sdk -key os -value "standalone" -context "sdk\\\\bsp/1773612707167"
+# webtalk_add_data -client sdk -key apptemplate -value "hello_world" -context "sdk\\\\bsp/1773612707167"
+# webtalk_add_data -client sdk -key RecordType -value "BSPCreation" -context "sdk\\\\bsp/1773612707167"
+# webtalk_add_data -client sdk -key uid -value "1773612712825" -context "sdk\\\\application/1773612712825"
+# webtalk_add_data -client sdk -key hwid -value "1772395833581" -context "sdk\\\\application/1773612712825"
+# webtalk_add_data -client sdk -key bspid -value "1773612707167" -context "sdk\\\\application/1773612712825"
+# webtalk_add_data -client sdk -key newbsp -value "true" -context "sdk\\\\application/1773612712825"
+# webtalk_add_data -client sdk -key os -value "standalone" -context "sdk\\\\application/1773612712825"
+# webtalk_add_data -client sdk -key apptemplate -value "hello_world" -context "sdk\\\\application/1773612712825"
+# webtalk_add_data -client sdk -key RecordType -value "APPCreation" -context "sdk\\\\application/1773612712825"
+# webtalk_add_data -client sdk -key LangUsed -value "C" -context "sdk\\\\application/1773612712825"
+# webtalk_add_data -client sdk -key Procused -value "microblaze" -context "sdk\\\\application/1773612712825"
+# webtalk_add_data -client sdk -key projSize -value "97.7421875" -context "sdk\\\\application/1773612712825"
+# webtalk_add_data -client sdk -key uid -value "NA" -context "sdk\\\\bsp/1773620833907"
+# webtalk_add_data -client sdk -key RecordType -value "ToolUsage" -context "sdk\\\\bsp/1773620833907"
+# webtalk_add_data -client sdk -key BootgenCount -value "0" -context "sdk\\\\bsp/1773620833907"
+# webtalk_add_data -client sdk -key DebugCount -value "0" -context "sdk\\\\bsp/1773620833907"
+# webtalk_add_data -client sdk -key PerfCount -value "0" -context "sdk\\\\bsp/1773620833907"
+# webtalk_add_data -client sdk -key FlashCount -value "0" -context "sdk\\\\bsp/1773620833907"
+# webtalk_add_data -client sdk -key CrossTriggCount -value "0" -context "sdk\\\\bsp/1773620833907"
+# webtalk_add_data -client sdk -key QemuDebugCount -value "0" -context "sdk\\\\bsp/1773620833907"
+# webtalk_transmit -clientid 1210522709 -regid "" -xml C:\\Users\\eliza\\Documents\\1_Local\\ECE532_local\\gyro_test\\gyro_test.sdk\\webtalk\\usage_statistics_ext_sdk.xml -html C:\\Users\\eliza\\Documents\\1_Local\\ECE532_local\\gyro_test\\gyro_test.sdk\\webtalk\\usage_statistics_ext_sdk.html -wdm C:\\Users\\eliza\\Documents\\1_Local\\ECE532_local\\gyro_test\\gyro_test.sdk\\webtalk\\sdk_webtalk.wdm -intro "<H3>SDK Usage Report</H3><BR>"
 # webtalk_terminate
-INFO: [Common 17-206] Exiting Webtalk at Sun Mar  1 16:16:06 2026...
+INFO: [Common 17-206] Exiting Webtalk at Sun Mar 15 20:27:22 2026...

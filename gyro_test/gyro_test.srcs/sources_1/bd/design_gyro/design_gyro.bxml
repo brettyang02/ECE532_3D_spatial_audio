@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="design_gyro" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1771969533"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1771969533"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1771969533"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1771969533"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1773624852"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1773624852"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1773624852"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1773624852"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\design_gyro_PmodGYRO_0_0\design_gyro_PmodGYRO_0_0.xci" Type="IP">
         <Instance HierarchyPath="PmodGYRO_0"/>
@@ -140,6 +140,14 @@
       </File>
       <File Name="ip\design_gyro_axi_uartlite_0_0\design_gyro_axi_uartlite_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_uartlite_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_gyro_axi_quad_spi_0_0\design_gyro_axi_quad_spi_0_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_quad_spi_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

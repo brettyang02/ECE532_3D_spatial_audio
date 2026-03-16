@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Tue Feb 24 16:45:30 2026
+//Date        : Sun Mar 15 21:34:11 2026
 //Host        : Tyra_Legion running 64-bit major release  (build 9200)
 //Command     : generate_target design_gyro_wrapper.bd
 //Design      : design_gyro_wrapper
@@ -10,7 +10,11 @@
 `timescale 1 ps / 1 ps
 
 module design_gyro_wrapper
-   (ja_pin10_io,
+   (ACL_MISO,
+    ACL_MOSI,
+    ACL_SCLK,
+    ACL_SCN,
+    ja_pin10_io,
     ja_pin1_io,
     ja_pin2_io,
     ja_pin3_io,
@@ -22,6 +26,10 @@ module design_gyro_wrapper
     sys_clock_0,
     usb_uart_rxd,
     usb_uart_txd);
+  input ACL_MISO;
+  output ACL_MOSI;
+  output ACL_SCLK;
+  output [0:0]ACL_SCN;
   inout ja_pin10_io;
   inout ja_pin1_io;
   inout ja_pin2_io;
@@ -35,6 +43,10 @@ module design_gyro_wrapper
   input usb_uart_rxd;
   output usb_uart_txd;
 
+  wire ACL_MISO;
+  wire ACL_MOSI;
+  wire ACL_SCLK;
+  wire [0:0]ACL_SCN;
   wire ja_pin10_i;
   wire ja_pin10_io;
   wire ja_pin10_o;
@@ -73,7 +85,11 @@ module design_gyro_wrapper
   wire usb_uart_txd;
 
   design_gyro design_gyro_i
-       (.ja_pin10_i(ja_pin10_i),
+       (.ACL_MISO(ACL_MISO),
+        .ACL_MOSI(ACL_MOSI),
+        .ACL_SCLK(ACL_SCLK),
+        .ACL_SCN(ACL_SCN),
+        .ja_pin10_i(ja_pin10_i),
         .ja_pin10_o(ja_pin10_o),
         .ja_pin10_t(ja_pin10_t),
         .ja_pin1_i(ja_pin1_i),

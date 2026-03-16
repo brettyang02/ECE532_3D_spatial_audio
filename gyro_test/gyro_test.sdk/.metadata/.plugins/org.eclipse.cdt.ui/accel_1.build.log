@@ -1,0 +1,13 @@
+21:52:19 **** Incremental Build of configuration Debug for project accel_1 ****
+make all 
+'Building file: ../src/accel.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/accel.o" -I../../accel_1_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/accel.d" -MT"src/accel.o" -o "src/accel.o" "../src/accel.c"
+../src/accel.c:2:10: fatal error: xspi.h: No such file or directory
+ #include "xspi.h"
+          ^~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:29: src/accel.o] Error 1
+
+21:52:19 Build Finished (took 514ms)
+

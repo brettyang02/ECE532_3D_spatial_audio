@@ -1,0 +1,76 @@
+#include "xparameters.h"
+#include "xspi.h"
+#include "xil_printf.h"
+
+// Name from xparameters.h
+#define SPI_DEVICE_ID    XPAR_AXI_QUAD_SPI_0_DEVICE_ID
+
+// ADXL362 Register Map
+#define REG_READ         0x0B
+#define REG_WHO_AM_I     0x00
+#define REG_POWER_CTL    0x2D
+#define REG_DATA_START   0x0E  // XDATA_L starts here
+
+XSpi SpiInstance;
+
+int init_accelerometer() {
+    XSpi_Config *ConfigPtr;
+    int Status;
+
+    // 1. Initialize the SPI driver
+    ConfigPtr = XSpi_LookupConfig(SPI_DEVICE_ID);
+    if (ConfigPtr == NULL) return XST_DEVICE_NOT_FOUND;
+
+    Status = XSpi_CfgInitialize(&SpiInstance, ConfigPtr, ConfigPtr->BaseAddress);
+    if (Status != XST_SUCCESS) return XST_FAILURE;
+
+    // 2. Set SPI Options: Master Mode and Manual Chip Select
+    // IMPORTANT: Ensure the Frequency Ratio in Vivado is 16 or higher
+    Status = XSpi_SetOptions(&SpiInstance, XSP_MASTER_OPTION | XSP_MANUAL_SSELECT_OPTION);
+    if (Status != XST_SUCCESS) return XST_FAILURE;
+
+    XSpi_Start(&SpiInstance);
+    XSpi_IntrGlobalDisable(&SpiInstance);
+
+    // 3. Wake up the ADXL362 (Power Control Register)
+    // Write 0x02 to Register 0x2D to enter "Measurement Mode"
+    u8 WriteBuf[3] = {0x0A, REG_POWER_CTL, 0x02};
+    XSpi_SetSlaveSelect(&SpiInstance, 0x01); // Pull CS Low
+    XSpi_Transfer(&SpiInstance, WriteBuf, NULL, 3);
+    XSpi_SetSlaveSelect(&SpiInstance, 0x00); // Pull CS High
+
+    return XST_SUCCESS;
+}
+
+void read_accel_data() {
+    // We send: [Read Command, Start Register, 6 dummy bytes for X_L, X_H, Y_L, Y_H, Z_L, Z_H]
+    u8 WriteBuf[8] = {REG_READ, REG_DATA_START, 0, 0, 0, 0, 0, 0};
+    u8 ReadBuf[8];
+
+    XSpi_SetSlaveSelect(&SpiInstance, 0x01);
+    XSpi_Transfer(&SpiInstance, WriteBuf, ReadBuf, 8);
+    XSpi_SetSlaveSelect(&SpiInstance, 0x00);
+
+    // The data starts at index 2 because indices 0 and 1 were the command/address
+    int16_t x = (int16_t)((ReadBuf[3] << 8) | ReadBuf[2]);
+    int16_t y = (int16_t)((ReadBuf[5] << 8) | ReadBuf[4]);
+    int16_t z = (int16_t)((ReadBuf[7] << 8) | ReadBuf[6]);
+
+    xil_printf("X: %d | Y: %d | Z: %d\r\n", x, y, z);
+}
+
+int main() {
+    if (init_accelerometer() != XST_SUCCESS) {
+        xil_printf("Accel Initialization Failed!\r\n");
+        return -1;
+    }
+
+    xil_printf("ADXL362 Ready. Reading gravity...\r\n");
+
+    while (1) {
+        read_accel_data();
+        for(int i=0; i<1000000; i++); // Small delay
+    }
+
+    return 0;
+}

@@ -1,0 +1,16 @@
+vhdl xil_defaultlib  \
+"../../../bd/design_gyro/ip/design_gyro_PmodGYRO_0_0/src/PmodGYRO_axi_quad_spi_0_0/sim/PmodGYRO_axi_quad_spi_0_0.vhd" \
+"../../../bd/design_gyro/ip/design_gyro_PmodGYRO_0_0/src/PmodGYRO_axi_gpio_0_0/sim/PmodGYRO_axi_gpio_0_0.vhd" \
+"../../../bd/design_gyro/ip/design_gyro_proc_sys_reset_0_0/sim/design_gyro_proc_sys_reset_0_0.vhd" \
+"../../../bd/design_gyro/ip/design_gyro_microblaze_0_0/sim/design_gyro_microblaze_0_0.vhd" \
+"../../../bd/design_gyro/ip/design_gyro_dlmb_v10_2/sim/design_gyro_dlmb_v10_2.vhd" \
+"../../../bd/design_gyro/ip/design_gyro_ilmb_v10_2/sim/design_gyro_ilmb_v10_2.vhd" \
+"../../../bd/design_gyro/ip/design_gyro_dlmb_bram_if_cntlr_2/sim/design_gyro_dlmb_bram_if_cntlr_2.vhd" \
+"../../../bd/design_gyro/ip/design_gyro_ilmb_bram_if_cntlr_2/sim/design_gyro_ilmb_bram_if_cntlr_2.vhd" \
+"../../../bd/design_gyro/ip/design_gyro_microblaze_0_axi_intc_1/sim/design_gyro_microblaze_0_axi_intc_1.vhd" \
+"../../../bd/design_gyro/ip/design_gyro_mdm_1_2/sim/design_gyro_mdm_1_2.vhd" \
+"../../../bd/design_gyro/ip/design_gyro_rst_clk_wiz_1_100M_1/sim/design_gyro_rst_clk_wiz_1_100M_1.vhd" \
+"../../../bd/design_gyro/ip/design_gyro_axi_uartlite_0_0/sim/design_gyro_axi_uartlite_0_0.vhd" \
+"../../../bd/design_gyro/ip/design_gyro_axi_quad_spi_0_0/sim/design_gyro_axi_quad_spi_0_0.vhd" \
+
+nosort

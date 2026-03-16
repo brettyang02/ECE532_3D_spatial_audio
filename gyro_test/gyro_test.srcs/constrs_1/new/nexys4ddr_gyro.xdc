@@ -29,3 +29,18 @@ set_property IOSTANDARD LVCMOS33 [get_ports {gyro_cs gyro_mosi gyro_miso gyro_sc
 ##USB-RS232 Interface
 set_property -dict { PACKAGE_PIN C4 IOSTANDARD LVCMOS33 } [get_ports { uart_rtl_0_rxd }];
 set_property -dict { PACKAGE_PIN D4 IOSTANDARD LVCMOS33 } [get_ports { uart_rtl_0_txd }];
+
+## On-board ADXL362 Accelerometer - Manual Mapping
+# MOSI (Master Out Slave In)
+set_property -dict { PACKAGE_PIN F14 IOSTANDARD LVCMOS33 } [get_ports { ACL_MOSI }]; 
+# MISO (Master In Slave Out)
+set_property -dict { PACKAGE_PIN E15 IOSTANDARD LVCMOS33 } [get_ports { ACL_MISO }]; 
+# SCLK (Serial Clock)
+set_property -dict { PACKAGE_PIN F15 IOSTANDARD LVCMOS33 } [get_ports { ACL_SCLK }]; 
+# CS (Chip Select)
+set_property -dict { PACKAGE_PIN D15 IOSTANDARD LVCMOS33 } [get_ports { ACL_CSN }];
+
+## Prevent DRC Errors for the unused Tri-state and Input ports
+## We set these to a virtual "Warning" so the bitstream can generate
+set_property SEVERITY {Warning} [get_drc_checks NSTD-1]
+set_property SEVERITY {Warning} [get_drc_checks UCIO-1]

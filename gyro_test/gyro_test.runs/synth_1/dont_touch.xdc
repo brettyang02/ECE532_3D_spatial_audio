@@ -54,4 +54,7 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_gyro_rst
 # IP: bd/design_gyro/ip/design_gyro_axi_uartlite_0_0/design_gyro_axi_uartlite_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_gyro_axi_uartlite_0_0 || ORIG_REF_NAME==design_gyro_axi_uartlite_0_0} -quiet] -quiet
 
+# IP: bd/design_gyro/ip/design_gyro_axi_quad_spi_0_0/design_gyro_axi_quad_spi_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_gyro_axi_quad_spi_0_0 || ORIG_REF_NAME==design_gyro_axi_quad_spi_0_0} -quiet] -quiet
+
 # XDC: bd/design_gyro/design_gyro_ooc.xdc

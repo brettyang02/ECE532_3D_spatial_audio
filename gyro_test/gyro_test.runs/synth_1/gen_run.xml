@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1771969537">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1773624854">
   <File Type="PA-TCL" Name="design_gyro_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="design_gyro_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_gyro_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="design_gyro_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="design_gyro_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="design_gyro_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="design_gyro_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="design_gyro_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="design_gyro_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/design_gyro/design_gyro.bd">
@@ -50,15 +53,16 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_gyro_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_gyro_dlmb_v10_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_gyro_proc_sys_reset_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_gyro_axi_quad_spi_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_gyro_PmodGYRO_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_gyro_microblaze_0_axi_intc_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_gyro_lmb_bram_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_gyro_microblaze_0_axi_intc_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_gyro_ilmb_bram_if_cntlr_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_gyro_microblaze_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_gyro_dlmb_bram_if_cntlr_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_gyro_ilmb_v10_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_gyro_dlmb_bram_if_cntlr_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_gyro_xbar_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_gyro_mdm_1_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_gyro_rst_clk_wiz_1_100M_1"/>

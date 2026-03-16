@@ -75,6 +75,10 @@ set_property used_in_implementation false [get_files -all c:/Users/eliza/Documen
 set_property used_in_implementation false [get_files -all c:/Users/eliza/Documents/1_Local/ECE532_local/gyro_test/gyro_test.srcs/sources_1/bd/design_gyro/ip/design_gyro_axi_uartlite_0_0/design_gyro_axi_uartlite_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/eliza/Documents/1_Local/ECE532_local/gyro_test/gyro_test.srcs/sources_1/bd/design_gyro/ip/design_gyro_axi_uartlite_0_0/design_gyro_axi_uartlite_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/eliza/Documents/1_Local/ECE532_local/gyro_test/gyro_test.srcs/sources_1/bd/design_gyro/ip/design_gyro_axi_uartlite_0_0/design_gyro_axi_uartlite_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/eliza/Documents/1_Local/ECE532_local/gyro_test/gyro_test.srcs/sources_1/bd/design_gyro/ip/design_gyro_axi_quad_spi_0_0/design_gyro_axi_quad_spi_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/eliza/Documents/1_Local/ECE532_local/gyro_test/gyro_test.srcs/sources_1/bd/design_gyro/ip/design_gyro_axi_quad_spi_0_0/design_gyro_axi_quad_spi_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/eliza/Documents/1_Local/ECE532_local/gyro_test/gyro_test.srcs/sources_1/bd/design_gyro/ip/design_gyro_axi_quad_spi_0_0/design_gyro_axi_quad_spi_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/eliza/Documents/1_Local/ECE532_local/gyro_test/gyro_test.srcs/sources_1/bd/design_gyro/ip/design_gyro_axi_quad_spi_0_0/design_gyro_axi_quad_spi_0_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/eliza/Documents/1_Local/ECE532_local/gyro_test/gyro_test.srcs/sources_1/bd/design_gyro/design_gyro_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
