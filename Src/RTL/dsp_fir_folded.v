@@ -48,7 +48,8 @@ module dsp_fir_folded (
         else if (new_sample_trig) begin
             // Save Output & Reset
             //audio_out   <= accumulator[40:17];
-            audio_out   <= accumulator[37:14];
+            //audio_out   <= accumulator[37:14];
+            audio_out   <= accumulator[38:15];
             accumulator <= 0;
 
             // Write to Circular Buffer
