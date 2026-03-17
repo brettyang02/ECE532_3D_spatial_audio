@@ -1,4 +1,4 @@
-02:33:32 **** Auto Build of project spatial_audio_app_bsp ****
+14:37:17 **** Auto Build of project spatial_audio_app_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_2/src"
 make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -8,6 +8,8 @@ make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gc
 make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Running Make include in microblaze_0/libsrc/intc_v3_8/src"
 make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/PmodGYRO_v1_0/src"
+make -C microblaze_0/libsrc/PmodGYRO_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Running Make include in microblaze_0/libsrc/PmodJSTK2_v1_0/src"
 make -C microblaze_0/libsrc/PmodJSTK2_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
@@ -27,6 +29,9 @@ make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc"
 "Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
 make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling intc"
+"Running Make libs in microblaze_0/libsrc/PmodGYRO_v1_0/src"
+make -C microblaze_0/libsrc/PmodGYRO_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling PmodGYRO..."
 "Running Make libs in microblaze_0/libsrc/PmodJSTK2_v1_0/src"
 make -C microblaze_0/libsrc/PmodJSTK2_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling PmodXXXX..."
@@ -41,5 +46,5 @@ make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-
 "Compiling uartlite"
 'Finished building libraries'
 
-02:33:39 Build Finished (took 7s.290ms)
+14:37:24 Build Finished (took 6s.703ms)
 

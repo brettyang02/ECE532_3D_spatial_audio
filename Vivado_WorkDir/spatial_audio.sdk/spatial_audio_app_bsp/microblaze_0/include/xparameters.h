@@ -474,6 +474,19 @@
  
  
 /******************************************************************/
+/* Definitions for driver PMODGYRO */
+#define XPAR_PMODGYRO_NUM_INSTANCES 1
+
+/* Definitions for peripheral PMODGYRO_0 */
+#define XPAR_PMODGYRO_0_DEVICE_ID 0
+#define XPAR_PMODGYRO_0_AXI_LITE_SPI_BASEADDR 0x00030000
+#define XPAR_PMODGYRO_0_AXI_LITE_SPI_HIGHADDR 0x0003FFFF
+#define XPAR_PMODGYRO_0_AXI_LITE_GPIO_BASEADDR 0x00021000
+#define XPAR_PMODGYRO_0_AXI_LITE_GPIO_HIGHADDR 0x00021FFF
+
+
+/******************************************************************/
+
 /* Definitions for driver PMODJSTK2 */
 #define XPAR_PMODJSTK2_NUM_INSTANCES 1
 
