@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xparameters.h"
+#include "xspi.h"
+#include "xil_printf.h"
+
+// Check xparameters.h for your new SPI block's Device ID
+#define SPI_DEVICE_ID    XPAR_SPI_1_DEVICE_ID
+
+XSpi AccelSpi;
+
+// ADXL362 Instruction Set
+#define WRITE_REG          0x0A
+#define READ_REG           0x0B
+#define READ_FIFO          0x0D
+
+// ADXL362 Registers
+#define REG_STATUS         0x0B
+#define REG_XL             0x0E // X-axis bits [7:0]
+#define REG_POWER_CTL      0x2D
+
+void SPI_WriteReg(u8 reg, u8 value) {
+    u8 buffer[3] = {WRITE_REG, reg, value};
+    XSpi_Transfer(&AccelSpi, buffer, NULL, 3);
+}
+
+u8 SPI_ReadReg(u8 reg) {
+    u8 send_buf[3] = {READ_REG, reg, 0x00};
+    u8 recv_buf[3] = {0, 0, 0};
+    XSpi_Transfer(&AccelSpi, send_buf, recv_buf, 3);
+    return recv_buf[2];
+}
+
+int main() {
+    init_platform();
+    print("\n\r--- Onboard ADXL362 Accelerometer Test ---\n\r");
+
+    // 1. Initialize SPI Driver
+    XSpi_Config *ConfigPtr = XSpi_LookupConfig(SPI_DEVICE_ID);
+    XSpi_CfgInitialize(&AccelSpi, ConfigPtr, ConfigPtr->BaseAddress);
+
+    // Set options: Master mode, Manual CS toggle, Clock Phase/Polarity (Mode 0)
+    XSpi_SetOptions(&AccelSpi, XSP_MASTER_OPTION | XSP_MANUAL_SSELECT_OPTION);
+    XSpi_Start(&AccelSpi);
+    XSpi_IntrGlobalDisable(&AccelSpi);
+    XSpi_SetSlaveSelect(&AccelSpi, 0x01);
+
+    // 2. Wake up the sensor (Power Control Register)
+    // Set bit 1 to '1' to enter Measurement Mode
+    SPI_WriteReg(REG_POWER_CTL, 0x02);
+
+    print("ADXL362 Woken Up. Reading axes...\n\r");
+
+    while (1) {
+        // Check Status Register (Bit 0: Data Ready)
+        if (SPI_ReadReg(REG_STATUS) & 0x01) {
+            // Read 8-bit X, Y, Z values (simplest test)
+            u8 x_val = SPI_ReadReg(REG_XL);
+            u8 y_val = SPI_ReadReg(REG_XL + 2);
+            u8 z_val = SPI_ReadReg(REG_XL + 4);
+
+            // Cast to signed char to see +/- tilt
+            xil_printf("X: %04d | Y: %04d | Z: %04d \r", (signed char)x_val, (signed char)y_val, (signed char)z_val);
+        }
+        usleep(100000); // 10Hz print rate

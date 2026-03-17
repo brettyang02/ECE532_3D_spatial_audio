@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xparameters.h"
+#include "xspi.h"
+#include "xil_printf.h"
+#include "sleep.h"
+
+#define SPI_DEVICE_ID XPAR_SPI_0_DEVICE_ID
+
+XSpi AccelSpi;
+
+int main() {
+    init_platform();
+    print("\n\r--- Clean Slate ADXL362 Test ---\n\r");
+
+    XSpi_Config *ConfigPtr = XSpi_LookupConfig(SPI_DEVICE_ID);
+    XSpi_CfgInitialize(&AccelSpi, ConfigPtr, ConfigPtr->BaseAddress);
+
+    // Master Mode, Manual CS. (Standard Mode 0 is default).
+    XSpi_SetOptions(&AccelSpi, XSP_MASTER_OPTION | XSP_MANUAL_SSELECT_OPTION);
+    XSpi_Start(&AccelSpi);
+    XSpi_IntrGlobalDisable(&AccelSpi);
+
+    while(1) {
+        // [Read Cmd 0x0B] [DevID Reg 0x00] [Dummy 0x00]
+        u8 send_buf[3] = {0x0B, 0x00, 0x00};
+        u8 recv_buf[3] = {0, 0, 0};
+
+        // Select Slave 0 (Driver pulls CS Low)
+        XSpi_SetSlaveSelect(&AccelSpi, 0x01);
+
+        XSpi_Transfer(&AccelSpi, send_buf, recv_buf, 3);
+
+        // Deselect (Driver pulls CS High)
+        XSpi_SetSlaveSelect(&AccelSpi, 0x00);
+
+        xil_printf("Device ID: 0x%02X\n\r", recv_buf[2]);
+        usleep(1000000);
+    }
+
+    cleanup_platform();
+    return 0;
+}

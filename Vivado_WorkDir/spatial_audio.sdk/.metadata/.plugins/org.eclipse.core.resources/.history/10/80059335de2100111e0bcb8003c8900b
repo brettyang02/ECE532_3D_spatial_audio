@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "PmodGYRO.h"
+#include "xparameters.h"
+
+PmodGYRO myGyro;
+
+// The Accelerometer has its own status register: 0x27 (STATUS_REG_A)
+// Bit 3 (0x08) indicates new X, Y, and Z data is available.
+int isAccelDataReady(PmodGYRO *InstancePtr) {
+    uint8_t status = 0;
+    GYRO_ReadReg(InstancePtr, 0x27, &status, 1);
+    return ((status & 0x08) != 0) ? 1 : 0;
+}
+
+int main() {
+    init_platform();
+    print("\n\r--- PmodGYRO: Accelerometer Sanity Check ---\n\r");
+
+    // 1. Initialize Peripheral
+    GYRO_begin(&myGyro, XPAR_PMODGYRO_0_AXI_LITE_SPI_BASEADDR, XPAR_PMODGYRO_0_AXI_LITE_GPIO_BASEADDR);
+
+    // 2. Configure Accelerometer
+    // Register 0x20 is CTRL_REG1_A.
+    // Writing 0x27: 50Hz Data Rate, Normal Mode, All axes enabled.
+    uint8_t accel_setup = 0x27;
+    GYRO_WriteReg(&myGyro, 0x20, &accel_setup, 1);
+
+    print("Accelerometer Live! Tilt the board to see G-force changes.\n\r");
+
+    while (1) {
+        if (isAccelDataReady(&myGyro)) {
+            // Read Accelerometer values (Note the 'A' in these function names)
+            int16_t accX = GYRO_getAccelX(&myGyro);
+            int16_t accY = GYRO_getAccelY(&myGyro);
+            int16_t accZ = GYRO_getAccelZ(&myGyro);
+
+            // Print raw values.
+            // In a +/- 2G scale, 1G is roughly 16384 (if 16-bit) or 1024 (if 12-bit)
+            // depending on the library's internal bit-shifting.
+            xil_printf("Accel X: %06d | Y: %06d | Z: %06d \r", accX, accY, accZ);
+        }
+    }
+
+    cleanup_platform();
+    return 0;
+}

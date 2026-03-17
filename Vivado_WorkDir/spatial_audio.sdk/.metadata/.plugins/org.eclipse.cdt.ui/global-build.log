@@ -1,156 +1,111 @@
-23:47:45 **** Build of project spatial_audio_app_bsp ****
+03:24:49 **** Incremental Build of configuration Debug for project spatial_audio_app ****
+make all 
+'Building file: ../src/base_gyroscope.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/base_gyroscope.o" -I../../spatial_audio_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/base_gyroscope.d" -MT"src/base_gyroscope.o" -o "src/base_gyroscope.o" "../src/base_gyroscope.c"
+../src/base_gyroscope.c:5:10: fatal error: PmodGYRO.h: No such file or directory
+ #include "PmodGYRO.h"
+          ^~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:29: src/base_gyroscope.o] Error 1
+03:27:27 **** Build of project Integration_Gyro_bsp ****
 make -k all 
-"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
-make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
 make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/PmodGYRO_v1_0/src"
+make -C microblaze_0/libsrc/PmodGYRO_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/PmodJSTK2_v1_0/src"
+make -C microblaze_0/libsrc/PmodJSTK2_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
 make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Running Make include in microblaze_0/libsrc/intc_v3_8/src"
 make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/PmodJSTK2_v1_0/src"
-make -C microblaze_0/libsrc/PmodJSTK2_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
-make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
 make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
-make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling bram"
-mb-ar: creating ../../../lib/libxil.a
 "Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
 make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling cpu"
-"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
-make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling gpio"
-"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
-make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling intc"
-"Running Make libs in microblaze_0/libsrc/PmodJSTK2_v1_0/src"
-make -C microblaze_0/libsrc/PmodJSTK2_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling PmodXXXX..."
+mb-ar: creating ../../../lib/libxil.a
 "Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
 make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling standalone";
 microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
  #pragma message ("For the sleep routines, assembly instructions are used")
          ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/PmodGYRO_v1_0/src"
+make -C microblaze_0/libsrc/PmodGYRO_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling PmodGYRO..."
+"Running Make libs in microblaze_0/libsrc/PmodJSTK2_v1_0/src"
+make -C microblaze_0/libsrc/PmodJSTK2_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling PmodXXXX..."
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling spi"
 "Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
 make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling uartlite"
 'Finished building libraries'
-23:47:51 **** Build of configuration Debug for project spatial_audio_app ****
+03:27:35 **** Build of configuration Debug for project Integration_Gyro ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../spatial_audio_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 'Finished building: ../src/helloworld.c'
 ' '
 'Building file: ../src/platform.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../spatial_audio_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
 'Finished building: ../src/platform.c'
 ' '
-'Building target: spatial_audio_app.elf'
+'Building target: Integration_Gyro.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../spatial_audio_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "spatial_audio_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: spatial_audio_app.elf'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
-mb-size spatial_audio_app.elf  |tee "spatial_audio_app.elf.size"
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   3132	    312	   3108	   6552	   1998	spatial_audio_app.elf
-'Finished building: spatial_audio_app.elf.size'
+   3140	    320	   3108	   6568	   19a8	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
 ' '
-23:47:53 **** Auto Build of configuration Debug for project spatial_audio_app ****
+03:27:38 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+03:27:47 **** Auto Build of configuration Debug for project spatial_audio_app ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../spatial_audio_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 'Finished building: ../src/helloworld.c'
 ' '
-'Building target: spatial_audio_app.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../spatial_audio_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "spatial_audio_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: spatial_audio_app.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size spatial_audio_app.elf  |tee "spatial_audio_app.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  31644	    364	   3232	  35240	   89a8	spatial_audio_app.elf
-'Finished building: spatial_audio_app.elf.size'
-' '
-23:56:14 **** Clean-only build of configuration Debug for project spatial_audio_app ****
+'Building file: ../src/base_gyroscope.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/base_gyroscope.o" -I../../spatial_audio_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/base_gyroscope.d" -MT"src/base_gyroscope.o" -o "src/base_gyroscope.o" "../src/base_gyroscope.c"
+../src/base_gyroscope.c:5:10: fatal error: PmodGYRO.h: No such file or directory
+ #include "PmodGYRO.h"
+          ^~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:29: src/base_gyroscope.o] Error 1
+03:28:04 **** Clean-only build of configuration Debug for project spatial_audio_app ****
 make clean 
-rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  spatial_audio_app.elf.size  spatial_audio_app.elf
+rm -rf  ./src/base_gyroscope.o ./src/helloworld.o ./src/platform.o  ./src/base_gyroscope.d ./src/helloworld.d ./src/platform.d  spatial_audio_app.elf.size  spatial_audio_app.elf
 ' '
-23:56:14 **** Incremental Build of configuration Debug for project spatial_audio_app ****
-make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../spatial_audio_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-'Finished building: ../src/helloworld.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../spatial_audio_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
-'Building target: spatial_audio_app.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../spatial_audio_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "spatial_audio_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: spatial_audio_app.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size spatial_audio_app.elf  |tee "spatial_audio_app.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  31644	    364	   3232	  35240	   89a8	spatial_audio_app.elf
-'Finished building: spatial_audio_app.elf.size'
-' '
-02:33:32 **** Auto Build of project spatial_audio_app_bsp ****
-make -k all 
-"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
-make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
-make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
-make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
-make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/PmodJSTK2_v1_0/src"
-make -C microblaze_0/libsrc/PmodJSTK2_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
-make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
-make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling bram"
-mb-ar: creating ../../../lib/libxil.a
-"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
-make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling cpu"
-"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
-make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling gpio"
-"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
-make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling intc"
-"Running Make libs in microblaze_0/libsrc/PmodJSTK2_v1_0/src"
-make -C microblaze_0/libsrc/PmodJSTK2_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling PmodXXXX..."
-"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
-make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling standalone";
-microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
- #pragma message ("For the sleep routines, assembly instructions are used")
-         ^~~~~~~
-"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling uartlite"
-'Finished building libraries'
-02:33:40 **** Auto Build of configuration Debug for project spatial_audio_app ****
+03:28:04 **** Auto Build of configuration Debug for project spatial_audio_app ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -173,6 +128,1535 @@ mb-size spatial_audio_app.elf  |tee "spatial_audio_app.elf.size"
   33852	    364	   3232	  37448	   9248	spatial_audio_app.elf
 'Finished building: spatial_audio_app.elf.size'
 ' '
-02:33:52 **** Incremental Build of configuration Debug for project spatial_audio_app ****
+03:28:29 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:78:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26788	    356	   3224	  30368	   76a0	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+03:31:29 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23824	    360	   3240	  27424	   6b20	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+03:32:45 **** Auto Build of configuration Debug for project spatial_audio_app ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../spatial_audio_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: spatial_audio_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../spatial_audio_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "spatial_audio_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: spatial_audio_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size spatial_audio_app.elf  |tee "spatial_audio_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33852	    364	   3232	  37448	   9248	spatial_audio_app.elf
+'Finished building: spatial_audio_app.elf.size'
+' '
+03:33:58 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:54:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23800	    360	   3240	  27400	   6b08	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+03:34:03 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+03:39:22 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:54:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23080	    360	   3240	  26680	   6838	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+03:39:25 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+03:40:46 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:54:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  17752	    360	   3240	  21352	   5368	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+03:40:51 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+03:46:04 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39476	    420	   3376	  43272	   a908	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+03:46:53 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+03:48:26 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39432	    420	   3372	  43224	   a8d8	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+03:48:47 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+03:54:35 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40336	    420	   3356	  44112	   ac50	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+03:54:40 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+03:56:24 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39616	    420	   3372	  43408	   a990	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+03:56:29 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:01:49 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39656	    420	   3372	  43448	   a9b8	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:01:54 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:07:24 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39656	    420	   3372	  43448	   a9b8	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:07:29 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:11:11 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39284	    420	   3376	  43080	   a848	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:11:17 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:11:40 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:122:14: warning: unused variable 'printAngleZ' [-Wunused-variable]
+          int printAngleZ = (int)(angleZ * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:120:14: warning: unused variable 'printAngleX' [-Wunused-variable]
+          int printAngleX = (int)(angleX * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39216	    420	   3372	  43008	   a800	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:11:53 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:12:53 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:122:14: warning: unused variable 'printAngleZ' [-Wunused-variable]
+          int printAngleZ = (int)(angleZ * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:120:14: warning: unused variable 'printAngleX' [-Wunused-variable]
+          int printAngleX = (int)(angleX * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39232	    420	   3372	  43024	   a810	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:12:58 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:13:25 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:14:01 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:122:14: warning: unused variable 'printAngleZ' [-Wunused-variable]
+          int printAngleZ = (int)(angleZ * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:120:14: warning: unused variable 'printAngleX' [-Wunused-variable]
+          int printAngleX = (int)(angleX * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39232	    420	   3372	  43024	   a810	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:14:07 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:14:32 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:122:14: warning: unused variable 'printAngleZ' [-Wunused-variable]
+          int printAngleZ = (int)(angleZ * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:120:14: warning: unused variable 'printAngleX' [-Wunused-variable]
+          int printAngleX = (int)(angleX * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39232	    420	   3372	  43024	   a810	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:14:37 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:18:48 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:122:14: warning: unused variable 'printAngleZ' [-Wunused-variable]
+          int printAngleZ = (int)(angleZ * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:120:14: warning: unused variable 'printAngleX' [-Wunused-variable]
+          int printAngleX = (int)(angleX * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39232	    420	   3372	  43024	   a810	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:19:16 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  38988	    420	   3376	  42784	   a720	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:19:21 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:20:36 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39056	    420	   3372	  42848	   a760	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:21:08 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39056	    420	   3372	  42848	   a760	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:21:13 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:21:56 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39056	    420	   3372	  42848	   a760	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:22:02 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:22:30 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39080	    420	   3372	  42872	   a778	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:22:33 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:23:17 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39104	    420	   3372	  42896	   a790	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:23:54 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:24:25 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39088	    420	   3372	  42880	   a780	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:24:45 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39020	    420	   3376	  42816	   a740	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:24:53 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39020	    420	   3376	  42816	   a740	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:24:56 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:25:49 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39020	    420	   3376	  42816	   a740	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:25:55 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:26:22 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39020	    420	   3376	  42816	   a740	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:26:27 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:27:05 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39020	    420	   3376	  42816	   a740	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:27:11 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:27:54 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39020	    420	   3376	  42816	   a740	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:29:43 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39036	    420	   3376	  42832	   a750	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:30:43 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39036	    420	   3376	  42832	   a750	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:30:48 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:31:29 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39036	    420	   3376	  42832	   a750	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:31:34 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:32:41 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39036	    420	   3376	  42832	   a750	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:32:46 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:36:09 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  38988	    420	   3376	  42784	   a720	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:36:13 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:38:05 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39036	    420	   3376	  42832	   a750	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:38:09 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:38:55 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39036	    420	   3376	  42832	   a750	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:38:59 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:39:26 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39036	    420	   3376	  42832	   a750	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:39:31 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:39:58 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39036	    420	   3376	  42832	   a750	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:40:11 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:40:50 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  38988	    420	   3376	  42784	   a720	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:41:01 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  38988	    420	   3376	  42784	   a720	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:41:42 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39012	    420	   3376	  42808	   a738	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:41:46 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:42:23 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39012	    420	   3376	  42808	   a738	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:42:36 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:43:16 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39012	    420	   3376	  42808	   a738	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:43:24 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:44:24 **** Auto Build of configuration Debug for project Integration_Gyro ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Integration_Gyro_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:121:14: warning: unused variable 'printAngleY' [-Wunused-variable]
+          int printAngleY = (int)(angleY * 10);
+              ^~~~~~~~~~~
+../src/helloworld.c:85:9: warning: unused variable 'prevDataReady' [-Wunused-variable]
+     int prevDataReady = 0;
+         ^~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Integration_Gyro.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Integration_Gyro_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Integration_Gyro.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Integration_Gyro.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Integration_Gyro.elf  |tee "Integration_Gyro.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39116	    420	   3376	  42912	   a7a0	Integration_Gyro.elf
+'Finished building: Integration_Gyro.elf.size'
+' '
+04:44:31 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:47:23 **** Build of project Accel_Test_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/PmodGYRO_v1_0/src"
+make -C microblaze_0/libsrc/PmodGYRO_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/PmodJSTK2_v1_0/src"
+make -C microblaze_0/libsrc/PmodJSTK2_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/PmodGYRO_v1_0/src"
+make -C microblaze_0/libsrc/PmodGYRO_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling PmodGYRO..."
+"Running Make libs in microblaze_0/libsrc/PmodJSTK2_v1_0/src"
+make -C microblaze_0/libsrc/PmodJSTK2_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling PmodXXXX..."
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling spi"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+04:47:31 **** Build of configuration Debug for project Accel_Test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Accel_Test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../Accel_Test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Accel_Test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Accel_Test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Accel_Test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Accel_Test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Accel_Test.elf  |tee "Accel_Test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3140	    320	   3108	   6568	   19a8	Accel_Test.elf
+'Finished building: Accel_Test.elf.size'
+' '
+04:47:34 **** Auto Build of configuration Debug for project Accel_Test ****
+make all 
+make: Nothing to be done for 'all'.
+04:48:13 **** Auto Build of configuration Debug for project Accel_Test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Accel_Test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:35:28: warning: implicit declaration of function 'GYRO_getAccelX'; did you mean 'GYRO_getTemp'? [-Wimplicit-function-declaration]
+             int16_t accX = GYRO_getAccelX(&myGyro);
+                            ^~~~~~~~~~~~~~
+                            GYRO_getTemp
+../src/helloworld.c:36:28: warning: implicit declaration of function 'GYRO_getAccelY'; did you mean 'GYRO_getTemp'? [-Wimplicit-function-declaration]
+             int16_t accY = GYRO_getAccelY(&myGyro);
+                            ^~~~~~~~~~~~~~
+                            GYRO_getTemp
+../src/helloworld.c:37:28: warning: implicit declaration of function 'GYRO_getAccelZ'; did you mean 'GYRO_getTemp'? [-Wimplicit-function-declaration]
+             int16_t accZ = GYRO_getAccelZ(&myGyro);
+                            ^~~~~~~~~~~~~~
+                            GYRO_getTemp
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Accel_Test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Accel_Test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Accel_Test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+D:\Vivado_Projects\ECE532_3D_spatial_audio\Vivado_WorkDir\spatial_audio.sdk\Accel_Test\Debug/../src/helloworld.c:35: undefined reference to `GYRO_getAccelX'
+D:\Vivado_Projects\ECE532_3D_spatial_audio\Vivado_WorkDir\spatial_audio.sdk\Accel_Test\Debug/../src/helloworld.c:36: undefined reference to `GYRO_getAccelY'
+D:\Vivado_Projects\ECE532_3D_spatial_audio\Vivado_WorkDir\spatial_audio.sdk\Accel_Test\Debug/../src/helloworld.c:37: undefined reference to `GYRO_getAccelZ'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: Accel_Test.elf] Error 1
+04:49:29 **** Auto Build of configuration Debug for project Accel_Test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Accel_Test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:8:26: error: 'XPAR_SPI_1_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_SPI_0_DEVICE_ID'?
+ #define SPI_DEVICE_ID    XPAR_SPI_1_DEVICE_ID
+                          ^
+../src/helloworld.c:39:48: note: in expansion of macro 'SPI_DEVICE_ID'
+     XSpi_Config *ConfigPtr = XSpi_LookupConfig(SPI_DEVICE_ID);
+                                                ^~~~~~~~~~~~~
+../src/helloworld.c:8:26: note: each undeclared identifier is reported only once for each function it appears in
+ #define SPI_DEVICE_ID    XPAR_SPI_1_DEVICE_ID
+                          ^
+../src/helloworld.c:39:48: note: in expansion of macro 'SPI_DEVICE_ID'
+     XSpi_Config *ConfigPtr = XSpi_LookupConfig(SPI_DEVICE_ID);
+                                                ^~~~~~~~~~~~~
+../src/helloworld.c:65:9: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+         usleep(100000); // 10Hz print rate
+         ^~~~~~
+         fseek
+../src/helloworld.c:65:9: error: expected declaration or statement at end of input
+../src/helloworld.c:65:9: error: expected declaration or statement at end of input
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+04:52:04 **** Auto Build of configuration Debug for project Accel_Test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Accel_Test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Accel_Test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Accel_Test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Accel_Test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Accel_Test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Accel_Test.elf  |tee "Accel_Test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9952	    356	   3212	  13520	   34d0	Accel_Test.elf
+'Finished building: Accel_Test.elf.size'
+' '
+04:52:19 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:52:54 **** Incremental Build of configuration Debug for project Integration_Gyro ****
+make all 
+make: Nothing to be done for 'all'.
+04:54:57 **** Auto Build of configuration Debug for project Accel_Test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Accel_Test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Accel_Test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Accel_Test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Accel_Test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Accel_Test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Accel_Test.elf  |tee "Accel_Test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10376	    356	   3212	  13944	   3678	Accel_Test.elf
+'Finished building: Accel_Test.elf.size'
+' '
+04:55:07 **** Incremental Build of configuration Debug for project Accel_Test ****
+make all 
+make: Nothing to be done for 'all'.
+04:57:47 **** Auto Build of configuration Debug for project Accel_Test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Accel_Test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:9: error: break statement not within loop or switch
+         break;
+         ^~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+04:58:04 **** Auto Build of configuration Debug for project Accel_Test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Accel_Test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Accel_Test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Accel_Test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Accel_Test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Accel_Test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Accel_Test.elf  |tee "Accel_Test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10380	    356	   3216	  13952	   3680	Accel_Test.elf
+'Finished building: Accel_Test.elf.size'
+' '
+04:58:08 **** Incremental Build of configuration Debug for project Accel_Test ****
+make all 
+make: Nothing to be done for 'all'.
+05:15:38 **** Auto Build of configuration Debug for project Accel_Test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Accel_Test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Accel_Test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Accel_Test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Accel_Test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Accel_Test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Accel_Test.elf  |tee "Accel_Test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9048	    356	   3212	  12616	   3148	Accel_Test.elf
+'Finished building: Accel_Test.elf.size'
+' '
+05:15:52 **** Incremental Build of configuration Debug for project Accel_Test ****
+make all 
+make: Nothing to be done for 'all'.
+05:22:17 **** Auto Build of configuration Debug for project Accel_Test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Accel_Test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Accel_Test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Accel_Test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Accel_Test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Accel_Test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Accel_Test.elf  |tee "Accel_Test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9820	    356	   3216	  13392	   3450	Accel_Test.elf
+'Finished building: Accel_Test.elf.size'
+' '
+05:22:22 **** Incremental Build of configuration Debug for project Accel_Test ****
+make all 
+make: Nothing to be done for 'all'.
+05:28:33 **** Auto Build of configuration Debug for project Accel_Test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Accel_Test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Accel_Test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Accel_Test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Accel_Test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Accel_Test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Accel_Test.elf  |tee "Accel_Test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9048	    356	   3212	  12616	   3148	Accel_Test.elf
+'Finished building: Accel_Test.elf.size'
+' '
+05:28:40 **** Incremental Build of configuration Debug for project Accel_Test ****
+make all 
+make: Nothing to be done for 'all'.
+05:29:48 **** Auto Build of configuration Debug for project Accel_Test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Accel_Test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Accel_Test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Accel_Test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Accel_Test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Accel_Test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Accel_Test.elf  |tee "Accel_Test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9400	    356	   3212	  12968	   32a8	Accel_Test.elf
+'Finished building: Accel_Test.elf.size'
+' '
+05:29:55 **** Incremental Build of configuration Debug for project Accel_Test ****
+make all 
+make: Nothing to be done for 'all'.
+05:31:17 **** Auto Build of configuration Debug for project Accel_Test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Accel_Test_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Accel_Test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Accel_Test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Accel_Test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Accel_Test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Accel_Test.elf  |tee "Accel_Test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9744	    356	   3212	  13312	   3400	Accel_Test.elf
+'Finished building: Accel_Test.elf.size'
+' '
+05:31:26 **** Incremental Build of configuration Debug for project Accel_Test ****
 make all 
 make: Nothing to be done for 'all'.

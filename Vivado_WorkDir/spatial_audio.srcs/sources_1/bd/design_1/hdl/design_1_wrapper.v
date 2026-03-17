@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Wed Mar 11 02:23:43 2026
-//Host        : Brett_PC running 64-bit major release  (build 9200)
+//Date        : Tue Mar 17 02:59:58 2026
+//Host        : DESKTOP-6P66IQN running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
 //Purpose     : IP block netlist
@@ -10,7 +10,12 @@
 `timescale 1 ps / 1 ps
 
 module design_1_wrapper
-   (jb_pin10_io,
+   (acl_spi_io0_io,
+    acl_spi_io1_io,
+    acl_spi_sck_io,
+    acl_spi_ss_io,
+    dip_switches_16bits_tri_i,
+    jb_pin10_io,
     jb_pin1_io,
     jb_pin2_io,
     jb_pin3_io,
@@ -18,6 +23,14 @@ module design_1_wrapper
     jb_pin7_io,
     jb_pin8_io,
     jb_pin9_io,
+    jd_pin10_io,
+    jd_pin1_io,
+    jd_pin2_io,
+    jd_pin3_io,
+    jd_pin4_io,
+    jd_pin7_io,
+    jd_pin8_io,
+    jd_pin9_io,
     reset_btn,
     rx_data,
     rx_lrck,
@@ -30,6 +43,11 @@ module design_1_wrapper
     tx_sclk,
     usb_uart_rxd,
     usb_uart_txd);
+  inout acl_spi_io0_io;
+  inout acl_spi_io1_io;
+  inout acl_spi_sck_io;
+  inout acl_spi_ss_io;
+  input [15:0]dip_switches_16bits_tri_i;
   inout jb_pin10_io;
   inout jb_pin1_io;
   inout jb_pin2_io;
@@ -38,6 +56,14 @@ module design_1_wrapper
   inout jb_pin7_io;
   inout jb_pin8_io;
   inout jb_pin9_io;
+  inout jd_pin10_io;
+  inout jd_pin1_io;
+  inout jd_pin2_io;
+  inout jd_pin3_io;
+  inout jd_pin4_io;
+  inout jd_pin7_io;
+  inout jd_pin8_io;
+  inout jd_pin9_io;
   input reset_btn;
   input rx_data;
   output rx_lrck;
@@ -51,6 +77,23 @@ module design_1_wrapper
   input usb_uart_rxd;
   output usb_uart_txd;
 
+  wire acl_spi_io0_i;
+  wire acl_spi_io0_io;
+  wire acl_spi_io0_o;
+  wire acl_spi_io0_t;
+  wire acl_spi_io1_i;
+  wire acl_spi_io1_io;
+  wire acl_spi_io1_o;
+  wire acl_spi_io1_t;
+  wire acl_spi_sck_i;
+  wire acl_spi_sck_io;
+  wire acl_spi_sck_o;
+  wire acl_spi_sck_t;
+  wire acl_spi_ss_i;
+  wire acl_spi_ss_io;
+  wire acl_spi_ss_o;
+  wire acl_spi_ss_t;
+  wire [15:0]dip_switches_16bits_tri_i;
   wire jb_pin10_i;
   wire jb_pin10_io;
   wire jb_pin10_o;
@@ -83,6 +126,38 @@ module design_1_wrapper
   wire jb_pin9_io;
   wire jb_pin9_o;
   wire jb_pin9_t;
+  wire jd_pin10_i;
+  wire jd_pin10_io;
+  wire jd_pin10_o;
+  wire jd_pin10_t;
+  wire jd_pin1_i;
+  wire jd_pin1_io;
+  wire jd_pin1_o;
+  wire jd_pin1_t;
+  wire jd_pin2_i;
+  wire jd_pin2_io;
+  wire jd_pin2_o;
+  wire jd_pin2_t;
+  wire jd_pin3_i;
+  wire jd_pin3_io;
+  wire jd_pin3_o;
+  wire jd_pin3_t;
+  wire jd_pin4_i;
+  wire jd_pin4_io;
+  wire jd_pin4_o;
+  wire jd_pin4_t;
+  wire jd_pin7_i;
+  wire jd_pin7_io;
+  wire jd_pin7_o;
+  wire jd_pin7_t;
+  wire jd_pin8_i;
+  wire jd_pin8_io;
+  wire jd_pin8_o;
+  wire jd_pin8_t;
+  wire jd_pin9_i;
+  wire jd_pin9_io;
+  wire jd_pin9_o;
+  wire jd_pin9_t;
   wire reset_btn;
   wire rx_data;
   wire rx_lrck;
@@ -96,8 +171,41 @@ module design_1_wrapper
   wire usb_uart_rxd;
   wire usb_uart_txd;
 
+  IOBUF acl_spi_io0_iobuf
+       (.I(acl_spi_io0_o),
+        .IO(acl_spi_io0_io),
+        .O(acl_spi_io0_i),
+        .T(acl_spi_io0_t));
+  IOBUF acl_spi_io1_iobuf
+       (.I(acl_spi_io1_o),
+        .IO(acl_spi_io1_io),
+        .O(acl_spi_io1_i),
+        .T(acl_spi_io1_t));
+  IOBUF acl_spi_sck_iobuf
+       (.I(acl_spi_sck_o),
+        .IO(acl_spi_sck_io),
+        .O(acl_spi_sck_i),
+        .T(acl_spi_sck_t));
+  IOBUF acl_spi_ss_iobuf
+       (.I(acl_spi_ss_o),
+        .IO(acl_spi_ss_io),
+        .O(acl_spi_ss_i),
+        .T(acl_spi_ss_t));
   design_1 design_1_i
-       (.jb_pin10_i(jb_pin10_i),
+       (.acl_spi_io0_i(acl_spi_io0_i),
+        .acl_spi_io0_o(acl_spi_io0_o),
+        .acl_spi_io0_t(acl_spi_io0_t),
+        .acl_spi_io1_i(acl_spi_io1_i),
+        .acl_spi_io1_o(acl_spi_io1_o),
+        .acl_spi_io1_t(acl_spi_io1_t),
+        .acl_spi_sck_i(acl_spi_sck_i),
+        .acl_spi_sck_o(acl_spi_sck_o),
+        .acl_spi_sck_t(acl_spi_sck_t),
+        .acl_spi_ss_i(acl_spi_ss_i),
+        .acl_spi_ss_o(acl_spi_ss_o),
+        .acl_spi_ss_t(acl_spi_ss_t),
+        .dip_switches_16bits_tri_i(dip_switches_16bits_tri_i),
+        .jb_pin10_i(jb_pin10_i),
         .jb_pin10_o(jb_pin10_o),
         .jb_pin10_t(jb_pin10_t),
         .jb_pin1_i(jb_pin1_i),
@@ -121,6 +229,30 @@ module design_1_wrapper
         .jb_pin9_i(jb_pin9_i),
         .jb_pin9_o(jb_pin9_o),
         .jb_pin9_t(jb_pin9_t),
+        .jd_pin10_i(jd_pin10_i),
+        .jd_pin10_o(jd_pin10_o),
+        .jd_pin10_t(jd_pin10_t),
+        .jd_pin1_i(jd_pin1_i),
+        .jd_pin1_o(jd_pin1_o),
+        .jd_pin1_t(jd_pin1_t),
+        .jd_pin2_i(jd_pin2_i),
+        .jd_pin2_o(jd_pin2_o),
+        .jd_pin2_t(jd_pin2_t),
+        .jd_pin3_i(jd_pin3_i),
+        .jd_pin3_o(jd_pin3_o),
+        .jd_pin3_t(jd_pin3_t),
+        .jd_pin4_i(jd_pin4_i),
+        .jd_pin4_o(jd_pin4_o),
+        .jd_pin4_t(jd_pin4_t),
+        .jd_pin7_i(jd_pin7_i),
+        .jd_pin7_o(jd_pin7_o),
+        .jd_pin7_t(jd_pin7_t),
+        .jd_pin8_i(jd_pin8_i),
+        .jd_pin8_o(jd_pin8_o),
+        .jd_pin8_t(jd_pin8_t),
+        .jd_pin9_i(jd_pin9_i),
+        .jd_pin9_o(jd_pin9_o),
+        .jd_pin9_t(jd_pin9_t),
         .reset_btn(reset_btn),
         .rx_data(rx_data),
         .rx_lrck(rx_lrck),
@@ -173,4 +305,44 @@ module design_1_wrapper
         .IO(jb_pin9_io),
         .O(jb_pin9_i),
         .T(jb_pin9_t));
+  IOBUF jd_pin10_iobuf
+       (.I(jd_pin10_o),
+        .IO(jd_pin10_io),
+        .O(jd_pin10_i),
+        .T(jd_pin10_t));
+  IOBUF jd_pin1_iobuf
+       (.I(jd_pin1_o),
+        .IO(jd_pin1_io),
+        .O(jd_pin1_i),
+        .T(jd_pin1_t));
+  IOBUF jd_pin2_iobuf
+       (.I(jd_pin2_o),
+        .IO(jd_pin2_io),
+        .O(jd_pin2_i),
+        .T(jd_pin2_t));
+  IOBUF jd_pin3_iobuf
+       (.I(jd_pin3_o),
+        .IO(jd_pin3_io),
+        .O(jd_pin3_i),
+        .T(jd_pin3_t));
+  IOBUF jd_pin4_iobuf
+       (.I(jd_pin4_o),
+        .IO(jd_pin4_io),
+        .O(jd_pin4_i),
+        .T(jd_pin4_t));
+  IOBUF jd_pin7_iobuf
+       (.I(jd_pin7_o),
+        .IO(jd_pin7_io),
+        .O(jd_pin7_i),
+        .T(jd_pin7_t));
+  IOBUF jd_pin8_iobuf
+       (.I(jd_pin8_o),
+        .IO(jd_pin8_io),
+        .O(jd_pin8_i),
+        .T(jd_pin8_t));
+  IOBUF jd_pin9_iobuf
+       (.I(jd_pin9_o),
+        .IO(jd_pin9_io),
+        .O(jd_pin9_i),
+        .T(jd_pin9_t));
 endmodule

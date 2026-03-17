@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include "xparameters.h"
+#include "xspi.h"
+#include "xil_printf.h"
+
+#define ACCEL_SPI_ID    XPAR_SPI_0_DEVICE_ID
+#define XL_READ_REG      0x0B
+#define REG_DEVID_AD     0x00
+
+XSpi AccelInstance;
+
+void CheckDeviceID() {
+    u8 send_buf[3] = {XL_READ_REG, REG_DEVID_AD, 0x00};
+    u8 recv_buf[3] = {0, 0, 0};
+
+    // 1. Pull CS Low (Start of transaction)
+    XSpi_SetSlaveSelect(&AccelInstance, 0x01);
+
+    // 2. Transfer 3 bytes
+    XSpi_Transfer(&AccelInstance, send_buf, recv_buf, 3);
+
+    // 3. Pull CS High (End of transaction)
+    XSpi_SetSlaveSelect(&AccelInstance, 0x00);
+
+    // The data comes back in the 3rd byte slot
+    if (recv_buf[2] == 0xAD) {
+        xil_printf("SUCCESS: Found ADXL362 (ID: 0x%02X)\n\r", recv_buf[2]);
+    } else {
+        xil_printf("ERROR: Unexpected ID: 0x%02X (Expected 0xAD)\n\r", recv_buf[2]);
+    }
+}
+
+int main() {
+    // Standard initialization
+    XSpi_Config *ConfigPtr = XSpi_LookupConfig(ACCEL_SPI_ID);
+    XSpi_CfgInitialize(&AccelInstance, ConfigPtr, ConfigPtr->BaseAddress);
+
+    // Set to Mode 0 (CPOL=0, CPHA=0) and Manual CS
+    XSpi_SetOptions(&AccelInstance, XSP_MASTER_OPTION | XSP_MANUAL_SSELECT_OPTION);
+    XSpi_Start(&AccelInstance);
+
+    CheckDeviceID();
+
+    return 0;
+}

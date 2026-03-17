@@ -1,0 +1,108 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "platform.h"
+#include "xparameters.h"
+#include "xspi.h"
+#include "xil_printf.h"
+#include "sleep.h"
+
+// ==========================================
+// ADXL362 ONBOARD ACCELEROMETER DEFINITIONS
+// ==========================================
+#define ACCEL_SPI_ID       XPAR_SPI_0_DEVICE_ID
+
+// ADXL362 Instructions
+#define XL_WRITE_REG       0x0A
+#define XL_READ_REG        0x0B
+
+// ADXL362 Critical Registers
+#define REG_DEVID_AD       0x00 // Should always return 0xAD
+#define REG_SOFT_RESET     0x1F
+#define REG_STATUS         0x0B
+#define REG_POWER_CTL      0x2D
+#define REG_XDATA_L        0x0E // 8-bit X-axis data
+
+XSpi AccelInstance;
+
+// --- Robust SPI Transfer ---
+// The ADXL362 expects CS to stay LOW for the entire 3-byte command
+void XL_Transfer(u8 *send, u8 *recv, int bytes) {
+    XSpi_SetSlaveSelect(&AccelInstance, 0x01); // Pull CS LOW
+    XSpi_Transfer(&AccelInstance, send, recv, bytes);
+    XSpi_SetSlaveSelect(&AccelInstance, 0x00); // Pull CS HIGH
+}
+
+void XL_WriteReg(u8 reg, u8 value) {
+    u8 buf[3] = {XL_WRITE_REG, reg, value};
+    XL_Transfer(buf, NULL, 3);
+}
+
+u8 XL_ReadReg(u8 reg) {
+    u8 send_buf[3] = {XL_READ_REG, reg, 0x00};
+    u8 recv_buf[3] = {0, 0, 0};
+    XL_Transfer(send_buf, recv_buf, 3);
+    return recv_buf[2];
+}
+
+int main() {
+    init_platform();
+    print("\n\r--- Onboard ADXL362 Final Diagnostic ---\n\r");
+
+    // 1. SPI Initialization
+    XSpi_Config *ConfigPtr = XSpi_LookupConfig(ACCEL_SPI_ID);
+    if (ConfigPtr == NULL) {
+        print("Error: SPI Device ID not found in xparameters.h\n\r");
+        return -1;
+    }
+
+    XSpi_CfgInitialize(&AccelInstance, ConfigPtr, ConfigPtr->BaseAddress);
+
+    // Set SPI to Mode 0 (ADXL362 requirement)
+    // Manual CS is required for the 3-byte protocol
+    XSpi_SetOptions(&AccelInstance, XSP_MASTER_OPTION | XSP_MANUAL_SSELECT_OPTION);
+    XSpi_Start(&AccelInstance);
+    XSpi_IntrGlobalDisable(&AccelInstance);
+
+    // 2. Hardware Sanity Check (The "Who Am I" test)
+    u8 devID = XL_ReadReg(REG_DEVID_AD);
+    xil_printf("Checking Connection... Device ID: 0x%02X\n\r", devID);
+
+    if (devID != 0xAD) {
+        print("CRITICAL ERROR: Could not identify ADXL362!\n\r");
+        print("Expected 0xAD. Check your Vivado SPI constraints/clock.\n\r");
+        // We continue anyway, but it will likely stay -1
+    } else {
+        print("SUCCESS: ADXL362 identified correctly.\n\r");
+    }
+
+    // 3. Reset and Wakeup
+    print("Resetting sensor...\n\r");
+    XL_WriteReg(REG_SOFT_RESET, 0x52); // Write 'R' to reset
+    usleep(10000);
+
+    print("Entering Measurement Mode...\n\r");
+    XL_WriteReg(REG_POWER_CTL, 0x02); // Bit 1 = 1 (Measure)
+
+    // 4. Data Loop
+    while (1) {
+        u8 status = XL_ReadReg(REG_STATUS);
+
+        // Bit 0 is DATA_READY
+        if (status & 0x01) {
+            // Read 8-bit signed registers
+            int8_t x = (int8_t)XL_ReadReg(0x08);
+            int8_t y = (int8_t)XL_ReadReg(0x09);
+            int8_t z = (int8_t)XL_ReadReg(0x0A);
+
+            xil_printf("X: %4d | Y: %4d | Z: %4d \r", x, y, z);
+        } else {
+            // If we never get status & 0x01, the sensor is likely asleep
+            // or the SPI clock is mismatched.
+        }
+
+        usleep(50000); // 20Hz update
+    }
+
+    cleanup_platform();
+    return 0;
+}

@@ -1,0 +1,90 @@
+#include <stdio.h>
+#include <stdlib.h>     // Required for abs()
+#include "platform.h"
+#include "xil_printf.h"
+#include "PmodGYRO.h"
+#include "xparameters.h"
+
+PmodGYRO myGyro;
+
+// Gyro Integration Variables
+float angleX = 0.0, angleY = 0.0, angleZ = 0.0;
+int32_t offsetX = 0, offsetY = 0, offsetZ = 0;
+float dt = 0.01;
+
+// ==========================================
+// GYRO SPI POLLING BYPASS
+// ==========================================
+int isDataReady(PmodGYRO *InstancePtr) {
+    uint8_t status = 0;
+    GYRO_ReadReg(InstancePtr, 0x27, &status, 1);
+    // Check if Bit 3 (0x08) ZYXDA is high
+    return ((status & 0x08) != 0) ? 1 : 0;
+}
+
+int main() {
+    init_platform();
+    print("\n\r--- Gyro-Only Sanity Check (jd port) ---\n\r");
+
+    // ==========================================
+    // 1. INITIALIZE GYRO
+    // ==========================================
+    GYRO_begin(&myGyro, XPAR_PMODGYRO_0_AXI_LITE_SPI_BASEADDR, XPAR_PMODGYRO_0_AXI_LITE_GPIO_BASEADDR);
+
+    // Set Gyro to +/- 2000 dps range
+    uint8_t scale_2000 = 0x20;
+    GYRO_WriteReg(&myGyro, 0x23, &scale_2000, 1);
+
+    // ==========================================
+    // 2. GYRO CALIBRATION
+    // ==========================================
+    print("Calibrating Gyro... DO NOT MOVE BOARD\n\r");
+    int samples = 100;
+    for (int i = 0; i < samples; i++) {
+        while(isDataReady(&myGyro) == 0) {}
+        offsetX += GYRO_getX(&myGyro);
+        offsetY += GYRO_getY(&myGyro);
+        offsetZ += GYRO_getZ(&myGyro);
+    }
+    offsetX /= samples;
+    offsetY /= samples;
+    offsetZ /= samples;
+    print("System Ready! Spinning up main loop...\n\r");
+
+    int prevDataReady = 0;
+
+    // ==========================================
+    // 3. MAIN CONTROL LOOP
+    // ==========================================
+    while (1) {
+        int currentDataReady = isDataReady(&myGyro);
+
+        if (currentDataReady == 1 && prevDataReady == 0) {
+            // Read Raw and Subtract offset
+            int16_t rawX = GYRO_getX(&myGyro) - offsetX;
+            int16_t rawY = GYRO_getY(&myGyro) - offsetY;
+            int16_t rawZ = GYRO_getZ(&myGyro) - offsetZ;
+
+            // 2000 dps sensitivity math
+            float vX = rawX * 0.070 / 2;
+            float vY = rawY * 0.070 / 2;
+            float vZ = rawZ * 0.070 / 2;
+
+            // Integrate with deadband
+            if (abs(rawX) > 15) angleX += (vX * dt);
+            if (abs(rawY) > 15) angleY += (vY * dt);
+            if (abs(rawZ) > 15) angleZ += (vZ * dt);
+
+            // Format for printing
+            int32_t printAngleX = (int32_t)(angleX * 100);
+            int32_t printAngleY = (int32_t)(angleY * 100);
+            int32_t printAngleZ = (int32_t)(angleZ * 100);
+
+            xil_printf("Angle X: %05d | Y: %05d | Z: %05d \r", printAngleX, printAngleY, printAngleZ);
+        }
+        prevDataReady = currentDataReady;
+    }
+
+    cleanup_platform();
+    return 0;
+}

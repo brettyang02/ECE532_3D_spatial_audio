@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xparameters.h"
+#include "xspi.h"
+#include "xil_printf.h"
+#include "sleep.h"
+
+// Ensure this matches your xparameters.h
+#define SPI_DEVICE_ID    XPAR_SPI_0_DEVICE_ID
+
+XSpi AccelSpi;
+
+void DiagnosticReadID() {
+    // 3-byte sequence: [Read Instruction 0x0B] [Address 0x00] [Dummy 0x00]
+    u8 send_buf[3] = {0x0B, 0x00, 0x00};
+    u8 recv_buf[3] = {0, 0, 0};
+    int Status;
+
+    xil_printf("--- ADXL362 Hardware Probe ---\n\r");
+
+    // 1. Reset and Re-Initialize the SPI core
+    XSpi_Reset(&AccelSpi);
+
+    // 2. Set Options: Master Mode and Manual Slave Select
+    // Manual SS is critical for the ADXL362 to keep CS low for all 3 bytes
+    Status = XSpi_SetOptions(&AccelSpi, XSP_MASTER_OPTION | XSP_MANUAL_SSELECT_OPTION);
+    if (Status != XST_SUCCESS) xil_printf("Option Error!\n\r");
+
+    // 3. Start the driver
+    XSpi_Start(&AccelSpi);
+
+    // 4. Disable Interrupts (we are polling)
+    XSpi_IntrGlobalDisable(&AccelSpi);
+
+    // 5. THE PULL-DOWN TEST
+    // We manually select the slave. This should pull C15 LOW.
+    XSpi_SetSlaveSelect(&AccelSpi, 0x01);
+
+    // Transfer 3 bytes
+    XSpi_Transfer(&AccelSpi, send_buf, recv_buf, 3);
+
+    // Deselect (Pulls C15 HIGH)
+    XSpi_SetSlaveSelect(&AccelSpi, 0x00);
+
+    // Display raw results for debugging
+    xil_printf("Raw SPI Stream: [0]:0x%02X, [1]:0x%02X, [2]:0x%02X\n\r",
+                recv_buf[0], recv_buf[1], recv_buf[2]);
+
+    if (recv_buf[2] == 0xAD) {
+        xil_printf(">> SUCCESS! ADXL362 Found: 0x%02X\n\r", recv_buf[2]);
+    } else if (recv_buf[2] == 0x00 || recv_buf[2] == 0xFF) {
+        xil_printf(">> DEVICE NOT RESPONDING. Check if CS (C15) is actually dropping.\n\r");
+    } else {
+        xil_printf(">> GARBAGE RECEIVED. Likely SPI Mode or Frequency issue.\n\r");
+    }
+}
+
+int main() {
+    init_platform();
+
+    XSpi_Config *ConfigPtr = XSpi_LookupConfig(SPI_DEVICE_ID);
+    if (ConfigPtr == NULL) return XST_DEVICE_NOT_FOUND;
+
+    XSpi_CfgInitialize(&AccelSpi, ConfigPtr, ConfigPtr->BaseAddress);
+
+    while(1) {
+        DiagnosticReadID();
+        usleep(2000000); // Wait 2 seconds and try again
+    }
+
+    cleanup_platform();
+    return 0;
+}

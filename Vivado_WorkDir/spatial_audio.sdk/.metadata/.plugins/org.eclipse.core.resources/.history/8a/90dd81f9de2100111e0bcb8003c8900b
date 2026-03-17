@@ -1,0 +1,87 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xparameters.h"
+#include "xspi.h"
+#include "xil_printf.h"
+#include "sleep.h"
+
+// ==========================================
+// ONBOARD ACCELEROMETER DEFINITIONS
+// ==========================================
+// Based on your xparameters, this is the only XSPI instance
+#define ACCEL_SPI_ID       XPAR_SPI_0_DEVICE_ID
+
+// ADXL362 SPI Commands
+#define XL_WRITE_REG       0x0A
+#define XL_READ_REG        0x0B
+
+// ADXL362 Registers
+#define REG_XL_DATA_8      0x08 // X-axis 8-bit data
+#define REG_STATUS         0x0B // Status register
+#define REG_POWER_CTL      0x2D // Power control
+
+XSpi AccelInstance;
+
+// --- Helper: Write to ADXL362 Register ---
+void XL_WriteReg(u8 reg, u8 value) {
+    u8 write_buf[3] = {XL_WRITE_REG, reg, value};
+    // Manual Slave Select (CS) toggle
+    XSpi_SetSlaveSelect(&AccelInstance, 0x01);
+    XSpi_Transfer(&AccelInstance, write_buf, NULL, 3);
+    XSpi_SetSlaveSelect(&AccelInstance, 0x00);
+}
+
+// --- Helper: Read from ADXL362 Register ---
+u8 XL_ReadReg(u8 reg) {
+    u8 send_buf[3] = {XL_READ_REG, reg, 0x00};
+    u8 recv_buf[3] = {0, 0, 0};
+    XSpi_SetSlaveSelect(&AccelInstance, 0x01);
+    XSpi_Transfer(&AccelInstance, send_buf, recv_buf, 3);
+    XSpi_SetSlaveSelect(&AccelInstance, 0x00);
+    return recv_buf[2];
+}
+
+int main() {
+    init_platform();
+    print("\n\r--- Onboard ADXL362 Accelerometer Test ---\n\r");
+
+    // 1. Initialize SPI
+    XSpi_Config *ConfigPtr = XSpi_LookupConfig(ACCEL_SPI_ID);
+    if (ConfigPtr == NULL) {
+        print("Error: Could not find SPI configuration\n\r");
+        return -1;
+    }
+
+    XSpi_CfgInitialize(&AccelInstance, ConfigPtr, ConfigPtr->BaseAddress);
+
+    // Configure SPI: Master mode, Manual CS, Mode 0 (CPOL=0, CPHA=0)
+    XSpi_SetOptions(&AccelInstance, XSP_MASTER_OPTION | XSP_MANUAL_SSELECT_OPTION);
+    XSpi_Start(&AccelInstance);
+    XSpi_IntrGlobalDisable(&AccelInstance);
+
+    // 2. Wake up the ADXL362
+    // Writing 0x02 to REG_POWER_CTL (0x2D) starts "Measurement Mode"
+    XL_WriteReg(REG_POWER_CTL, 0x02);
+
+    print("ADXL362 Active! Tilt the board to test.\n\r");
+
+    while (1) {
+        // Bit 0 of Status Register indicates Data Ready
+        if (XL_ReadReg(REG_STATUS) & 0x01) {
+
+            // Reading the 8-bit X, Y, Z registers (Registers 0x08, 0x09, 0x0A)
+            int8_t x_raw = (int8_t)XL_ReadReg(0x08);
+            int8_t y_raw = (int8_t)XL_ReadReg(0x09);
+            int8_t z_raw = (int8_t)XL_ReadReg(0x0A);
+
+            // Print the values (8-bit signed: -128 to 127)
+            xil_printf("Accel X: %4d | Y: %4d | Z: %4d \r", x_raw, y_raw, z_raw);
+        }
+
+        // 100ms delay for readability
+        usleep(100000);
+    }
+
+    cleanup_platform();
+    return 0;
+}
