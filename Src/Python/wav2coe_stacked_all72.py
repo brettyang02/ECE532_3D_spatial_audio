@@ -6,9 +6,17 @@ import os
 # --- CONFIGURATION ---
 ELEVATION_FOLDERS = [
     "../../KEMAR/elev-30/",
+    "../../KEMAR/elev-20/",
+    "../../KEMAR/elev-10/",
     "../../KEMAR/elev0/",
+    "../../KEMAR/elev10/",
+    "../../KEMAR/elev20/",
     "../../KEMAR/elev30/",
+    "../../KEMAR/elev40/",
+    "../../KEMAR/elev50/",
     "../../KEMAR/elev60/",
+    "../../KEMAR/elev70/",
+    "../../KEMAR/elev80/",
     "../../KEMAR/elev90/"
 ]
 

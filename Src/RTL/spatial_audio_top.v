@@ -134,8 +134,8 @@ module spatial_audio_top (
     // ==========================================
     // 3. Address Generators
     // ==========================================
-    wire [15:0] bram_addr_a;
-    wire [15:0] bram_addr_b;
+    wire [16:0] bram_addr_a;
+    wire [16:0] bram_addr_b;
     wire conv_en;
     
     hrtf_address_generator_3D addr_gen_a (

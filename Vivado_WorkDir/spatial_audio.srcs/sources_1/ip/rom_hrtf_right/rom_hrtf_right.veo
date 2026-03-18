@@ -56,10 +56,10 @@
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 rom_hrtf_right your_instance_name (
   .clka(clka),    // input wire clka
-  .addra(addra),  // input wire [15 : 0] addra
+  .addra(addra),  // input wire [16 : 0] addra
   .douta(douta),  // output wire [15 : 0] douta
   .clkb(clkb),    // input wire clkb
-  .addrb(addrb),  // input wire [15 : 0] addrb
+  .addrb(addrb),  // input wire [16 : 0] addrb
   .doutb(doutb)  // output wire [15 : 0] doutb
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------

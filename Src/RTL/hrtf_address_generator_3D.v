@@ -5,7 +5,7 @@ module hrtf_address_generator_3D(
     input wire [7:0] angle_index,   
     input wire [3:0] elevation_index, // <--- ADDED: New 3D elevation input
     
-    output reg [15:0] bram_addr,    
+    output reg [16:0] bram_addr,    
     output reg conv_en,             
     output reg conv_done            
 );
@@ -37,12 +37,12 @@ module hrtf_address_generator_3D(
             latched_elevation <= elevation_index; 
             
             // Calculate the very first address: (elevation * 9216) + (angle * 128)
-            bram_addr <= (elevation_index * 16'd9216) + {1'b0, angle_index, 7'b0}; 
+            bram_addr <= (elevation_index * 17'd9216) + (angle_index * 17'd128);
         end 
         else if (state == 1) begin
             
             // Add the tap_count to the latched 3D base address
-            bram_addr <= (latched_elevation * 16'd9216) + {1'b0, latched_angle, 7'b0} + tap_count; 
+            bram_addr <= (latched_elevation * 17'd9216) + (latched_angle * 17'd128) + tap_count;
             
             if (tap_count == 127) begin
                 state <= 0;

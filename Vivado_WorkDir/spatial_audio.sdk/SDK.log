@@ -448,3 +448,285 @@ con
 ----------------End of Script----------------
 
 17:27:52 INFO  : Disconnected from the channel tcfchan#2.
+22:12:29 INFO  : Registering command handlers for SDK TCF services
+22:12:29 INFO  : Launching XSCT server: xsct.bat -interactive D:\ECE532\ECE532_3D_spatial_audio\Vivado_WorkDir\spatial_audio.sdk\temp_xsdb_launch_script.tcl
+22:12:31 INFO  : XSCT server has started successfully.
+22:12:31 INFO  : Successfully done setting XSCT server connection channel  
+22:12:31 INFO  : Successfully done setting SDK workspace  
+22:12:31 INFO  : Processing command line option -hwspec D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper.hdf.
+22:12:32 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+22:13:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:13:44 INFO  : Jtag cable 'Digilent Nexys4DDR 210292646056A' is selected.
+22:13:44 INFO  : 'jtag frequency' command is executed.
+22:13:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A" && level==0} -index 0' command is executed.
+22:13:46 INFO  : FPGA configured successfully with bitstream "D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:13:46 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:13:46 INFO  : Context for processor 'microblaze_0' is selected.
+22:13:46 INFO  : Processor reset is completed for 'microblaze_0'.
+22:13:46 INFO  : Context for processor 'microblaze_0' is selected.
+22:13:47 INFO  : The application 'D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/spatial_audio_app/Debug/spatial_audio_app.elf' is downloaded to processor 'microblaze_0'.
+22:13:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A" && level==0} -index 0
+fpga -file D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+dow D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/spatial_audio_app/Debug/spatial_audio_app.elf
+----------------End of Script----------------
+
+22:13:47 INFO  : Context for processor 'microblaze_0' is selected.
+22:13:47 INFO  : 'con' command is executed.
+22:13:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+con
+----------------End of Script----------------
+
+22:13:47 INFO  : Disconnected from the channel tcfchan#1.
+22:15:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:15:47 INFO  : Jtag cable 'Digilent Nexys4DDR 210292646056A' is selected.
+22:15:47 INFO  : 'jtag frequency' command is executed.
+22:15:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A" && level==0} -index 0' command is executed.
+22:15:49 INFO  : FPGA configured successfully with bitstream "D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:15:49 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:15:49 INFO  : Context for processor 'microblaze_0' is selected.
+22:15:49 INFO  : Processor reset is completed for 'microblaze_0'.
+22:15:49 INFO  : Context for processor 'microblaze_0' is selected.
+22:15:49 INFO  : The application 'D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/spatial_audio_app/Debug/spatial_audio_app.elf' is downloaded to processor 'microblaze_0'.
+22:15:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A" && level==0} -index 0
+fpga -file D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+dow D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/spatial_audio_app/Debug/spatial_audio_app.elf
+----------------End of Script----------------
+
+22:15:49 INFO  : Context for processor 'microblaze_0' is selected.
+22:15:49 INFO  : 'con' command is executed.
+22:15:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+con
+----------------End of Script----------------
+
+22:15:49 INFO  : Disconnected from the channel tcfchan#2.
+22:18:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:18:07 INFO  : Jtag cable 'Digilent Nexys4DDR 210292646056A' is selected.
+22:18:07 INFO  : 'jtag frequency' command is executed.
+22:18:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A" && level==0} -index 0' command is executed.
+22:18:09 INFO  : FPGA configured successfully with bitstream "D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:18:09 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:18:09 INFO  : Context for processor 'microblaze_0' is selected.
+22:18:09 INFO  : Processor reset is completed for 'microblaze_0'.
+22:18:09 INFO  : Context for processor 'microblaze_0' is selected.
+22:18:09 INFO  : The application 'D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/spatial_audio_app/Debug/spatial_audio_app.elf' is downloaded to processor 'microblaze_0'.
+22:18:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A" && level==0} -index 0
+fpga -file D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+dow D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/spatial_audio_app/Debug/spatial_audio_app.elf
+----------------End of Script----------------
+
+22:18:09 INFO  : Context for processor 'microblaze_0' is selected.
+22:18:09 INFO  : 'con' command is executed.
+22:18:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+con
+----------------End of Script----------------
+
+22:18:09 INFO  : Disconnected from the channel tcfchan#3.
+22:44:59 INFO  : Registering command handlers for SDK TCF services
+22:44:59 INFO  : Launching XSCT server: xsct.bat -interactive D:\ECE532\ECE532_3D_spatial_audio\Vivado_WorkDir\spatial_audio.sdk\temp_xsdb_launch_script.tcl
+22:45:03 INFO  : XSCT server has started successfully.
+22:45:03 INFO  : Successfully done setting XSCT server connection channel  
+22:45:07 INFO  : Successfully done setting SDK workspace  
+22:45:07 INFO  : Processing command line option -hwspec D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper.hdf.
+22:45:07 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+22:45:10 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1773801829974,  Project:1773772490955
+22:45:10 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper.hdf.
+22:45:10 INFO  : Copied contents of D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+22:45:10 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+22:45:13 INFO  : 
+22:45:14 INFO  : Updating hardware inferred compiler options for spatial_audio_app.
+22:45:14 INFO  : Clearing existing target manager status.
+22:45:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:45:27 INFO  : Jtag cable 'Digilent Nexys4DDR 210292646056A' is selected.
+22:45:27 INFO  : 'jtag frequency' command is executed.
+22:45:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A" && level==0} -index 0' command is executed.
+22:45:30 INFO  : FPGA configured successfully with bitstream "D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:45:30 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:45:30 INFO  : Context for processor 'microblaze_0' is selected.
+22:45:30 INFO  : Processor reset is completed for 'microblaze_0'.
+22:45:30 INFO  : Context for processor 'microblaze_0' is selected.
+22:45:30 INFO  : The application 'D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/spatial_audio_app/Debug/spatial_audio_app.elf' is downloaded to processor 'microblaze_0'.
+22:45:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A" && level==0} -index 0
+fpga -file D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+dow D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/spatial_audio_app/Debug/spatial_audio_app.elf
+----------------End of Script----------------
+
+22:45:30 INFO  : Context for processor 'microblaze_0' is selected.
+22:45:30 INFO  : 'con' command is executed.
+22:45:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+con
+----------------End of Script----------------
+
+22:45:30 INFO  : Disconnected from the channel tcfchan#1.
+22:46:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:46:50 INFO  : Jtag cable 'Digilent Nexys4DDR 210292646056A' is selected.
+22:46:50 INFO  : 'jtag frequency' command is executed.
+22:46:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A" && level==0} -index 0' command is executed.
+22:46:53 INFO  : FPGA configured successfully with bitstream "D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:46:53 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:46:53 INFO  : Context for processor 'microblaze_0' is selected.
+22:46:53 INFO  : Processor reset is completed for 'microblaze_0'.
+22:46:53 INFO  : Context for processor 'microblaze_0' is selected.
+22:46:53 INFO  : The application 'D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/spatial_audio_app/Debug/spatial_audio_app.elf' is downloaded to processor 'microblaze_0'.
+22:46:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A" && level==0} -index 0
+fpga -file D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+dow D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/spatial_audio_app/Debug/spatial_audio_app.elf
+----------------End of Script----------------
+
+22:46:53 INFO  : Context for processor 'microblaze_0' is selected.
+22:46:53 INFO  : 'con' command is executed.
+22:46:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+con
+----------------End of Script----------------
+
+22:46:53 INFO  : Disconnected from the channel tcfchan#2.
+22:47:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:47:40 INFO  : Jtag cable 'Digilent Nexys4DDR 210292646056A' is selected.
+22:47:40 INFO  : 'jtag frequency' command is executed.
+22:47:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A" && level==0} -index 0' command is executed.
+22:47:42 INFO  : FPGA configured successfully with bitstream "D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:47:42 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:47:42 INFO  : Context for processor 'microblaze_0' is selected.
+22:47:42 INFO  : Processor reset is completed for 'microblaze_0'.
+22:47:42 INFO  : Context for processor 'microblaze_0' is selected.
+22:47:42 INFO  : The application 'D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/spatial_audio_app/Debug/spatial_audio_app.elf' is downloaded to processor 'microblaze_0'.
+22:47:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A" && level==0} -index 0
+fpga -file D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+dow D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/spatial_audio_app/Debug/spatial_audio_app.elf
+----------------End of Script----------------
+
+22:47:42 INFO  : Context for processor 'microblaze_0' is selected.
+22:47:42 INFO  : 'con' command is executed.
+22:47:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+con
+----------------End of Script----------------
+
+22:47:42 INFO  : Disconnected from the channel tcfchan#3.
+22:51:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:51:21 INFO  : Jtag cable 'Digilent Nexys4DDR 210292646056A' is selected.
+22:51:21 INFO  : 'jtag frequency' command is executed.
+22:51:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A" && level==0} -index 0' command is executed.
+22:51:24 INFO  : FPGA configured successfully with bitstream "D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:51:24 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:51:24 INFO  : Context for processor 'microblaze_0' is selected.
+22:51:24 INFO  : Processor reset is completed for 'microblaze_0'.
+22:51:24 INFO  : Context for processor 'microblaze_0' is selected.
+22:51:24 INFO  : The application 'D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/spatial_audio_app/Debug/spatial_audio_app.elf' is downloaded to processor 'microblaze_0'.
+22:51:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A" && level==0} -index 0
+fpga -file D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+dow D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/spatial_audio_app/Debug/spatial_audio_app.elf
+----------------End of Script----------------
+
+22:51:24 INFO  : Context for processor 'microblaze_0' is selected.
+22:51:24 INFO  : 'con' command is executed.
+22:51:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+con
+----------------End of Script----------------
+
+22:51:24 INFO  : Disconnected from the channel tcfchan#4.
+22:51:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:51:40 INFO  : Jtag cable 'Digilent Nexys4DDR 210292646056A' is selected.
+22:51:40 INFO  : 'jtag frequency' command is executed.
+22:51:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A" && level==0} -index 0' command is executed.
+22:51:42 INFO  : FPGA configured successfully with bitstream "D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:51:42 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:51:42 INFO  : Context for processor 'microblaze_0' is selected.
+22:51:42 INFO  : Processor reset is completed for 'microblaze_0'.
+22:51:42 INFO  : Context for processor 'microblaze_0' is selected.
+22:51:42 INFO  : The application 'D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/spatial_audio_app/Debug/spatial_audio_app.elf' is downloaded to processor 'microblaze_0'.
+22:51:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A" && level==0} -index 0
+fpga -file D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+dow D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/spatial_audio_app/Debug/spatial_audio_app.elf
+----------------End of Script----------------
+
+22:51:42 INFO  : Context for processor 'microblaze_0' is selected.
+22:51:42 INFO  : 'con' command is executed.
+22:51:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+con
+----------------End of Script----------------
+
+22:51:42 INFO  : Disconnected from the channel tcfchan#5.
+22:52:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:52:44 INFO  : Jtag cable 'Digilent Nexys4DDR 210292646056A' is selected.
+22:52:44 INFO  : 'jtag frequency' command is executed.
+22:52:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A" && level==0} -index 0' command is executed.
+22:52:47 INFO  : FPGA configured successfully with bitstream "D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+22:52:47 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:52:47 INFO  : Context for processor 'microblaze_0' is selected.
+22:52:47 INFO  : Processor reset is completed for 'microblaze_0'.
+22:52:47 INFO  : Context for processor 'microblaze_0' is selected.
+22:52:47 INFO  : The application 'D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/spatial_audio_app/Debug/spatial_audio_app.elf' is downloaded to processor 'microblaze_0'.
+22:52:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A" && level==0} -index 0
+fpga -file D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+dow D:/ECE532/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/spatial_audio_app/Debug/spatial_audio_app.elf
+----------------End of Script----------------
+
+22:52:47 INFO  : Context for processor 'microblaze_0' is selected.
+22:52:47 INFO  : 'con' command is executed.
+22:52:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292646056A"} -index 0
+con
+----------------End of Script----------------
+
+22:52:47 INFO  : Disconnected from the channel tcfchan#6.

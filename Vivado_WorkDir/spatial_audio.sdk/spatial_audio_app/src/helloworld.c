@@ -12,6 +12,12 @@
 #include "xuartlite_l.h"
 
 // ==========================================
+// TUNING CONSTANTS
+// ==========================================
+const float AZIMUTH_SENSITIVITY = 1.0f;
+const float ELEVATION_SENSITIVITY = 1.0f; // Lower number = more sensitive to tilt
+
+// ==========================================
 // GLOBAL INSTANCES
 // ==========================================
 PmodJSTK2 joystick;
@@ -23,9 +29,6 @@ float angleX = 0.0, angleY = 0.0, angleZ = 0.0;
 int32_t offsetX = 0, offsetY = 0, offsetZ = 0;
 float dt = 0.01;
 
-// ==========================================
-// GYRO SPI POLLING BYPASS
-// ==========================================
 int isDataReady(PmodGYRO *InstancePtr) {
     uint8_t status = 0;
     GYRO_ReadReg(InstancePtr, 0x27, &status, 1);
@@ -35,28 +38,23 @@ int isDataReady(PmodGYRO *InstancePtr) {
 int main() {
     init_platform();
 
-    print("\n\r--- 3D Spatial Audio Control (Terminal Mode) ---\n\r");
-    print("Type 'gyro' to use Gyroscope for Azimuth.\n\r");
+    print("\n\r--- 3D Spatial Audio Control (Full Sphere) ---\n\r");
+    print("Type 'gyro' to use Gyroscope (Azimuth & Elevation).\n\r");
     print("Type 'joystick' to use Joystick for Azimuth.\n\r");
-    print("Keyboard ALWAYS controls Elevation (-30, 0, 30, 60, 90).\n\r");
+    print("Type 'reset' to center the audio (0 deg Azimuth, 0 deg Elevation).\n\r");
+    print("Keyboard ALWAYS controls Elevation (-30 to 90) in Joystick Mode.\n\r");
     print("Default Mode: Joystick\n\r> ");
 
-    // 1. Initialize Outputs
     XGpio_Initialize(&angle_gpio, XPAR_GPIO_0_DEVICE_ID);
     XGpio_SetDataDirection(&angle_gpio, 1, 0x00);
     XGpio_SetDataDirection(&angle_gpio, 2, 0x00);
 
-    // 2. Initialize Joystick
     JSTK2_begin(&joystick, XPAR_PMODJSTK2_0_AXI_LITE_SPI_BASEADDR, XPAR_PMODJSTK2_0_AXI_LITE_GPIO_BASEADDR);
 
-    // 3. Initialize Gyro
     GYRO_begin(&myGyro, XPAR_PMODGYRO_0_AXI_LITE_SPI_BASEADDR, XPAR_PMODGYRO_0_AXI_LITE_GPIO_BASEADDR);
     uint8_t scale_2000 = 0x20;
     GYRO_WriteReg(&myGyro, 0x23, &scale_2000, 1);
 
-    // ==========================================
-    // GYRO CALIBRATION
-    // ==========================================
     print("\n\rCalibrating Gyro... DO NOT MOVE BOARD\n\r");
     int samples = 100;
     for (int i = 0; i < samples; i++) {
@@ -71,7 +69,7 @@ int main() {
     print("Calibration Complete!\n\r> ");
 
     u8 current_angle_index = 0;
-    u8 current_elevation_index = 1;
+    u8 current_elevation_index = 3; // Index 3 is 0 degrees (-30=0, -20=1, -10=2, 0=3)
     XGpio_DiscreteWrite(&angle_gpio, 1, current_angle_index);
     XGpio_DiscreteWrite(&angle_gpio, 2, current_elevation_index);
 
@@ -81,13 +79,10 @@ int main() {
     char input_buffer[16];
     int buffer_index = 0;
 
-    // ==========================================
-    // MAIN LOOP
-    // ==========================================
     while (1) {
 
         // --------------------------------------
-        // 1. UART COMMANDS & ELEVATION (Always Active)
+        // 1. UART COMMANDS & ELEVATION
         // --------------------------------------
         if (!XUartLite_IsReceiveEmpty(uart_base_addr)) {
             u8 key_input = XUartLite_RecvByte(uart_base_addr);
@@ -98,34 +93,49 @@ int main() {
 
                     if (strcmp(input_buffer, "gyro") == 0) {
                         current_mode = 0;
-                        xil_printf("\n\r[SYSTEM] Switched to GYRO Mode!\n\r> ");
+                        angleX = 0.0;
+                        angleZ = 0.0;
+                        xil_printf("\n\r[SYSTEM] Switched to GYRO Mode! (Board Zeroed)\n\r> ");
                     }
                     else if (strcmp(input_buffer, "joystick") == 0) {
                         current_mode = 1;
                         xil_printf("\n\r[SYSTEM] Switched to JOYSTICK Mode!\n\r> ");
                     }
+                    else if (strcmp(input_buffer, "reset") == 0) {
+                        angleX = 0.0;
+                        angleZ = 0.0;
+                        current_angle_index = 0;
+                        current_elevation_index = 3;
+                        XGpio_DiscreteWrite(&angle_gpio, 1, current_angle_index);
+                        XGpio_DiscreteWrite(&angle_gpio, 2, current_elevation_index);
+
+                        int real_azi = current_angle_index * 5;
+                        int real_elev = (current_elevation_index * 10) - 30;
+                        xil_printf("\n\r[SYSTEM] Audio RESET! Azimuth angle %d (index %d) | Elevation angle %d (index %d)\n\r> ",
+                                   real_azi, current_angle_index, real_elev, current_elevation_index);
+                    }
                     else {
-                        // Parses elevation regardless of Gyro/Joystick mode!
-                        int parsed_elevation = atoi(input_buffer);
-                        int valid = 1;
-                        u8 new_elevation_index = current_elevation_index;
+                        if (current_mode == 1) {
+                            int parsed_elevation = atoi(input_buffer);
 
-                        if      (parsed_elevation == -30) new_elevation_index = 0;
-                        else if (parsed_elevation ==   0) new_elevation_index = 1;
-                        else if (parsed_elevation ==  30) new_elevation_index = 2;
-                        else if (parsed_elevation ==  60) new_elevation_index = 3;
-                        else if (parsed_elevation ==  90) new_elevation_index = 4;
-                        else {
-                            xil_printf("\n\rError: %d is not a supported elevation!\n\r", parsed_elevation);
-                            valid = 0;
-                        }
+                            if (parsed_elevation >= -30 && parsed_elevation <= 90 && (parsed_elevation % 10 == 0)) {
+                                u8 new_elevation_index = (parsed_elevation + 30) / 10;
 
-                        if (valid && (new_elevation_index != current_elevation_index)) {
-                            current_elevation_index = new_elevation_index;
-                            XGpio_DiscreteWrite(&angle_gpio, 2, current_elevation_index);
-                            xil_printf("\n\rSuccess! Elevation changed to %d (Index %d)\n\r", parsed_elevation, current_elevation_index);
-                        } else if (valid) {
-                            xil_printf("\n\rElevation is already %d.\n\r", parsed_elevation);
+                                if (new_elevation_index != current_elevation_index) {
+                                    current_elevation_index = new_elevation_index;
+                                    XGpio_DiscreteWrite(&angle_gpio, 2, current_elevation_index);
+
+                                    int real_azi = current_angle_index * 5;
+                                    xil_printf("\n\rSuccess! Azimuth angle %d (index %d) | Elevation angle %d (index %d)\n\r",
+                                               real_azi, current_angle_index, parsed_elevation, current_elevation_index);
+                                } else {
+                                    xil_printf("\n\rElevation is already %d.\n\r", parsed_elevation);
+                                }
+                            } else {
+                                xil_printf("\n\rError: %d is invalid! Must be between -30 and 90 in steps of 10.\n\r", parsed_elevation);
+                            }
+                        } else {
+                            xil_printf("\n\r[SYSTEM] Keyboard elevation is disabled in Gyro mode. Tilt the board to change height!\n\r");
                         }
                     }
                     buffer_index = 0;
@@ -155,23 +165,26 @@ int main() {
             int16_t rawY = GYRO_getY(&myGyro) - offsetY;
             int16_t rawZ = GYRO_getZ(&myGyro) - offsetZ;
 
-            float magic_multiplier = 0.7 / 16;
+            // Using the new top-level constants!
+            float magic_multiplier = AZIMUTH_SENSITIVITY / 16.0f;
             float vX = rawX * magic_multiplier;
             float vY = rawY * magic_multiplier;
-            float vZ = rawZ * magic_multiplier * 1.5 * 1.05;
+            float vZ = rawZ * magic_multiplier * 1.5f * 1.05f;
 
-            if (abs(rawX) > 15) angleX -= (vX * dt);
+            if (abs(rawX) > 15) angleX += (vX * dt);
             if (abs(rawY) > 15) angleY -= (vY * dt);
             if (abs(rawZ) > 15) angleZ -= (vZ * dt);
         }
 
         // --------------------------------------
-        // 3. APPLY CURRENT AZIMUTH CONTROL
+        // 3. APPLY CURRENT AZIMUTH & ELEVATION CONTROL
         // --------------------------------------
         if (current_mode == 0) {
-            // MODE 0: GYROSCOPE (Azimuth Only)
-            int printAngleZ = (int)(angleZ * 10);
+            // =========================
+            // MODE 0: GYROSCOPE
+            // =========================
 
+            int printAngleZ = (int)(angleZ * 10);
             int wrapped_Z = printAngleZ;
             while (wrapped_Z < 0) wrapped_Z += 360;
             while (wrapped_Z >= 360) wrapped_Z -= 360;
@@ -179,18 +192,35 @@ int main() {
             int new_angle_index = (wrapped_Z / 5);
             if (new_angle_index >= 72) new_angle_index = 0;
 
-            if (new_angle_index != current_angle_index) {
-                current_angle_index = new_angle_index;
-                XGpio_DiscreteWrite(&angle_gpio, 1, current_angle_index);
+            // Using the new ELEVATION_SENSITIVITY constant
+            int raw_elev_index = (int)round(-angleX / ELEVATION_SENSITIVITY) + 3;
 
-                xil_printf("\r                            \r[GYRO] Azimuth Idx: %2d | Elev Idx: %d \n\r> ", current_angle_index, current_elevation_index);
+            if (raw_elev_index < 0) raw_elev_index = 0;
+            if (raw_elev_index > 12) raw_elev_index = 12;
+            int new_elev_index = raw_elev_index;
+
+            if (new_angle_index != current_angle_index || new_elev_index != current_elevation_index) {
+                current_angle_index = new_angle_index;
+                current_elevation_index = new_elev_index;
+
+                XGpio_DiscreteWrite(&angle_gpio, 1, current_angle_index);
+                XGpio_DiscreteWrite(&angle_gpio, 2, current_elevation_index);
+
+                int real_azi = current_angle_index * 5;
+                int real_elev = (current_elevation_index * 10) - 30;
+
+                // Clears the line and prints the exact requested format
+                xil_printf("\r                                                                      \r[GYRO] Azimuth angle %3d (index %2d) | Elevation angle %3d (index %2d)\n\r> ",
+                           real_azi, current_angle_index, real_elev, current_elevation_index);
                 for(int i=0; i < buffer_index; i++){
                     outbyte(input_buffer[i]);
                 }
             }
         }
         else {
-            // MODE 1: JOYSTICK (Azimuth Only)
+            // =========================
+            // MODE 1: JOYSTICK
+            // =========================
             JSTK2_Position position = JSTK2_getPosition(&joystick);
             float dx = 0.0;
             float dy = 0.0;
@@ -214,7 +244,11 @@ int main() {
                     current_angle_index = (u8)new_angle_index;
                     XGpio_DiscreteWrite(&angle_gpio, 1, current_angle_index);
 
-                    xil_printf("\r                            \r[JSTK] Angle: %3d deg -> Index: %2d\n\r> ", (int)angle_deg, current_angle_index);
+                    int real_azi = current_angle_index * 5;
+                    int real_elev = (current_elevation_index * 10) - 30;
+
+                    xil_printf("\r                                                                      \r[JSTK] Azimuth angle %3d (index %2d) | Elevation angle %3d (index %2d)\n\r> ",
+                               real_azi, current_angle_index, real_elev, current_elevation_index);
                     for(int i=0; i < buffer_index; i++){
                         outbyte(input_buffer[i]);
                     }
