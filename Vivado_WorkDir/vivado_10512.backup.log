@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Mar 17 16:59:14 2026
+# Process ID: 10512
+# Current directory: C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/Vivado_WorkDir
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22664 C:\Users\andyl\Desktop\ECE532_3D_spatial_audio\Vivado_WorkDir\spatial_audio.xpr
+# Log file: C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/Vivado_WorkDir/vivado.log
+# Journal file: C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/Vivado_WorkDir\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/andyl/Desktop/ECE532_3D_spatial_audio/PMOD_lib'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 977.797 ; gain = 273.047
+update_compile_order -fileset sources_1
+launch_sdk -workspace C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk -hwspec C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk -hwspec C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 17 17:33:04 2026...

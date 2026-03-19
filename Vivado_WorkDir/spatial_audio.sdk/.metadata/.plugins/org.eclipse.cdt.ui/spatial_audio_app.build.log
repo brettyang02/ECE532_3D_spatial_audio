@@ -1,6 +1,6 @@
-22:52:42 **** Incremental Build of configuration Debug for project spatial_audio_app ****
+22:36:42 **** Incremental Build of configuration Debug for project spatial_audio_app ****
 make all 
 make: Nothing to be done for 'all'.
 
-22:52:42 Build Finished (took 172ms)
+22:36:42 Build Finished (took 106ms)
 

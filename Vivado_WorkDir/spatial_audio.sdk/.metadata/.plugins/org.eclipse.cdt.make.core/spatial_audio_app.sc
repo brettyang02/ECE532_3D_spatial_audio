@@ -2,6 +2,9 @@
 <?scdStore version="2"?><scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="xilinx.gnu.mb.exe.debug.1948286058;xilinx.gnu.mb.exe.debug.1948286058.">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="c:\xilinx\sdk\2018.3\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/7.3.1/include"/>
+<includePath path="c:\xilinx\sdk\2018.3\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/7.3.1/include-fixed"/>
+<includePath path="c:\xilinx\sdk\2018.3\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/include"/>
 <includePath path="f:\xilinx\sdk\2018.3\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/7.3.1/include"/>
 <includePath path="f:\xilinx\sdk\2018.3\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/7.3.1/include-fixed"/>
 <includePath path="f:\xilinx\sdk\2018.3\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/include"/>
@@ -572,6 +575,9 @@
 </instance>
 <instance id="xilinx.gnu.mb.exe.debug.1948286058;xilinx.gnu.mb.exe.debug.1948286058.;xilinx.gnu.mb.c.toolchain.compiler.debug.679006110;xilinx.gnu.compiler.input.129150953">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="c:\xilinx\sdk\2018.3\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/7.3.1/include"/>
+<includePath path="c:\xilinx\sdk\2018.3\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/7.3.1/include-fixed"/>
+<includePath path="c:\xilinx\sdk\2018.3\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/include"/>
 <includePath path="f:\xilinx\sdk\2018.3\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/7.3.1/include"/>
 <includePath path="f:\xilinx\sdk\2018.3\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/7.3.1/include-fixed"/>
 <includePath path="f:\xilinx\sdk\2018.3\gnu\microblaze\nt\bin\../lib/gcc/microblaze-xilinx-elf/7.3.1/../../../../microblaze-xilinx-elf/include"/>

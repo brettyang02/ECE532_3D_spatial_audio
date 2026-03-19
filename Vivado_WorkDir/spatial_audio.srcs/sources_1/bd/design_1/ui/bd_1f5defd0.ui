@@ -2,74 +2,85 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port tx_data -pg 1 -y 680 -defaultsOSRD
-preplace port rx_sclk -pg 1 -y 770 -defaultsOSRD
-preplace port reset_btn -pg 1 -y 510 -defaultsOSRD
-preplace port jb -pg 1 -y 100 -defaultsOSRD
-preplace port rx_data -pg 1 -y 480 -defaultsOSRD
-preplace port tx_lrck -pg 1 -y 620 -defaultsOSRD
-preplace port sys_clock -pg 1 -y 660 -defaultsOSRD
-preplace port jd -pg 1 -y -150 -defaultsOSRD
-preplace port usb_uart -pg 1 -y 390 -defaultsOSRD
-preplace port rx_lrck -pg 1 -y 740 -defaultsOSRD
-preplace port tx_sclk -pg 1 -y 650 -defaultsOSRD
-preplace port tx_mclk -pg 1 -y 590 -defaultsOSRD
-preplace port rx_mclk -pg 1 -y 710 -defaultsOSRD
-preplace inst spatial_audio_top_0 -pg 1 -lvl 6 -y 700 -defaultsOSRD
-preplace inst PmodGYRO_0 -pg 1 -lvl 6 -y -150 -defaultsOSRD
-preplace inst axi_intc_0 -pg 1 -lvl 3 -y 340 -defaultsOSRD
-preplace inst microblaze_0_axi_periph -pg 1 -lvl 5 -y 260 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 2 -y 370 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 6 -y 270 -defaultsOSRD
-preplace inst mdm_1 -pg 1 -lvl 3 -y 530 -defaultsOSRD
-preplace inst axi_uartlite_0 -pg 1 -lvl 6 -y 420 -defaultsOSRD
-preplace inst microblaze_0 -pg 1 -lvl 4 -y 490 -defaultsOSRD
-preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 2 -y 510 -defaultsOSRD
-preplace inst clk_wiz_1 -pg 1 -lvl 1 -y 650 -defaultsOSRD
-preplace inst microblaze_0_local_memory -pg 1 -lvl 5 -y 570 -defaultsOSRD
-preplace inst PmodJSTK2_0 -pg 1 -lvl 6 -y 100 -defaultsOSRD
-preplace netloc axi_intc_0_interrupt 1 3 1 900
-preplace netloc rx_data_1 1 0 6 NJ 480 200J 700 NJ 700 NJ 700 NJ 700 NJ
-preplace netloc microblaze_0_axi_periph_M04_AXI 1 5 1 1770
-preplace netloc spatial_audio_top_0_tx_lrck 1 6 1 2120J
-preplace netloc reset_btn_1 1 0 2 -30 490 N
-preplace netloc PmodGYRO_0_Pmod_out 1 6 1 N
+preplace port tx_data -pg 1 -y 1150 -defaultsOSRD
+preplace port rx_sclk -pg 1 -y 1240 -defaultsOSRD
+preplace port reset_btn -pg 1 -y 910 -defaultsOSRD
+preplace port dip_switches_16bits -pg 1 -y 70 -defaultsOSRD
+preplace port jb -pg 1 -y 240 -defaultsOSRD
+preplace port rx_data -pg 1 -y 1150 -defaultsOSRD
+preplace port jc -pg 1 -y 420 -defaultsOSRD
+preplace port tx_lrck -pg 1 -y 1090 -defaultsOSRD
+preplace port sys_clock -pg 1 -y 940 -defaultsOSRD
+preplace port push_buttons_5bits -pg 1 -y 100 -defaultsOSRD
+preplace port jd -pg 1 -y 600 -defaultsOSRD
+preplace port usb_uart -pg 1 -y 770 -defaultsOSRD
+preplace port rx_lrck -pg 1 -y 1210 -defaultsOSRD
+preplace port tx_sclk -pg 1 -y 1120 -defaultsOSRD
+preplace port tx_mclk -pg 1 -y 1060 -defaultsOSRD
+preplace port rx_mclk -pg 1 -y 1180 -defaultsOSRD
+preplace inst PmodJSTK2_1 -pg 1 -lvl 6 -y 420 -defaultsOSRD
+preplace inst spatial_audio_top_0 -pg 1 -lvl 6 -y 1150 -defaultsOSRD
+preplace inst PmodGYRO_0 -pg 1 -lvl 6 -y 600 -defaultsOSRD
+preplace inst axi_intc_0 -pg 1 -lvl 3 -y 660 -defaultsOSRD
+preplace inst microblaze_0_axi_periph -pg 1 -lvl 5 -y 330 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 2 -y 690 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 6 -y 930 -defaultsOSRD
+preplace inst axi_gpio_1 -pg 1 -lvl 6 -y 80 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 3 -y 840 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 6 -y 780 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 4 -y 730 -defaultsOSRD
+preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 2 -y 1040 -defaultsOSRD
+preplace inst clk_wiz_1 -pg 1 -lvl 1 -y 930 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 5 -y 740 -defaultsOSRD
+preplace inst PmodJSTK2_0 -pg 1 -lvl 6 -y 240 -defaultsOSRD
+preplace netloc axi_intc_0_interrupt 1 3 1 840
+preplace netloc rx_data_1 1 0 6 NJ 1150 NJ 1150 NJ 1150 NJ 1150 NJ 1150 NJ
+preplace netloc microblaze_0_axi_periph_M08_AXI 1 5 1 N
+preplace netloc microblaze_0_axi_periph_M04_AXI 1 5 1 1650
+preplace netloc spatial_audio_top_0_tx_lrck 1 6 1 1990J
+preplace netloc reset_btn_1 1 0 2 20 1020 N
 preplace netloc PmodJSTK2_0_Pmod_out 1 6 1 NJ
-preplace netloc spatial_audio_top_0_tx_sclk 1 6 1 2130J
-preplace netloc axi_uartlite_0_interrupt 1 1 6 230 820 NJ 820 NJ 820 NJ 820 NJ 820 2100
-preplace netloc spatial_audio_top_0_rx_sclk 1 6 1 2130J
-preplace netloc microblaze_0_Clk 1 1 5 210 620 600 440 910 390 1420 0 1780
-preplace netloc microblaze_0_axi_periph_M03_AXI 1 5 1 1750
-preplace netloc microblaze_0_axi_periph_M06_AXI 1 5 1 1740
-preplace netloc microblaze_0_ilmb_1 1 4 1 1390
-preplace netloc microblaze_0_M_AXI_DP 1 4 1 1430
-preplace netloc microblaze_0_axi_periph_M00_AXI 1 2 4 600 10 NJ 10 NJ 10 1710
+preplace netloc PmodGYRO_0_Pmod_out 1 6 1 NJ
+preplace netloc spatial_audio_top_0_tx_sclk 1 6 1 1980J
+preplace netloc axi_uartlite_0_interrupt 1 1 6 200 570 NJ 570 NJ 570 1310J 650 1620J 700 1990
+preplace netloc spatial_audio_top_0_rx_sclk 1 6 1 1980J
+preplace netloc microblaze_0_Clk 1 1 5 200 920 560 750 840 830 1320 630 1680
+preplace netloc microblaze_0_axi_periph_M03_AXI 1 5 1 1640
+preplace netloc microblaze_0_axi_periph_M06_AXI 1 5 1 1650
+preplace netloc microblaze_0_ilmb_1 1 4 1 N
+preplace netloc microblaze_0_M_AXI_DP 1 4 1 1300
+preplace netloc microblaze_0_axi_periph_M00_AXI 1 2 4 560 30 NJ 30 NJ 30 1620
 preplace netloc sys_clock_1 1 0 1 NJ
-preplace netloc microblaze_0_axi_periph_M05_AXI 1 5 1 1720
-preplace netloc spatial_audio_top_0_tx_mclk 1 6 1 2110J
-preplace netloc axi_gpio_0_gpio_io_o 1 5 2 1810 0 2100
+preplace netloc axi_gpio_1_GPIO2 1 6 1 1990J
+preplace netloc microblaze_0_axi_periph_M05_AXI 1 5 1 1700
+preplace netloc spatial_audio_top_0_tx_mclk 1 6 1 1980J
+preplace netloc axi_gpio_0_gpio_io_o 1 5 2 1660 1020 1990
 preplace netloc xlconcat_0_dout 1 2 1 NJ
-preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 2 3 620J 450 890J 400 1400
-preplace netloc microblaze_0_axi_periph_M01_AXI 1 5 1 1760
-preplace netloc spatial_audio_top_0_tx_data 1 6 1 2140J
-preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 2 4 610 430 880J 380 1410 20 1790
-preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 2 630J 460 890
-preplace netloc clk_wiz_1_locked 1 1 5 220 680 NJ 680 NJ 680 NJ 680 NJ
-preplace netloc axi_uartlite_0_UART 1 6 1 2100J
-preplace netloc clk_wiz_1_clk_out2 1 1 5 210 660 NJ 660 NJ 660 NJ 660 NJ
-preplace netloc microblaze_0_dlmb_1 1 4 1 1410
-preplace netloc microblaze_0_axi_periph_M02_AXI 1 5 1 1730
-preplace netloc axi_gpio_0_gpio2_io_o 1 5 2 1800 -10 2110
-preplace netloc spatial_audio_top_0_rx_lrck 1 6 1 NJ
-preplace netloc spatial_audio_top_0_rx_mclk 1 6 1 2120J
-preplace netloc microblaze_0_debug 1 3 1 880
-preplace netloc mdm_1_debug_sys_rst 1 1 3 240 610 NJ 610 900
-levelinfo -pg 1 -50 110 430 760 1160 1570 1960 2170 -top -250 -bot 880
+preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 2 3 NJ 1020 NJ 1020 1340
+preplace netloc PmodJSTK2_1_Pmod_out 1 6 1 NJ
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 5 1 1670
+preplace netloc spatial_audio_top_0_tx_data 1 6 1 NJ
+preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 2 4 570 770 820J 820 1330 640 1690
+preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 2 580 760 NJ
+preplace netloc clk_wiz_1_locked 1 1 5 210 940 NJ 940 NJ 940 NJ 940 1620
+preplace netloc axi_uartlite_0_UART 1 6 1 NJ
+preplace netloc clk_wiz_1_clk_out2 1 1 5 NJ 930 NJ 930 NJ 930 NJ 930 1640
+preplace netloc microblaze_0_axi_periph_M07_AXI 1 5 1 N
+preplace netloc microblaze_0_axi_periph_M02_AXI 1 5 1 1660
+preplace netloc microblaze_0_dlmb_1 1 4 1 N
+preplace netloc axi_gpio_0_gpio2_io_o 1 5 2 1690 1030 1980
+preplace netloc spatial_audio_top_0_rx_lrck 1 6 1 1990J
+preplace netloc spatial_audio_top_0_rx_mclk 1 6 1 1990J
+preplace netloc axi_gpio_1_GPIO 1 6 1 NJ
+preplace netloc microblaze_0_debug 1 3 1 830
+preplace netloc mdm_1_debug_sys_rst 1 1 3 220 910 NJ 910 830
+preplace netloc microblaze_0_axi_periph_M09_AXI 1 5 1 1630
+levelinfo -pg 1 0 110 390 700 1070 1480 1840 2010 -top 0 -bot 1270
 "
 }
 {
-   "da_axi4_cnt":"7",
-   "da_board_cnt":"5",
+   "da_axi4_cnt":"10",
+   "da_board_cnt":"7",
    "da_clkrst_cnt":"1",
    "da_mb_cnt":"1"
 }
