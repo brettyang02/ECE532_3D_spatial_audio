@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Wed Mar 18 22:03:17 2026
--- Host        : Andiputer running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/andyl/Desktop/ECE532_3D_spatial_audio/Vivado_WorkDir/spatial_audio.srcs/sources_1/bd/design_1/ip/design_1_PmodGYRO_0_0/design_1_PmodGYRO_0_0_sim_netlist.vhdl
+-- Date        : Tue Mar 17 03:03:50 2026
+-- Host        : DESKTOP-6P66IQN running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_PmodGYRO_0_0 -prefix
+--               design_1_PmodGYRO_0_0_ design_1_PmodGYRO_0_0_sim_netlist.vhdl
 -- Design      : design_1_PmodGYRO_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -38,8 +38,6 @@ entity design_1_PmodGYRO_0_0_address_decoder is
     reg1 : in STD_LOGIC_VECTOR ( 3 downto 0 );
     reg2 : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_address_decoder : entity is "address_decoder";
 end design_1_PmodGYRO_0_0_address_decoder;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_address_decoder is
@@ -912,8 +910,6 @@ entity design_1_PmodGYRO_0_0_cdc_sync is
     gpio_io_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_cdc_sync : entity is "cdc_sync";
 end design_1_PmodGYRO_0_0_cdc_sync;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_cdc_sync is
@@ -3102,8 +3098,6 @@ entity design_1_PmodGYRO_0_0_counter_f is
     \icount_out_reg[0]_1\ : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_counter_f : entity is "counter_f";
 end design_1_PmodGYRO_0_0_counter_f;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_counter_f is
@@ -3277,8 +3271,6 @@ entity design_1_PmodGYRO_0_0_interrupt_control is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     \ip_irpt_enable_reg_reg[8]_0\ : in STD_LOGIC_VECTOR ( 8 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_interrupt_control : entity is "interrupt_control";
 end design_1_PmodGYRO_0_0_interrupt_control;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_interrupt_control is
@@ -3650,8 +3642,6 @@ entity design_1_PmodGYRO_0_0_pmod_concat is
   );
   attribute Bottom_Row_Interface : string;
   attribute Bottom_Row_Interface of design_1_PmodGYRO_0_0_pmod_concat : entity is "GPIO";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_pmod_concat : entity is "pmod_concat";
   attribute Top_Row_Interface : string;
   attribute Top_Row_Interface of design_1_PmodGYRO_0_0_pmod_concat : entity is "SPI";
 end design_1_PmodGYRO_0_0_pmod_concat;
@@ -3766,8 +3756,6 @@ entity design_1_PmodGYRO_0_0_qspi_cntrl_reg is
     p_8_in : in STD_LOGIC;
     Bus_RNW_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_qspi_cntrl_reg : entity is "qspi_cntrl_reg";
 end design_1_PmodGYRO_0_0_qspi_cntrl_reg;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_qspi_cntrl_reg is
@@ -3942,8 +3930,6 @@ entity design_1_PmodGYRO_0_0_qspi_fifo_ifmodule is
     p_1_in29_in : in STD_LOGIC;
     p_1_in32_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_qspi_fifo_ifmodule : entity is "qspi_fifo_ifmodule";
 end design_1_PmodGYRO_0_0_qspi_fifo_ifmodule;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_qspi_fifo_ifmodule is
@@ -4100,8 +4086,6 @@ entity design_1_PmodGYRO_0_0_qspi_mode_0_module is
     D : in STD_LOGIC_VECTOR ( 0 to 0 );
     \OTHER_RATIO_GENERATE.rx_shft_reg_s_reg[7]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_qspi_mode_0_module : entity is "qspi_mode_0_module";
 end design_1_PmodGYRO_0_0_qspi_mode_0_module;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_qspi_mode_0_module is
@@ -5948,8 +5932,6 @@ entity design_1_PmodGYRO_0_0_qspi_status_slave_sel_reg is
     Bus_RNW_reg : in STD_LOGIC;
     p_4_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_qspi_status_slave_sel_reg : entity is "qspi_status_slave_sel_reg";
 end design_1_PmodGYRO_0_0_qspi_status_slave_sel_reg;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_qspi_status_slave_sel_reg is
@@ -6000,8 +5982,6 @@ entity design_1_PmodGYRO_0_0_reset_sync_module is
     reset2ip_reset_int : in STD_LOGIC;
     ext_spi_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_reset_sync_module : entity is "reset_sync_module";
 end design_1_PmodGYRO_0_0_reset_sync_module;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_reset_sync_module is
@@ -6086,8 +6066,6 @@ entity design_1_PmodGYRO_0_0_soft_reset is
     ip2Bus_WrAck_intr_reg_hole : in STD_LOGIC;
     ip2Bus_WrAck_core_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_soft_reset : entity is "soft_reset";
 end design_1_PmodGYRO_0_0_soft_reset;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_soft_reset is
@@ -6657,8 +6635,6 @@ entity design_1_PmodGYRO_0_0_xpm_cdc_gray is
   attribute DEST_SYNC_FF of design_1_PmodGYRO_0_0_xpm_cdc_gray : entity is 2;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of design_1_PmodGYRO_0_0_xpm_cdc_gray : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_xpm_cdc_gray : entity is "xpm_cdc_gray";
   attribute REG_OUTPUT : integer;
   attribute REG_OUTPUT of design_1_PmodGYRO_0_0_xpm_cdc_gray : entity is 0;
   attribute SIM_ASSERT_CHK : integer;
@@ -8972,8 +8948,6 @@ entity design_1_PmodGYRO_0_0_xpm_cdc_sync_rst is
   attribute INIT of design_1_PmodGYRO_0_0_xpm_cdc_sync_rst : entity is "0";
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of design_1_PmodGYRO_0_0_xpm_cdc_sync_rst : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_xpm_cdc_sync_rst : entity is "xpm_cdc_sync_rst";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of design_1_PmodGYRO_0_0_xpm_cdc_sync_rst : entity is 0;
   attribute VERSION : integer;
@@ -9245,8 +9219,6 @@ entity design_1_PmodGYRO_0_0_xpm_counter_updn is
     wr_pntr_plus1_pf_carry : in STD_LOGIC;
     wr_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_xpm_counter_updn : entity is "xpm_counter_updn";
 end design_1_PmodGYRO_0_0_xpm_counter_updn;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_xpm_counter_updn is
@@ -11386,8 +11358,6 @@ entity design_1_PmodGYRO_0_0_xpm_fifo_reg_bit is
     prog_full : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_xpm_fifo_reg_bit : entity is "xpm_fifo_reg_bit";
 end design_1_PmodGYRO_0_0_xpm_fifo_reg_bit;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_xpm_fifo_reg_bit is
@@ -11538,8 +11508,6 @@ entity design_1_PmodGYRO_0_0_xpm_fifo_reg_vec is
     D : in STD_LOGIC_VECTOR ( 3 downto 0 );
     wr_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_xpm_fifo_reg_vec : entity is "xpm_fifo_reg_vec";
 end design_1_PmodGYRO_0_0_xpm_fifo_reg_vec;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_xpm_fifo_reg_vec is
@@ -12700,8 +12668,6 @@ entity design_1_PmodGYRO_0_0_xpm_memory_base is
   attribute MESSAGE_CONTROL of design_1_PmodGYRO_0_0_xpm_memory_base : entity is 0;
   attribute NUM_CHAR_LOC : integer;
   attribute NUM_CHAR_LOC of design_1_PmodGYRO_0_0_xpm_memory_base : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_xpm_memory_base : entity is "xpm_memory_base";
   attribute P_ECC_MODE : string;
   attribute P_ECC_MODE of design_1_PmodGYRO_0_0_xpm_memory_base : entity is "no_ecc";
   attribute P_ENABLE_BYTE_WRITE_A : integer;
@@ -13553,8 +13519,6 @@ entity design_1_PmodGYRO_0_0_GPIO_Core is
     D : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \Not_Dual.gpio_OE_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_GPIO_Core : entity is "GPIO_Core";
 end design_1_PmodGYRO_0_0_GPIO_Core;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_GPIO_Core is
@@ -13977,8 +13941,6 @@ entity design_1_PmodGYRO_0_0_PmodGYRO_pmod_bridge_0_0 is
   attribute CHECK_LICENSE_TYPE of design_1_PmodGYRO_0_0_PmodGYRO_pmod_bridge_0_0 : entity is "PmodGYRO_pmod_bridge_0_0,pmod_concat,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_1_PmodGYRO_0_0_PmodGYRO_pmod_bridge_0_0 : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_PmodGYRO_pmod_bridge_0_0 : entity is "PmodGYRO_pmod_bridge_0_0";
   attribute X_CORE_INFO : string;
   attribute X_CORE_INFO of design_1_PmodGYRO_0_0_PmodGYRO_pmod_bridge_0_0 : entity is "pmod_concat,Vivado 2018.3";
 end design_1_PmodGYRO_0_0_PmodGYRO_pmod_bridge_0_0;
@@ -15672,8 +15634,6 @@ entity design_1_PmodGYRO_0_0_cross_clk_sync_fifo_1 is
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_9\ : in STD_LOGIC;
     spicr_bits_7_8_frm_axi_clk : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_cross_clk_sync_fifo_1 : entity is "cross_clk_sync_fifo_1";
 end design_1_PmodGYRO_0_0_cross_clk_sync_fifo_1;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_cross_clk_sync_fifo_1 is
@@ -16183,8 +16143,6 @@ entity design_1_PmodGYRO_0_0_slave_attachment is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_slave_attachment : entity is "slave_attachment";
 end design_1_PmodGYRO_0_0_slave_attachment;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_slave_attachment is
@@ -16796,8 +16754,6 @@ entity design_1_PmodGYRO_0_0_xpm_fifo_rst is
     \guf.underflow_i_reg\ : in STD_LOGIC;
     rd_en : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_xpm_fifo_rst : entity is "xpm_fifo_rst";
 end design_1_PmodGYRO_0_0_xpm_fifo_rst;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_xpm_fifo_rst is
@@ -17711,8 +17667,6 @@ entity design_1_PmodGYRO_0_0_axi_lite_ipif is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end design_1_PmodGYRO_0_0_axi_lite_ipif;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_axi_lite_ipif is
@@ -18814,8 +18768,6 @@ entity design_1_PmodGYRO_0_0_xpm_fifo_base is
   attribute FULL_RESET_VALUE of design_1_PmodGYRO_0_0_xpm_fifo_base : entity is 1;
   attribute FULL_RST_VAL : string;
   attribute FULL_RST_VAL of design_1_PmodGYRO_0_0_xpm_fifo_base : entity is "1'b1";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_xpm_fifo_base : entity is "xpm_fifo_base";
   attribute PE_THRESH_ADJ : integer;
   attribute PE_THRESH_ADJ of design_1_PmodGYRO_0_0_xpm_fifo_base : entity is 8;
   attribute PE_THRESH_MAX : integer;
@@ -20873,8 +20825,6 @@ entity design_1_PmodGYRO_0_0_axi_gpio is
   attribute C_TRI_DEFAULT_2 of design_1_PmodGYRO_0_0_axi_gpio : entity is -1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_1_PmodGYRO_0_0_axi_gpio : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_axi_gpio : entity is "axi_gpio";
   attribute ip_group : string;
   attribute ip_group of design_1_PmodGYRO_0_0_axi_gpio : entity is "LOGICORE";
 end design_1_PmodGYRO_0_0_axi_gpio;
@@ -21419,8 +21369,6 @@ entity design_1_PmodGYRO_0_0_xpm_fifo_async is
   attribute FIFO_WRITE_DEPTH of design_1_PmodGYRO_0_0_xpm_fifo_async : entity is 16;
   attribute FULL_RESET_VALUE : integer;
   attribute FULL_RESET_VALUE of design_1_PmodGYRO_0_0_xpm_fifo_async : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_xpm_fifo_async : entity is "xpm_fifo_async";
   attribute PROG_EMPTY_THRESH : integer;
   attribute PROG_EMPTY_THRESH of design_1_PmodGYRO_0_0_xpm_fifo_async : entity is 10;
   attribute PROG_FULL_THRESH : integer;
@@ -21867,8 +21815,6 @@ entity design_1_PmodGYRO_0_0_PmodGYRO_axi_gpio_0_0 is
   attribute CHECK_LICENSE_TYPE of design_1_PmodGYRO_0_0_PmodGYRO_axi_gpio_0_0 : entity is "PmodGYRO_axi_gpio_0_0,axi_gpio,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_1_PmodGYRO_0_0_PmodGYRO_axi_gpio_0_0 : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_PmodGYRO_axi_gpio_0_0 : entity is "PmodGYRO_axi_gpio_0_0";
   attribute X_CORE_INFO : string;
   attribute X_CORE_INFO of design_1_PmodGYRO_0_0_PmodGYRO_axi_gpio_0_0 : entity is "axi_gpio,Vivado 2018.3";
 end design_1_PmodGYRO_0_0_PmodGYRO_axi_gpio_0_0;
@@ -22002,8 +21948,6 @@ entity design_1_PmodGYRO_0_0_async_fifo_fg is
     \LEGACY_MD_IP2BUS_DATA_GEN.IP2Bus_Data_reg[29]_0\ : in STD_LOGIC;
     \OTHER_RATIO_GENERATE.Serial_Dout_reg\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_async_fifo_fg : entity is "async_fifo_fg";
 end design_1_PmodGYRO_0_0_async_fifo_fg;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_async_fifo_fg is
@@ -22555,8 +22499,6 @@ entity design_1_PmodGYRO_0_0_qspi_core_interface is
     io1_i_sync : in STD_LOGIC;
     io0_i_sync : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_qspi_core_interface : entity is "qspi_core_interface";
 end design_1_PmodGYRO_0_0_qspi_core_interface;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_qspi_core_interface is
@@ -23577,8 +23519,6 @@ entity design_1_PmodGYRO_0_0_axi_quad_spi_top is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_axi_quad_spi_top : entity is "axi_quad_spi_top";
 end design_1_PmodGYRO_0_0_axi_quad_spi_top;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_axi_quad_spi_top is
@@ -24137,8 +24077,6 @@ entity design_1_PmodGYRO_0_0_axi_quad_spi is
   attribute C_XIP_MODE of design_1_PmodGYRO_0_0_axi_quad_spi : entity is 0;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_1_PmodGYRO_0_0_axi_quad_spi : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_axi_quad_spi : entity is "axi_quad_spi";
 end design_1_PmodGYRO_0_0_axi_quad_spi;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_axi_quad_spi is
@@ -24335,8 +24273,6 @@ entity design_1_PmodGYRO_0_0_PmodGYRO_axi_quad_spi_0_0 is
   attribute CHECK_LICENSE_TYPE of design_1_PmodGYRO_0_0_PmodGYRO_axi_quad_spi_0_0 : entity is "PmodGYRO_axi_quad_spi_0_0,axi_quad_spi,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_1_PmodGYRO_0_0_PmodGYRO_axi_quad_spi_0_0 : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_PmodGYRO_axi_quad_spi_0_0 : entity is "PmodGYRO_axi_quad_spi_0_0";
   attribute X_CORE_INFO : string;
   attribute X_CORE_INFO of design_1_PmodGYRO_0_0_PmodGYRO_axi_quad_spi_0_0 : entity is "axi_quad_spi,Vivado 2018.3";
 end design_1_PmodGYRO_0_0_PmodGYRO_axi_quad_spi_0_0;
@@ -24644,8 +24580,6 @@ entity design_1_PmodGYRO_0_0_PmodGYRO is
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_PmodGYRO_0_0_PmodGYRO : entity is "PmodGYRO";
 end design_1_PmodGYRO_0_0_PmodGYRO;
 
 architecture STRUCTURE of design_1_PmodGYRO_0_0_PmodGYRO is
@@ -24873,8 +24807,7 @@ architecture STRUCTURE of design_1_PmodGYRO_0_0 is
   attribute X_INTERFACE_INFO of AXI_LITE_GPIO_wready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_GPIO WREADY";
   attribute X_INTERFACE_INFO of AXI_LITE_GPIO_wvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_GPIO WVALID";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of AXI_LITE_GPIO_wvalid : signal is "XIL_INTERFACENAME AXI_LITE_GPIO, DATA_WIDTH 32, PROTOCOL AXI4LITE, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_TH" & LF &
- "READS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of AXI_LITE_GPIO_wvalid : signal is "XIL_INTERFACENAME AXI_LITE_GPIO, DATA_WIDTH 32, PROTOCOL AXI4LITE, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of AXI_LITE_SPI_arready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI ARREADY";
   attribute X_INTERFACE_INFO of AXI_LITE_SPI_arvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI ARVALID";
   attribute X_INTERFACE_INFO of AXI_LITE_SPI_awready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI AWREADY";
@@ -24885,8 +24818,7 @@ architecture STRUCTURE of design_1_PmodGYRO_0_0 is
   attribute X_INTERFACE_INFO of AXI_LITE_SPI_rvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI RVALID";
   attribute X_INTERFACE_INFO of AXI_LITE_SPI_wready : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI WREADY";
   attribute X_INTERFACE_INFO of AXI_LITE_SPI_wvalid : signal is "xilinx.com:interface:aximm:1.0 AXI_LITE_SPI WVALID";
-  attribute X_INTERFACE_PARAMETER of AXI_LITE_SPI_wvalid : signal is "XIL_INTERFACENAME AXI_LITE_SPI, DATA_WIDTH 32, PROTOCOL AXI4LITE, ID_WIDTH 0, ADDR_WIDTH 7, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THR" & LF &
- "EADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of AXI_LITE_SPI_wvalid : signal is "XIL_INTERFACENAME AXI_LITE_SPI, DATA_WIDTH 32, PROTOCOL AXI4LITE, ID_WIDTH 0, ADDR_WIDTH 7, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of Pmod_out_pin10_i : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_I";
   attribute X_INTERFACE_INFO of Pmod_out_pin10_o : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_O";
   attribute X_INTERFACE_INFO of Pmod_out_pin10_t : signal is "digilentinc.com:interface:pmod:1.0 Pmod_out PIN10_T";

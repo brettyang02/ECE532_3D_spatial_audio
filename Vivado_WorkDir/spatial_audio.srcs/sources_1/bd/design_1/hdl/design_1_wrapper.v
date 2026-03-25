@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Wed Mar 18 22:30:10 2026
-//Host        : Andiputer running 64-bit major release  (build 9200)
+//Date        : Tue Mar 24 02:25:37 2026
+//Host        : DESKTOP-6P66IQN running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
 //Purpose     : IP block netlist
@@ -11,6 +11,8 @@
 
 module design_1_wrapper
    (dip_switches_16bits_tri_i,
+    gpio2_io_o_0,
+    gpio_io_o_0,
     jb_pin10_io,
     jb_pin1_io,
     jb_pin2_io,
@@ -49,6 +51,8 @@ module design_1_wrapper
     usb_uart_rxd,
     usb_uart_txd);
   input [15:0]dip_switches_16bits_tri_i;
+  output [7:0]gpio2_io_o_0;
+  output [7:0]gpio_io_o_0;
   inout jb_pin10_io;
   inout jb_pin1_io;
   inout jb_pin2_io;
@@ -88,6 +92,8 @@ module design_1_wrapper
   output usb_uart_txd;
 
   wire [15:0]dip_switches_16bits_tri_i;
+  wire [7:0]gpio2_io_o_0;
+  wire [7:0]gpio_io_o_0;
   wire jb_pin10_i;
   wire jb_pin10_io;
   wire jb_pin10_o;
@@ -200,6 +206,8 @@ module design_1_wrapper
 
   design_1 design_1_i
        (.dip_switches_16bits_tri_i(dip_switches_16bits_tri_i),
+        .gpio2_io_o_0(gpio2_io_o_0),
+        .gpio_io_o_0(gpio_io_o_0),
         .jb_pin10_i(jb_pin10_i),
         .jb_pin10_o(jb_pin10_o),
         .jb_pin10_t(jb_pin10_t),

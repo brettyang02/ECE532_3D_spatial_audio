@@ -47,3 +47,25 @@ set_property-dict { PACKAGE_PIN D4 IOSTANDARD LVCMOS33 } [get_ports { uart_rtl_0
 ## Reset Button (CPU Reset)
 ## ----------------------------------------------------------------------------
 set_property -dict {PACKAGE_PIN C12 IOSTANDARD LVCMOS33} [get_ports reset_btn]
+
+## 7-Segment Display Constraints
+
+# Channel 1: Segments (Matches gpio_io_o_0)
+set_property -dict { PACKAGE_PIN T10   IOSTANDARD LVCMOS33 } [get_ports { gpio_io_o_0[0] }]; # CA
+set_property -dict { PACKAGE_PIN R10   IOSTANDARD LVCMOS33 } [get_ports { gpio_io_o_0[1] }]; # CB
+set_property -dict { PACKAGE_PIN K16   IOSTANDARD LVCMOS33 } [get_ports { gpio_io_o_0[2] }]; # CC
+set_property -dict { PACKAGE_PIN K13   IOSTANDARD LVCMOS33 } [get_ports { gpio_io_o_0[3] }]; # CD
+set_property -dict { PACKAGE_PIN P15   IOSTANDARD LVCMOS33 } [get_ports { gpio_io_o_0[4] }]; # CE
+set_property -dict { PACKAGE_PIN T11   IOSTANDARD LVCMOS33 } [get_ports { gpio_io_o_0[5] }]; # CF
+set_property -dict { PACKAGE_PIN L18   IOSTANDARD LVCMOS33 } [get_ports { gpio_io_o_0[6] }]; # CG
+set_property -dict { PACKAGE_PIN H15   IOSTANDARD LVCMOS33 } [get_ports { gpio_io_o_0[7] }]; # DP
+
+# Channel 2: Anodes (Matches gpio2_io_o_0)
+set_property -dict { PACKAGE_PIN J17   IOSTANDARD LVCMOS33 } [get_ports { gpio2_io_o_0[0] }]; # AN0 (Right-most)
+set_property -dict { PACKAGE_PIN J18   IOSTANDARD LVCMOS33 } [get_ports { gpio2_io_o_0[1] }]; # AN1
+set_property -dict { PACKAGE_PIN T9    IOSTANDARD LVCMOS33 } [get_ports { gpio2_io_o_0[2] }]; # AN2
+set_property -dict { PACKAGE_PIN J14   IOSTANDARD LVCMOS33 } [get_ports { gpio2_io_o_0[3] }]; # AN3
+set_property -dict { PACKAGE_PIN P14   IOSTANDARD LVCMOS33 } [get_ports { gpio2_io_o_0[4] }]; # AN4
+set_property -dict { PACKAGE_PIN T14   IOSTANDARD LVCMOS33 } [get_ports { gpio2_io_o_0[5] }]; # AN5
+set_property -dict { PACKAGE_PIN K2    IOSTANDARD LVCMOS33 } [get_ports { gpio2_io_o_0[6] }]; # AN6
+set_property -dict { PACKAGE_PIN U13   IOSTANDARD LVCMOS33 } [get_ports { gpio2_io_o_0[7] }]; # AN7 (Left-most)
