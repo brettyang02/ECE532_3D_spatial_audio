@@ -189,7 +189,7 @@ ax.legend(loc="upper left")
 
 # --- NEW: Set default camera viewing angle ---
 # Elev=20 tilts it down slightly, Azim=30 rotates it so the Front star is clearly on the right
-ax.view_init(elev=20, azim=30)
+ax.view_init(elev = 40, azim = 220)
 
 # --- 3. The Animation Loop ---
 def update_radar(frame):
@@ -223,7 +223,7 @@ def update_radar(frame):
             pass
 
     # The Math
-    azi_rad = np.radians(current_azi)
+    azi_rad = np.radians(-current_azi)
     elev_rad = np.radians(current_elev)
     
     x = np.cos(elev_rad) * np.cos(azi_rad)

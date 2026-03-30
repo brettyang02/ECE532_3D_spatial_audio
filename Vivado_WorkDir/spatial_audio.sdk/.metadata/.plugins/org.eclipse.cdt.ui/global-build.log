@@ -969,3 +969,6 @@ mb-size spatial_audio_v2.elf  |tee "spatial_audio_v2.elf.size"
   43732	    448	   3484	  47664	   ba30	spatial_audio_v2.elf
 'Finished building: spatial_audio_v2.elf.size'
 ' '
+14:26:02 **** Incremental Build of configuration Debug for project spatial_audio_v2 ****
+make all 
+make: Nothing to be done for 'all'.
