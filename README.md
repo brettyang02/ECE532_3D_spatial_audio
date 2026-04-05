@@ -16,7 +16,7 @@ Following the ECE532 design tree guidelines, all generated bitstreams and tempor
 
 
 * **`/KEMAR`**: Raw HRTF dataset coefficients.
-* **`/PMOD_lib`**: Drivers for the PmodJSTK2 and PmodGYRO peripherals.
+* **`/PMOD_lib`**: IP cores for the PMOD peripherals provided by digilent.com. In this project PmodJSTK2_v1_0 and PmodGYRO_v1_0 are used.
 * **`/Src`**: Main design source code. They are linked to the Vivado project, so any changes here will be reflected in the block design.
     * **`/RTL`**: Custom Verilog modules including the I2S Controller, DSP Engine, and BRAM Address Generator.
     * **`/Python`**: Coefficient generation scripts (from `.wav` to `.coe`), and generated `.coe` files.
@@ -24,7 +24,7 @@ Following the ECE532 design tree guidelines, all generated bitstreams and tempor
     * **`/Constraint`**: `.xdc` files for Nexys 4 DDR pin mapping.
     * **`/Runtime`**: Archive for `.cpp` files in Xilinx SDK, and the Python visualization script.
 * **`/Vivado_WorkDir`**: The Vivado project structure (reconstructable via block design files).
-    * **`/spatial_audio.xpr`**: Vivado project file (2018.3). Double-click this file should open the project in Vivado, with block design and RTL files automatically linked.
+    * **`spatial_audio.xpr`**: Vivado project file (2018.3). Double-click this file should open the project in Vivado, with block design and RTL files automatically linked.
     * **`/spatial_audio.srcs`**: contains the block design and generated IPs.
     * **`/spatial_audio.sdk`**: Xilinx SDK workspace for software development.
     * **`*.coe`**: copy of generated coefficient files for Vivado use.
@@ -37,7 +37,7 @@ Following the ECE532 design tree guidelines, all generated bitstreams and tempor
 * **PMOD A**: I2S Audio I/O PMOD.
 * **PMOD B & C**: Dual Joysticks PMODs.
 * **PMOD D**: Gyroscope PMOD.
-* **Audio**: Stereo headphones at I2S Output, and an analog 3.5mm audio source (e.g., Laptop/Phone).
+* **Audio**: Stereo headphones at I2S Output, and an analog 3.5mm audio source (e.g., Laptop/Phone) at I2S Input.
 
 ---
 
