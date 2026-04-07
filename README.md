@@ -9,6 +9,10 @@ This project is a **hardware-accelerated 3D spatial audio system** designed for 
 * **Multi-Peripheral Control**: Supports real-time coordinate input via dual SPI Joysticks or a Gyroscope PMOD.
 * **Real-time Visualization**: Bridges FPGA data to a Python-based GUI via UART to visualize the current sound source position.
 
+### Video Demonstration
+This video demonstrates the functionality of the spatial audio engine, showcasing real-time audio processing and visualization as the sound source is moved using the joystick mode, and then gyroscope mode:
+https://youtu.be/2-fSMbu6mTw
+
 ---
 
 ## Repository Structure
